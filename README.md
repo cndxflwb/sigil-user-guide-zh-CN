@@ -2,7 +2,7 @@
 
 <br/>
 
-[在线阅读本用户指南](https://sigil-ebook.com/sigil-user-guide)
+[在线阅读本用户指南（英文版）](https://sigil-ebook.com/sigil-user-guide)
 
 <br/>
 
