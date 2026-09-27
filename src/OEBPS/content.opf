@@ -20,7 +20,7 @@
     <meta property="schema:accessibilityFeature">structuralNavigation</meta>
     <meta name="Sigil version" content="2.8.1"/>
     <dc:identifier id="bookid">urn:uuid:621cf516-7f59-4bfa-8bc5-a61601eef3c8</dc:identifier>
-    <meta name="cover" content=""/>
+    <meta name="cover" content="cover.png"/>
   </metadata>
   <manifest>
     <item id="Fontin-SmallCaps.otf" href="Fonts/Fontin-SmallCaps.otf" media-type="application/vnd.ms-opentype"/>
