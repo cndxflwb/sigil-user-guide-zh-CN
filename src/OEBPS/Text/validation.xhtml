@@ -1,117 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Validation</title>
+  <title>验证</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="validation">Validation</h2>
+  <h2 id="validation">验证</h2>
 
-  <p class="h2subheading">— Making sure your EPUB is Error Free —</p>
+  <p class="h2subheading">— 确保你的 EPUB 没有错误 —</p>
 
-  <p>In order to be considered a valid EPUB, your ebook must meet the standards defined for EPUBs. This means it must include certain files and information and not contain any errors as defined by the EPUB specification. To help you check if your EPUB is valid you can use the following tools which are available for free as plugins for Sigil.</p>
+  <p>要制作有效的 EPUB，电子书必须符合为 EPUB 定义的标准。这意味着必须包含某些文件和信息，且不含 EPUB 规范所定义的任何错误。为帮助检查 EPUB 是否有效，可使用以下工具，它们均可作为 Sigil 插件免费获取。</p>
 
-  <h3 class="sigil_not_in_toc">EPUB Validation With EpubCheck (EPUB2 and EPUB3)</h3>
+  <h3 class="sigil_not_in_toc">使用 EPUBCheck 验证 EPUB（EPUB2 与 EPUB3）</h3>
 
-  <p>For validating all EPUB3’s should run your EPUB through the <a href="https://daisy.org/activities/projects/epubcheck">EpubCheck</a> program. You can use it online or download a local version of the program:</p>
+  <p>验证 EPUB 时应通过 <a href="https://daisy.org/activities/projects/epubcheck">EPUBCheck</a> 程序运行。可在线使用，也可下载该程序的本地版本：</p>
+
   <ul>
-    <li><a href="http://validator.idpf.org">IDPF EPUB Validator</a></li>
+    <li><a href="http://validator.idpf.org">IDPF EPUB 验证器</a></li>
   </ul>
 
-  <p>But the best way to use EpubCheck with Sigil is to download the latest version of the <a href="https://www.mobileread.com/forums/showpost.php?p=2950625">EpubCheck plugin</a> and <a href="manage_plugins.xhtml">install it</a>.</p>
+  <p>但在 Sigil 中使用 EPUBCheck 的最佳方式，是下载最新版本的 <a href="https://www.mobileread.com/forums/showpost.php?p=2950625">EPUBCheck 插件</a>并<a href="../Text/manage_plugins.xhtml">安装它</a>。</p>
 
-  <p>Development of Epubcheck is done at <a href="https://github.com/w3c/epubcheck">https://github.com/w3c/epubcheck</a>.
-  </p>
- 
-  <p>EpubCheck uses java on your machine and the latest version of the epubcheck.jar to verify your EPUB meets the EPUB specification.</p>
+  <p>EPUBCheck 的开发工作在 <a href="https://github.com/w3c/epubcheck">https://github.com/w3c/epubcheck</a>（EPUBCheck Github 仓库）进行。</p>
 
-  <p>When EpubCheck installed and used as a plugin, it will return errors and warnings in the Validation window making it easier for the user to navigate to and fix any errors.</p>
+  <p>EPUBCheck 使用您机器上的 Java 以及最新版本的 <span class="example">epubcheck.jar</span> 来验证你的 EPUB 是否符合 EPUB 规范。</p>
 
-  <p>To run epubcheck select Plugins &gt; Validation &gt; epubcheck.</p>
+  <p>当 EPUBCheck 作为插件安装并使用时，它会在验证窗口中返回错误和警告，使用户更容易定位并修复错误。</p>
 
-  <p>Once you have run EpubCheck to produce a report, look at each of the issues listed and then edit your document to correct them.</p>
+  <p>要运行 EPUBCheck，请选择 <span class="menuitem">插件=&gt;有效性=&gt;EPUBCheck</span>。</p>
+
+  <p>运行 EPUBCheck 生成报告后，逐条查看列出的问题，然后编辑你的文档来修正它们。</p>
 
   <div class="image">
     <img alt="Image of the Validation window in action." src="../Images/validation-flightcrew.png"/>
   </div>
 
   <div class="tip">
-    <p class="tiptext">You can double-click on most entries to be taken to the relevant part of the book.</p>
+    <p class="tiptext">大多数条目都可以双击，直接跳转到书中的相关位置。</p>
   </div>
 
-  <p>You should validate your document each time you change it to verify there are no more errors.</p>
+  <p>每次修改文档后都应重新验证，确认不再存在错误。</p>
 
-  <h4 class="sigil_not_in_toc">Common Validation Issues:</h4>
+  <h4 class="sigil_not_in_toc">常见验证问题：</h4>
 
   <div class="tip">
-    <p class="tiptext">Note that errors are highlighted in pink, and warnings are highlighted in yellow.</p>
+    <p class="tiptext">请注意，错误以粉红色高亮显示，警告以黄色高亮显示。</p>
   </div>
 
   <ul>
-    <li><span class="example">This resource is present in the OPF &lt;manifest&gt;, but it's not reachable (it's unused).</span> 
+    <li><span class="example">This resource is present in the OPF &lt;manifest&gt;, but it's not reachable (it's unused).（该资源存在于 OPF 的 &lt;manifest&gt; 中，但无法访问（未被使用）。——EPUBCheck 验证信息以英文显示，此处提供中文翻译。下同。译者注）</span> 
 
     <ul>
-      <li>This warning means you have included the listed file in your EPUB, but you have not used it anywhere in your book. If you intended to use it, you should link to it, otherwise you can delete the file. Try to search all your files or <span class="example">toc.ncx</span> for the filename – you should leave off the pathname when searching, e.g. if the error is in <span class="example">Text/Chapter1.html</span> then just search for <span class="example">Chapter1.html</span></li>
+      <li>此警告表示您在 EPUB 中包含了所列文件，但书中并未使用它。若计划打算使用，应建立指向它的链接；否则可删除该文件。可在所有文件或 <span class="example">toc.ncx</span> 中搜索文件名——搜索时省略路径名，例如错误位于 <span class="example">Text/Chapter1.html</span> 时，只需搜索 <span class="example">Chapter1.html</span>。</li>
     </ul></li>
 
-    <li><span class="example">This OPS document is reachable but not present in the OPF &lt;manifest or spine&gt;. "Reachable" means that a reference of some kind that points to this resource exists in the EPUB.</span> 
+    <li><span class="example">This OPS document is reachable but not present in the OPF &lt;manifest or spine&gt;. "Reachable" means that a reference of some kind that points to this resource exists in the EPUB.（此OPS文档可访问，但未出现在OPF的&lt;manifest&gt; 或 &lt;spine&gt;中。“可访问”意指EPUB中存在某种指向该资源的引用。）</span> 
 
     <ul>
-      <li>This error means you have a reference or a link to a file or image in your EPUB, but that file is not included in the EPUB. You need to add the file to the EPUB or correct the name of the file used in your text. You can usually find these by searching for the filename listed in all the HTML files. You may also have to re-generate or update your TOC.</li>
+      <li>此错误表示你的 EPUB 中存在对某个文件或图像的引用或链接，但该文件并未包含在 EPUB 中。需将该文件添加到 EPUB，或更正文本中使用的文件名。通常可在所有 HTML 文件中搜索所列文件名来找到这些引用。可能还需要重新生成或更新目录。</li>
     </ul></li>
 
-    <li><span class="example">ID value 'SOMEIDNAME' is not unique</span> 
+    <li><span class="example">ID value 'SOMEIDNAME' is not unique（ID值“SOMEIDNAME”不是唯一的。）</span> 
 
     <ul>
-      <li>This error means you have an ID named SOMEIDNAME in your EPUB that is defined more than once. Typically these are in headers or footnotes and can be caused by copying and pasting or merging. You can find these by searching all HTML files for the ID name that is listed and changing them so all IDs are different from all other IDs. If the issue is in a heading and you have auto-generated your headings, you can delete the ID and they will be re-generated the next time you create your TOC.</li>
+      <li>此错误表示你的 EPUB 中存在名为 SOMEIDNAME 的 ID，且被定义了多次。这类问题通常出现在标题或脚注中，可能由复制粘贴或合并引起。可在所有 HTML 文件中搜索所列的 ID 名称并修改，使所有 ID 互不相同。若问题出现在标题中，且标题为自动生成，可删除该 ID，下次创建目录时会重新生成。</li>
     </ul></li>
 
-    <li><span class="example">attribute 'INVALIDATTRIBUTE' is not declared for element 'SOMEELEMENT'</span> 
+    <li><span class="example">attribute 'INVALIDATTRIBUTE' is not declared for element 'SOMEELEMENT'（元素“SOMEELEMENT”未声明属性“INVALIDATTRIBUTE”。）</span> 
 
     <ul>
-      <li>This error means you have an HTML tag named SOMEELEMENT that contains an attribute INVALIDATTRIBUTE, but INVALIDATTRIBUTE is not valid for that tag. For instance <span class="example">&lt;h2 invalidattribute="test"&gt;</span>. This can be caused by typos or by old versions of HTML. You need to search for INVALIDATTRIBUTE in all HTML files and remove, correct, or replace each occurrence.</li>
+      <li>此错误表示名为 SOMEELEMENT 的 HTML 标签中包含属性 INVALIDATTRIBUTE，但该属性对该标签无效。例如 &lt;h2 invalidattribute="test"&gt;。这可能由拼写错误或旧版 HTML 造成。需在所有 HTML 文件中搜索 INVALIDATTRIBUTE，移除、更正或替换每一处此属性。</li>
     </ul></li>
 
-    <li><span class="example">no declaration found for element 'INVALIDELEMENT'</span> 
+    <li><span class="example">no declaration found for element 'INVALIDELEMENT'（元素“INVALIDELEMENT”未找到声明。）</span> 
 
     <ul>
-      <li>This error means you have an HTML tag named INVALIDELEMENT that has not been defined. Typically this is simply because it is invalid and is old HTML syntax that need updating. You need to search for INVALIDELEMENT in all HTML files and remove, correct, or replace these with valid HTML.</li>
+      <li>此错误表示名为 INVALIDELEMENT 的 HTML 标签未被定义。通常只是因为它无效，属于需要更新的旧 HTML 语法。需在所有 HTML 文件中搜索 INVALIDELEMENT，移除、更正或替换为有效的 HTML。</li>
     </ul></li>
 
-    <li><span class="example">element 'INVALIDELEMENT' is not allowed for content model '(p|d|h2|h3|h4|h5|h6|div|ul|ol|...'</span> 
+    <li><span class="example">element 'INVALIDELEMENT' is not allowed for content model '(p|d|h2|h3|h4|h5|h6|div|ul|ol|...'（“INVALIDELEMENT”这个元素不能出现在此处，根据内容模型，只允许 p、d、h2、h3、h4、h5、h6、div、ul、ol 等元素。）</span> 
 
     <ul>
-      <li>This error means you have an HTML tag named INVALIDELEMENT that is not valid HTML for an EPUB. Typically this is old HTML syntax that needs updating (such as the <span class="example">&lt;center&gt;</span> tag which should be implemented using a style). You need to search for INVALIDELEMENT in all HTML files and remove, correct, or replace each occurrence with valid HTML.</li>
+      <li>此错误表示名为 INVALIDELEMENT 的 HTML 标签在 EPUB 中不是有效的 HTML。这通常是旧 HTML 语法，需要更新（例如 &lt;center&gt; 标签应改用样式实现）。需在所有 HTML 文件中搜索 INVALIDELEMENT，将每一处移除、更正或替换为有效的 HTML。</li>
     </ul></li>
 
-    <li><span class="example">value 'SOMENAME' is invalid NCName</span> 
+    <li><span class="example">value 'SOMENAME' is invalid NCName（“SOMENAME”这个值不是合法的NCName。）</span> 
 
     <ul>
-      <li>This error means you have an ID name that is invalid. It probably contains a space or other invalid character. You need to search for SOMENAME and change it.</li>
+      <li>此错误表示存在无效的 ID 名称，可能包含空格或其他无效字符。需搜索 SOMENAME 并修改。</li>
     </ul></li>
   </ul>
 
-  <h3 class="sigil_not_in_toc" id="tidy">CSS Validation With W3C </h3>
+  <h3 class="sigil_not_in_toc" id="tidy">使用 W3C 验证 CSS</h3>
 
-  <p>You can also easily validate your CSS Stylesheet files using the W3C website by selecting the menu item <span class="menuitem">Tools=&gt;Validate Stylesheets With W3C</span>.</p>
+  <p>也可选择菜单项 <span class="menuitem">工具=&gt;验证样式表</span>，轻松地通过 W3C 网站验证 CSS 样式表文件。</p>
 
-  <p>This will send the contents of all of your stylesheets to the W3C service which will produce reports of any issues.</p>
+  <p>这会将您所有样式表的内容发送给 W3C 服务，由它生成各种问题的报告。</p>
 
-  <p>You can validate individual stylesheets by right-clicking on the stylesheet in the Book Browser and selecting the validate option.</p>
+  <p>也可在书籍浏览器中右键单击某个样式表并选择验证选项，单独验证该样式表。</p>
 
   <div class="tip">
-    <p class="tiptext">Validation is done using the W3C Stylesheet Validation Level that was selected in the Preferences menu (<span class="menuitem">Edit=&gt;Preferences=&gt;General Settings=&gt;EPUB2/3 W3C Stylesheet Validation Level</span>).</p>
+    <p class="tiptext">验证所使用的 W3C 样式表验证级别，是在首选项菜单中选择的（即 <span class="menuitem">编辑=&gt;首选项=&gt;一般设定=&gt;EPUB2/3 W3C 样式表验证级别</span>）。</p>
   </div>
 
-  <h3 class="sigil_not_in_toc" id="tidyx">CSSValidator Plugin</h3>
+  <h3 class="sigil_not_in_toc" id="tidyx">CSSValidator 插件</h3>
 
-  <p>There also exists a <a href="https://www.mobileread.com/forums/showthread.php?t=342116">CSS Validator plugin</a> you can use to validate all of your CSS Stylesheet files. Use <span class="menuitem">Plugins=&gt;Manage Plugins</span> to <a href="manage_plugins.xhtml">install it</a>.</p>
+  <p>还有一个 <a href="https://www.mobileread.com/forums/showthread.php?t=342116">CSS Validator 插件</a>，可用于验证您所有的 CSS 样式表文件。使用 <span class="menuitem">插件=&gt;插件管理</span> <a href="../Text/manage_plugins.xhtml">安装</a>。</p>
 
-  <h3 class="sigil_not_in_toc">EPUB Validation With Devices</h3>
+  <h3 class="sigil_not_in_toc">在设备上验证 EPUB</h3>
 
-  <p>And in case you missed it: You should always test your EPUB on as many devices or programs as possible.</p>
+  <p>再次提醒（以防您遗漏）：您应始终在尽可能多的设备或程序上测试你的 EPUB。</p>
 </body>
 </html>

@@ -1,151 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Opening and Saving Files</title>
+  <title>打开与保存文件</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="opening_and_saving_files">Opening and Saving Files</h2>
+  <h2 id="opening_and_saving_files">打开与保存文件</h2>
 
-  <p class="h2subheading">— Load and Save Your Books —</p>
+  <p class="h2subheading">— 加载并保存你的图书 —</p>
 
-  <p>Sigil supports opening EPUB files and reading HTML and text files. When Sigil saves your book it saves in the EPUB format: the EPUB file will contain all of your HTML files, images, stylesheets, fonts, etc. zipped up into one file.</p>
+  <p>Sigil 支持打开 EPUB 文件，以及读取 HTML 和文本文件。保存图书时，Sigil 会以 EPUB 格式保存：EPUB 文件会将您所有的 HTML 文件、图像、样式表、字体等打包压缩到一个文件中。</p>
 
   <div class="tip">
-    <p class="tiptext">Save early, save often, and make backup copies!</p>
+    <p class="tiptext">尽早保存、经常保存，并制作备份副本！</p>
 
-    <p class="tiptext">Always close Sigil before you open your EPUB in another program – or the other program will lock the file and prevent you from saving in Sigil.</p>
+    <p class="tiptext">在其他程序中打开你的 EPUB 之前，请务必先关闭 Sigil——否则另一个程序会锁定该文件，导致您无法在 Sigil 中保存。</p>
   </div>
 
-  <h3 class="sigil_not_in_toc">Opening and Adding Documents</h3>
+  <h3 class="sigil_not_in_toc">打开与添加文档</h3>
 
-  <h4 class="sigil_not_in_toc">Open Files</h4>
+  <h4 class="sigil_not_in_toc">打开文件</h4>
 
-  <p>To open a file, click the Open button <img alt="Image of a orange folder icon for Open Files." src="../Images/document-open.png"/>, or select the menu item <span class="menuitem">File=&gt;Open</span> or its keyboard shortcut then choose the file you want to open:</p>
+  <p>要打开文件，请点击 Open（打开）按钮<img class="toolbar-icon" alt="Image of a orange folder icon for Open Files." src="../Images/document-open.png"/>，或选择菜单项 <span class="menuitem">文件=&gt;打开</span> 或其键盘快捷键，然后选择要打开的文件：</p>
 
   <div class="indent">
-    <p>EPUB Files</p>
+    <p>EPUB 文件</p>
 
     <ul>
-      <li>Everything in the EPUB file is loaded automatically: HTML files, images, stylesheets, metadata, etc..</li>
+      <li>EPUB 文件中的所有内容都会自动加载：HTML 文件、图像、样式表、元数据等。</li>
 
-      <li>Sigil will unpack your files into the specified folders into exact paths shown in the Book Browser via tooltips. The Book Browser itself groups files according to their type or function in the EPUB.</li>
+      <li>Sigil 会将文件解包到指定文件夹中，并通过工具提示显示书籍浏览器中所呈现的确切路径。书籍浏览器本身会按文件在 EPUB 中的类型或功能将文件分组。</li>
 
-      <li>If the EPUB contains common errors Sigil will try to correct them.</li>
+      <li>如果 EPUB 包含常见错误，Sigil 会尝试修正它们。</li>
 
-      <li>Depending on your preferences, Sigil will format or clean the HTML files.</li>
+      <li>根据你的首选项设置，Sigil 会对 HTML 文件进行格式化或清理。</li>
 
-      <li>If the EPUB still contains invalid HTML files after cleaning, Sigil will still load the file and report the errors that need to be fixed.</li>
+      <li>如果清理后 EPUB 中仍然存在无效的 HTML 文件，Sigil 依然会加载该文件，并报告需要修复的错误。</li>
     </ul>
 
-    <p>XHTML Files</p>
+    <p>XHTML 文件</p>
 
     <ul>
-      <li>The XHTML file and any linked files and stylesheets are imported if possible and placed into their folders.</li>
+      <li>若可以，Sigil 会导入 XHTML 文件及其链接的文件和样式表，并放入各自的文件夹。</li>
 
-      <li>The metadata in the XHTML file will be loaded into the metadata for the book.</li>
+      <li>XHTML 文件中的元数据会加载到图书的元数据中。</li>
 
-      <li>Depending on your preferences, Sigil will format or clean the files.</li>
+      <li>根据你的首选项设置，Sigil 会格式化或清理文件。</li>
 
-      <li>If the XHTML file is still invalid after cleaning, Sigil will report the error but may not load the file. You may have to fix the errors outside of Sigil.</li>
+      <li>如果清理后 XHTML 文件仍然无效，Sigil 会报告错误，但可能不会加载该文件。您可能需要在 Sigil 之外修复这些错误。</li>
     </ul>
   </div>
 
-  <p>Text Files</p>
+  <p>文本文件</p>
 
   <ul>
-    <li>The text file will be converted to XHTML. Paragraphs must be separated by blank lines to have them split into separate paragraphs.</li>
+    <li>文本文件将转换为 XHTML。段落之间须用空行分隔，才能拆分为独立的段落。</li>
   </ul>
 
-  <h4 class="sigil_not_in_toc">Add Files</h4>
+  <h4 class="sigil_not_in_toc">添加文件</h4>
 
-  <p>Add files to your EPUB by clicking the Add Existing Files button <img alt="Image of Add Files icon." src="../Images/document-add.png"/>, selecting the menu item <span class="menuitem">File=&gt;Add=&gt;Existing Files</span>, or right-clicking on a file in the Book Browser and choose <span class="menuitem">Add Existing Files</span>:</p>
+  <p>点击 <span class="menuitem">添加现有文件</span> 按钮<img class="toolbar-icon" alt="Image of Add Files icon." src="../Images/document-add.png"/>、选择菜单项 <span class="menuitem">文件=&gt;添加=&gt;现有文件</span>，或在书籍浏览器中右键单击某个文件并选择 <span class="menuitem">添加现有文件</span>，即可向 EPUB 添加文件：</p>
 
   <div class="indent">
-    <p>XHTML Files</p>
+    <p>XHTML 文件</p>
 
     <ul>
-      <li>Metadata is not loaded from the file (unlike when you use Open).</li>
+      <li>不会从文件中加载元数据（与使用“打开”时不同）。</li>
 
-      <li>Sigil will attempt to load files that are referenced.</li>
+      <li>Sigil 会尝试加载引用的文件。</li>
 
-      <li>Files will be placed into their appropriate folder.</li>
+      <li>文件将放入相应的文件夹。</li>
     </ul>
 
-    <p>Image Files</p>
+    <p>图像文件</p>
 
     <ul>
-      <li>Files will be placed into the the current images folder.</li>
+      <li>文件将放入当前的 Images（图像）文件夹。</li>
     </ul>
 
-    <p>Video Files</p>
+    <p>视频文件</p>
 
     <ul>
-      <li>Files will be placed into the current video folder.</li>
+      <li>文件将放入当前的 Video（视频）文件夹。</li>
     </ul>
 
-    <p>Audio Files</p>
+    <p>音频文件</p>
 
     <ul>
-      <li>Files will be placed into the current audio folder.</li>
+      <li>文件将放入当前的 Audio（音频）文件夹。</li>
     </ul>
 
-    <p>Stylesheet Files</p>
+    <p>样式表文件</p>
 
     <ul>
-      <li>Files will be placed into the current styles folder.</li>
+      <li>文件将放入当前的 Styles（样式）文件夹。</li>
     </ul>
 
-    <p>Font Files</p>
+    <p>字体文件</p>
 
     <ul>
-      <li>Files will be placed into the current fonts folder.</li>
+      <li>文件将放入当前的 Fonts（字体）文件夹。</li>
     </ul>
 
-    <p>Other Files</p>
+    <p>其他文件</p>
 
     <ul>
-      <li>All other files will be shown under the Book Browser’s Misc group as they are not usually used in an EPUB, although certain text files in the Misc group can be edited in Sigil.</li>
+      <li>所有其他文件都显示在书籍浏览器的 Misc（杂项）分组下，因为它们通常不在 EPUB 中使用；不过，Misc 分组中的某些文本文件仍可在 Sigil 中编辑。</li>
     </ul>
   </div>
 
-  <h4 class="sigil_not_in_toc">Add Blank Files</h4>
+  <h4 class="sigil_not_in_toc">添加空白文件</h4>
 
-  <p>You can also create new empty files in Sigil. Select the menu item <span class="menuitem">File=&gt;Add</span> and choose from Blank HTML File, Blank Stylesheet, Blank Javascript or Blank SVG Image (a special image format). You can also do this in the Book Browser using the right-click context menu, or even add a keyboard shortcut in Preferences.</p>
+  <p>您也可以在 Sigil 中创建新的空文件。选择菜单项 <span class="menuitem">文件=&gt;添加</span>，然后从空白 HTML 文件、空白样式表、空白 JavaScript或空白 SVG 图像（一种特殊图像格式）中选择。您也可以在书籍浏览器中通过右键上下文菜单执行此操作，甚至可以在首选项中为其添加键盘快捷键。</p>
 
-   <p>To use your own custom HTML file or CSS stylesheet, simply create your files then name them: “user-template2.xthml” and “user-template2.css” for EPUB2, and “user-template3.xhtml” and “user-template3.css for EPUB3. Then place the files in the Sigil Preferences folder (in Windows: <span class="menuitem">Edit=&gt;Preferences</span>, on Mac: <span class="menuitem">Sigil=&gt;Preferences</span>, then click the <span class="buttonbox">Open Preferences Location</span> button and copy the files into the folder). Now, whenever you add a Blank HTML File or Blank Stylesheet, your custom template will be inserted.</p>
+  <p>要使用您自己的自定义 HTML 文件或 CSS 样式表，只需创建相应文件并命名：EPUB2 使用 <span class="example">user-template2.xthml</span> 和 <span class="example">user-template2.css</span>，EPUB3 使用 <span class="example">user-template3.xhtml</span> 和 <span class="example">user-template3.css</span>。然后将这些文件放入 Sigil 的首选项文件夹（在 Windows 中：选择 <span class="menuitem">编辑=&gt;首选项</span>；在 Mac 上：选择 <span class="menuitem">Sigil=&gt;首选项</span>，然后点击 <span class="buttonbox">打开首选项文件夹</span> 按钮，将文件复制到该文件夹中）。此后，每当您添加空白 HTML 文件或空白样式表时，插入的都将是你的自定义模板。</p>
 
-  <h3 class="sigil_not_in_toc" id="saving_your_book">Saving Your EPUB</h3>
+  <h3 class="sigil_not_in_toc" id="saving_your_book">保存你的 EPUB</h3>
 
-  <p>Save your book by clicking the Save button <img alt="Image of Floopy Disk icon for Epub Save." src="../Images/document-save.png"/>, or selecting the menu item <span class="menuitem">File=&gt;Save</span> or its shortcut. You should always save your document before doing major edits in case you want to undo them.</p>
+  <p>点击 保存 按钮<img class="toolbar-icon" alt="Image of Floopy Disk icon for Epub Save." src="../Images/button-save.png"/>，或选择菜单项 <span class="menuitem">文件=&gt;保存</span> 或其快捷键即可保存图书。在进行重大编辑之前，您应当始终保存文档，以防需要撤销这些更改。</p>
 
-  <p>Your saved EPUB file contains all the files that make up your book – your text, images, stylesheets, embedded fonts, table of contents, metadata, etc.</p>
+  <p>您保存的 EPUB 文件包含构成图书的所有文件——文本、图像、样式表、嵌入字体、目录、元数据等。</p>
 
   <div class="tip">
-    <p class="tiptext">If you edit any text in your document, an asterisk ( <b>*</b> ) is added to the file’s name in the titlebar.</p>
+    <p class="tiptext">如果您编辑了文档中的任何文本，标题栏中的文件名后面会添加一个星号（<b>*</b>）。</p>
   </div>
 
-  <p>When you save your book Sigil will check it for certain errors and warn you if you need to fix anything. But you should always run one of the Validators available as plugins for Sigil, such as FlightCrew for EPUB2 and EpubCheck for EPUB2 and 3, to check for typical EPUB issues.</p>
+  <p>保存图书时，Sigil 会检查其中的某些错误，并在需要修复时向您发出警告。但您应当始终运行 Sigil 插件版验证器，例如用于 EPUB2 的 FlightCrew 以及用于 EPUB2 和 3 的 EPUBCheck，来检查典型的 EPUB 问题。</p>
 
   <div class="tip">
-    <p class="tiptext">Sigil will not always be able to save an EPUB that contains errors, so frequent saves will make it easier to identify if there are errors that you need to correct.</p>
+    <p class="tiptext">Sigil 并不总能保存包含错误的 EPUB，因此频繁保存可以让您更容易识别需要修正的错误。</p>
 
-    <p class="tiptext">Sigil will also clean your source code according to your preferences when saving the file.</p>
+    <p class="tiptext">保存文件时，Sigil 还会按照你的首选项设置清理源代码。</p>
   </div>
 
-  <h4 class="sigil_not_in_toc" id="save_a_copy">Save a Copy</h4>
+  <h4 class="sigil_not_in_toc" id="save_a_copy">保存副本</h4>
 
-  <p>You can select <span class="menuitem">File=&gt;Save A Copy</span> to save a copy of your EPUB to a different filename. The difference between Save or Save As is that the current book you are working on is not renamed. So you can use this feature to save your EPUB without changing the name of your book or the directory you save files to.</p>
+  <p>您可选择 <span class="menuitem">文件=&gt;保存副本</span>，将 EPUB 的副本保存为不同的文件名。它与 保存 或 另存为 的区别在于，当前正在处理的图书不会改名。因此，可用此功能保存 EPUB，而无需更改图书名称或保存目录。</p>
 
   <div class="tip">
-    <p class="tiptext">Use <span class="menuitem">File=&gt;Save A Copy</span> for quick backups.</p>
+    <p class="tiptext">使用 <span class="menuitem">文件=&gt;保存副本</span> 进行快速备份。</p>
   </div>
 
-  <h3 class="sigil_not_in_toc" id="saving_files">Saving Individual Files</h3>
+  <h3 class="sigil_not_in_toc" id="saving_files">保存单个文件</h3>
 
-  <p>You can also right-click on a file name in the Book Browser and select <span class="menuitem">Save As</span> from the context menu. You can then name and save the specific file to a directory on your computer. If you select more than one file, all files will be saved to your chosen directory. This is a quick way to share a specific file with someone without sharing the EPUB, or to create a template file you can use for other books.</p>
+  <p>您还可以在书籍浏览器中右键单击文件名，并从上下文菜单中选择 <span class="menuitem">另存为</span>。随后即可命名该特定文件，并将其保存到计算机上的某个目录中。如果选择了多个文件，所有文件都会保存到您所选的目录中。这是一种无需分享整个 EPUB 就能与他人分享特定文件的快捷方式，也可以用来创建供其他图书使用的模板文件。</p>
 </body>
 </html>

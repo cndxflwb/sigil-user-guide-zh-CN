@@ -1,855 +1,855 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>User Interface</title>
+  <title>用户界面</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="user_interface">User Interface</h2>
+  <h2 id="user_interface">用户界面</h2>
 
-  <p class="h2subheading">— Windows, Menus and Toolbars —</p>
+  <p class="h2subheading">— 窗口、菜单与工具栏 —</p>
 
   <div class="image">
     <img alt="Sigil main application image." src="../Images/ui_user-interface-default.png"/>
   </div>
 
-  <p>Sigil’s user interface consists of:</p>
+  <p>Sigil 的用户界面由以下部分组成：</p>
 
   <ul>
-    <li><span class="listheading">Windows:</span> Displays for information like Code View, Book Browser, Preview and Table of Contents.</li>
+    <li><span class="listheading">窗口：</span>用于显示信息的区域，如代码视图、书籍浏览器、预览和目录。</li>
 
-    <li><span class="listheading">Main Menu:</span> Most available commands, like <span class="menuitem">File=&gt;Open</span>, can be accessed from the main menu bar at the top of the user interface.</li>
+    <li><span class="listheading">主菜单：</span>主菜单栏位于界面顶部，大多数命令如 <span class="menuitem">文件=&gt;打开</span> 都可在此访问。</li>
 
-    <li><span class="listheading">Keyboard Shortcuts:</span> User-definable shortcuts for all menu items, like <span class="shortcut">Ctrl+S</span> to save your file.</li>
+    <li><span class="listheading">键盘快捷键：</span>所有菜单项的快捷键都可自定义，例如用 <span class="shortcut">Ctrl+S</span> 保存文件。</li>
 
-    <li><span class="listheading">Toolbar Buttons:</span> Movable buttons that provide quick access to many menu items.</li>
+    <li><span class="listheading">工具栏按钮：</span>可移动的按钮，用于快速访问许多菜单项。</li>
 
-    <li><span class="listheading">Context Menus:</span> Commands shown when you right-click on something, like a filename or window.</li>
+    <li><span class="listheading">上下文菜单：</span>右键点击文件名或窗口等对象时显示的命令。</li>
   </ul>
 
   <div class="tip">
-    <p class="tiptext">The screenshots in the User Guide may be slightly different from what you see on your computer, depending on your operating system.</p>
+    <p class="tiptext">用户指南中的截图可能与你在计算机上看到的略有不同，具体效果取决于操作系统。</p>
   </div>
 
-  <h3 class="sigil_not_in_toc">Windows</h3>
+  <h3 class="sigil_not_in_toc">窗口</h3>
 
-  <p>Sigil uses various windows in the main interface to present information: a window to show the files in the book (Book Browser), to edit your book (Code View), to see a live preview of your book (Preview), to view your table of contents, to view validation results, etc.</p>
+  <p>Sigil 主界面通过多个窗口呈现信息：书籍浏览器显示书中文件，代码视图用于编辑书籍，预览窗口显示实时预览，此外还有目录窗口、验证结果窗口等。</p>
 
-  <p>You can select which windows appear on your screen by using the <span class="menuitem">View</span> menu on the menubar:</p>
+  <p>可通过菜单栏上的 <span class="menuitem">视图</span> 菜单，选择屏幕上显示哪些窗口：</p>
 
-   <div class="image">
+  <div class="image">
     <img alt="Image of Sigil's View menu." style="width:35%" src="../Images/ui_View.png"/>
   </div>
 
-  <p>Certain windows can also be moved. To move a window, click on its header bar and drag it to its new location. For instance you can stack the windows. Here’s the Table of Contents placed below the Book Browser:</p>
+  <p>部分窗口还可以移动。要移动窗口，请点住标题栏并拖到新位置。例如可以把窗口堆叠起来。下图是放在书籍浏览器下方的目录：</p>
 
   <div class="image">
     <img alt="Image of the Book Browser window." src="../Images/ui_toc-stacked.png"/>
   </div>
 
-  <p>You can also create tabs for the Table of Contents and the Book Browser (and other windows) if you drag and drop it directly on the Book Browser window instead of just above or below it:</p>
+  <p>如果将目录、书籍浏览器等窗口直接拖放到书籍浏览器窗口上，而不是其正上方或正下方，即可为它们创建选项卡：</p>
 
   <div class="image">
     <img alt="Image of Book Browser window tabbed with Table Of Contents window." src="../Images/ui_toc-tabbed.png"/>
   </div>
 
-  <p>You can even undock windows (separate them from the main Sigil window so that they float on their own). To undock a window, double-click on the window’s header bar. In some OS’s you can also undock and re-dock the windows by clicking on the little button in the top left or right corner of the window.</p>
-  
-  <p>Here’s an example of the Preview window at the top, Code View at the bottom, and the Book Browser and Table of Contents undocked and floating on the left:</p>
+  <p>还可以分离窗口，使其脱离 Sigil 主窗口、独立浮动。要分离窗口，双击窗口标题栏即可。在某些操作系统中，也可点击窗口左上角或右上角的小按钮，分离或重新停靠窗口。</p>
+
+  <p>下面的示例中，预览窗口在顶部，代码视图在底部，书籍浏览器和目录已分离并浮在左侧：</p>
 
   <div class="image">
     <img alt="Image showing a possible customized layout for all Sigil's main windows." src="../Images/ui_rearranged-and-undocked.png"/>
   </div>
 
-  <h3 class="sigil_not_in_toc" id="main_menu">Main Menu</h3>
+  <h3 class="sigil_not_in_toc" id="main_menu">主菜单</h3>
 
-  <p>This is the list of menu items that is always at the top of Sigil’s window or your screen:</p>
+  <p>以下是始终位于 Sigil 窗口或屏幕顶部的菜单项列表：</p>
 
   <div class="image">
     <img alt="Image showing the main menu bar." src="../Images/ui_main-menu.png"/>
   </div>
 
-  <p class="heading">File</p>
+  <p class="heading">文件</p>
 
   <ul>
-    <li class="first"><span class="listheading">New:</span> Create a new, empty ePub2 or ePub3.</li>
+    <li class="first"><span class="listheading">新建：</span>创建空白的 EPUB2 或 EPUB3。</li>
 
-    <li><span class="listheading">Open:</span> Open an EPUB, HTML file, or text file from your computer.</li>
+    <li><span class="listheading">打开：</span>从计算机打开 EPUB、HTML 文件或文本文件。</li>
 
-    <li class="first"><span class="listheading">Add:</span> 
+    <li class="first"><span class="listheading">Add:</span>|→<span class="listheading">添加：</span>←| 
 
     <ul>
-      <li><span class="listheading">Existing Files:</span> Add HTML files, images, etc. from your computer.</li>
+      <li><span class="listheading">现有文件：</span>从计算机添加 HTML 文件、图像等。</li>
 
-      <li class="first"><span class="listheading">Blank HTML File:</span> Create a new HTML file in the book.</li>
+      <li class="first"><span class="listheading">空白 HTML 文件：</span>在书中新建 HTML 文件。</li>
 
-      <li><span class="listheading">Blank Stylesheet:</span> Create a new CSS Stylesheet in the book.</li>
+      <li><span class="listheading">空白样式表：</span>在书中新建 CSS 样式表。</li>
 
-      <li><span class="listheading">Blank Javascript:</span> Create a new empty javascript (js) file in the book.</li>
+      <li><span class="listheading">空白 javascript：</span>在书中新建空白的 javascript（js）文件。</li>
 
-      <li><span class="listheading">Blank SVG Image File:</span> Create a new SVG image file in the book.</li>
+      <li><span class="listheading">空白 SVG 图像文件：</span>在书中新建 SVG 图像文件。</li>
     </ul></li>
 
-    <li class="first"><span class="listheading">Save:</span> Save your file (use often!).</li>
+    <li class="first"><span class="listheading">保存：</span>保存文件（建议经常保存！）。</li>
 
-    <li><span class="listheading">Save As:</span> Save your file under a different name.</li>
+    <li><span class="listheading">另存为：</span>以其他名称保存文件。</li>
 
-    <li><span class="listheading">Save A Copy:</span> Save a copy of your file under a different name without renaming your current file (useful for backups).</li>
+    <li><span class="listheading">保存副本：</span>以其他名称保存文件副本，当前文件不改名（适合备份）。</li>
 
-    <li class="first"><span class="listheading">Print Preview:</span> Preview the printing of the current tab.</li>
+    <li class="first"><span class="listheading">打印预览：</span>预览当前选项卡的打印效果。</li>
 
-    <li><span class="listheading">Print:</span> Print the current tab.</li>
+    <li><span class="listheading">打印：</span>打印当前选项卡。</li>
 
-    <li class="first">List of recently opened files.</li>
+    <li class="first">最近打开的文件列表。</li>
 
-    <li class="first"><span class="listheading">Quit:</span> Exit Sigil, asking if you want to save your file first if it hasn’t been saved. (On Mac, Quit is under the <span class="menuitem">Sigil</span> menu.)</li>
+    <li class="first"><span class="listheading">退出：</span>退出 Sigil。若文件尚未保存，会先提示是否保存。（在 Mac 上，“退出”在 <span class="menuitem">Sigil</span> 菜单下。）</li>
   </ul>
 
-  <p class="heading">Edit</p>
+  <p class="heading">编辑</p>
 
   <ul>
-    <li><span class="listheading">Undo:</span> Undoes the last action, restoring text that has just been deleted, inserted or replaced.</li>
+    <li><span class="listheading">撤销：</span>撤销上一步操作，恢复刚删除、插入或替换的文本。</li>
 
-    <li><span class="listheading">Redo:</span> Reverse the last Undo.</li>
+    <li><span class="listheading">重做：</span>反转上一次撤销。</li>
 
-    <li class="first"><span class="listheading">Cut:</span> Remove the selected text and store it to the Clipboard for paste.</li>
+    <li class="first"><span class="listheading">剪切：</span>删除选中的文本并将其存入剪贴板以便粘贴。</li>
 
-    <li><span class="listheading">Copy:</span> Copy the selected text and store it to the Clipboard for paste.</li>
+    <li><span class="listheading">复制：</span>复制选中的文本并将其存入剪贴板以便粘贴。</li>
 
-    <li><span class="listheading">Paste:</span> Insert text previously cut or copied to the Clipboard into your document.</li>
+    <li><span class="listheading">粘贴：</span>将之前剪切或复制到剪贴板的文本插入文档。</li>
 
-    <li><span class="listheading">Edit/Paste from Clipboard History:</span> View and edit a list of text snippets cut or copied to the Clipboard, and select and paste (insert) a snippet into your document. (To set the number of snippets to save, go to Preferences.)</li>
+    <li><span class="listheading">编辑/从剪贴板历史粘贴：</span>查看并编辑已剪切或复制到剪贴板的文本片段列表，选中片段后粘贴（插入）到文档。保存的片段数量可在首选项中设置。</li>
 
-    <li><span class="listheading">Delete Line:</span> Delete the current line in Code View.</li>
+    <li><span class="listheading">删除行：</span>删除代码视图中的当前行。</li>
 
-    <li class="first"><span class="listheading">Change Case:</span> 
+    <li class="first"><span class="listheading">Change Case:</span>|→<span class="listheading">更改大小写：</span>←| 
 
     <ul>
-      <li><span class="listheading">Lowercase:</span> Change the selected text to lowercase.</li>
+      <li><span class="listheading">全部小写：</span>将选中的文本改为小写。</li>
 
-      <li><span class="listheading">Uppercase:</span> Change the selected text to uppercase.</li>
+      <li><span class="listheading">全部大写：</span>将选中的文本改为大写。</li>
 
-      <li><span class="listheading">Titlecase:</span> Change the first letter of each selected word to uppercase.</li>
+      <li><span class="listheading">每个单词首字母大写：</span>将选中的每个单词的首字母改为大写。</li>
 
-      <li><span class="listheading">Capitalize:</span> Change the first letter of the selection to uppercase.</li>
+      <li><span class="listheading">句首字母大写：</span>将选中内容的首字母改为大写。</li>
     </ul></li>
 
-    <li class="first"><span class="listheading">Split at Cursor:</span> Split the current file into two files immediately.</li>
+    <li class="first"><span class="listheading">在光标处拆分：</span>立即将当前文件拆分为两个文件。</li>
 
-    <li><span class="listheading">Split at Markers:</span> Split all files at previously inserted split markers.</li>
+    <li><span class="listheading">在标记处拆分：</span>在先前插入的所有拆分标记处拆分文件。</li>
 
-    <li class="first"><span class="listheading">Preferences:</span> Open the Preferences window to change options. (On Mac, Preferences is under the <span class="menuitem">Sigil</span> menu).</li>
+    <li class="first"><span class="listheading">首选项：</span>打开首选项窗口以更改选项。（在 Mac 上，“首选项”在 <span class="menuitem">Sigil</span> 菜单下。）</li>
   </ul>
 
-  <p class="heading">Insert</p>
+  <p class="heading">插入</p>
 
   <ul>
-    <li><span class="listheading">Split Marker:</span> Insert a marker to use for Split at Markers (see <span class="menuitem">Edit</span> menu).</li>
+    <li><span class="listheading">拆分标记：</span>插入供“在标记处拆分”使用的标记（见 <span class="menuitem">编辑</span> 菜单）。</li>
 
-    <li class="first"><span class="listheading">File:</span> Insert an image, audio, or video file from your book or your computer.</li>
+    <li class="first"><span class="listheading">文件：</span>从书或计算机插入图像、音频或视频文件。</li>
 
-    <li><span class="listheading">Special Character:</span> Insert special characters from a chart.</li>
+    <li><span class="listheading">特殊字符：</span>从字符表中插入特殊字符。</li>
 
-    <li class="first"><span class="listheading">ID:</span> Insert an anchor name that can be used with links.</li>
+    <li class="first"><span class="listheading">ID：</span>插入可用于链接的锚点名称。</li>
 
-    <li class="first"><span class="listheading">Aria Clip:</span> Insert Aria specific suggested clips to improve Accessibility (EPUB3 Only).</li>
+    <li class="first"><span class="listheading">Aria 片段：</span>插入 Aria 专用的建议剪贴板，以提升无障碍支持（仅限 EPUB3）。</li>
 
-    <li class="first"><span class="listheading">Role:</span> Insert a semantic epub:type and corresponding Aria role to improve semantic meaning for Accessibility (EPUB3 Only).</li>
+    <li class="first"><span class="listheading">角色：</span>插入语义 epub:type 及对应的 Aria role，增强无障碍语义（仅限 EPUB3）。</li>
 
-    <li><span class="listheading">Link:</span> Insert a link to something in your document or anywhere else.</li>
+    <li><span class="listheading">链接：</span>插入指向文档中某处或其他位置的链接。</li>
 
-    <li class="first"><span class="listheading">Closing Tag:</span> Insert a tag to close the last unclosed tag.</li>
+    <li class="first"><span class="listheading">结束标签：</span>插入标签，关闭最后一个未关闭的标签。</li>
 
-    <li class="first"><span class="listheading">Clip:</span> Select a clip to insert from the first Clips bar.</li>
+    <li class="first"><span class="listheading">剪贴板：</span>从第一个剪贴板选择要插入的剪贴。</li>
 
-    <li class="first"><span class="listheading">Clip2:</span> Select a clip to insert from the second Clips bar.</li>
+    <li class="first"><span class="listheading">剪贴板2：</span>从第二个剪切板栏选择要插入的剪贴。</li>
   </ul>
 
-  <p class="heading">Format</p>
+  <p class="heading">格式</p>
 
   <ul>
-    <li class="first"><span class="listheading">Heading:</span> 
+    <li class="first"><span class="listheading">Heading:</span>|→<span class="listheading">标题：</span>←| 
 
     <ul>
-      <li><span class="listheading">Heading 1:</span> Format the paragraph as a level 1 heading.</li>
+      <li><span class="listheading">标题 1：</span>将段落格式化为 1 级标题。</li>
 
-      <li><span class="listheading">Heading 2:</span> Format the paragraph as a level 2 heading.</li>
+      <li><span class="listheading">标题 2：</span>将段落格式化为 2 级标题。</li>
 
-      <li><span class="listheading">Heading 3:</span> Format the paragraph as a level 3 heading.</li>
+      <li><span class="listheading">标题 3：</span>将段落格式化为 3 级标题。</li>
 
-      <li><span class="listheading">Heading 4:</span> Format the paragraph as a level 4 heading.</li>
+      <li><span class="listheading">标题 4：</span>将段落格式化为 4 级标题。</li>
 
-      <li><span class="listheading">Heading 5:</span> Format the paragraph as a level 5 heading.</li>
+      <li><span class="listheading">标题 5：</span>将段落格式化为 5 级标题。</li>
 
-      <li><span class="listheading">Heading 6:</span> Format the paragraph as a level 6 heading.</li>
+      <li><span class="listheading">标题 6：</span>将段落格式化为 6 级标题。</li>
 
-      <li><span class="listheading">Normal:</span> Format the paragraph as normal text.</li>
+      <li><span class="listheading">正文：</span>将段落格式化为普通文本。</li>
 
-      <li class="listheading"><span class="listheading">Preserve existing attributes:</span> Keep attributes like class when formatting.</li>
+      <li class="listheading"><span class="listheading">保留现有属性：</span>格式化时保留 class 等属性。</li>
     </ul></li>
 
-    <li class="first"><span class="listheading">Bold:</span> Make text bold.</li>
+    <li class="first"><span class="listheading">粗体：</span>将文本设为粗体。</li>
 
-    <li><span class="listheading">Italic:</span> Make text italic.</li>
+    <li><span class="listheading">斜体：</span>将文本设为斜体。</li>
 
-    <li><span class="listheading">Underline:</span> Make text underlined.</li>
+    <li><span class="listheading">下划线：</span>为文本添加下划线。</li>
 
-    <li><span class="listheading">Strikethrough:</span> Make text striked-through.</li>
+    <li><span class="listheading">删除线：</span>为文本添加删除线。</li>
 
-    <li><span class="listheading">Subscript:</span> Make text subscript.</li>
+    <li><span class="listheading">下标：</span>将文本设为下标。</li>
 
-    <li><span class="listheading">Superscript:</span> Make text superscript.</li>
+    <li><span class="listheading">上标：</span>将文本设为上标。</li>
 
-    <li class="first"><span class="listheading">Align Left:</span> Align text to the left margin (use Remove Formatting to reset to default).</li>
+    <li class="first"><span class="listheading">左对齐：</span>将文本对齐到左边距（使用“移除格式”恢复默认）。</li>
 
-    <li><span class="listheading">Center:</span> Align text centered on the screen.</li>
+    <li><span class="listheading">居中：</span>将文本在屏幕上居中对齐。</li>
 
-    <li><span class="listheading">Align Right:</span> Align text to the right margin.</li>
+    <li><span class="listheading">右对齐：</span>将文本对齐到右边距。</li>
 
-    <li><span class="listheading">Justify:</span> Align text to left and right margins.</li>
+    <li><span class="listheading">两端对齐：</span>将文本同时对齐到左右边距。</li>
 
-    <li class="first"><span class="listheading">Bulleted List:</span> Change text into a list of items preceded by bullets.</li>
+    <li class="first"><span class="listheading">项目符号列表：</span>将文本转换为带项目符号的列表。</li>
 
-    <li><span class="listheading">Numbered List:</span> Change text into a list of items preceded by numbers.</li>
+    <li><span class="listheading">编号列表：</span>将文本转换为带编号的列表。</li>
 
-    <li class="first"><span class="listheading">Decrease Indent:</span> Decrease the indentation of the text.</li>
+    <li class="first"><span class="listheading">减少缩进：</span>减少文本的缩进。</li>
 
-    <li><span class="listheading">Increase Indent:</span> Increase the indentation the text.</li>
+    <li><span class="listheading">增加缩进：</span>增加文本的缩进。</li>
 
-    <li class="first"><span class="listheading">Text Direction LTR:</span> Set the direction of text from left to right.</li>
+    <li class="first"><span class="listheading">文本方向—左到右：</span>将文本方向设置为从左到右。</li>
 
-    <li><span class="listheading">Text Direction RTL:</span> Set the direction of text from right to left.</li>
+    <li><span class="listheading">文本方向—右到左：</span>将文本方向设置为从右到左。</li>
 
-    <li><span class="listheading">Text Direction Default:</span> Set the direction of the text to the default.</li>
+    <li><span class="listheading">文本方向—默认：</span>将文本方向设置为默认。</li>
 
-    <li class="first"><span class="listheading">Remove Formatting:</span> Delete tags within selected text.</li>
-    
-    <li><span class="listheading">Remove Tag Pair:</span> Remove open and close tag (place the cursor inside the tag to select it).</li>
+    <li class="first"><span class="listheading">移除格式：</span>删除选中文本内的标签。</li>
+
+    <li><span class="listheading">移除标签对：</span>移除成对的开始和结束标签（需将光标置于标签内部以选中）。</li>
   </ul>
-  <div class="tip">
-    <p class="tip">Users can shift double-click in a tag to select just that tag’s contents. Or use alt double-click in a tag to select that tag and its contents. This can be useful for using <b>Remove Formatting</b></p>
-  </div>
-  <p class="heading">Search</p>
-
-  <ul>
-    <li><span class="listheading">Find &amp; Replace:</span> Open the Find &amp; Replace window.</li>
-
-    <li class="first"><span class="listheading">Find Next:</span> Search forward for the next matching text.</li>
-
-    <li><span class="listheading">Find Previous:</span> Search backward for the previous matching text.</li>
-
-    <li class="first"><span class="listheading">Replace:</span> Replace matched text.</li>
-
-    <li><span class="listheading">Replace/Find Next:</span> Replace matched text and search forward for the next matching text.</li>
-
-    <li><span class="listheading">Replace/Find Previous:</span> Replace matched text and search backward for the previous matching text.</li>
-
-    <li><span class="listheading">Replace All:</span> Replace every instance of matching text according to the Find &amp; Replace settings.</li>
-
-    <li class="first"><span class="listheading">Count All:</span> Count every instance of matching text according to the Find &amp; Replace settings.</li>
-
-    <li class="first"><span class="listheading">Dry Run Replace All:</span> Perform a dry-run of the results from a Replace All showing every instance of matching text and its replacement according to the Find &amp; Replace settings. No actual replacements are made. </li>
-
-    <li class="first"><span class="listheading">Filter Replacements:</span> Create a table showing all matching text and potential replacements according to the Find &amp; Replace settings. The user can then delete any undesired replacements before applying any changes.</li>
-
-    <li class="first"><span class="listheading">Current File:</span> 
-
-		<ul>
-		  <li><span class="listheading">Find Next In File:</span> Search only in the current file regardless of Find &amp; Replace mode.</li>
-
-		  <li class="first"><span class="listheading">Replace Next In File:</span> Replace then Find Next only in the current file regardless of Find &amp; Replace mode.</li>
-
-		  <li><span class="listheading">Replace All In File:</span> Replace All only in the current file regardless of Find &amp; Replace mode.</li>
-
-		  <li class="first"><span class="listheading">Count All In File:</span> Count All only in the current file regardless of Find &amp; Replace mode.</li>
-		</ul></li>
-
-    <li class="first"><span class="listheading">Bookmark Location:</span> Bookmark your current location in Code View.</li>
-
-    <li><span class="listheading">Go To Link Or Style:</span> Go to the selected link, or go to the CSS style for this tag.</li>
-
-    <li><span class="listheading">Back:</span> Go back to where you set a bookmark, clicked a link or used Go to Link or Style.</li>
-
-    <li class="first"><span class="listheading">Mark Selected Text:</span> Mark the selected text for use with Find &amp; Replace, which will limit the search to the selected text only.</li>
-
-    <li><span class="listheading">Go To Line:</span> Jump to a specific line number in Code View.</li>
-  </ul>
-
-  <p class="heading">Tools</p>
-
-  <ul>
-    <li><span class="listheading">Add Cover:</span> Select an image to make it the cover.</li>
-
-    <li><span class="listheading">Metadata Editor:</span> Open the Metadata Editor to edit book details.</li>
-
-    <li class="first"><span class="listheading">Table Of Contents:</span> 
-
-		<ul>
-		  <li><span class="listheading">Generate Table Of Contents:</span> Use predefined headings to generate a TOC.</li>
-
-		  <li><span class="listheading">Edit Table Of Contents:</span> Edit the TOC manually.</li>
-
-		  <li><span class="listheading">Create HTML Table Of Contents:</span> Create an HTML file version of the TOC.</li>
-		</ul></li>
-
-	<li class="first"><p><span class="listheading">Restructure Epub to Sigil Norm:</span> Starting with Sigil 1.0.0, EPUBs loaded into Sigil are kept “as-is”; no files or folders are moved or renamed. This is a departure from Sigil 0.9.18 and earlier, which automatically restructured each EPUB into a standard Sigil form (one OEBPS folder, specific names for the OPF and NCX, only one folder for text, images, etc.). Users who prefer the standard Sigil form may use Restructure Epub to Sigil Norm to manually restructure their EPUB to the old Sigil standard.</p></li>
-
-    <li class="first"><p><span class="listheading">Rebase OPF Manifest IDs on Current Filenames:</span> Older versions of Sigil used to base OPF Manifest IDs on that file's name in order to help create uniqueness. Unfortunately when these files are later renamed, the Manifest ID ends up being based on its prior filename.  This can cause confusion when trying to hand edit the OPF. This tool will rebase the entire set of Manifest IDs on their current filenames while properly maintaining and updating any OPF references to those IDs. This includes properly updating the spine, cover metadata, smil metatdata, other metadata refines, media-overlays, fallback ids, and spine attributes.</p></li>
-	
-	 <li><span class="listheading">Create a Custom Empty Epub:</span> Design a custom EPUB layout to use when creating new EPUBs.</li>
-
-    <li class="first"><span class="listheading">Index:</span> 
-
-		<ul>
-		  <li><span class="listheading">Index Editor:</span> Manage your index entries.</li>
-
-		  <li class="first"><span class="listheading">Add To Index Editor:</span> Add the selected text to the Index Editor list.</li>
-
-		  <li><span class="listheading">Mark For Index:</span> Add the selected text to the index when it is created.</li>
-
-		  <li class="first"><span class="listheading">Create Index:</span> Create an HTML file containing the index list.</li>
-		</ul></li>
-
-    <li class="first"><span class="listheading">Spellcheck:</span> 
-
-		<ul>
-		  <li><span class="listheading">Spellcheck:</span> Open dialog to spellcheck all words at once.</li>
-
-		  <li class="first"><span class="listheading">Highlight Misspelled Words:</span> Toggle highlighting of misspelled words in Code View.</li>
-
-		  <li><span class="listheading">Next Misspelled Word:</span> Find the next misspelled word in Code View.</li>
-
-		  <li class="first"><span class="listheading">Add Misspelled Word:</span> Add the misspelled word to the default dictionary.</li>
-
-		  <li><span class="listheading">Ignore Misspelled Word:</span> Ignore the misspelled word temporarily while Sigil is running. Ignored words are also cleared when you open a new book.</li>
-
-		  <li class="first"><span class="listheading">Clear Ignored Words:</span> Clear the list of temporarily ignored words.</li>
-		</ul></li>
-
-    <li class="first"><span class="listheading">Reformat HTML:</span> 
-
-		<ul>
-		  <li><span class="listheading">Mend and Prettify all HTML Files:</span> Fix HTML syntax errors in all HTML files and pretty-print them.</li>
-
-		  <li><span class="listheading">Mend all HTML Files:</span> Fix HTML syntax errors in all HTML files.</li>
-		</ul></li>
-
-    <li class="first"><span class="listheading">Epub3 Tools (EPUB3 Only):</span> 
-
-		<ul>
-		  <li><span class="listheading">Update Manifest Properties:</span> Add or update mandatory manifest properties.</li>
-
-		  <li><span class="listheading">Generate NCX/Guide for epub2 e-readers:</span> Populate the NCX file with TOC entries from the NAV file (in EPUB3s, the NCX isn’t updated automatically since the NCX isn’t required; use this tool to manually update the NCX). Also populate the Guide with Landmarks entries from the NAV file.</li>
-		  
-		  <li><span class="listheading">Remove the NCX and Guide:</span> Remove the NCX and Guide, both of which are not required in EPUB3, but are sometimes included for backward compatability with EPUB2 reading systems.</li>
-		</ul></li>
-		
-	<li class="first"><span class="listheading">Well-Formed Check EPUB:</span> A simple validation tool to check if your EPUB is well-formed.</li>
-
-    <li><span class="listheading">Validate Stylesheets With W3C:</span> Check if your CSS files are valid using the W3C web service.</li>
-
-    <li><span class="listheading">Reports:</span> Display various details about HTML files, images, CSS styles, etc.</li>
-
-    <li class="first"><span class="listheading">Clip Editor:</span> Create and edit snippets of text and styles, and paste them into your document.</li>
-
-    <li><span class="listheading">Saved Searches:</span> Create, edit, and run saved Find &amp; Replace searches.</li>
-
-    <li class="first"><span class="listheading">Delete Unused Media Files:</span> Remove unlinked image, video, and audio files from your book.</li>
-
-    <li><span class="listheading">Delete Unused Stylesheet Selectors:</span> Remove unreferenced selectors from CSS files.</li>
-  </ul>
-
-  <p class="heading">View</p>
-
-  <ul>
-    <li><span class="listheading">Toolbars</span> 
-
-		<ul>
-		  <li><span class="listheading">New:</span> Show or hide the buttons to create New ePub2 and New ePub3.</li>
-
-		  <li><span class="listheading">File:</span> Show or hide the Open and Save buttons.</li>
-		  
-		  <li><span class="listheading">Add Existing:</span> Show or hide the Add Existing Files button.</li>
-		  
-		  <li><span class="listheading">Checkpoints:</span> Show or hide the checkpoint buttons: Create Checkpoint for Epub, Create Epub from previous Checkpoint, Compare Epub against Checkpoint, Manage Checkpoint Repositories.</li>
-
-		  <li><span class="listheading">Undo/Redo:</span> Show or hide the Undo and Redo buttons.</li>
-		  
-		  <li><span class="listheading">Edit:</span> Show or hide the editing buttons: Cut, Copy, Paste, Remove Open and Close Tag Pair.</li>
-		  
-		  <li><span class="listheading">External Editor:</span> Show or hide the Launch External Xhtml Editor button. (To set your preferred External Xhtml Editor, go to <span class="menuitem">Preferences=&gt;General Settings</span>.)</li>
-		  
-		  <li><span class="listheading">Find:</span> Show or hide the Find &amp; Replace and Saved Searches buttons.</li>
-
-		  <li><span class="listheading">Insert:</span> Show or hide buttons to: Split at Cursor, Insert File, Insert Special Character, Insert ID, Insert Aria Clip, Insert Role, Insert Link.</li>
-
-		  <li><span class="listheading">Back:</span> Show or hide the Back button.</li>
-
-		  <li><span class="listheading">Donate:</span> Show or hide the Donate button.</li>
-
-		  <li><span class="listheading">Tools:</span> Show or hide the tool buttons: Metadata Editor, Generate Table of Contents, Edit Table of Contents, Spellcheck.</li>
-		  
-		  <li><span class="listheading">Plugins Set 1:</span> Show or hide 5 Plugin buttons. (To choose which plugins appear here, go to <span class="menuitem">Preferences=&gt;Plugins=&gt;Shortcuts</span>).</li>
-
-		  <li><span class="listheading">Plugins Set 2:</span> Show or hide 5 additional Plugin buttons. (To choose which plugins appear here, go to <span class="menuitem">Preferences=&gt;Plugins=&gt;Shortcuts</span>).</li>
-		  
-		  <li><span class="listheading">Heading:</span> Show or hide the heading buttons: h1, h2, etc.</li>
-
-		  <li><span class="listheading">Format:</span> Show or hide the formatting buttons: Bold, Italic, Underline, Strikethrough, Subscript, Superscript.</li>
-
-		  <li><span class="listheading">Align:</span> Show or hide the text alignment buttons: Align Left, Center, Align Right, Justify.</li>
-
-		  <li><span class="listheading">List:</span> Show or hide the list buttons: Bullets and Numbering.</li>
-
-		  <li><span class="listheading">Indent:</span> Show or hide the Decrease Indent and Increase Indent buttons.</li>
-
-		  <li><span class="listheading">Change Case:</span> Show or hide the change case buttons: Lowercase, Uppercase, Titlecase, Capitalize.</li>
-
-		  <li><span class="listheading">Text Direction:</span> Show or hide the text direction buttons: Left-to-Right, Right-to-Left, Default.</li>
-
-		  <li><span class="listheading">Clip Bar:</span> Show or hide the clip bar. (To create and manage clips, go to <span class="menuitem">Tools=&gt;Clip Editor</span>.)</li>
-		  
-		<li><span class="listheading">Clip Bar2:</span> Show or hide a second clip bar. (To create and manage clips, go to <span class="menuitem">Tools=&gt;Clip Editor</span>.)</li>
-		
-		<li><span class="listheading">Index:</span> Show or hide the indexing buttons: Index Editor, Add the selected text to the Index Editor, Mark the selected text for inclusion in the Index, Generate a new Index HTML file.</li>
-		</ul></li>
-
-    <li class="first"><span class="listheading">Zoom In:</span> Increase the size of text and images in Code View or Preview (whichever window is selected).</li>
-
-    <li><span class="listheading">Zoom Out:</span> Decrease the size of text and images in Code View or Preview (whichever window is selected).</li>
-
-    <li><span class="listheading">Zoom Reset:</span> Reset the window zoom to 100%.</li>
-
-    <li class="first"><span class="listheading">Book Browser:</span> Show or hide the list of files in the EPUB.</li>
-
-    <li><span class="listheading">Clips:</span> Show or hide a selectable list of all text clippings.</li>
-
-    <li><span class="listheading">Preview:</span> Show or hide a live preview window.</li>
-
-    <li><span class="listheading">Table of Contents:</span> Show or hide a clickable TOC window.</li>
-
-    <li><span class="listheading">Validation Results:</span> Show or hide the validation results window.</li>
-
-    <li><span class="listheading">Focus on BookBrowser:</span> move keyboard focus to the BookBrowser, unhiding it if needed.</li>
-
-    <li><span class="listheading">Focus on CodeView:</span> move keyboard focus to Code View.</li>
-
-    <li><span class="listheading">Focus on Preview:</span> Move keyboard focus to Preview, unhiding it if needed.</li>
-
-    <li><span class="listheading">Focus on Table of Contents:</span>  Move keyboard focus to the Table of Contents Window, unhiding it if needed.</li>
-
-    <li><span class="listheading">Focus on Clips Window:</span> Move keyboard focus to the Clips Window, unhiding it if needed.</li>
-
-  </ul>
-
-  <p class="heading">Window</p>
-
-  <ul>
-    <li><span class="listheading">Next Tab:</span> Change view to the next tab in Code View.</li>
-
-    <li><span class="listheading">Previous Tab:</span> Change view to the preceding tab in Code View.</li>
-
-    <li><span class="listheading">Close Tab:</span> Close the current tab in Code View.</li>
-
-    <li><span class="listheading">Close Other Tabs:</span> Close all tabs other than the current tab in Code View.</li>
-
-    <li class="first"><span class="listheading">Previous File:</span> Open the file above the selected file in the Book Browser.</li>
-
-    <li><span class="listheading">Next File:</span> Open the file below the selected file in the Book Browser.</li>
-  </ul>
-
-  <p class="heading">Plugins</p>
-
-  <ul>
-    <li><span class="listheading">Manage Plugins:</span> Add or remove plugins, and select which plugins appear in the toolbar.</li>
-  </ul>
-
-  <p class="heading">Checkpoints</p>
-
-  <ul>
-    <li><span class="listheading">Create Checkpoint for Epub:</span> Save the current version of the EPUB as a checkpoint (stored via a local git repository).</li>
-    
-    <li><span class="listheading">Create Epub from previous Checkpoint:</span> Create a new EPUB from an earlier checkpoint version.</li>
-
-    <li><span class="listheading">Compare Epub against Checkpoint:</span> Compare the current version of the EPUB with an earlier checkpoint version.</li>
-
-    <li><span class="listheading">Manage Checkpoint Repositories:</span> View a list of all checkpoints, view logs, and remove selected checkpoint repositories.</li>
-
-    <li><span class="listheading">Edit Checkpoint Descriptions:</span> Create and attach a short description for each Checkpoint made.</li>
-
-    <li><span class="listheading">Show Log of Checkpoints:</span> View a list of all checkpoints along with log descriptions.</li>
-
-  </ul>
-
-  <p class="heading">Help</p>
-
-  <ul>
-    <li><span class="listheading">User Guide:</span> Official documentation for Sigil.</li>
-
-    <li class="first"><span class="listheading">Donate:</span> How to donate to ongoing development.</li>
-
-    <li><span class="listheading">Sigil Website:</span> Announcements and updates about development.</li>
-  </ul>
-
-  <h3 class="sigil_not_in_toc" id="keyboard_shortcuts">Keyboard Shortcuts</h3>
-
-  <p>Keyboard shortcuts (e.g. <span class="shortcut">Ctrl+S</span> for Save) are shown next to menu entries and in <span class="menuitem">Edit=&gt;Preferences: Keyboard Shortcuts</span> (for Mac: <span class="menuitem">Sigil=&gt;Preferences: Keyboard Shortcuts</span>).</p>
 
   <div class="tip">
-    <p class="tiptext">You can create or change keyboard shortcuts in <a href="preferences.xhtml">Preferences</a>.</p>
+    <p class="tip">在标签内按住 Shift 双击，可仅选中该标签的内容；按住 Alt 双击，则选中标签本身及其内容。配合“移除格式”使用十分方便。</p>
   </div>
 
-  <h3 class="sigil_not_in_toc" id="toolbars">Toolbars</h3>
+  <p class="heading">搜索</p>
 
-  <p>Toolbars are rows of buttons that provide shortcuts to commonly used commands. Toolbars are positioned at the top of the window by default, but you can click and drag groups of buttons to run along the left, right or bottom of the window, if you like, or undock them as floating palettes.</p>
-  
-  <p>Here’s an example of toolbar buttons running along all four sides of the window, plus more buttons floating undocked, and the Clips window floating undocked:</p>
+  <ul>
+    <li><span class="listheading">查找与替换：</span>打开“查找与替换”窗口。</li>
+
+    <li class="first"><span class="listheading">查找下一个：</span>向前搜索，定位下一处匹配文本。</li>
+
+    <li><span class="listheading">查找上一个：</span>向后搜索，定位上一处匹配文本。</li>
+
+    <li class="first"><span class="listheading">替换：</span>替换匹配文本。</li>
+
+    <li><span class="listheading">替换/查找下一个：</span>替换匹配文本，然后向前搜索下一处匹配。</li>
+
+    <li><span class="listheading">替换/查找上一个：</span>替换匹配文本，然后向后搜索上一处匹配。</li>
+
+    <li><span class="listheading">全部替换：</span>按“查找与替换”设置替换所有匹配文本。</li>
+
+    <li class="first"><span class="listheading">全部计数：</span>按“查找与替换”设置统计匹配文本的总数。</li>
+
+    <li class="first"><span class="listheading">试运行全部替换：</span>预演“全部替换”的结果，按“查找与替换”设置显示每一处匹配文本及其替换内容，不会实际替换。</li>
+
+    <li class="first"><span class="listheading">过滤替换：</span>生成一张表格，按“查找与替换”设置列出所有匹配文本及候选替换内容。应用更改前，可先删除不需要的替换。</li>
+
+    <li class="first"><span class="listheading">Current File:</span>|→<span class="listheading">当前文件：</span>←| 
+
+    <ul>
+      <li><span class="listheading">在文件中查找下一个：</span>无论“查找与替换”模式如何，仅在当前文件中搜索。</li>
+
+      <li class="first"><span class="listheading">在文件中替换下一个：</span>无论“查找与替换”模式如何，仅在当前文件中替换后查找下一个。</li>
+
+      <li><span class="listheading">在文件中全部替换：</span>无论“查找与替换”模式如何，仅在当前文件中全部替换。</li>
+
+      <li class="first"><span class="listheading">在文件中全部计数：</span>无论“查找与替换”模式如何，仅在当前文件中全部计数。</li>
+    </ul></li>
+
+    <li class="first"><span class="listheading">书签位置：</span>在代码视图中标记当前位置。</li>
+
+    <li><span class="listheading">转到链接或样式：</span>转到选中的链接，或转到此标签的 CSS 样式。</li>
+
+    <li><span class="listheading">返回：</span>返回到设置书签、点击链接或使用“转到链接或样式”的位置。</li>
+
+    <li class="first"><span class="listheading">标记选中文本：</span>标记选中文本供“查找与替换”使用，搜索范围仅限该文本。</li>
+
+    <li><span class="listheading">跳转到指定行：</span>跳转到代码视图中的指定行号位置。</li>
+  </ul>
+
+  <p class="heading">工具</p>
+
+  <ul>
+    <li><span class="listheading">添加封面：</span>选择一张图片作为封面。</li>
+
+    <li><span class="listheading">元数据编辑器：</span>打开元数据编辑器，编辑图书信息。</li>
+
+    <li class="first"><span class="listheading">Table Of Contents:</span>|→<span class="listheading">目录：</span>←| 
+
+    <ul>
+      <li><span class="listheading">生成目录：</span>使用预定义标题生成目录。</li>
+
+      <li><span class="listheading">编辑目录：</span>手动编辑目录。</li>
+
+      <li><span class="listheading">创建 HTML 目录：</span>以 HTML 文件形式创建目录。</li>
+    </ul></li>
+
+    <li class="first"><p><span class="listheading">按 Sigil 规范重构 EPUB：</span>从 Sigil 1.0.0 开始，载入 Sigil 的 EPUB 保持原样，文件和文件夹均不移动、不改名。这与 Sigil 0.9.18 及更早版本不同：早期版本会自动把每个 EPUB 重构为标准的 Sigil 结构（一个 OEBPS 文件夹、OPF 与 NCX 使用特定名称、文本和图片各只有一个文件夹）。若偏好标准结构，可使用“按 Sigil 规范重构 EPUB”，将 EPUB 手动重构为旧的 Sigil 标准。</p></li>
+
+    <li class="first"><p><span class="listheading">基于当前文件名重建 OPF 清单 ID：</span>旧版 Sigil 曾根据文件名生成 OPF 清单 ID，以保证唯一性。文件改名后，清单 ID 仍沿用旧文件名，手动编辑 OPF 时容易混淆。此工具基于当前文件名重建整套清单 ID，同时维护和更新 OPF 中对这些 ID 的所有引用，包括 spine、封面元数据、smil 元数据、其他元数据细化、媒体叠加层、回退 ID 和 spine 属性。</p></li>
+
+    <li><span class="listheading">创建自定义空白 EPUB：</span>设计自定义的 EPUB 布局，供新建 EPUB 时使用。</li>
+
+    <li class="first"><span class="listheading">Index:</span>|→<span class="listheading">索引：</span>←| 
+
+    <ul>
+      <li><span class="listheading">索引编辑器：</span>管理索引条目。</li>
+
+      <li class="first"><span class="listheading">添加到索引编辑器：</span>将选中文本添加到索引编辑器列表。</li>
+
+      <li><span class="listheading">标记为索引：</span>创建索引时，将选中文本一并写入索引。</li>
+
+      <li class="first"><span class="listheading">创建索引：</span>生成包含索引列表的 HTML 文件。</li>
+    </ul></li>
+
+    <li class="first"><span class="listheading">Spellcheck:</span>|→<span class="listheading">拼写检查：</span>←| 
+
+    <ul>
+      <li><span class="listheading">拼写检查：</span>打开对话框，一次性检查所有单词。</li>
+
+      <li class="first"><span class="listheading">高亮拼写错误的单词：</span>切换是否在代码视图中高亮拼写错误的单词。</li>
+
+      <li><span class="listheading">下一个拼写错误的单词：</span>在代码视图中查找下一个拼写错误的单词。</li>
+
+      <li class="first"><span class="listheading">添加拼写错误的单词：</span>将拼写错误的单词添加到默认词典。</li>
+
+      <li><span class="listheading">忽略拼写错误的单词：</span>在 Sigil 运行期间暂时忽略该单词。打开新书时，忽略列表也会一并清除。</li>
+
+      <li class="first"><span class="listheading">清除忽略的单词：</span>清除暂时忽略的单词列表。</li>
+    </ul></li>
+
+    <li class="first"><span class="listheading">Reformat HTML:</span>|→<span class="listheading">HTML 重新格式化：</span>←| 
+
+    <ul>
+      <li><span class="listheading">修复并美化所有 HTML 文件：</span>修复所有 HTML 文件中的语法错误并美化格式。</li>
+
+      <li><span class="listheading">修复所有 HTML 文件：</span>修复所有 HTML 文件中的语法错误。</li>
+    </ul></li>
+
+    <li class="first"><span class="listheading">Epub3 Tools (EPUB3 Only):</span>|→<span class="listheading">EPUB3 工具（仅限 EPUB3）：</span>←| 
+
+    <ul>
+      <li><span class="listheading">更新清单属性：</span>添加或更新必需的清单属性。</li>
+
+      <li><span class="listheading">为 EPUB2 阅读器生成 NCX/Guide：</span>用 NAV 文件中的目录条目填充 NCX 文件（EPUB3 无需 NCX，故不会自动更新，可用此工具手动更新）。同时用 NAV 文件中的 Landmarks 条目填充 Guide。</li>
+
+      <li><span class="listheading">移除 NCX 和 Guide：</span>移除 NCX 和 Guide。这两者在 EPUB3 中并非必需，但有时为兼容 EPUB2 阅读系统而保留。</li>
+    </ul></li>
+
+    <li class="first"><span class="listheading">EPUB格式良好性检查：</span>简单的验证工具，用于检查 EPUB 是否良好。</li>
+
+    <li><span class="listheading">使用 W3C 验证样式表：</span>通过 W3C 网络服务检查 CSS 文件是否有效。</li>
+
+    <li><span class="listheading">报告：</span>显示 HTML 文件、图片、CSS 样式等详细信息。</li>
+
+    <li class="first"><span class="listheading">剪贴板编辑器：</span>创建并编辑文本和样式片段，粘贴到文档中。</li>
+
+    <li><span class="listheading">搜索模板：</span>创建、编辑并运行已保存的查找与替换搜索。</li>
+
+    <li class="first"><span class="listheading">删除未使用的媒体文件：</span>从书中移除未被使用的图片、视频和音频文件。</li>
+
+    <li><span class="listheading">删除未使用的样式表选择器：</span>从 CSS 文件中移除未被引用的选择器。</li>
+  </ul>
+
+  <p class="heading">视图</p>
+
+  <ul>
+    <li><span class="listheading">Toolbars</span>|→<span class="listheading">工具栏</span>←| 
+
+    <ul>
+      <li><span class="listheading">新建：</span>显示或隐藏用于创建新 EPUB2 和新 EPUB3 的按钮。</li>
+
+      <li><span class="listheading">文件：</span>显示或隐藏“打开”和“保存”按钮。</li>
+
+      <li><span class="listheading">添加现有：</span>显示或隐藏“添加现有文件”按钮。</li>
+
+      <li><span class="listheading">检查点：</span>显示或隐藏检查点按钮：为 EPUB 创建检查点、从上一个检查点创建 EPUB、将 EPUB 与检查点比较、管理检查点仓库。</li>
+
+      <li><span class="listheading">撤销/重做：</span>显示或隐藏“撤销”和“重做”按钮。</li>
+
+      <li><span class="listheading">编辑：</span>显示或隐藏编辑按钮：剪切、复制、粘贴、移除开始和结束标签对。</li>
+
+      <li><span class="listheading">外部编辑器：</span>显示或隐藏“启动外部 Xhtml 编辑器”按钮。（要设置首选的外部 Xhtml 编辑器，请到 <span class="menuitem">首选项=&gt;一般设定</span> 。）</li>
+
+      <li><span class="listheading">查找：</span>显示或隐藏“查找与替换”和“搜索模板”按钮。</li>
+
+      <li><span class="listheading">插入：</span>显示或隐藏以下按钮：在光标处拆分、插入文件、插入特殊字符、插入 ID、插入 Aria 剪贴板、插入 Role、插入链接。</li>
+
+      <li><span class="listheading">回退：</span>显示或隐藏“返回”按钮。</li>
+
+      <li><span class="listheading">捐赠：</span>显示或隐藏“捐赠”按钮。</li>
+
+      <li><span class="listheading">工具：</span>显示或隐藏工具按钮：元数据编辑器、生成目录、编辑目录、拼写检查。</li>
+
+      <li><span class="listheading">插件集1：</span>显示或隐藏 5 个插件按钮。（要选择此处显示哪些插件，请到 <span class="menuitem">首选项=&gt;插件=&gt;快捷方式</span>。）</li>
+
+      <li><span class="listheading">插件集2：</span>显示或隐藏另外 5 个插件按钮。（要选择此处显示哪些插件，请到 <span class="menuitem">首选项=&gt;插件=&gt;快捷方式</span>。）</li>
+
+      <li><span class="listheading">标题：</span>显示或隐藏标题按钮：h1、h2 等。</li>
+
+      <li><span class="listheading">格式：</span>显示或隐藏格式按钮：粗体、斜体、下划线、删除线、下标、上标。</li>
+
+      <li><span class="listheading">对齐：</span>显示或隐藏文本对齐按钮：左对齐、居中、右对齐、两端对齐。</li>
+
+      <li><span class="listheading">列表：</span>显示或隐藏列表按钮：项目符号和编号。</li>
+
+      <li><span class="listheading">缩进：</span>显示或隐藏“减少缩进”和“增加缩进”按钮。</li>
+
+      <li><span class="listheading">大小写：</span>显示或隐藏更改大小写按钮：小写、大写、标题格式、首字母大写。</li>
+
+      <li><span class="listheading">文字方向：</span>显示或隐藏文本方向按钮：从左到右、从右到左、默认。</li>
+
+      <li><span class="listheading">剪贴板：</span>显示或隐藏剪贴板。（要创建和管理剪贴板，请到 <span class="menuitem">工具=&gt;剪贴板编辑器</span>。）</li>
+
+      <li><span class="listheading">剪贴板2：</span>显示或隐藏第二个剪贴板。（要创建和管理剪贴板，请到 <span class="menuitem">工具=&gt;剪贴板编辑器</span>。）</li>
+
+      <li><span class="listheading">索引：</span>显示或隐藏索引按钮：索引编辑器、将选中文本添加到索引编辑器、将选中文本标记为索引条目、生成新的索引 HTML 文件。</li>
+    </ul></li>
+
+    <li class="first"><span class="listheading">放大：</span>放大代码视图或预览窗口（以当前选中窗口为准）中的文本和图片。</li>
+
+    <li><span class="listheading">缩小：</span>缩小代码视图或预览窗口（以当前选中窗口为准）中的文本和图片。</li>
+
+    <li><span class="listheading">缩放重置：</span>将窗口缩放重置为 100%。</li>
+
+    <li class="first"><span class="listheading">书籍浏览器：</span>显示或隐藏 EPUB 中的文件列表。</li>
+
+    <li><span class="listheading">剪贴板：</span>显示或隐藏所有文本剪贴板的可选列表。</li>
+
+    <li><span class="listheading">预览：</span>显示或隐藏实时预览窗口。</li>
+
+    <li><span class="listheading">目录：</span>显示或隐藏可点击的目录窗口。</li>
+
+    <li><span class="listheading">验证结果：</span>显示或隐藏验证结果窗口。</li>
+
+    <li><span class="listheading">聚焦书籍浏览器：</span>将键盘焦点移至书籍浏览器，必要时自动取消隐藏。</li>
+
+    <li><span class="listheading">聚焦代码试图：</span>将键盘焦点移动到代码视图。</li>
+
+    <li><span class="listheading">聚焦预览：</span>将键盘焦点移到预览，必要时自动取消隐藏。</li>
+
+    <li><span class="listheading">聚焦目录：</span>将键盘焦点移到目录窗口，必要时自动取消隐藏。</li>
+
+    <li><span class="listheading">聚焦剪贴板窗口：</span>将键盘焦点移到剪贴板窗口，必要时自动取消隐藏。</li>
+  </ul>
+
+  <p class="heading">窗口</p>
+
+  <ul>
+    <li><span class="listheading">下一个标签页：</span>将视图切换到代码视图中的下一个标签。</li>
+
+    <li><span class="listheading">上一个标签页：</span>将视图切换到代码视图中的上一个标签。</li>
+
+    <li><span class="listheading">关闭标签页：</span>关闭代码视图中的当前标签。</li>
+
+    <li><span class="listheading">关闭其他标签页：</span>关闭代码视图中除当前标签外的所有标签。</li>
+
+    <li class="first"><span class="listheading">前一个文件：</span>打开书籍浏览器中所选文件上方的文件。</li>
+
+    <li><span class="listheading">下一个文件：</span>打开书籍浏览器中所选文件下方的文件。</li>
+  </ul>
+
+  <p class="heading">插件</p>
+
+  <ul>
+    <li><span class="listheading">插件管理：</span>添加或移除插件，并选择哪些插件显示在工具栏中。</li>
+  </ul>
+
+  <p class="heading">检查点</p>
+
+  <ul>
+    <li><span class="listheading">为 EPUB 创建检查点：</span>将 EPUB 的当前版本保存为检查点（通过本地 git 仓库存储）。</li>
+
+    <li><span class="listheading">从上一个检查点恢复EPUB：</span>从较早的检查点版本创建新的 EPUB。</li>
+
+    <li><span class="listheading">将EPUB与上一个检查点进行比较：</span>将 EPUB 的当前版本与较早的检查点版本进行比较。</li>
+
+    <li><span class="listheading">管理检查点存储库：</span>查看所有检查点的列表、查看日志，并移除选中的检查点仓库。</li>
+
+    <li><span class="listheading">编辑检查点描述：</span>为每个已创建的检查点编写并附加简短描述。</li>
+
+    <li><span class="listheading">显示检查点日志：</span>查看所有检查点及其日志描述的列表。</li>
+  </ul>
+
+  <p class="heading">帮助</p>
+
+  <ul>
+    <li><span class="listheading">用户指南：</span>Sigil 的官方文档。</li>
+
+    <li class="first"><span class="listheading">捐赠：</span>如何捐助项目的持续开发。</li>
+
+    <li><span class="listheading">Sigil 官网：</span>开发相关的公告和更新。</li>
+  </ul>
+
+  <h3 class="sigil_not_in_toc" id="keyboard_shortcuts">键盘快捷键</h3>
+
+  <p>键盘快捷键（如用于保存的 <span class="shortcut">Ctrl+S</span>）显示在菜单项旁，也列于 <span class="menuitem">编辑=&gt;首选项：键盘快捷键</span> 中（Mac 上为 <span class="menuitem">Sigil=&gt;首选项：键盘快捷键</span>）。</p>
+
+  <div class="tip">
+    <p class="tiptext">可在<a href="../Text/preferences.xhtml">首选项</a>中创建或更改键盘快捷键。</p>
+  </div>
+
+  <h3 class="sigil_not_in_toc" id="toolbars">工具栏</h3>
+
+  <p>工具栏是一排排按钮，为常用命令提供快捷方式。默认位于窗口顶部；如需调整，可按住并拖动按钮组，使其沿窗口左侧、右侧或底部排列，也可分离为浮动面板。</p>
+
+  <p>下图是一个示例：工具栏按钮沿窗口四边排列，另有若干按钮和剪贴板窗口以分离状态浮动：</p>
 
   <div class="image">
     <img alt="Image showing Table of Contents torn away as floating window." src="../Images/ui_buttons-moved.png"/>
   </div>
-  
+
   <div class="tip">
-    <p class="tiptext">To move toolbars, click and hold on the small bar to the left of each button group then drag it to where you want it.</p>
+    <p class="tiptext">要移动工具栏，请按住每组按钮左侧的小条，拖动到目标位置。</p>
 
-    <p class="tiptext">Right-click on the toolbar to easily select which buttons or windows to show, or use the <span class="menuitem">View=&gt;Toolbars</span> menu.</p>
-    
-    <p class="tiptext">Hover over a button to see tooltips explaining what the button does.</p>
+    <p class="tiptext">右键点击工具栏可快速选择要显示哪些按钮或窗口，也可使用 <span class="menuitem">视图=&gt;工具栏</span> 菜单。</p>
+
+    <p class="tiptext">将鼠标悬停在按钮上，可查看该按钮功能的工具说明。</p>
   </div>
 
-  <h4 class="sigil_not_in_toc" id="main_toolbar">Main Toolbar</h4>
+  <h4 class="sigil_not_in_toc" id="main_toolbar">主工具栏</h4>
 
- <div class="image">
-    <img alt="Image of the primary toolbar." src="../Images/ui_main-toolbar.png"/>
+  <div class="image">
+    <img class="toolbar-icon" alt="Image of the primary toolbar." src="../Images/ui_main-toolbar.png"/>
   </div>
 
-  <p>The main toolbar contains buttons used for shortcuts to Sigil’s main features. They are shown below with their equivalent menu entry.</p>
+  <p>主工具栏包含快速访问 Sigil 主要功能的按钮。下方列出这些按钮及其对应的菜单项。</p>
 
   <div class="toolbar">
-    <img alt="Image of the icons on the File toolbar." src="../Images/ui_toolbar-file.png"/> 
+    <img class="toolbar-icon" alt="Image of the icons on the File toolbar." src="../Images/ui_toolbar-file.png"/> 
 
     <ul>
-      <li><span class="listheading">New ePub2:</span> <span class="menuitem">File=&gt;New=&gt;ePub2</span></li>
+      <li><span class="listheading">新建EPUB2：</span><span class="menuitem">文件=&gt;新建=&gt;EPUB2</span></li>
 
-      <li><span class="listheading">New ePub3:</span> <span class="menuitem">File=&gt;New=&gt;ePub3</span></li>
+      <li><span class="listheading">新建EPUB3：</span><span class="menuitem">文件=&gt;新建=&gt;EPUB3</span></li>
 
-      <li class="first"><span class="listheading">Open:</span> <span class="menuitem">File=&gt;Open</span></li>
+      <li class="first"><span class="listheading">打开：</span><span class="menuitem">文件=&gt;打开</span></li>
 
-      <li><span class="listheading">Save:</span> <span class="menuitem">File=&gt;Save</span></li>
+      <li><span class="listheading">保存：</span><span class="menuitem">文件=&gt;保存</span></li>
 
-      <li class="first"><span class="listheading">Add Existing Files:</span> <span class="menuitem">File=&gt;Add=&gt;Existing File</span></li>
+      <li class="first"><span class="listheading">添加现有文件：</span><span class="menuitem">文件=&gt;添加=&gt;现有文件</span></li>
     </ul>
   </div>
 
   <div class="toolbar">
-    <img alt="Image of icons on Checkpoint toolbar." src="../Images/ui_toolbar-checkpoints.png"/> 
+    <img class="toolbar-icon" alt="Image of icons on Checkpoint toolbar." src="../Images/ui_toolbar-checkpoints.png"/> 
 
     <ul>
-      <li><span class="listheading">Create Checkpoint for Epub:</span> <span class="menuitem">Checkpoints=&gt;Create Checkpoint for Epub</span></li>
+      <li><span class="listheading">为 EPUB 创建检查点：</span><span class="menuitem">检查点=&gt;为EPUB创建检查点</span></li>
 
-      <li><span class="listheading">Create Epub from previous Checkpoint:</span> <span class="menuitem">Checkpoints=&gt;Create Epub from previous Checkpoint</span></li>
+      <li><span class="listheading">从上一个检查点创建 EPUB：</span><span class="menuitem">检查点=&gt;从上一个检查点创建 EPUB</span></li>
 
-      <li><span class="listheading">Compare Epub against Checkpoint:</span> <span class="menuitem">Checkpoints=&gt;Compare Epub against Checkpoint</span></li>
+      <li><span class="listheading">将 EPUB 与检查点比较：</span><span class="menuitem">检查点=&gt;将 EPUB 与上一个检查点进行比较</span></li>
 
-      <li><span class="listheading">Manage Checkpoint Repositories:</span> <span class="menuitem">Checkpoints=&gt;Manage Checkpoint Repositories</span></li>
-   </ul>
-  </div>
-
-  <div class="toolbar">
-    <img alt="Image of icons on the Index toolbar." src="../Images/ui_toolbar-index.png"/> 
-
-    <ul>
-      <li><span class="listheading">Index Editor</span> <span class="menuitem">Tools=&gt;Index=&gt;Index Editor</span></li>
-      
-      <li><span class="listheading">Add the selected text to the Index Editor:</span> <span class="menuitem">Tools=&gt;Index=&gt;Add To Index Editor</span></li>
-      
-       <li><span class="listheading">Mark the selected text for inclusion in the Index:</span> <span class="menuitem">Tools=&gt;Index=&gt;Mark For Index</span></li>
- 
- 		<li><span class="listheading">Generate a new Index HTML file:</span> <span class="menuitem">Tools=&gt;Index=&gt;Create Index</span></li>
-  </ul>
-  </div>
-
-  <div class="toolbar">
-    <p><img alt="Image of icons on the Edit toolbar." src="../Images/ui_toolbar-edit.png"/></p>
-
-    <ul>
-      <li><span class="listheading">Undo:</span> <span class="menuitem">Edit=&gt;Undo</span></li>
-
-      <li><span class="listheading">Redo:</span> <span class="menuitem">Edit=&gt;Redo</span></li>
-
-      <li class="first"><span class="listheading">Cut:</span> <span class="menuitem">Edit=&gt;Cut</span></li>
-
-      <li><span class="listheading">Copy:</span> <span class="menuitem">Edit=&gt;Copy</span></li>
-
-	  <li><span class="listheading">Paste:</span> <span class="menuitem">Edit=&gt;Paste</span></li>
-
-      <li class="first"><span class="listheading">Remove Open and Close Tag Pair:</span> <span class="menuitem">Format=&gt;Remove Tag Pair</span></li>
+      <li><span class="listheading">管理检查点仓库：</span><span class="menuitem">检查点=&gt;管理检查点仓库</span></li>
     </ul>
   </div>
 
   <div class="toolbar">
-    <img alt="Image of Preferred External Editor Icon" src="../Images/ui_toolbar-external-editor.png"/> 
+    <img class="toolbar-icon" alt="Image of icons on the Index toolbar." src="../Images/ui_toolbar-index.png"/> 
 
     <ul>
-      <li><span class="listheading">Launch External Xhtml Editor:</span> <span class="menuitem">(no equivalent menu entry)</span></li>
-  </ul>
+      <li><span class="listheading">索引编辑器：</span><span class="menuitem">工具=&gt;索引=&gt;索引编辑器</span></li>
+
+      <li><span class="listheading">将选中的文本添加到索引编辑器：</span><span class="menuitem">工具=&gt;索引=&gt;添加到索引编辑器</span></li>
+
+      <li><span class="listheading">将选中的文本标记为索引条目：</span><span class="menuitem">工具=&gt;索引=&gt;标记为索引</span></li>
+
+      <li><span class="listheading">生成新的索引 HTML 文件：</span><span class="menuitem">工具=&gt;索引=&gt;创建索引文档</span></li>
+    </ul>
   </div>
 
   <div class="toolbar">
-    <img alt="Image of the Search Toolbar." src="../Images/ui_toolbar-find.png"/> 
+    <img class="toolbar-icon" alt="Image of icons on the Edit toolbar." src="../Images/ui_toolbar-edit.png"/> 
 
     <ul>
-    	<li><span class="listheading">Find &amp; Replace:</span> <span class="menuitem">Search=&gt;Find &amp; Replace</span></li>
-      
-    	<li><span class="listheading">Saved Searches:</span> <span class="menuitem">Tools=&gt;Saved Searches</span></li>
-  </ul>
+      <li><span class="listheading">撤销：</span><span class="menuitem">编辑=&gt;撤销</span></li>
+
+      <li><span class="listheading">重做：</span><span class="menuitem">编辑=&gt;重做</span></li>
+
+      <li class="first"><span class="listheading">剪切：</span><span class="menuitem">编辑=&gt;剪切</span></li>
+
+      <li><span class="listheading">复制：</span><span class="menuitem">编辑=&gt;复制</span></li>
+
+      <li><span class="listheading">粘贴：</span><span class="menuitem">编辑=&gt;粘贴</span></li>
+
+      <li class="first"><span class="listheading">移除起始和结束标签对：</span><span class="menuitem">格式=&gt;删除标签对</span></li>
+    </ul>
   </div>
 
   <div class="toolbar">
-    <p><img alt="Image of Split, Insert Image, Insert Special Character, Insert Anchor ID, Insert Aria Clip, Insert Role, Insert Link toolbar." src="../Images/ui_toolbar-insert2.png" style="height:40px;"/></p>
+    <img class="toolbar-icon" alt="Image of Preferred External Editor Icon" src="../Images/ui_toolbar-external-editor.png"/> 
 
     <ul>
-      <li><span class="listheading">Split At Cursor:</span> <span class="menuitem">Edit=&gt;Split At Cursor</span></li>
+      <li><span class="listheading">启动外部 Xhtml 编辑器：</span><span class="menuitem">（菜单中没有对应的入口/选项）</span></li>
+    </ul>
+  </div>
 
-      <li class="first"><span class="listheading">Insert File:</span> <span class="menuitem">Insert=&gt;File</span></li>
+  <div class="toolbar">
+    <img class="toolbar-icon" alt="Image of the Search Toolbar." src="../Images/ui_toolbar-find.png"/> 
 
-      <li><span class="listheading">Insert Special Character:</span> <span class="menuitem">Insert=&gt;Special Character</span></li>
+    <ul>
+      <li><span class="listheading">查找与替换：</span><span class="menuitem">搜索=&gt;查找与替换</span></li>
 
-      <li><span class="listheading">Insert ID:</span> <span class="menuitem">Insert=&gt;ID</span></li>
+      <li><span class="listheading">搜索模板：</span><span class="menuitem">工具=&gt;搜索模板</span></li>
+    </ul>
+  </div>
 
-      <li><span class="listheading">Insert Aria Clip:</span> <span class="menuitem">Insert=&gt;Aria Clip</span></li>
+  <div class="toolbar">
+    <img class="toolbar-icon" alt="Image of Split, Insert Image, Insert Special Character, Insert Anchor ID, Insert Aria Clip, Insert Role, Insert Link toolbar." src="../Images/ui_toolbar-insert2.png"/> 
 
-      <li><span class="listheading">Insert Role:</span> <span class="menuitem">Insert=&gt;Role</span></li>
+    <ul>
+      <li><span class="listheading">在光标处拆分：</span><span class="menuitem">编辑=&gt;在光标处拆分</span></li>
 
-      <li><span class="listheading">Insert Link:</span> <span class="menuitem">Insert=&gt;Link</span></li>
+      <li class="first"><span class="listheading">插入文件：</span><span class="menuitem">插入=&gt;文件</span></li>
+
+      <li><span class="listheading">插入特殊字符：</span><span class="menuitem">插入=&gt;特殊字符</span></li>
+
+      <li><span class="listheading">插入 ID：</span><span class="menuitem">插入=&gt;ID</span></li>
+
+      <li><span class="listheading">插入 Aria 剪贴板：</span><span class="menuitem">插入=&gt;Aria 片段</span></li>
+
+      <li><span class="listheading">插入 Role：</span><span class="menuitem">插入=&gt;角色</span></li>
+
+      <li><span class="listheading">插入链接：</span><span class="menuitem">插入=&gt;链接</span></li>
     </ul>
 
     <div class="toolbar">
-      <p><img alt="Image of return to previous arrow tool icon." style="width:15%" src="../Images/ui_toolbar-back.png"/></p>
+      <img class="toolbar-icon" alt="Image of return to previous arrow tool icon." src="../Images/ui_toolbar-back.png"/> 
 
       <ul>
-        <li><span class="listheading">Bookmark Location</span> <span class="menuitem">Search=&gt;Bookmark Location</span></li>
-        <li><span class="listheading">Back:</span> <span class="menuitem">Search=&gt;Back</span></li>
+        <li><span class="listheading">书签位置：</span><span class="menuitem">搜索=&gt;书签位置</span></li>
+
+        <li><span class="listheading">返回：</span><span class="menuitem">搜索=&gt;返回</span></li>
       </ul>
     </div>
   </div>
 
   <div class="toolbar">
-    <p><img alt="Image of Dontate icon." src="../Images/ui_toolbar-donate.png"/></p>
+    <img class="toolbar-icon" alt="Image of Dontate icon." src="../Images/ui_toolbar-donate.png"/> 
 
     <ul>
-      <li><span class="listheading">Donate:</span> <span class="menuitem">Help=&gt;Donate</span></li>
+      <li><span class="listheading">捐赠：</span><span class="menuitem">帮助=&gt;捐赠</span></li>
     </ul>
   </div>
 
   <div class="toolbar">
-    <p><img alt="Image of toolbar including Metadata Editor, Table of Contents Generate, Table of Contents Editor, and SpellCheck icons." src="../Images/ui_toolbar-tools.png"/></p>
+    <img class="toolbar-icon" alt="Image of toolbar including Metadata Editor, Table of Contents Generate, Table of Contents Editor, and SpellCheck icons." src="../Images/ui_toolbar-tools.png"/> 
 
     <ul>
-      <li><span class="listheading">Metadata Editor:</span> <span class="menuitem">Tools=&gt;Metadata Editor</span></li>
+      <li><span class="listheading">元数据编辑器：</span><span class="menuitem">工具=&gt;元数据编辑器</span></li>
 
-      <li><span class="listheading">Generate Table of Contents:</span> <span class="menuitem">Tools=&gt;Table Of Contents=&gt;Generate Table Of Contents</span></li>
+      <li><span class="listheading">生成目录：</span><span class="menuitem">工具=&gt;目录=&gt;生成目录</span></li>
 
-      <li><span class="listheading">Edit Table of Contents:</span> <span class="menuitem">Tools=&gt;Table Of Contents=&gt;Edit Table Of Contents</span></li>
+      <li><span class="listheading">编辑目录：</span><span class="menuitem">工具=&gt;目录=&gt;编辑目录</span></li>
 
-      <li><span class="listheading">Spellcheck:</span> <span class="menuitem">Tools=&gt;Spellcheck=&gt;Spellcheck</span></li>
+      <li><span class="listheading">拼写检查：</span><span class="menuitem">工具=&gt;拼写检查=&gt;拼写检查</span></li>
     </ul>
   </div>
 
   <div class="toolbar">
-    <p><img alt="Image of 10 puzzle piece placeholder icons for installed plugins." src="../Images/ui_toolbar-plugins.png"/></p>
+    <img class="toolbar-icon" alt="Image of 10 puzzle piece placeholder icons for installed plugins." src="../Images/ui_toolbar-plugins.png"/> 
 
     <ul>
-      <li><span class="listheading">Run Plugin 1:</span> <span class="menuitem">(no equivalent menu entry)</span></li>
+      <li><span class="listheading">运行插件 1</span><span class="menuitem">（菜单中没有对应的入口/选项）</span></li>
 
-      <li><span class="listheading">Run Plugin 2:</span> <span class="menuitem">(no equivalent menu entry)</span></li>
+      <li><span class="listheading">运行插件 2</span><span class="menuitem">（菜单中没有对应的入口/选项）</span></li>
 
-      <li><span class="listheading">Run Plugin 3:</span> <span class="menuitem">(no equivalent menu entry)</span></li>
+      <li><span class="listheading">运行插件 3</span><span class="menuitem">（菜单中没有对应的入口/选项）</span></li>
 
-      <li><span class="listheading">Run Plugin 4:</span> <span class="menuitem">(no equivalent menu entry)</span></li>
+      <li><span class="listheading">运行插件 4</span><span class="menuitem">（菜单中没有对应的入口/选项）</span></li>
 
-      <li><span class="listheading">Run Plugin 5:</span> <span class="menuitem">(no equivalent menu entry)</span></li>
+      <li><span class="listheading">运行插件 5</span><span class="menuitem">（菜单中没有对应的入口/选项）</span></li>
 
-      <li class="first"><span class="listheading">Run Plugin 6:</span> <span class="menuitem">(no equivalent menu entry)</span></li>
+      <li class="first"><span class="listheading">运行插件 6</span><span class="menuitem">（菜单中没有对应的入口/选项）</span></li>
 
-      <li><span class="listheading">Run Plugin 7:</span> <span class="menuitem">(no equivalent menu entry)</span></li>
+      <li><span class="listheading">运行插件 7</span><span class="menuitem">（菜单中没有对应的入口/选项）</span></li>
 
-      <li><span class="listheading">Run Plugin 8:</span> <span class="menuitem">(no equivalent menu entry)</span></li>
+      <li><span class="listheading">运行插件 8</span><span class="menuitem">（菜单中没有对应的入口/选项）</span></li>
 
-      <li><span class="listheading">Run Plugin 9:</span> <span class="menuitem">(no equivalent menu entry)</span></li>
+      <li><span class="listheading">运行插件 9</span><span class="menuitem">（菜单中没有对应的入口/选项）</span></li>
 
-      <li><span class="listheading">Run Plugin 10:</span> <span class="menuitem">(no equivalent menu entry)</span></li>
+      <li><span class="listheading">运行插件 10</span><span class="menuitem">（菜单中没有对应的入口/选项）</span></li>
     </ul>
   </div>
 
-  <h4 class="sigil_not_in_toc" id="formatting_toolbar">Formatting Toolbar</h4>
-  
+  <h4 class="sigil_not_in_toc" id="formatting_toolbar">格式工具栏</h4>
+
   <div class="image">
-    <img alt="Image of Formating toolbar." src="../Images/ui_toolbar-format.png"/>
+    <img class="toolbar-icon" alt="Image of Formating toolbar." src="../Images/ui_toolbar-format.png"/>
   </div>
 
-  <p>The formatting toolbar contains buttons used for formatting text. They are shown below with their equivalent menu entry.</p>
+  <p>格式工具栏包含格式化文本的按钮。下方列出这些按钮及其对应的菜单项。</p>
 
   <div class="toolbar">
-     <p><img alt="Image of Select Headings Level Toolbar" src="../Images/ui_toolbar-headings.png"/></p>
+    <img class="toolbar-icon" alt="Image of Select Headings Level Toolbar" src="../Images/ui_toolbar-headings.png"/> 
 
     <ul>
-      <li><span class="listheading">Heading 1:</span> <span class="menuitem">Format=&gt;Heading=&gt;Heading 1</span></li>
+      <li><span class="listheading">标题 1：</span><span class="menuitem">格式=&gt;标题=&gt;标题 1</span></li>
 
-      <li><span class="listheading">Heading 2:</span> <span class="menuitem">Format=&gt;Heading=&gt;Heading 2</span></li>
+      <li><span class="listheading">标题 2：</span><span class="menuitem">格式=&gt;标题=&gt;标题 2</span></li>
 
-      <li><span class="listheading">Heading 3:</span> <span class="menuitem">Format=&gt;Heading=&gt;Heading 3</span></li>
+      <li><span class="listheading">标题 3：</span><span class="menuitem">格式=&gt;标题=&gt;标题 3</span></li>
 
-      <li><span class="listheading">Heading 4:</span> <span class="menuitem">Format=&gt;Heading=&gt;Heading 4</span></li>
+      <li><span class="listheading">标题 4：</span><span class="menuitem">格式=&gt;标题=&gt;标题 4</span></li>
 
-      <li><span class="listheading">Heading 5:</span> <span class="menuitem">Format=&gt;Heading=&gt;Heading 5</span></li>
+      <li><span class="listheading">标题 5：</span><span class="menuitem">格式=&gt;标题=&gt;标题 5</span></li>
 
-      <li><span class="listheading">Heading 6:</span> <span class="menuitem">Format=&gt;Heading=&gt;Heading 6</span></li>
+      <li><span class="listheading">标题 6：</span><span class="menuitem">格式=&gt;标题=&gt;标题 6</span></li>
 
-      <li><span class="listheading">Normal:</span> <span class="menuitem">Format=&gt;Heading=&gt;Normal</span></li>
+      <li><span class="listheading">正文：</span><span class="menuitem">格式=&gt;标题=&gt;正文段落</span></li>
     </ul>
   </div>
 
   <div class="toolbar">
-    <p><img alt="Image of Formatting toolbar: With bold, italics, underline, strikethrough, subscript, and superscript icons." src="../Images/ui_toolbar-bold.png"/></p>
+    <img class="toolbar-icon" alt="Image of Formatting toolbar: With bold, italics, underline, strikethrough, subscript, and superscript icons." src="../Images/ui_toolbar-bold.png"/> 
 
     <ul>
-      <li><span class="listheading">Bold:</span> <span class="menuitem">Format=&gt;Bold</span></li>
+      <li><span class="listheading">粗体：</span><span class="menuitem">格式=&gt;粗体</span></li>
 
-      <li><span class="listheading">Italic:</span> <span class="menuitem">Format=&gt;Italic</span></li>
+      <li><span class="listheading">斜体：</span><span class="menuitem">格式=&gt;斜体</span></li>
 
-      <li><span class="listheading">Underline:</span> <span class="menuitem">Format=&gt;Underline</span></li>
+      <li><span class="listheading">下划线：</span><span class="menuitem">格式=&gt;下划线</span></li>
 
-      <li><span class="listheading">Strikethrough:</span> <span class="menuitem">Format=&gt;Strikethrough</span></li>
+      <li><span class="listheading">删除线：</span><span class="menuitem">格式=&gt;删除线</span></li>
 
-      <li><span class="listheading">Subscript:</span> <span class="menuitem">Format=&gt;Subscript</span></li>
+      <li><span class="listheading">下标：</span><span class="menuitem">格式=&gt;下标</span></li>
 
-      <li><span class="listheading">Superscript:</span> <span class="menuitem">Format=&gt;Superscript</span></li>
+      <li><span class="listheading">上标：</span><span class="menuitem">格式=&gt;上标</span></li>
     </ul>
   </div>
 
   <div class="toolbar">
-    <p><img alt="Image of paragrpah alignment toolbar including align left, center, align right, and justified." src="../Images/ui_toolbar-align.png"/></p>
+    <img class="toolbar-icon" alt="Image of paragrpah alignment toolbar including align left, center, align right, and justified." src="../Images/ui_toolbar-align.png"/> 
 
     <ul>
-      <li><span class="listheading">Align Left:</span> <span class="menuitem">Format=&gt;Align Left</span></li>
+      <li><span class="listheading">左对齐：</span><span class="menuitem">格式=&gt;左对齐</span></li>
 
-      <li><span class="listheading">Center:</span> <span class="menuitem">Format=&gt;Center</span></li>
+      <li><span class="listheading">居中：</span><span class="menuitem">格式=&gt;居中</span></li>
 
-      <li><span class="listheading">Align Right:</span> <span class="menuitem">Format=&gt;Align Right</span></li>
+      <li><span class="listheading">右对齐：</span><span class="menuitem">格式=&gt;右对齐</span></li>
 
-      <li><span class="listheading">Justify:</span> <span class="menuitem">Format=&gt;Justify</span></li>
+      <li><span class="listheading">两端对齐：</span><span class="menuitem">格式=&gt;两端对齐</span></li>
     </ul>
   </div>
 
   <div class="toolbar">
-    <p><img alt="Image of List toolbar including unnumbered and numbered lists." src="../Images/ui_toolbar-list.png"/></p>
+    <img class="toolbar-icon" alt="Image of List toolbar including unnumbered and numbered lists." src="../Images/ui_toolbar-list.png"/> 
 
     <ul>
-      <li><span class="listheading">Bulleted List:</span> <span class="menuitem">Format=&gt;Bulleted List</span></li>
+      <li><span class="listheading">项目符号列表：</span><span class="menuitem">格式=&gt;符号列表</span></li>
 
-      <li><span class="listheading">Numbered List:</span> <span class="menuitem">Format=&gt;Numbered List</span></li>
+      <li><span class="listheading">编号列表：</span><span class="menuitem">格式=&gt;编号列表</span></li>
     </ul>
   </div>
 
   <div class="toolbar">
-    <p><img alt="Image of Indentation tool to remove and to add indentation." src="../Images/ui_toolbar-indent.png"/></p>
+    <img class="toolbar-icon" alt="Image of Indentation tool to remove and to add indentation." src="../Images/ui_toolbar-indent.png"/> 
 
     <ul>
-      <li><span class="listheading">Decrease Indent:</span> <span class="menuitem">Format=&gt;Decrease Indent</span></li>
+      <li><span class="listheading">减少缩进：</span><span class="menuitem">格式=&gt;减少缩进</span></li>
 
-      <li><span class="listheading">Increase Indent:</span> <span class="menuitem">Format=&gt;Increase Indent</span></li>
+      <li><span class="listheading">增加缩进：</span><span class="menuitem">格式=&gt;增加缩进</span></li>
     </ul>
   </div>
 
   <div class="toolbar">
-    <p><img alt="Image of Case tool including lowercase, uppercase, titlecase, and Captialize." src="../Images/ui_toolbar-case.png"/></p>
+    <img class="toolbar-icon" alt="Image of Case tool including lowercase, uppercase, titlecase, and Captialize." src="../Images/ui_toolbar-case.png"/> 
 
     <ul>
-      <li><span class="listheading">Lowercase:</span> <span class="menuitem">Edit=&gt;Change Case=&gt;Lowercase</span></li>
+      <li><span class="listheading">小写：</span><span class="menuitem">编辑=&gt;改变大小写=&gt;全部小写</span></li>
 
-      <li><span class="listheading">Uppercase:</span> <span class="menuitem">Edit=&gt;Change Case=&gt;Uppercase</span></li>
+      <li><span class="listheading">大写：</span><span class="menuitem">编辑=&gt;改变大小写=&gt;全部大写</span></li>
 
-      <li><span class="listheading">Titlecase:</span> <span class="menuitem">Edit=&gt;Change Case=&gt;Titlecase</span></li>
+      <li><span class="listheading">每个单词首字母大写：</span><span class="menuitem">编辑=&gt;改变大小写=&gt;每个单词首字母大写</span></li>
 
-      <li><span class="listheading">Capitalize:</span> <span class="menuitem">Edit=&gt;Change Case=&gt;Capitalize</span></li>
+      <li><span class="listheading">句首字母大写：</span><span class="menuitem">编辑=&gt;改变大小写=&gt;句首字母大写</span></li>
     </ul>
   </div>
 
   <div class="toolbar">
-    <p><img alt="Image of Text Direction toolbar showing left to right, right to left, and default direction icons." src="../Images/ui_toolbar-direction.png"/></p>
+    <img class="toolbar-icon" alt="Image of Text Direction toolbar showing left to right, right to left, and default direction icons." src="../Images/ui_toolbar-direction.png"/> 
 
     <ul>
-      <li><span class="listheading">Left-to-Right:</span> <span class="menuitem">Format=&gt;Text Direction LTR</span></li>
+      <li><span class="listheading">从左到右：</span><span class="menuitem">格式=&gt;文本方向—左到右</span></li>
 
-      <li><span class="listheading">Right-to-Left:</span> <span class="menuitem">Format=&gt;Text Direction RTL</span></li>
+      <li><span class="listheading">从右到左：</span><span class="menuitem">格式=&gt;文本方向—右到左</span></li>
 
-      <li><span class="listheading">Default:</span> <span class="menuitem">Format=&gt;Text Direction Default</span></li>
+      <li><span class="listheading">默认：</span><span class="menuitem">格式=&gt;文本方向—默认</span></li>
     </ul>
   </div>
 
-  
-<h4 class="sigil_not_in_toc" id="clipbar">Clip Bars</h4>
+  <h4 class="sigil_not_in_toc" id="clipbar">剪贴板</h4>
 
   <div class="toolbar">
-     <p><img alt="Image of default Clips toolbar." src="../Images/ui_toolbar-clips.png"/></p>
-     
-   <p>There are two clip bars: <b>Clip Bar</b> and <b>Clip Bar2</b>. Buttons are created for the first 60 clips not in a group. The first clip bar will contain the first 30 clips, the second clip bar will contain the next 30 clips. To create, edit, and manage clips, go to: <span class="menuitem">Tools=&gt;Clip Editor</span></p>
- </div>
+    <img class="toolbar-icon" alt="Image of default Clips toolbar." src="../Images/ui_toolbar-clips.png"/> 
+
+    <p>有两个剪贴板项：<b>剪贴板</b>和<b>剪贴板2</b>。会为不在编组中的前 60 个剪贴板创建按钮。第一个剪贴板包含前 30 个剪贴，第二个剪贴板包含后 30 个剪贴。要创建、编辑和管理剪贴板，请到 <span class="menuitem">工具=&gt;剪贴板编辑器</span>。</p>
+  </div>
 
   <div class="tip">
-    <p class="tiptext">Text direction, Clip Bar, and Clip Bar2 are not visible by default. Use <span class="menuitem">View=&gt;Toolbars</span> to hide/unhide these button groups.</p>
+    <p class="tiptext">文本方向、剪贴板和剪贴板2 默认不可见。请通过 <span class="menuitem">视图=&gt;工具栏</span>隐藏/显示这些按钮组。</p>
   </div>
 
-  <h3 class="sigil_not_in_toc" id="context_menus">Context Menus</h3>
+  <h3 class="sigil_not_in_toc" id="context_menus">上下文菜单</h3>
 
-  <p>Context Menus are menus that appear when you <b>right-click</b> on text, a label, a window, a tab, a header, a text box, etc., giving you quick access to a variety of actions. Context menu items are discussed in related chapters.</p>
+  <p><b>右键点击</b>文本、标签、窗口、选项卡、标题、文本框等对象时会弹出上下文菜单，方便快速执行各种操作。各菜单项将在相关章节中介绍。</p>
 
   <div class="image">
     <img alt="Image of Book Browser Context menu." style="width:40%" src="../Images/ui_book-browser-context-menu.png"/>
   </div>
 
   <div class="tip">
-    <p class="tiptext">When in doubt, right-click on something to see if there are additional actions available!</p>
+    <p class="tiptext">拿不准的时候，右键点击某处看看是否有其他可用操作！</p>
   </div>
 
-  <h3 class="sigil_not_in_toc" id="zoom">Zoom</h3>
+  <h3 class="sigil_not_in_toc" id="zoom">缩放</h3>
 
-  <p>On the lower right of the main window is a zoom control that lets you shrink or enlarge the text and images in the Code View and Preview windows independently. Click on the window you want to zoom, then click on the + or − icons to increase or decrease the zoom level. The percentage indicates the current zoom level. (Note: Changing the zoom level on Preview will only work when the Preview window is docked.)</p>
+  <p>主窗口右下角有缩放控件，可分别缩小或放大代码视图和预览窗口中的文本与图片。先点击要缩放的窗口，再点击 + 或 − 图标调整缩放级别。百分比显示当前缩放级别。（注意：仅当预览窗口处于聚焦状态时，更改预览缩放级别才会生效。）</p>
 
   <div class="image">
-    <img alt="Zoom tool on bottom right on Main Window." src="../Images/ui_zoom.png"/>
+    <img class="toolbar-icon" alt="Zoom tool on bottom right on Main Window." src="../Images/ui_zoom.png"/>
   </div>
 
-  <h3 class="sigil_not_in_toc" id="status_bar">Status Bar</h3>
+  <h3 class="sigil_not_in_toc" id="status_bar">状态栏</h3>
 
-  <p>The bottom left corner of the main window will occasionally show status information when an action is completed, such as “EPUB saved” or “Table of Contents edited”.</p>
+  <p>主窗口左下角偶尔会在操作完成时显示状态信息，例如“EPUB 已保存”或“目录已编辑”。</p>
 
-  <p>Toward the right corner of the main window (before the zoom slider), you will find information about the currently opened file, such as the Line and Column in Code View.</p>
+  <p>主窗口右下角附近（缩放滑块之前）显示当前打开文件的信息，例如代码视图中的行号和列号。</p>
 
   <div class="image">
     <img alt="Image of the Status bar when information is briefly displayed." src="../Images/ui_status-bar.png"/>
   </div>
 
-  <h3 class="sigil_not_in_toc" id="tooltips">Tooltips</h3>
+  <h3 class="sigil_not_in_toc" id="tooltips">工具提示</h3>
 
-  <p>Many of the buttons, dropdown boxes, labels and fields have tooltips that provide information on how they are used. To see a tooltip just hover your mouse over the button or other item and the help text should be displayed:</p>
+  <p>许多按钮、下拉框、标签和字段都带有工具提示，说明其用法。只需将鼠标悬停在按钮或其他项目上，即可显示帮助文本：</p>
 
   <div class="image">
     <img alt="Image showing a pop-up Tool Tip." src="../Images/ui_tooltip.png"/>
   </div>
 
-  <p>Hovering over a filename in the Book Browser will reveal the full filepath:</p>
+  <p>在书籍浏览器中将鼠标悬停在文件名上，即可显示完整的文件路径：</p>
 
   <div class="image">
     <img alt="Tool tip showing full file path for file in Book Browser." src="../Images/ui_tooltip2.png"/>
   </div>
 
   <div class="tip">
-    <p class="tiptext">There are many tooltips available in Sigil. Most dialogs and buttons will provide some help text.</p>
+    <p class="tiptext">Sigil 内置了大量工具提示，多数对话框和按钮都会提供帮助文本。</p>
   </div>
 </body>
 </html>

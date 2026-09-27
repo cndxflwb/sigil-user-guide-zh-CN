@@ -203,7 +203,7 @@ span.listheading {
 
 span.menuitem {
     font-family: monotype, courier, sans-serif;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: bold;
     line-height: 1.25;
 }
@@ -223,3 +223,7 @@ img.inline {
     height: 1.0em !important;
 }
 
+img.toolbar-icon {
+	height: 1.5em;
+	vertical-align: middle;
+}

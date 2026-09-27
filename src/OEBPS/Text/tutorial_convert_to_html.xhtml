@@ -1,118 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Create an EPUB</title>
+  <title>创建 EPUB</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="tutorial">Prepare Your File For Sigil</h2>
+  <h2 id="tutorial">准备好 Sigil 可处理的文件</h2>
 
-  <p>If you already have an EPUB or HTML file, or are writing from scratch in Sigil, you can skip this step.</p>
+  <p>如果已经有 EPUB 或 HTML 文件，或者打算在 Sigil 中从零开始写作，可以跳过这一步。</p>
 
-  <p>If you are starting with a document created by a word processor, then the first thing you need to do is convert your document to HTML so that you can import it into Sigil. Some programs can generate EPUB files as output. And some programs have add-ons or features to clean up their HTML output. Whether it is best to use the HTML or EPUB (or even plain text) output of these programs depends on the program – you can always test different ways to see what works best.</p>
+  <p>如果从文字处理软件创建的文档入手，第一步是把文档转换为 HTML，这样才能导入 Sigil。有些程序可以直接生成 EPUB 文件，有些程序则提供了清理 HTML 输出的附加组件或功能。该用这些程序的 HTML 输出还是 EPUB 输出（甚至是纯文本输出），取决于具体的程序——可以多试几种方式，看哪种效果最好。</p>
 
   <div class="tip">
-    <p class="tiptext">The “cleaner” your HTML file is, the easier it will be to turn it into an EPUB and the more likely it will display correctly on multiple devices. This means using styles for formatting and not using too many fancy formats and layouts.</p>
+    <p class="tiptext">HTML 文件越“干净”，转换成 EPUB 就越容易，在多种设备上正确显示的可能性也越大。也就是说，应当使用样式排版，而不是使用过多花哨的格式和布局。</p>
 
-    <p class="tiptext">Do not expect an EPUB to look like a printed book – EPUB is designed so that the reader can control how the book is displayed.</p>
+    <p class="tiptext">不要指望 EPUB 看起来像纸质书——EPUB 的设计理念就是让读者能够自行控制书籍的显示方式。</p>
   </div>
 
-  <p>Although conversion is not part of Sigil, here are some suggestions for converting files for importing into Sigil.</p>
+  <p>虽然格式转换不属于 Sigil 的功能范围，但这里有一些关于转换文件以便导入 Sigil 的建议。</p>
 
-  <h3 class="sigil_not_in_toc">Word Documents</h3>
+  <h3 class="sigil_not_in_toc">Word 文档</h3>
 
-  <p>Use the MS Word menu item <span class="menuitem">File=&gt;Save As Filtered HTML</span>. Or use the <a href="https://www.mobileread.com/forums/showthread.php?t=142530">MS Word Macro @ MobileRead</a>.</p>
+  <p>使用 MS Word 菜单项 <span class="menuitem">文件=&gt;另存为筛选过的 HTML</span>，或使用 <a href="https://www.mobileread.com/forums/showthread.php?t=142530">MS Word Macro @ MobileRead</a>。</p>
 
-  <p>Both approaches try to reduce the amount of extra code exported by MS Word so that your HTML file is cleaner and simpler to edit in Sigil. You really want to have your code as clean as possible since Word adds lots of extra HTML tags that you will probably want to delete at some point.</p>
+  <p>这两种方法都力求减少 MS Word 导出的多余代码，让 HTML 文件更干净，在 Sigil 中更容易编辑。应尽量保持代码干净，因为 Word 会添加大量多余的 HTML 标签，这些标签迟早需要删除。</p>
 
-  <p>When using Word or any word processor, you should always try to use styles to format your code instead of just making some text bold, some larger, etc. Styles are also an important concept when formatting EPUBs.</p>
+  <p>使用 Word 或任何文字处理软件时，都应当尽量使用样式排版，而不是简单地让某些文字加粗、某些文字变大等。为 EPUB 排版时，样式同样是重要概念。</p>
 
-<p>There are numerous sites on the Internet that deal with converting MS Word files for use in EPUBs. Here are just a couple:</p>
+  <p>互联网上有许多网站专门讲解如何将 MS Word 文件转换后用于 EPUB。这里只举几个例子：</p>
 
-<ul>
- <li><a href="https://www.epubble.com/word-to-epub-tutorial/">https://www.epubble.com/word-to-epub-tutorial</a></li>
+  <ul>
+    <li><a href="https://www.epubble.com/word-to-epub-tutorial/">https://www.epubble.com/word-to-epub-tutorial</a></li>
 
-<li><a href="https://justpublishingadvice.com/how-to-convert-word-to-epub/">https://justpublishingadvice.com/how-to-convert-word-to-epub/</a></li>
+    <li><a href="https://justpublishingadvice.com/how-to-convert-word-to-epub/">https://justpublishingadvice.com/how-to-convert-word-to-epub/</a></li>
+  </ul>
 
-</ul>
+  <p>微软和苹果也都提供了免费应用，可以自动完成这一过程。</p>
 
-<p>There are also free apps available from both Microsoft and Apple that automate the process for you.</p>
- <p>Windows: <a href="https://www.microsoft.com/en-us/p/word-to-epub-converter/9nr7rm5fv3sx?activetab=pivot:overviewtab">Word-to-epub-converter</a></p>
+  <p>Windows: <a href="https://www.microsoft.com/en-us/p/word-to-epub-converter/9nr7rm5fv3sx?activetab=pivot:overviewtab">Word-to-epub-converter</a></p>
 
-<p>Apple iOS: <a href="https://apps.apple.com/us/app/the-document-converter/id1081041948?mt=12">The Document Converter</a></p>
+  <p>Apple iOS: <a href="https://apps.apple.com/us/app/the-document-converter/id1081041948?mt=12">The Document Converter</a></p>
 
-<h3 class="sigil_not_in_toc">LibreOffice ODF/ODT</h3>
+  <h3 class="sigil_not_in_toc">LibreOffice ODF/ODT</h3>
 
-<p>The LibreOffice writing application has the same capabilities as MS Word when it comes to saving an ODT file to html – <span class="menuitem">File=&gt;Save A Copy</span> (setting the filter to HTML Document (Writer) (.html)) OR <span class="menuitem">File=&gt;Export</span> (setting the filter to XHTML (.html;.xhtml))</p>
+  <p>在将 ODT 文件保存为 html 方面，LibreOffice 文字处理软件具备与 MS Word 相同的能力——<span class="menuitem">文件=&gt;保存副本</span>（将筛选器设为 HTML Document (Writer) (<span class="example">.html</span>)）或 <span class="menuitem">文件=&gt;导出</span>（将筛选器设为 XHTML (<span class="example">.html;.xhtml</span>)）</p>
 
-<p>For EPUB use it is preferable to use Save a Copy as this creates a cleaner output than Export with less formatting data in the document. Save a Copy also links to any images, whereas Export embeds the image data in the file.</p>
+  <p>用于 EPUB 时，最好使用“保存副本”，因为它的输出比“导出”更干净，文档中的格式数据更少。“保存副本”还会链接到各图片，而“导出”会把图片数据嵌入文件。</p>
 
-<p>Whilst not specifically EPUB related some information on this subject can be found in the LibreOffice on-line documentation – <a href="https://documentation.libreoffice.org/assets/Uploads/Documentation/en/GS5.1/HTML/GS5112-CreatingWebPages.html">Saving Documents as HTML</a></p>
+  <p>虽然并非专门针对 EPUB，但在 LibreOffice 在线文档中可以找到一些与此主题相关的信息——<a href="https://documentation.libreoffice.org/assets/Uploads/Documentation/en/GS5.1/HTML/GS5112-CreatingWebPages.html">将文档另存为 HTML</a></p>
 
-<h3 class="sigil_not_in_toc">DOCXImport Plugin</h3>
+  <h3 class="sigil_not_in_toc">DOCXImport 插件</h3>
 
-<p>To create a new EPUB book directly from a MS Word file you can use the DOCXImport plugin developed by DiapDealer. By adding this plugin you can directly import a docx into Sigil as html.</p>
+  <p>要直接从 MS Word 文件创建新的 EPUB，可使用 DiapDealer 开发的 DOCXImport 插件。添加该插件后，可将 docx 直接作为 html 导入 Sigil。</p>
 
-<p><a href="https://www.mobileread.com/forums/showthread.php?t=273966">DOCXImport plugin</a> (See the <a href="manage_plugins.xhtml">Manage Plugins</a> chapter on how to install a plugin).</p>
+  <p><a href="https://www.mobileread.com/forums/showthread.php?t=273966">DOCXImport 插件</a>（关于如何安装插件，请参阅<a href="../Text/manage_plugins.xhtml">插件管理</a>一章）。</p>
 
-<div class="tip">
-    <p class="tiptext">Note: Using this plugin will create a new EPUB. If you already have an existing EPUB open in Sigil this will be replaced and any unsaved work will be discarded.</p>
+  <div class="tip">
+    <p class="tiptext">注意：该插件会创建全新的 EPUB。如果 Sigil 中已打开现有 EPUB，该文件将被替换，所有未保存的修改都会丢失。</p>
   </div>
 
-<p>Click on <span class="menuitem">Plugins=&gt;Input=&gt;DOCXImport</span> to run the plugin.</p>
-<div class="image">
+  <p>点击 <span class="menuitem">插件=&gt;输入=&gt;DOCXImport</span> 即可运行该插件。</p>
+
+  <div class="image">
     <img alt="Showing selecting a plugin via the Plugin dynamic menus" src="../Images/docx-import-plugin1.png"/>
   </div>
 
-<p>Prior to selecting the file to import you have the option of choosing which version of EPUB your book will be, and also whether to use a custom Style Map or Stylesheet.</p>
+  <p>在选择要导入的文件之前，可以先选择这本书采用的 EPUB 版本，以及是否使用自定义的样式映射或样式表。</p>
 
-<div class="image">
+  <div class="image">
     <img alt="Showing DOCXImport plugin." src="../Images/docx-import-plugin2.png"/>
   </div>
 
-<p>Click on DOCX File to import and then select the file you wish to import.</p>
+  <p>点击 DOCX 文件开始导入，然后选择要导入的文件。</p>
 
-<div class="image">
+  <div class="image">
     <img alt="More of the DOCXImport plugin being used." src="../Images/docx-import-plugin3.png"/>
   </div>
 
-<p>Heed the warning!</p>
+  <p>请留意这个警告！</p>
 
-<div class="image">
+  <div class="image">
     <img alt="Warning when loading an epub from a plugin." src="../Images/docx-import-plugin4.png"/>
   </div>
 
-<p>The docx file after successful importation and conversion ready for editing.</p>
+  <p>docx 文件导入并转换成功后，即可编辑。</p>
 
-<div class="image">
+  <div class="image">
     <img alt="Showing a newly imported DOCX file inside Sigil" src="../Images/docx-import-plugin5.png"/>
   </div>
 
+  <h3 class="sigil_not_in_toc">纯文本文件</h3>
 
-
-  <h3 class="sigil_not_in_toc">Text Files</h3>
-
-  <p>It is not strictly necessary to convert text files to HTML. Sigil can directly open .txt files.</p>
+  <p>严格来说，无需把纯文本文件转换成 HTML。Sigil 可以直接打开 <span class="example">.txt</span> 文件。</p>
 
   <div class="tip">
-    <p class="tiptext">Text files must have a blank line between paragraphs so that Sigil can split them into separate paragraphs.</p>
+    <p class="tiptext">纯文本文件的段落之间必须有空行，Sigil 才能将其拆分成独立的段落。</p>
   </div>
 
-  <p>Text files are not an ideal source, but they can still be better than some formats as they will have fewer unnecessary HTML tags. They may be worth using if you have lots of issues with other formats. Sometimes it is faster to add styles to a clean document than to try to clean up a converted file.</p>
+  <p>纯文本文件并不是理想的源格式，但可能比某些格式更好，因为它不会产生多余的 HTML 标签。如果使用其他格式遇到很多问题，纯文本文件值得一试。有时，给干净的文档添加样式，比费力清理转换出来的文件更快。</p>
 
-  <h3 class="sigil_not_in_toc">Other Formats</h3>
+  <h3 class="sigil_not_in_toc">其他格式</h3>
 
-  <p>Many other word processors, such as LibreOffice, also have a save-as or export to HTML or even save-as EPUB function that you can try. As with MS Word good advice on this process can be found on the Internet.</p>
+  <p>许多其他文字处理软件（如 LibreOffice）也有另存为或导出为 HTML、甚至另存为 EPUB 的功能，都可以尝试。与 MS Word 一样，可以在互联网上找到关于这一过程的实用建议。</p>
 
-<p>You can also convert other formats to HTML or EPUB using additional software such as <a href="https://calibre-ebook.com/">Calibre</a> which handles most ebook formats, runs on all platforms, and has an ebook library built-in, as well as, <a href="https://pandoc.org">Pandoc</a>, a dedicated document conversion application that supports a huge number of document formats including EPUB2, EPUB3, docx, odt and most Markdown variants. Pandoc is free, opensource, cross-platform, and written in Haskell (GHC).</p>
+  <p>也可使用其他软件把其他格式转换为 HTML 或 EPUB，例如 <a href="https://calibre-ebook.com/">Calibre</a>——能处理绝大多数电子书格式，可在所有平台上运行，并内置电子书库；还有 <a href="https://pandoc.org">Pandoc</a>——一款专门的文档转换应用，支持大量文档格式，包括 EPUB2、EPUB3、docx、odt 以及大多数 Markdown 变体。Pandoc 免费、开源、跨平台，采用 Haskell（GHC）编写。</p>
 
-  <p>Note that any automatic conversion of your files will introduce lots of extra code. If you are just formatting a book for personal use you may not be concerned with this. But if you are formatting books for professional purposes or want as little extra code in your EPUB as possible, then it should be avoided.</p>
+  <p>请注意，任何自动转换都会引入大量多余的代码。如果只是为个人用途排版，可能无需在意这一点。但如果是为专业目的排版图书，或者希望 EPUB 中尽量少出现多余代码，就应当避免使用自动转换。</p>
 
   <div class="tip">
-    <p class="tiptext">Aside from the EPUB format, Sigil primarily supports importing HTML (with any linked in images, css, and media files), and Text files. Since converting from other formats can be quite specialised, it is often best left to plugins and external tools. Free Sigil import plugins do exist to directly read in MarkDown, Kindle, docx, and odt formats.</p>
+    <p class="tiptext">除了 EPUB 格式，Sigil 主要支持导入 HTML（连同其中链接的图片、css 和媒体文件）以及纯文本文件。从其他格式转换可能相当专业，通常最好交给插件和外部工具处理。已有免费的 Sigil 导入插件，可以直接读入 MarkDown、Kindle、docx 和 odt 格式。</p>
   </div>
 </body>
 </html>

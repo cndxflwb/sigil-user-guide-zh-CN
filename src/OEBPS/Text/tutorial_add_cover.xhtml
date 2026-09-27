@@ -1,52 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Create an EPUB</title>
+  <title>创建 EPUB</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2>Add a Cover Image</h2>
+  <h2>添加封面图片</h2>
 
-  <p>Every book should have a cover image, and Sigil can make adding one to your EPUB easy. You will need to have an existing cover image available to use (and have permission to use it). The exact size of the cover is up to you and the guidelines for your device, however here
-are some general ideas about what is expected.</p>
-<ul>
-    <li><span class="listheading">Kindle Direct Publishing</span> – 2,560 × 1,600 (1.6:1 aspect ratio)</li>
-    <li><span class="listheading">Novels and Non-Fiction</span> – 2,560px × 1,600px (1.5:1 aspect ratio)</li>
-    <li><span class="listheading">Illustrated Books</span> – 2,800px × 3,920px (1.4:1 aspect ratio) or 3,000px × 3,600px (1.2:1 aspect ratio)</li>
-    <li><span class="listheading">Audiobooks</span> – 3,200px × 3,200px (1:1 aspect ratio)</li>
-</ul>
+  <p>每本书都应该有一张封面图片，而 Sigil 可以很轻松地帮你给 EPUB 添加封面。你需要有一张现成的封面图片可供使用（并且拥有使用它的许可）。封面的确切尺寸取决于你自己以及你所用设备的指南，不过这里给出一些大致参考尺寸。</p>
 
-<p>You should check with your book vendor and with the
-specifications for your targeted devices for the details
-on proper cover sizes.</p>
+  <ul>
+    <li><span class="listheading">Kindle 自助出版（KDP）</span>——2,560 × 1,600（1.6:1 宽高比）</li>
 
-  <p>To add a cover, just select the menu item <span class="menuitem">Tools=&gt;Add Cover</span></p>
+    <li><span class="listheading">小说与非虚构类</span>——2,560px × 1,600px（1.5:1 宽高比）</li>
 
-<p>That menu item will display the Add Cover Window.</p>
+    <li><span class="listheading">图文书</span>——2,800px × 3,920px（1.4:1 宽高比）或 3,000px × 3,600px（1.2:1 宽高比）</li>
+
+    <li><span class="listheading">有声书—</span>—3,200px × 3,200px（1:1 宽高比）</li>
+  </ul>
+
+  <p>你应当从书籍发行商以及适配设备的规格说明中确认，以获取关于恰当封面尺寸的详细信息。</p>
+
+  <p>要添加封面，只需选择菜单项 <span class="menuitem">工具=&gt;添加封面</span></p>
+
+  <p>该菜单项会显示添加封面窗口。</p>
 
   <div class="image">
     <img alt="Image of Add Cover dialog." src="../Images/tutorial-add-cover.png"/>
   </div>
 
-  <p>The Add Cover window shows you a list of images already in your EPUB. But since you haven’t loaded any images yet, it’s empty.</p>
+  <p>添加封面窗口会列出你的 EPUB 中已有的图像。但由于你还没有加载任何图像，所以列表是空的。</p>
 
-  <p>You can insert the image into your EPUB and make it the cover in one step by clicking on the <span class="buttonbox">Other Files</span> button.</p>
+  <p>你可以点击<span class="buttonbox">其他文件</span>按钮，一步将图像插入 EPUB 并将其设置为封面。</p>
 
-  <p>Select your cover image from your filesystem and click OK.</p>
+  <p>从文件系统中选择你的封面图片，然后点击<span class="buttonbox">确定</span>。</p>
 
-  <p>And that’s it. Sigil has added your image to the EPUB and marked it as the cover image. It has also created an HTML file at the start of your book and inserted your cover image into the file so that it will be displayed at the start of the book</p>
+  <p>就这样。Sigil 已经把图像添加进 EPUB，并将其标记为封面图片。它还在全书的开头创建了一个 HTML 文件，并把封面图片插入到该文件中，这样封面就会在全书的开头显示出来</p>
 
-<p>The contents of your Book Browser show that the cover.xhtml
-file has been added to the Text folder, and the cover.jpg
-image has been added to the Images folder.</p>
+  <p>书籍浏览器中的内容显示，<span class="example">cover.xhtml</span> 文件已被添加到 Text（文本） 文件夹，<span class="example">cover.jpg</span> 图片已被添加到 Images（图像） 文件夹。</p>
 
   <div class="image">
     <img alt="Showing the newly added cover in Book Browser" src="../Images/tutorial-add-cover-browser.png"/>
   </div>
 
-  <p>You should Save <img alt="File Save icon." src="../Images/button-save.png"/> your book.</p>
+  <p>你应该保存 <img class="toolbar-icon" alt="File Save icon." src="../Images/button-save.png"/> 你的书。</p>
 </body>
 </html>

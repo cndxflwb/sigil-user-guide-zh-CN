@@ -1,60 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Create an EPUB</title>
+  <title>创建 EPUB</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2>Generate A Table of Contents</h2>
+  <h2>生成目录</h2>
 
-  <p>In order for Sigil to generate a table of contents for you, you must have already identified the chapter names. See the previous tutorial (<a href="tutorial_mark_chapters.xhtml">Identify Your Chapters</a>) if you have not done this already.</p>
+  <p><a href="../Text/tutorial_mark_chapters.xhtml">标识你的章节</a>：要让 Sigil 为你生成目录，你必须已经标识了章节名称。如果还没有做这一步，请参阅前面的教程。</p>
 
-  <p>Once you have marked all your chapter headings you can click the Generate Table Of Contents button <img alt="Generate Table of Contents icon." src="../Images/generate-toc.png"/> or use the menu item <span class="menuitem">Tools=&gt;Table Of Contents=&gt;Generate Table Of Contents</span> to open a new dialog:</p>
+  <p>标记完所有章节标题后，你可以点击生成目录按钮 <img class="toolbar-icon" alt="Generate Table of Contents icon." src="../Images/generate-toc.png"/>，或使用菜单项 <span class="menuitem">工具=&gt;目录=&gt;生成目录</span>来打开一个新对话框：</p>
 
   <div class="image">
     <img alt="Table of Contents Generator window." src="../Images/tutorial-generate-chapter.png"/>
   </div>
 
-  <p>The dialog allows you to mark which headings to include or not include in your Table of Contents.</p>
+  <p>该对话框允许你标记哪些标题要包含进目录、哪些不包含。</p>
 
+  <div class="tip">
+    <p class="tiptext">把某个标题标记为排除在目录之外，这个设置是持久有效的。下次生成目录时，该标题仍然会被排除在外。更多细节请参阅<a href="../Text/table_of_contents.xhtml">目录</a>一章。</p>
+  </div>
 
+  <p>完成后点击<span class="buttonbox">确定</span>。</p>
 
-<div class="tip">
-<p class="tiptext">Marking a heading to be excluded
-from the TOC is persistent. The next time you generate
-the TOC, that heading will remain excluded.
-See the <a href="table_of_contents.xhtml">Table of Contents</a> chapter for more details.</p>
-</div>
-
-
-
-  <p>Click <span class="buttonbox">OK</span> when you are finished.</p>
-
-  <p>The Table of Contents window will be updated to show your current TOC – which includes the headings you selected:</p>
+  <p>目录窗口会被更新，显示你当前的目录——其中包含你所选的标题：</p>
 
   <div class="image">
     <img alt="Showing generated Table of Contents in the ToC window." src="../Images/tutorial-generated-toc.png"/>
   </div>
 
-  <p>If you click on an entry in the Table of Contents window you will jump to its location in the book.</p>
+  <p>点击目录窗口中的某个条目，你会跳转到它在书中的位置。</p>
 
-  <p>You should re-generate the TOC any time you change your headings.</p>
+  <p>每次修改标题之后，你都应当重新生成目录。</p>
 
   <div class="tip">
-    <p class="tiptext">If you also generate an HTML TOC as well, you
-should do that after you generate the EPUB TOC because
-the HTML TOC gets its information from the EPUB TOC, not
-directly from the HTML files.</p>
+    <p class="tiptext">如果你还要生成 HTML 目录，应当在生成 EPUB 目录之后再做，因为 HTML 目录的信息来自 EPUB 目录，而不是直接来自 HTML 文件。</p>
   </div>
 
-
-  <p>Save <img alt="File Save icon." src="../Images/button-save.png"/> your book if you haven’t already.</p>
+  <p>如果还没有保存，请保存 <img class="toolbar-icon" alt="File Save icon." src="../Images/button-save.png"/> 你的书。</p>
 
   <div class="tip">
-    <p class="tiptext">See the <a href="table_of_contents.xhtml">Table of Contents</a> chapter for more details.</p>
+    <p class="tiptext">更多细节请参阅<a href="../Text/table_of_contents.xhtml">目录</a>一章。</p>
   </div>
 </body>
 </html>

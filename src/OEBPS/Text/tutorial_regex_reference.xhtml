@@ -1,127 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Use Regular Expressions</title>
+  <title>使用正则表达式</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2>Regular Expression Reference</h2>
+  <h2>正则表达式参考</h2>
 
-  <p class="h2subheading">— Regex Reference —</p>
+  <p class="h2subheading">— 正则表达式参考 —</p>
 
-  <p>This tutorial is basically a quick reference for Regex.</p>
+  <p>本教程基本上是正则表达式的快速参考。</p>
 
-  <p>Regex is a very powerful way for you to edit and cleanup your EPUB when using Find &amp; Replace. However, when you first start using regex it can be confusing because there are a lot of commands you can use. This is a brief summary of some basic regex commands.</p>
+  <p>配合查找与替换使用，正则表达式是编辑和清理 EPUB 的强大工具。不过，刚开始使用时可能会感到困惑，因为可用的命令非常多。下面是基本正则命令的简要汇总。</p>
 
-  <p>You can find more details about regex at these links (or ask for help in the Sigil forum):</p>
+  <p>你可以在以下链接找到关于正则表达式的更多详细信息（或在 Sigil 论坛寻求帮助）：</p>
 
   <ul>
-    <li><a href="https://www.mobileread.com/forums/showthread.php?t=118569">Regex overview at MobileRead</a></li>
+    <li><a href="https://www.mobileread.com/forums/showthread.php?t=118569">MobileRead 上的正则表达式概述</a></li>
 
-    <li><a href="https://www.regular-expressions.info/tutorial.html">An Online Regex tutorial/reference</a></li>
+    <li><a href="https://www.regular-expressions.info/tutorial.html">在线正则表达式教程/参考</a></li>
 
-    <li><a href="https://cheatography.com/davechild/cheat-sheets/regular-expressions/">A one page command summary</a></li>
+    <li><a href="https://cheatography.com/davechild/cheat-sheets/regular-expressions/">单页命令速查表</a></li>
 
-    <li><a href="https://docs.python.org/3/library/re.html">Regex as used by Python</a></li>
+    <li><a href="https://docs.python.org/3/library/re.html">Python 中使用的正则表达式</a></li>
 
-    <li><a href="https://www.pcre.org/pcre.txt">Official PCRE details – start at the PCRESYNTAX(3) section</a></li>
+    <li><a href="https://www.pcre.org/pcre.txt">官方 PCRE 详细说明 – 从 PCRESYNTAX(3) 部分开始</a></li>
   </ul>
 
-  <h3 class="sigil_not_in_toc" id="regex_overview">Overview</h3>
+  <h3 class="sigil_not_in_toc" id="regex_overview">概述</h3>
 
-  <p class="sigilNotInTOC">When using regex commands in Find &amp; Replace the purpose is to allow you to search for patterns instead of exact text. This means that you can tell Find &amp; Replace to search for “a number” instead of “8”, or to match any words between certain tags and then replace it with new tags or new words.</p>
+  <p class="sigilNotInTOC">在查找与替换中使用正则命令，就能搜索模式而不是精确文本。也就是说，可以让查找与替换搜索“一个数字”而不是“8”，也可以匹配某些标签之间的任何词语，再用新标签或新词替换。</p>
 
-  <p>In order to allow you to search for patterns, you need to use regex commands in place of the specific text you want in your search. For instance, instead of searching for <span class="example">8</span> you could search for <span class="example">\d</span> (which means one digit) or <span class="example">\d+</span> (which means one or more digits).</p>
+  <p>要搜索模式，需要在搜索中用正则命令替代想要的具体文本。例如，不搜索 <span class="example">8</span>，而是搜索 <span class="example">\d</span>（表示一个数字）或 <span class="example">\d+</span>（表示一个或多个数字）。</p>
 
-  <p>An example Find &amp; Replace command using regex might be to change all level 1 headings to level 2 headings:</p>
+  <p>使用正则表达式的查找与替换命令示例如下，可将所有 1 级标题改为 2 级标题：</p>
 
   <ul>
-    <li><span class="listheading">Find:</span> <span class="example">&lt;h1(.*?)&lt;/h1&gt;</span></li>
+    <li><span class="listheading">查找：</span> 
 
-    <li><span class="listheading">Replace:</span> <span class="example">&lt;h2\1&lt;/h2&gt;</span></li>
+    <pre class="example">&lt;h1(.*?)&lt;/h1&gt;</pre></li>
+
+    <li><span class="listheading">替换：</span> 
+
+    <pre class="example">&lt;h2\1&lt;/h2&gt;</pre></li>
   </ul>
 
-  <p>where the Find command searches for any text between the h1 start and end tags, and using <span class="example">()</span> to save the text. (The start tag is left open in order to catch any class definitions, and the <span class="example">?</span> tells <span class="example">.*</span> to do minimal matching). The Replace command is used to replace the matched text with the saved text (indicated by <span class="example">\1</span>) surrounded by the h2 start and end tags.</p>
+  <p>其中“查找”命令搜索 h1 起始标签和结束标签之间的任何文本，并使用 <span class="example">()</span> 保存文本。（起始标签保持开放以便捕获任何 class 定义，<span class="example">?</span> 则使 <span class="example">.*</span> 最短匹配。）“替换”命令把匹配到的文本替换为保存的文本（由 <span class="example">\1</span> 表示），并在其前后加上 h2 起始和结束标签。</p>
 
-  <p>The following sections give a sample of common regex commands that you may find useful.</p>
+  <p>以下几节给出了一些你可能会用到的常见正则命令示例。</p>
 
-  <h3 class="sigil_not_in_toc" id="regex_modifiers">General Modifiers:</h3>
+  <h3 class="sigil_not_in_toc" id="regex_modifiers">通用修饰符：</h3>
 
-  <p>You can put these commands at the start of any regex to modify how the expression behaves:</p>
+  <p>你可以把这些命令放在任何正则表达式的开头，以修改表达式的行为：</p>
 
   <ul>
-    <li><span class="example">(?s)</span> – search across lines when using <span class="example">.*</span> since by default <span class="example">.*</span> only matches within a line of text. This is done by the DotAll option in Find &amp; Replace.</li>
+    <li><span class="example">(?s)</span> – 使用 <span class="example">.*</span> 时跨行搜索，因为默认情况下 <span class="example">.*</span> 只在一行文本内匹配。这由查找与替换中的 覆盖全部 选项实现。</li>
 
-    <li><span class="example">(?U)</span> – match the first occurrence of your string (also called minimal or ungreedy matching). This is very useful when using <span class="example">.*</span> to avoid matching too much. This is done by the Minimal Match option in Find &amp; Replace.</li>
+    <li><span class="example">(?U)</span> – 匹配字符串的第一次出现（也称最短或非贪婪匹配）。使用 <span class="example">.*</span> 时这非常有用，可以避免匹配过多内容。这由查找与替换中的“最短匹配”（Minimal Match）选项实现。</li>
 
-    <li><span class="example">(?i)</span> – ignore case when matching.</li>
+    <li><span class="example">(?i)</span> – 匹配时忽略大小写。</li>
 
-    <li><span class="example">(*UCP)</span> – enables unicode properties for the expression that follows.</li>
+    <li><span class="example">(*UCP)</span> – 为其后的表达式启用 Unicode 属性。</li>
   </ul>
 
-  <p>You can combine modifiers, e.g. <span class="example">(?sU)</span> is commonly used.</p>
+  <p>你可以组合修饰符，例如 <span class="example">(?sU)</span> 就很常用。</p>
 
-  <h3 class="sigil_not_in_toc">Single Characters:</h3>
+  <h3 class="sigil_not_in_toc">单字符：</h3>
 
-  <p>You can use these regex commands to represent single characters:</p>
+  <p>你可以用这些正则命令表示单个字符：</p>
 
   <ul>
-    <li><span class="example">.</span> – matches one character</li>
+    <li><span class="example">.</span> – 匹配一个字符</li>
 
-    <li><span class="example">\d</span> – match one digit</li>
+    <li><span class="example">\d</span> – 匹配一个数字</li>
 
-    <li><span class="example">\t</span> – match one tab</li>
+    <li><span class="example">\t</span> – 匹配一个制表符</li>
 
-    <li><span class="example">[abc]</span> – any character that is a b or c</li>
+    <li><span class="example">[abc]</span> – 任何为 a、b 或 c 的字符</li>
 
-    <li><span class="example">[^abc]</span> – any character that is NOT a b or c</li>
+    <li><span class="example">[^abc]</span> – 任何不是 a、b 或 c 的字符</li>
 
-    <li><span class="example">[0-9]</span> – any digit from 0 to 9</li>
+    <li><span class="example">[0-9]</span> – 任何从 0 到 9 的数字</li>
 
-    <li><span class="example">[[:alpha:]]</span> – any letter, upper or lower case</li>
+    <li><span class="example">[[:alpha:]]</span> – 任何字母，无论大写还是小写</li>
 
-    <li><span class="example">[^[:alnum:]]</span> – any character that is NOT a digit or upper or lowercase letter</li>
+    <li><span class="example">[^[:alnum:]]</span> – 任何不是数字或大小写字母的字符</li>
   </ul>
 
-  <h3 class="sigil_not_in_toc">Multiple Characters:</h3>
+  <h3 class="sigil_not_in_toc">多字符：</h3>
 
-  <p>These regex quantifiers or codes allow you to represent multiple characters:</p>
+  <p>这些正则量词或代码让你能够表示多个字符：</p>
 
   <ul>
-    <li><span class="example">*</span> – use after a character to mean 0 or more, e.g. <span class="example">.*</span> means 0 or more of any character</li>
+    <li><span class="example">*</span> – 用在字符后表示 0 个或多个，例如 <span class="example">.*</span> 表示 0 个或多个任意字符</li>
 
-    <li><span class="example">+</span> – use after a character to mean 1 or more, e.g. <span class="example">\d+</span> means 1 or more digits</li>
+    <li><span class="example">+</span> – 用在字符后表示 1 个或多个，例如 <span class="example">\d+</span> 表示 1 个或多个数字</li>
 
-    <li><span class="example">?</span> – use after a character to mean 0 or 1 instance, e.g. <span class="example">\d?</span> means none or 1 digit</li>
+    <li><span class="example">?</span> – 用在字符后表示 0 个或 1 个，例如 <span class="example">\d?</span> 表示没有或 1 个数字</li>
 
-    <li><span class="example">\s</span> – matches whitespace, including space, tab, end of line carriage returns or newlines</li>
+    <li><span class="example">\s</span> – 匹配空白字符，包括空格、制表符、行尾回车或换行符</li>
   </ul>
 
-  <p>And there is a special character that tells your search to stop at the first match it finds instead of the largest match which you can use instead of the general modifier <span class="example">(?U)</span>:</p>
+  <p>还有一个特殊字符，它让搜索在找到第一个匹配时就停止，而不是寻找最大匹配，你可以用它代替通用修饰符 <span class="example">(?U)</span>：</p>
 
   <ul>
-    <li><span class="example">?</span> – use after a quantifier to do a minimal search, e.g. <span class="example">.*?</span> or <span class="example">\d+?</span></li>
+    <li><span class="example">?</span> – 用在量词后进行最短搜索，例如 <span class="example">.*?</span> 或 <span class="example">\d+?</span></li>
   </ul>
 
-  <h3 class="sigil_not_in_toc">Groups:</h3>
+  <h3 class="sigil_not_in_toc">分组：</h3>
 
-  <p>In some cases you need to group your expressions together so that, for example, you can save them for a later replace, or to indicate a choice of words:</p>
+  <p>在某些情况下，你需要把表达式组合在一起，例如把它们保存起来供以后替换使用，或者表示词语的选择：</p>
 
   <ul>
-    <li><span class="example">(atext|btext)</span> – atext or btext</li>
+    <li><span class="example">(atext|btext)</span> – atext 或 btext</li>
 
-    <li><span class="example">(group)</span> – group the words together for later retrieval – you can use multiple groups</li>
+    <li><span class="example">(group)</span> – 把词语组合在一起以便以后取用——你可以使用多个分组</li>
   </ul>
 
-  <h3 class="sigil_not_in_toc">Replacing:</h3>
+  <h3 class="sigil_not_in_toc">替换：</h3>
 
-  <p>When replacing text, one of the most useful features is to be able to use text that was matched by storing it in a group. Once you have grouped text you can reference it in your replace command:</p>
+  <p>替换文本时，最有用的功能之一是能够把匹配到的文本存入分组后再使用。一旦把文本分组，你就可以在替换命令中引用它：</p>
 
   <ul>
-    <li><span class="example">\1</span> – use in Replace to retrieve the value of a saved group (use <span class="example">\2</span> for the second group, etc.)</li>
+    <li><span class="example">\1</span> – 在“替换”中用于取回保存的分组的值（第二个分组用 <span class="example">\2</span>，依此类推）</li>
   </ul>
 </body>
 </html>

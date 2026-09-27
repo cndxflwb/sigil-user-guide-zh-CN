@@ -1,197 +1,209 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Saved Searches</title>
+  <title>搜索模板</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="search_editor">Saved Searches</h2>
+  <h2 id="search_editor">搜索模板</h2>
 
-  <p class="h2subheading">— Saved Searches for Find &amp; Replace —</p>
+  <p class="h2subheading">—已保存的查找与替换搜索模板—</p>
 
-  <p>If you have Find &amp; Replace searches that you routinely run – or complicated searches that you occasionally run but don’t want to have to recreate every time – you can save them in the Saved Searches dialog. Once saved, you can use the dialog to edit and run the searches.</p>
+  <p>如果你有一些经常运行的查找与替换搜索——或者偶尔运行但不想每次重新创建的复杂搜索——可以把它们保存在“搜索模板”对话框中。保存后，你可以使用该对话框来编辑和运行这些搜索。</p>
 
-  <p>To open the Saved Searches dialog, select menu item <span class="menuitem">Tools=&gt;Saved Searches</span>, its keyboard shortcut, or toolbar button <img alt="Saved Searches icon." src="../Images/saved-searches-button.png"/>.</p>
+  <p>要打开“搜索模板”对话框，请选择菜单项 <span class="menuitem">工具=&gt;搜索模板</span>、其键盘快捷键，或工具栏按钮<img class="toolbar-icon" alt="Saved Searches icon." src="../Images/saved-searches-button.png"/>。</p>
 
   <div class="image">
     <img alt="Saved Searches main dialog." src="../Images/saved-searches-main.png"/>
   </div>
 
+  <h3 class="sigil_not_in_toc">上下文菜单命令</h3>
 
-  <h3 class="sigil_not_in_toc">Context Menu Commands</h3>
-
-  <p>Most actions concerning creating and editing saved searches are accessed using the right-click context menu:</p>
+  <p>创建和编辑搜索模板的大多数操作都通过右键上下文菜单完成：</p>
 
   <div class="image">
     <img alt="Saved Searches Context menu." src="../Images/saved-searches-context-menu.png"/>
   </div>
 
-  <p>Select one or more saved search entries then right-click on the selection for the following options:</p>
+  <p>选中一个或多个历史搜索条目，然后右键单击所选内容，会显示以下选项：</p>
 
   <ul>
-    <li><span class="listheading">Add Entry:</span> Add a new blank search under the entry you clicked.</li>
+    <li><span class="listheading">添加条目：</span>在你单击的条目下方添加一个新的空白搜索。</li>
 
-    <li><span class="listheading">Add Group:</span> Add a new group under the entry you clicked.</li>
+    <li><span class="listheading">添加组：</span>在你单击的条目下方添加一个新组。</li>
 
-    <li class="first"><span class="listheading">Edit:</span> Edit or rename the entry (same as double-click).</li>
+    <li class="first"><span class="listheading">编辑：</span>编辑或重命名该条目（与双击相同）。</li>
 
-    <li class="first"><span class="listheading">Cut:</span> Delete one or more entries that can be pasted later.</li>
+    <li class="first"><span class="listheading">剪切：</span>删除一个或多个条目，之后可以粘贴。</li>
 
-    <li><span class="listheading">Copy:</span> Copy one or more entries that can be pasted later.</li>
+    <li><span class="listheading">复制：</span>复制一个或多个条目，之后可以粘贴。</li>
 
-    <li><span class="listheading">Paste:</span> Paste any cut/copied entries.</li>
+    <li><span class="listheading">粘贴：</span>粘贴任何已剪切/复制的条目。</li>
 
-    <li class="first"><span class="listheading">Delete:</span> Delete selected entries or groups.</li>
+    <li class="first"><span class="listheading">删除：</span>删除选中的条目或组。</li>
 
-    <li class="first"><span class="listheading">Import:</span> Read a list of exported entries from a file into the list.</li>
+    <li class="first"><span class="listheading">导入：</span>从文件中读取已导出的条目列表并加入列表。</li>
 
-    <li><span class="listheading">Reload:</span> Restore the list from the last saved state.</li>
+    <li><span class="listheading">重新加载：</span>将列表恢复到最后一次保存的状态。</li>
 
-    <li class="first"><span class="listheading">Export:</span> Save selected entries to a file for sharing or backup.</li>
+    <li class="first"><span class="listheading">导出：</span>把选中的条目保存到文件中，用于共享或备份。</li>
 
-    <li><span class="listheading">Export All:</span> Save all entries to a file.</li>
+    <li><span class="listheading">导出所有：</span>把所有条目保存到文件中。</li>
 
-    <li class="first"><span class="listheading">Collapse All:</span> Collapse the display of all groups.</li>
+    <li class="first"><span class="listheading">全部折叠：</span>折叠所有组的显示。</li>
 
-    <li><span class="listheading">Expand All:</span> Expand the display of all groups.</li>
-	  
-    <li class="first"><span class="listheading">Fill Controls:</span> Copy the first Controls value to all other entries in the same group that are highlighted via shift-click. I.e., if you want the same Controls for multiple entries in a Saved Search group, enter the Controls for the first entry, use shift-click to highlight the remaining entries that should use the same Controls, then select Fill Controls. (Requires Sigil 1.6.0 and higher.)</li>
+    <li><span class="listheading">全部展开：</span>展开所有组的显示。</li>
 
+    <li class="first"><span class="listheading">填充控制项：</span>把第一个 控制项 值复制到通过按下 <span class="shortcut">Shift</span> 键单击选中（高亮显示）的所有其他条目。也就是说，如果你想让已保存搜索组中的多个条目使用相同的 控制项，先为第一个条目输入 控制项，用 <span class="shortcut">Shift</span> 单击选中（高亮显示）其余应使用相同 控制项 的条目，然后选择 填充控制项。（需要 Sigil 1.6.0 或更高版本。）</li>
   </ul>
 
   <div class="tip">
-    <p class="tip">Selecting “Import…” will allow you to read in a new search group from a csv file, or from a previously saved Sigil ini file, or from a simple text file.</p>
+    <p class="tip">选择 导入…… 可以从 csv 文件、之前保存的 Sigil ini 文件或简单的文本文件中读入新的搜索组。</p>
   </div>
-  
+
   <div class="tip">
-    <p class="tip">To move search entries or groups, use the arrow keys or drag-and-drop.</p>
+    <p class="tip">要移动搜索条目或组，请使用方向键或拖放。</p>
 
-  	<p class="tip">To make a group of searches, first create the group, then move the search entries into the group.</p>
+    <p class="tip">要创建一个搜索组，请先创建组，然后把搜索条目移动到该组中。</p>
   </div>
 
+  <h3 class="sigil_not_in_toc">运行搜索</h3>
 
-  <h3 class="sigil_not_in_toc">Running Searches</h3>
+  <p>“搜索模板”对话框既可以管理搜索，也可以运行搜索。所有查找与替换操作按钮都可以在该对话框中使用，因此无需打开查找与替换窗口即可运行已保存的搜索。</p>
 
-  <p>The Saved Searches dialog can be used to run searches as well as manage them. All of the Find &amp; Replace action buttons are available in the Saved Searches dialog, so you do not need to open the Find &amp; Replace window to run a saved search.</p>
+  <h4 class="sigil_not_in_toc">使用控制项——Sigil 1.6.0 新增</h4>
 
-  <h4 class="sigil_not_in_toc"> Using Controls - Newly Added in Sigil 1.6.0</h4>
+  <p>控制项 列允许你设置搜索模式、搜索方向、各种搜索选项以及搜索目标（要搜索的文件）。</p>
 
-  <p>The “Controls” column allows you to set search mode, search direction, any search options and the search targets (the files to search).</p>
+  <p>控制项由双字符代码表示，可以按任意顺序排列，用逗号或空格分隔：</p>
 
-  <p>Controls are represented by two-character codes, which can be in any order, separated by commas or spaces:</p>
-  
-   <ul>
-    <li><span class="listheading">NL</span> - Mode: Normal</li>
-    <li><span class="listheading">RX</span> - Mode: Regular Expression</li>
-    <li><span class="listheading">CS</span> - Mode: Case Sensitive</li>
+  <ul>
+    <li><span class="listheading">NL</span>——模式：正常</li>
 
-    <li class="first"><span class="listheading">UP</span> - Direction: Up</li>
-    <li><span class="listheading">DN</span> - Direction: Down</li>
-    
-   <li class="first"><span class="listheading">CF</span> - Target: Current File</li>
-   <li><span class="listheading">AH</span> - Target: All HTML Files</li>
-   <li><span class="listheading">SH</span> - Target: Selected HTML Files</li>
-   <li><span class="listheading">TH</span> - Target: Tabbed HTML Files</li>
-   <li><span class="listheading">AC</span> - Target: All CSS Files</li>
-   <li><span class="listheading">SC</span> - Target: Selected CSS Files</li>
-   <li><span class="listheading">TC</span> - Target: Tabbed CSS Files</li>
-   <li><span class="listheading">OP</span> - Target: OPF File</li>
-   <li><span class="listheading">NX</span> - Target: NCX File</li>
-   <li><span class="listheading">SV</span> - Target: Selected SVG Files</li>
-   <li><span class="listheading">SJ</span> - Target: Selected Javascript Files</li>
-   <li><span class="listheading">SX</span> - Target: Selected Misc XML Files</li>
+    <li><span class="listheading">RX</span>——模式：正则表达式</li>
 
+    <li><span class="listheading">CS</span>——模式：区分大小写</li>
 
-   <li class="first"><span class="listheading">DA</span> - Regex Option: DotAll</li>
-   <li><span class="listheading">MM</span> - Regex Option: Minimal Match</li>
-   <li><span class="listheading">AT</span> - Regex Option: Auto Tokenise</li>
-   <li><span class="listheading">UN</span> - Regex Option: Unicode Property</li>
-   <li><span class="listheading">WR</span> - Option: Wrap</li>
-   <li><span class="listheading">TO</span> - Option: Text</li>
-   </ul>
+    <li class="first"><span class="listheading">UP</span>——方向：向前</li>
 
-  <p>To edit the Controls, double-click in the Controls column of your search to see a Find &amp; Replace-like interface for setting the Mode, Options, Direction, and Targets.  Tooltips are provided to make quick overview of existing Controls settings simpler.</p>
+    <li><span class="listheading">DN</span>——方向：向后</li>
+
+    <li class="first"><span class="listheading">CF</span>——目标：当前文件</li>
+
+    <li><span class="listheading">AH</span>——目标：所有 HTML 文件</li>
+
+    <li><span class="listheading">SH</span>——目标：选中的 HTML 文件</li>
+
+    <li><span class="listheading">TH</span>——目标：标签页中的 HTML 文件</li>
+
+    <li><span class="listheading">AC</span>——目标：所有 CSS 文件</li>
+
+    <li><span class="listheading">SC</span>——目标：选中的 CSS 文件</li>
+
+    <li><span class="listheading">TC</span>——目标：标签页中的 CSS 文件</li>
+
+    <li><span class="listheading">OP</span>——目标：OPF 文件</li>
+
+    <li><span class="listheading">NX</span>——目标：NCX 文件</li>
+
+    <li><span class="listheading">SV</span>——目标：选中的 SVG 文件</li>
+
+    <li><span class="listheading">SJ</span>——目标：选中的 javascript 文件</li>
+
+    <li><span class="listheading">SX</span>——目标：选中的 Misc XML 文件</li>
+
+    <li class="first"><span class="listheading">DA</span>——正则选项：覆盖全部</li>
+
+    <li><span class="listheading">MM</span>——正则选项：懒惰匹配</li>
+
+    <li><span class="listheading">AT</span>——正则选项：自动转义</li>
+
+    <li><span class="listheading">UN</span>——正则选项：Unicode 属性</li>
+
+    <li><span class="listheading">WR</span>——选项：循环</li>
+
+    <li><span class="listheading">TO</span>——选项：文本</li>
+  </ul>
+
+  <p>要编辑控制项，双击搜索条目所在行的 控制项 列，会显示一个类似查找与替换的界面，用于设置 模式、选项、方向和 目标。界面提供了工具提示，便于快速查看现有的控制项设置。</p>
 
   <div class="image">
     <img alt="Saved Searches Editing Controls." src="../Images/saved-searches-editing-controls.png"/>
   </div>
 
+  <p>如果 控制项 字段留空，将使用当前查找与替换窗口中的搜索设置。如有疑问，请打开查找与替换窗口查看你最后设置的模式和选项，因为运行任何已保存的搜索时都会使用这些设置。</p>
 
-  <p>If the Controls field is left blank, then the search setting in the current Find &amp; Replace window will be used. If in doubt, open the Find &amp; Replace window to check what modes and options you last set, as that is what will be used when you run any saved search.</p>
-
-  <p>To run a search, select an entry and click one of the action buttons: Find, Replace, Replace/Find, Replace All, Count All. Status messages will appear in the lower left corner of the Saved Searches dialog; they will also appear in the lower right corner of the Find &amp; Replace window if you have it open.</p>
-  
-    <div class="tip">
-    <p class="tiptext">All Saved Searches are run using the mode, options, direction and targets set in the Controls column.</p>
-
-    <p class="tiptext">To run a search only on the Current File, regardless of the mode setting, hold the <span class="shortcut">Ctrl</span> key down (on Mac: <span class="shortcut">Cmd</span> key) while clicking on an action button.</p>
-  </div>
-
-  <h3 class="sigil_not_in_toc">Running Multiple Searches at One Time</h3>
-
-  <p>You can run multiple searches with a single button click if you:</p>
-  
-  	<ol>
-  		<li>Select a group name instead of an individual entry,<br/>
-  		<i>or</i></li>
-  		<li>Select multiple non-group entries by holding down the <span class="shortcut">Ctrl</span> key (on Mac: <span class="shortcut">Cmd</span> key) while clicking on multiple individual entries.</li>
-  	</ol>
-  	
-  	<p>Once selected, click <span class="buttonbox">Replace All</span>, and each search in the group or selection will run sequentially, one after another.  When running multiple searches in a group, the Controls value if blank will inherit the values of the previous search in the search grouping.   Setting the Controls for the first search of any search grouping will suffice.</p>
-  
-
-  <h3 class="sigil_not_in_toc">Save</h3>
-
-		  <p>Once you are done creating and editing your searches, be sure to save them by clicking <span class="buttonbox">Save</span>.</p>
-
-		  <p>To exit without saving your entries, close the window with the <span class="buttonbox">Close</span> button or <span class="shortcut">Esc</span> key, then confirm that you don’t want to save, if prompted. You can also use context menu <span class="menuitem">Reload</span> to reload your entries from disk, which will delete current unsaved entries.</p>
-
-		  <p>Use the <span class="menuitem">Export</span> context menu item to save a copy of your searches so that they can be shared with others (who can then use <span class="menuitem">Import</span> to add them to their Sigil).</p>
-
-		  <div class="tip">
-			<p class="tiptext">If you save and are running more than one copy of Sigil, then the other instances of Sigil will automatically reload the newly saved searches to keep all copies in sync.</p>
-		  </div>
-
-  <h3 class="sigil_not_in_toc">Counts Report (New in Sigil 1.9.10)</h3>
-
-  <p>This feature was introduced to take any user selected Saved Search Group and generate a report of the counts of all matches for each specific saved search in the group. This allows users to create custom report tables on the number of uses for any feature or tag (ie. lists, tables, images) that can be defined by a regular expression search.</p>
-
-   <div class="image">
-    <img alt="report of the number of matches by saved search in a saved search group" src="../Images/saved-search-counts-report.png"/>
-   </div>
-
-  <p>A pop-up context menu allows the user to export the Counts Report to a CSV file for subsequent processing in a spreadsheet.</p>
-
-  <h3 class="sigil_not_in_toc">Filter</h3>
-
-  <p>Use the filter text box to restrict the list of entries shown, making it easier to find the search you want.</p>
-
-  <h3 class="sigil_not_in_toc">Load Search</h3>
-  
-  <p>If you prefer to run your searches from the Find &amp; Replace window, select the search from the Saved Searches dialog, then click <span class="buttonbox">Load Search</span>. It will then be loaded into the Find &amp; Replace window. Alternatively, you can right-click directly in the Find &amp; Replace text boxes and select a saved search from the context menu (see more below).</p>
-  
-  <p>Loading does not run the search – it is only a way to populate the fields in the Find &amp; Replace window.</p>
-
-  <p>You do not need to use the <span class="buttonbox">Load Search</span> button if you are running a search from the Saved Searches dialog.</p>
+  <p>要运行搜索，选中一个条目并单击右侧的操作按钮：查找、替换、替换/查找、全部替换、计算全部匹配。状态消息会显示在“搜索模板”对话框的左下角；如果你打开了查找与替换窗口，状态消息也会显示在其右下角。</p>
 
   <div class="tip">
-    <p class="tiptext">You can load a search using just the keyboard by using the shortcut to open Saved Searches, typing your search name in the filter box and hitting return (followed by Esc if you want to close the window).</p>
+    <p class="tiptext">所有已保存的搜索都使用 控制项 列中设置的模式、选项、方向和目标来运行。</p>
+
+    <p class="tiptext">要只在当前文件中运行搜索（无论模式如何设置），请在单击操作按钮时按住<span class="shortcut">Ctrl</span>键（Mac 上：<span class="shortcut">Cmd</span>键）。</p>
   </div>
 
+  <h3 class="sigil_not_in_toc">一次运行多个搜索</h3>
 
-  <h3 class="sigil_not_in_toc">Using Saved Searches from the Find &amp; Replace Box</h3>
-  
-  <p>You can access your saved searches directly from the Find &amp; Replace window (without ever opening the Saved Searches dialog) by right-clicking in the Find or Replace text field and bringing up the context menu.</p>
- 
- 	<p>Your saved searches will appear at the top of the context-menu. Select one to load it into the Find &amp; Replace window.</p>
+  <p>只需单击一次按钮即可运行多个搜索，方法是：</p>
 
-   <div class="image">
+  <ol>
+    <li>选择组名而不是单个条目，<br/><i>或者</i></li>
+
+    <li>按住<span class="shortcut">Ctrl</span>键（Mac 上：<span class="shortcut">Cmd</span>键）逐个单击多个单独条目，以选中多个非编组条目。</li>
+  </ol>
+
+  <p>选中后，单击<span class="buttonbox">全部替换</span>，组中或所选内容中的每个搜索会依次逐个运行。在组中运行多个搜索时，如果某个搜索的 控制项 值为空，它会继承该搜索分组中前一个搜索的值。因此，只需为任何搜索分组的第一个搜索设置 控制项 即可。</p>
+
+  <h3 class="sigil_not_in_toc">保存</h3>
+
+  <p>完成搜索的创建和编辑后，请务必单击<span class="buttonbox">保存</span>。</p>
+
+  <p>要不保存条目直接退出，请使用<span class="buttonbox">关闭</span>按钮或<span class="shortcut">Esc</span>键关闭窗口，然后在提示时确认不保存。你也可以使用上下文菜单 <span class="menuitem">重新加载</span> 从磁盘重新加载条目，这会删除当前未保存的条目。</p>
+
+  <p>使用 <span class="menuitem">导出</span> 上下文菜单项保存搜索的副本，以便与他人共享（对方可以使用 <span class="menuitem">导入</span> 把它们添加到自己的 Sigil 中）。</p>
+
+  <div class="tip">
+    <p class="tiptext">如果你保存了搜索，且正在运行多个 Sigil 实例，其他 Sigil 实例会自动重新加载新保存的搜索，以保持所有实例同步。</p>
+  </div>
+
+  <h3 class="sigil_not_in_toc">计数报告（Sigil 1.9.10 新增）</h3>
+
+  <p>此功能可针对用户选定的任意已保存搜索组生成报告，统计组内每个搜索的所有匹配数量。用户借此可以统计任何能用正则表达式定义的功能或标签（例如列表、表格、图像）的使用次数，创建自定义报表。</p>
+
+  <div class="image">
+    <img alt="report of the number of matches by saved search in a saved search group" src="../Images/saved-search-counts-report.png"/>
+  </div>
+
+  <p>弹出式上下文菜单允许用户将计数报告导出为 CSV 文件，以便在电子表格中进一步处理。</p>
+
+  <h3 class="sigil_not_in_toc">过滤器</h3>
+
+  <p>使用过滤器文本框可以限制显示的条目列表，便于找到想要的搜索。</p>
+
+  <h3 class="sigil_not_in_toc">加载搜索</h3>
+
+  <p>如果你更喜欢在查找与替换窗口中运行搜索，请在“搜索模板”对话框中选中该搜索，然后单击<span class="buttonbox">加载搜索</span>。搜索会被加载到查找与替换窗口中。你也可以直接在查找与替换文本框中右键单击，从上下文菜单中选择一个已保存的搜索条目（详见下文）。</p>
+
+  <p>加载搜索后并不会运行——它只是填充查找与替换窗口各字段的一种方式。</p>
+
+  <p>如果你是从“搜索模板”对话框运行搜索，则不需要使用<span class="buttonbox">加载搜索</span>按钮。</p>
+
+  <div class="tip">
+    <p class="tiptext">仅用键盘也可以加载搜索：使用快捷键打开“搜索模板”，在过滤框中输入搜索名称并按回车（如果想关闭窗口，接着按 <span class="shortcut">Esc</span>）。</p>
+  </div>
+
+  <h3 class="sigil_not_in_toc">从查找与替换框使用已保存的搜索</h3>
+
+  <p>你可以直接在查找与替换窗口中访问已保存的搜索（无需打开“搜索模板”对话框）：在 查找 或 替换 文本框中右键单击，调出上下文菜单即可。</p>
+
+  <p>已保存的搜索会显示在上下文菜单的顶部。选择其中一项即可将其加载到查找与替换窗口中。</p>
+
+  <div class="image">
     <img alt="Find and Replace using Context menu." src="../Images/saved-searches-find-replace-context-menu.png"/>
-   </div>
-  	
-	<p>If you’ve run a search in the Find &amp; Replace window that you want to save, call up the context menu by right-clicking in the Find or Replace text field, then select <span class="menuitem">Save Search</span>.</p>
+  </div>
+
+  <p>如果你在查找与替换窗口中想保存搜索，供下次使用，请在 查找 或 替换 文本框中右键单击调出上下文菜单，然后选择 <span class="menuitem">保存搜索</span>。</p>
 </body>
 </html>

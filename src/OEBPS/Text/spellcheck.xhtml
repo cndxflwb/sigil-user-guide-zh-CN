@@ -1,100 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Spellcheck</title>
+  <title>拼写检查</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="spellcheck">Spellcheck</h2>
+  <h2 id="spellcheck">拼写检查</h2>
 
-  <p class="h2subheading">— Checking and Correcting Spelling —</p>
+  <p class="h2subheading">— 检查并更正拼写 —</p>
 
-  <p>Sigil provides several ways to check your spelling – highlighting misspelled words, finding words one at a time, or showing all misspelled words at once. You can choose a standard dictionary to use, and create personal user dictionaries with your own words.</p>
-
-  <div class="tip">
-    <p class="tiptext">Spellcheck uses Code View to show misspelled words.</p>
-  </div>
-
-  <h3 class="sigil_not_in_toc" id="spellcheck_configuration">Configure Spellchecking</h3>
-
-  <p>You can set the spell checking preferences that you want – including which main dictionary to use, and which personal user dictionaries to use if any. You can set up user dictionaries for different types of books or individual books, or use only the default user dictionary. You can change user dictionaries at any time.</p>
+  <p>Sigil 提供多种检查拼写的方式——高亮拼错的单词、逐个查找单词，或一次性显示所有拼错的单词。您可以选择要使用的标准词典，并创建包含自己词汇的个人用户词典。</p>
 
   <div class="tip">
-    <p class="tiptext">Set up your dictionaries in <a href="preferences.xhtml#preferences_spellcheck_dictionaries">Preferences</a>.</p>
+    <p class="tiptext">拼写检查在代码视图中显示拼错的单词。</p>
   </div>
 
-  <h3 class="sigil_not_in_toc">Automatic Spellchecking</h3>
+  <h3 class="sigil_not_in_toc" id="spellcheck_configuration">配置拼写检查</h3>
 
-  <p>Code View will highlight any misspelled words with a wavy red underline when automatic spell checking is enabled in Preferences or using the menu item <span class="menuitem">Tools=&gt;Spellcheck=&gt;Highlight Misspelled Words</span>:</p>
+  <p>您可以按需设置拼写检查首选项——包括使用哪个主词典，以及使用哪些个人用户词典（如果有的话）。可以为不同类型的图书或单本图书设置用户词典，也可以只使用默认用户词典。用户词典可随时更改。</p>
+
+  <div class="tip">
+    <p class="tiptext">在<a href="../Text/preferences.xhtml#preferences_spellcheck_dictionaries">首选项</a>中设置你的词典。</p>
+  </div>
+
+  <h3 class="sigil_not_in_toc">自动拼写检查</h3>
+
+  <p>当在首选项中启用了自动拼写检查，或使用菜单项 <span class="menuitem">工具=&gt;拼写检查=&gt;高亮拼错的单词</span> 时，代码视图会以红色波浪下划线高亮显示任何拼错的单词：</p>
 
   <div class="image">
     <img alt="Red squiggly line used to mark misspelled words." src="../Images/spellcheck_misspelled.png"/>
   </div>
 
-  <p>You can then right-click on the misspelled word to bring up a list of choices:</p>
+  <p>然后您可以右键单击拼错的单词，调出选项列表：</p>
 
   <div class="image">
     <img alt="Using the Spellcheck content menu to get suggestions." src="../Images/spellcheck-context-suggestion.png"/>
   </div>
 
   <ul>
-    <li><span class="listheading">Suggested Words:</span> A list of alternative words to choose from – selecting one will replace the misspelled word.</li>
+    <li><span class="listheading">建议的单词：</span>可供选择的替代词列表——选中某个词即会替换拼错的单词。</li>
 
-    <li><span class="listheading">Add To Default Dictionary:</span> Add this word to your current default user dictionary.</li>
+    <li><span class="listheading">添加到默认词典：</span>将该单词添加进您当前的默认用户词典。</li>
 
-    <li><span class="listheading">Add To Dictionary:</span> Add this word to the dictionary you select from the list.</li>
+    <li><span class="listheading">添加到词典：</span>将该单词添加进您在列表中选择的词典。</li>
 
-    <li><span class="listheading">Ignore:</span> Ignores the spelling of this word in the entire document until you restart Sigil.</li>
+    <li><span class="listheading">忽略：</span>在整个文档中忽略该单词的拼写，直到您重启 Sigil。</li>
   </ul>
 
-  <h3 class="sigil_not_in_toc" id="spellcheck_find">Finding Misspelled Words</h3>
+  <h3 class="sigil_not_in_toc" id="spellcheck_find">查找拼错的单词</h3>
 
-  <p>Find the next misspelled word in Code View by selecting the menu item <span class="menuitem">Tools=&gt;Spellcheck=&gt;Find Next Misspelled Word</span> or using its shortcut. You will be switched to Code View automatically if you are not in it already, and the next misspelled word will be highlighted each time you search for the next word.</p>
+  <p>选择菜单项 <span class="menuitem">工具=&gt;拼写检查=&gt;查找下一个拼错的单词</span> 或使用其快捷键，可在代码视图中查找下一个拼错的单词。如果您尚未处于代码视图，会自动切换过去；每次查找下一个单词时，下一个拼错的单词都会被高亮显示。</p>
 
-  <p>In order to be able to right-click on the misspelled word to select a suggested word or add it to the dictionary you must have <span class="menuitem">Tools=&gt;Spellcheck=&gt;Highlight Misspelled Words</span> enabled.</p>
+  <p>若要右键单击拼错的单词来选择建议词或将其添加到词典，必须已启用 <span class="menuitem">工具=&gt;拼写检查=&gt;高亮拼错的单词</span>。</p>
 
-  <h3 class="sigil_not_in_toc" id="spellcheck_editor">Spellcheck</h3>
+  <h3 class="sigil_not_in_toc" id="spellcheck_editor">拼写检查</h3>
 
-  <p>To open the Spellcheck dialog, click the Spellcheck toolbar icon <img alt="Using the Spellcheck Tool dialog." src="../Images/document-spellcheck.png"/>, or use the menu item <span class="menuitem">Tools=&gt;Spellcheck=&gt;Spellcheck</span> or the keyboard shortcut – Alt+Q (Windows), Option+Q (Mac).</p>
+  <p>要打开拼写检查对话框，请点击工具栏上的拼写检查图标<img class="toolbar-icon" alt="Using the Spellcheck Tool dialog." src="../Images/document-spellcheck.png"/>，或使用菜单项 <span class="menuitem">工具=&gt;拼写检查=&gt;拼写检查</span>，或使用键盘快捷键——<span class="shortcut">Alt+Q</span>（Windows）、<span class="shortcut">Option+Q</span>（Mac）。</p>
 
   <div class="image">
     <img alt="The main SpellCheck Dialog." src="../Images/spellcheck-main.png"/>
   </div>
 
-  <p>Words are shown with the number of times they occur in the book and if they are misspelled. Select a word to perform an action.</p>
-
+  <p>列表中显示单词在书中出现的次数以及是否拼错。选择一个单词即可对其执行操作。</p>
 
   <div class="tip">
-    <p class="tiptext">Selecting a word will also show the first occurrence of the word in Code View so you can view its context and change just the one occurrence if needed.</p>
+    <p class="tiptext">选择一个单词时，代码视图还会显示该单词首次出现的位置，便于您查看其上下文，并在需要时只修改那一处。</p>
 
-    <p class="tiptext">Double-click a selected word to find the next occurrence of the word.</p>
+    <p class="tiptext">双击已选中的单词可查找该单词的下一处出现。</p>
   </div>
 
-  <p>You can add words to a dictionary by clicking <span class="buttonbox">Add to Dictionary</span>. Select your user dictionary to add the word to from the dropdown list:</p>
+  <p>点击 <span class="buttonbox">添加到词典</span> 即可将单词添加到词典。从下拉列表中选择要添加单词的用户词典：</p>
 
   <div class="image">
     <img alt="SpellCheck Dialog adding words to dictionaries." src="../Images/spellcheck-editor-dictionaries.png"/>
   </div>
 
-  <p>To Ignore words, click <span class="buttonbox">Ignore</span>. The Misspelled Word column will update to “No” only if you have enabled the dictionary to be used in Preferences. To clear all ignored words use <span class="menuitem">Tools=&gt;Spellcheck=&gt;Clear Ignored Words</span>. Ignored words are also cleared when you open a new book.</p>
+  <p>要忽略单词，请点击 <span class="buttonbox">忽略</span>。只有在首选项中启用了所用词典时，拼错的单词列才会更新为“否”。要清除所有已忽略的单词，请使用 <span class="menuitem">工具=&gt;拼写检查=&gt;清除已忽略的单词</span>。打开新图书时，已忽略的单词也会被清除。</p>
 
-  <p>To correct the spelling of words, select one of the suggested words from the dropdown below click <span class="buttonbox">Change Selected Word To:</span> or type your own word in the box. Then click <span class="buttonbox">Change Selected Word To:</span>. This will change every occurrence of the selected word to the new word. It will also automatically refresh the list of words from the HTML files.</p>
+  <p>要更正单词拼写，请从下拉列表中选择建议词，或在输入框中键入自己的单词，然后点击 <span class="buttonbox">将选中的单词更改为：</span>。这会把所选单词的每一处出现都更改为新单词，并自动刷新来自 HTML 文件的单词列表。</p>
 
   <div class="image">
     <img alt="Spellcheck dialog, selecting a suggestion." src="../Images/spellcheck-suggested-words.png"/>
   </div>
 
-  <p>You can see all words in your EPUB by selecting <img alt="show all words checkbox" src="../Images/show-all-words.png"/>. In addition, the tooltip for the column names shows the number of words in your EPUB:</p>
+  <p>勾选该复选框<img class="toolbar-icon" alt="show all words checkbox" src="../Images/show-all-words.png"/>即可查看 EPUB 中的所有单词。此外，列名的工具提示会显示 EPUB 中的单词数量：</p>
 
   <div class="image">
     <img alt="Spellcheck dialog tool tips." src="../Images/spellcheck-editor-tooltip.png"/>
   </div>
 
-  <p>If you enable <img alt="Case Insensitive Sort Checkbox." src="../Images/locale-aware-sort.png"/> then the words will be sorted as determined by your locale or region (as AaBbCc instead of ABCabc).</p>
+  <p>如果启用该选项<img class="toolbar-icon" alt="Case Insensitive Sort Checkbox." src="../Images/locale-aware-sort.png"/>，单词将按照你的区域或地区设置进行排序（排列为 AaBbCc 而非 ABCabc）。</p>
 
-  <p>Use the <span class="buttonbox">Refresh</span> button if you edit your book while Spellcheck is open. You do not need to use it if you are just ignoring, adding, or changing a word.</p>
+  <p>如果在拼写检查对话框打开期间编辑了图书，请使用 <span class="buttonbox">刷新</span> 按钮。如果只是忽略、添加或更改单词，则无需使用它。</p>
 </body>
 </html>

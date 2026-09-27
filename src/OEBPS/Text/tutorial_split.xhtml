@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Create an EPUB</title>
+  <title>创建 EPUB</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2>Create Files For Each Chapter</h2>
+  <h2>为每个章节创建文件</h2>
 
-  <p>If you loaded an HTML file into Sigil, this usually means all of your text and chapters are in one large file. This is allowed, but the standard practice with EPUBs is to put each chapter in your book into a separate HTML file. The smaller file sizes are needed for some e-readers to read your book, but it also makes your EPUB much faster to display and easier to edit.</p>
+  <p>如果把一个 HTML 文件加载到了 Sigil 中，通常意味着所有文字和章节都在一个大文件里。这样做是允许的，但 EPUB 的标准做法是把书中的每一章都放进单独的 HTML 文件。较小的文件体积是某些电子书阅读器读取书籍所必需的，而且这样还能让 EPUB 显示更快、编辑更方便。</p>
 
   <div class="tip">
-    <p class="tiptext">Since most e-readers start a new file in the EPUB on a new page, it means your chapters will also start on a new page.</p>
+    <p class="tiptext">由于大多数电子书阅读器会在 EPUB 中从新页面开始显示新文件，因此章节也会从新页面开始。</p>
   </div>
 
-  <h3 class="sigil_not_in_toc">Create One File Per Chapter</h3>
+  <h3 class="sigil_not_in_toc">每章创建一个文件</h3>
 
-  <p>The easiest way to split your book into separate files is to use the Split At Cursor button <img alt="Split at Cursor icon" src="../Images/split-section.png"/> wherever you want to start a new file.</p>
+  <p>把书拆分成多个文件，最简单的方法是在想开始新文件的位置使用 在光标处拆分 按钮 <img class="toolbar-icon" alt="Split at Cursor icon" src="../Images/split-section.png"/>。</p>
 
-  <p>For example, to start a chapter on a new page, click just to the left of the chapter heading so that your cursor is at the start of the line:</p>
+  <p>例如，要让某一章从新页面开始，请点击该章节标题的紧左侧，使光标位于行首：</p>
 
   <div class="image">
     <img alt="Selecting a good location to split a file in Code View." src="../Images/tutorial-split-select.png"/>
   </div>
 
-  <p>Now click the Split At Cursor button <img alt="Split at Cursor icon." src="../Images/split-section.png"/> to split the text into two parts:</p>
+  <p>现在点击在光标处拆分按钮 <img class="toolbar-icon" alt="Split at Cursor icon." src="../Images/split-section.png"/>，把文本拆分成两部分：</p>
 
   <div class="image">
     <img alt="Showling newly split-off file in BookBrowser" src="../Images/tutorial-split-2.png"/>
   </div>
 
-  <p>You can see that everything after where you split is now in a new file called “Section0001.html”.</p>
+  <p>可以看到，拆分位置之后的所有内容现在都进入了名为“<span class="example">Section0001.html</span>”的新文件。</p>
 
-  <p>If you look at the original file you can see it only contains the text before where you split:</p>
+  <p>如果查看原文件，会发现它只包含拆分位置之前的文本：</p>
 
   <div class="image">
     <img alt="Showing original file with the split-off text removed" src="../Images/tutorial-split-1.png"/>
   </div>
 
-  <p>You can continue splitting every chapter in your book, and putting any section that should start on a new page in a separate file.</p>
+  <p>可以继续拆分书中的每一章，并把任何应当从新页面开始的部分放进独立的文件。</p>
 
-  <p>If you want to rename your files, see the <a href="book_browser.xhtml#book_browser_rename">Rename</a> section. This includes how to rename many files at once, e.g. Chapter_1, Chapter_2, etc..</p>
+  <p>如果想重命名文件，请参阅<a href="../Text/book_browser.xhtml#book_browser_rename">重命名</a>一节。其中包括如何一次性重命名多个文件，例如 Chapter_1、Chapter_2 等。</p>
 
   <div class="tip">
-    <p class="tiptext">See the <a href="splitting_and_merging.xhtml">Splitting and Merging</a> chapter for more details – including how to insert Split Markers and split every file at once.</p>
+    <p class="tiptext">更多细节请参阅<a href="../Text/splitting_and_merging.xhtml">拆分与合并</a>一章——包括如何插入拆分标记以及如何一次性拆分所有文件。</p>
   </div>
 </body>
 </html>

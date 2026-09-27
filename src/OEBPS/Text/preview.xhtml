@@ -1,93 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Preview View</title>
+  <title>预览</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="preview">Preview</h2>
+  <h2 id="preview">预览</h2>
 
-  <p class="h2subheading">— Show Code View Changes —</p>
+  <p class="h2subheading">— 显示代码视图中的更改 —</p>
 
-  <p>Preview is a movable window that gives you a dynamically updated read-only view of what appears in Code View. You can also inspect your code and styles by clicking the Inspect button (&lt;/&gt; icon) in the toolbar at the bottom of Preview.</p>
+  <p>预览是可移动的窗口，提供代码视图内容的动态更新只读视图。可点击预览底部工具栏中的 检查页面 按钮（<img class="toolbar-icon" alt="Page Inspector tool icon." src="../Images/tutorial-inspector.png"/> 图标）检查代码和样式。</p>
 
-  <p>You can use Preview to show the results of changes in your code (including immediate feedback of errors), and you can also open a CSS stylesheet to make changes that are shown in Preview.</p>
+  <p>可用预览展示代码更改的结果（包括即时反馈的错误），也可打开 CSS 样式表进行修改，效果同样显示在预览中。</p>
 
-  <p>Activate the Preview window by selecting the menu item <span class="menuitem">View=&gt;Preview</span> or its keyboard shortcut:</p>
+  <p>选择菜单项 <span class="menuitem">视图=&gt;预览</span> 或其键盘快捷键来激活预览窗口：</p>
 
   <div class="image">
     <img alt="Image of main Preview window in action." src="../Images/preview-window.png"/>
   </div>
 
   <div class="tip">
-    <p class="tiptext">You can toggle the Preview window open or closed with its shortcut, and even move the window to a second monitor if you have one.</p>
+    <p class="tiptext">可使用快捷键打开或关闭预览窗口，有第二台显示器时，甚至可将该窗口移过去。</p>
   </div>
 
-  <p>The Preview window will be updated immediately when you click somewhere in Code View. It will also be updated after you stop typing for a short time.</p>
+  <p>当您在代码视图中点击某个位置时，预览窗口会立即更新。当您停止输入一小段时间后，它也会更新。</p>
 
   <div class="tip">
-    <p class="tiptext">If you click in Preview the Code View tab will sync to the same location.</p>
+    <p class="tiptext">如果您在预览中点击，代码视图标签页会同步到相同的位置。</p>
   </div>
 
- <h3 class="sigil_not_in_toc">Preview Window's Toolbar</h3>
+  <h3 class="sigil_not_in_toc">预览窗口的工具栏</h3>
 
-   <p>The Preview Window has its own dedicated toolbar found at the bottom left of the Preview Window just before its loading progress bar area.  From left to right the function of each tool is: </p>
-    <ul>
-      <li><p><img alt="inspect-icon" style="width:5%" src="../Images/inspect-icon.svg"/> Open/Closes Preview's Inspector (see following description)</p></li>
+  <p>预览窗口拥有自己的专用工具栏，位于预览窗口左下角、加载进度条区域之前。从左到右，每个工具的功能如下：</p>
 
-      <li><p><img alt="select-all-icon" style="width:5%" src="../Images/select-all-icon.svg"/> Selects All Content on the Page</p></li>
- 
-      <li><p><img alt="copy-icon" style="width:5%" src="../Images/copy-icon.svg"/> Copies Selection to the Clipboard</p></li>
+  <ul>
+    <li><p><img alt="inspect-icon" class="toolbar-icon" src="../Images/inspect-icon.png"/> 打开/关闭预览的检查器（见后文说明）</p></li>
 
-      <li><p><img alt="reload-icon" style="width:5%" src="../Images/reload-icon.svg"/> Reloads/Updates Preview</p></li>
+    <li><p><img alt="select-all-icon" class="toolbar-icon" src="../Images/select-all-icon.png"/> 选择页面上的全部内容</p></li>
 
-      <li><p><img alt="cycle-css-icon" style="width:5%" src="../Images/cycle-css-icon.svg"/> Cycles through Preview's custom css files. For more information see the Advanced Topics chapter and the discussion of "custom_preview_style.css" and "custom_preview_style_alt.css" files which can be created and stored in Sigil's User Preferences folder.</p></li>
- 
-      <li><p><img alt="print-icon" style="width:5%" src="../Images/print-icon.svg"/> Print/Print Preview the contents of Preview</p></li>
-    </ul>
+    <li><p><img alt="copy-icon" class="toolbar-icon" src="../Images/copy-icon.png"/> 将选区内容复制到剪贴板</p></li>
 
-  <h3 class="sigil_not_in_toc">Inspector</h3>
+    <li><p><img alt="reload-icon" class="toolbar-icon" src="../Images/reload-icon.png"/> 重新加载/更新预览</p></li>
 
-  <p>The Inspector Widget is opened/closed by clicking the “&lt;/&gt;” button on the toolbar <img src="../Images/preview-window-toolbar.png" alt="Preview Window toolbar." style="width:25%"/> at the bottom of Preview. You can resize and reposition it how you like, and Sigil will remember your settings</p>
+    <li><p><img alt="cycle-css-icon" class="toolbar-icon" src="../Images/cycle-css-icon.png"/> 在预览的自定义 CSS 文件之间循环切换。更多信息请参阅“高级主题”一章中关于 <span class="example">custom_preview_style.css</span> 和 <span class="example">custom_preview_style_alt.css</span> 文件的讨论——这些文件可创建并保存在 Sigil 的用户首选项文件夹中。</p></li>
+
+    <li><p><img class="toolbar-icon" alt="print-icon" src="../Images/print-icon.png"/> 打印/打印预览中的内容</p></li>
+  </ul>
+
+  <h3 class="sigil_not_in_toc">检查器</h3>
+
+  <p>点击预览底部工具栏<img class="toolbar-icon" src="../Images/preview-window-toolbar.png" alt="Preview Window toolbar."/>上的 <img alt="inspect-icon" class="toolbar-icon" src="../Images/inspect-icon.png"/> 按钮可打开/关闭检查器部件。可按喜好调整其大小和位置，Sigil 会记住设置</p>
 
   <p><img src="../Images/preview-window-inspector.png" alt="Preview Window Inspector"/></p>
 
-  <p>The Inspector window is an HTML developer’s tool that allows detailed examination of the code behind the book’s appearance. It is intended to allow you to see why specific sections of your book are displayed the way they are, and to make temporary changes to styles and text to see how they affect your text.</p>
+  <p>检查器窗口是 HTML 开发者工具，可详细检查图书外观背后的代码。用它可了解图书中特定部分为何以某种方式显示，并对样式和文本做临时更改，观察其对文本的影响。</p>
 
   <div class="tip">
-    <p class="tiptext">Any changes you make in the Inspector window are only temporary and are not saved!</p>
+    <p class="tiptext">在检查器窗口中所做的任何更改都只是临时的，不会保存！</p>
   </div>
 
-  <p>For more information about using the Inspector built into Preview and specifically how to use it to determine the exact CSS being used for any particular tag, <a href="inspector.xhtml">see this tutorial</a>.</p>
+  <p>有关使用内置于预览中的检查器的更多信息，特别是如何用它确定任何特定标签正在使用的确切 CSS，请参阅<a href="../Text/inspector.xhtml">此教程</a>。</p>
 
-  <h3 class="sigil_not_in_toc">Cycle Custom CSS</h3>
+  <h3 class="sigil_not_in_toc">循环切换自定义 CSS</h3>
 
-  <p>The Cycle Custom CSS tool allows the user to change the css stylesheet that controls the appearance of the Preview Panel. The changes are made by clicking the <span class="inlineButton"><img class="inline" alt="preview-window-toolbar-cycle-icon" src="../Images/preview-window-toolbar-cycle-icon.png"/></span> button on the toolbar <span class="inlineButton"><img class="inline" src="../Images/preview-window-toolbar.png" alt="Preview Window toolbar." style="width:25%"/></span> at the bottom of Preview.</p>
+  <p>循环切换自定义 CSS 工具允许用户更改控制预览面板外观的 CSS 样式表。更改方式是在预览底部的工具栏<img class="toolbar-icon" src="../Images/preview-window-toolbar.png" alt="Preview Window toolbar."/>上点击该按钮<img class="toolbar-icon" alt="preview-window-toolbar-cycle-icon" src="../Images/preview-window-toolbar-cycle-icon.png"/>。</p>
 
-  <p>The widget will be disabled if none of the following css stylesheets are present in the <a href="preferences.xhtml#Prefer_Location">Preferent Location</a> folder:</p>
+  <p>若<a href="../Text/preferences.xhtml#Prefer_Location">首选项文件夹</a>中不存在以下任何 CSS 样式表，该部件将被禁用：</p>
 
   <div>
     <ol>
-      <li>custom_preview_style.css</li>
+      <li><span class="example">custom_preview_style.css</span></li>
 
-      <li>custom_preview_style_alt.css</li>
+      <li><span class="example">custom_preview_style_alt.css</span></li>
     </ol>
   </div>
 
-  <p>If that were the case, then the Cycle Custom CSS button will be gray-out (or disabled) on the Preview toolbar:</p>
+  <p>出现这种情况时，预览工具栏上的 循环自定义 CSS 文件 按钮将变灰（即被禁用）：</p>
 
-  <div class="coverimage">
-    <img src="../Images/preview-window-toolbar-cycle-grayed.png" alt="preview-window-toolbar-cycle-grayed."/>
+  <div class="image">
+    <img class="toolbar-icon" src="../Images/preview-window-toolbar-cycle-grayed.png" alt="preview-window-toolbar-cycle-grayed."/>
   </div>
 
-  <p>Is perfectly possible to create a <span class="shortcut">custom_preview_style.css</span> or <span class="shortcut">custom_preview_style_alt.css</span> file after Sigil is open, but in that case, the user will have to open a new MainWindow in order to activate the new css file(s) in Preview.</p>
+  <p>完全可以在 Sigil 打开之后再创建 <span class="example">custom_preview_style.css</span> 或 <span class="example">custom_preview_style_alt.css</span> 文件，但此时须打开一个新的主窗口，才能在预览中激活新的 CSS 文件。</p>
 
-  <p>This feature is specially usefull when Sigil is in dark mode and the user has selected the option <a href="preferences.xhtml#previewDarkMode">Make Preview simulate a dark appearance in dark mode</a>. In those cases, black borders, table layouts, dark colors and similars, can't be properly watched in Preview. But with the appropriate custom preview stylesheets, this difficulty can be overcome.</p>
+  <p>当 Sigil 处于深色模式且用户选择了 <a href="../Text/preferences.xhtml#previewDarkMode">使预览在深色模式下模拟一个深色的外观</a> 选项时，此功能特别有用。在这种情况下，黑色边框、表格布局、深色等在预览中无法正常显示。但借助合适的自定义预览样式表，可以克服这一困难。</p>
 
-  <p>An example will make things clearer. Suppose we have the following XHTML code:</p>
+  <p>下面举例说明。假设有以下 XHTML 代码：</p>
 
   <pre class="example">&lt;body&gt;
   &lt;p&gt;&lt;span class="drop"&gt;L&lt;/span&gt;orem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ac tellus nunc. Phasellus imperdiet leo metus, et gravida lacus. Donec metus ligula, elementum at pellentesque pellentesque, suscipit ac nunc. Etiam lobortis, massa ac aliquam auctor, augue nisl sagittis urna, at dapibus tellus erat ullamcorper ligula. Praesent orci dui, pulvinar id convallis a, faucibus non mauris. Donec tellus augue, tempus sed facilisis sed, fringilla quis leo. Mauris vulputate, leo ac facilisis vulputate, enim orci interdum augue, in blandit quam turpis quis dui. Morbi dictum luctus velit nec faucibus.&lt;/p&gt;
@@ -130,7 +131,9 @@
 &lt;/body&gt;
 </pre>
 
-  and that the respective .css stylesheet that styles the above code is: 
+  and that the respective .css stylesheet that styles the above code is: |→而为上述代码设置样式的对应 <span class="example">.css</span> 样式表是：←| 
+
+  
 
   <pre class="example">p {
      line-height: 1.2em;
@@ -166,13 +169,13 @@
      border: 1px solid black;
 }</pre>
 
-  <p>Let's save what we have wrote as “Dark mode case.epub”. If none custom css stylesheets are present, then the user who works in dark mode will see the Preview Panel with its default style and the above code will look as follows.</p>
+  <p>把我们所写的内容保存为 <span class="example">Dark mode case.epub</span>。如果不存在任何自定义 CSS 样式表，那么在深色模式下工作的用户将看到使用默认样式的预览面板，上面的代码看起来会是下面这样：</p>
 
   <p><img alt="default_preview_dark_style" src="../Images/default_preview_dark_style.png"/></p>
 
-  <p>As can be seen, the contrast is poor and the colors and the design of the sheet are not well appreciated.</p>
+  <p>可见对比度很差，颜色和表格设计也无法很好地呈现。</p>
 
-  <p>Now, if in the <a href="preferences.xhtml#Prefer_Location">Preferent Location</a> folder we add a file named <span class="shortcut">custom_preview_style.css</span> with the following selectors and properties:</p>
+  <p>现在，若在<a href="../Text/preferences.xhtml#Prefer_Location">首选项文件夹</a>中添加一个名为 <span class="example">custom_preview_style.css</span> 的文件，写入以下选择器和属性：</p>
 
   <pre class="example">body {
     background: initial !important;
@@ -184,52 +187,52 @@ svg, img {
     filter: invert(1);
 }</pre>
 
-  <p>after closing and opening Sigil, we will see that the <span class="inlineButton"><img class="inline" alt="preview-window-toolbar-cycle-icon" src="../Images/preview-window-toolbar-cycle-icon.png"/></span> button is enabled. If now the “Dark mode case.epub” is open and the <span class="inlineButton"><img class="inline" alt="preview-window-toolbar-cycle-icon" src="../Images/preview-window-toolbar-cycle-icon.png"/></span> button is pressed, the Preview Panel will look this time as follows:</p>
+  <p>在关闭并重新打开 Sigil 之后，我们会看到该<img class="toolbar-icon" alt="preview-window-toolbar-cycle-icon" src="../Images/preview-window-toolbar-cycle-icon.png"/>按钮已启用。此时打开 <span class="example">Dark mode case.epub</span> 并按下该<img class="toolbar-icon" alt="preview-window-toolbar-cycle-icon" src="../Images/preview-window-toolbar-cycle-icon.png"/>按钮，预览面板这次看起来将是这样：</p>
 
   <p><img alt="custom_preview_dark_style" src="../Images/custom_preview_dark_style.png"/></p>
 
-  <p>All colors are inverted, the contrast is greatly improved, and text, borders and table layout it can be properly watched.</p>
+  <p>所有颜色都反转了，对比度大大提升，文本、边框和表格布局都能正常显示。</p>
 
-  <p>If again, we close Sigil and add in the <a href="preferences.xhtml#Prefer_Location">Preferent Location</a> folder a new file named <span class="shortcut">custom_preview_style_alt.css</span> with the following code:</p>
+  <p>再次关闭 Sigil，在<a href="../Text/preferences.xhtml#Prefer_Location">首选项文件夹</a>中添加一个名为 <span class="example">custom_preview_style_alt.css</span> 的文件，写入以下代码：</p>
 
   <pre class="example">html {
     background: white !important;
     color: black !important;
 }</pre>
 
-  <p>and after that, we open “Dark mode case.epub” and press the <span class="inlineButton"><img class="inline" alt="preview-window-toolbar-cycle-icon" src="../Images/preview-window-toolbar-cycle-icon.png"/></span> button twice, the Preview Panel will look now:</p>
+  <p>之后打开 <span class="example">Dark mode case.epub</span> 并按下该<img class="toolbar-icon" alt="preview-window-toolbar-cycle-icon" src="../Images/preview-window-toolbar-cycle-icon.png"/>按钮两次，预览面板现在看起来将是：</p>
 
   <p><img alt="custom_preview_alt_style" src="../Images/custom_preview_alt_style.png"/></p>
 
-  <p>So, if both, <span class="shortcut">custom_preview_style.css</span> and <span class="shortcut">custom_preview_style_alt.css</span> are present in the <a href="preferences.xhtml#Prefer_Location">Preferent Location</a> folder, the we will have a three-stage toggler that works cyclically of the following way:</p>
+  <p>因此，若<a href="../Text/preferences.xhtml#Prefer_Location">首选项文件夹</a>中同时存在 <span class="example">custom_preview_style.css</span> 和 <span class="example">custom_preview_style_alt.css</span>，就会得到一个按以下方式循环工作的三级切换器：</p>
 
   <div>
     <ol>
-      <li>custom_preview_style.css</li>
+      <li><span class="example">custom_preview_style.css</span></li>
 
-      <li>custom_preview_style_alt.css</li>
+      <li><span class="example">custom_preview_style_alt.css</span></li>
 
       <li>default preview style</li>
     </ol>
   </div>
 
-  <p>This is how it works in practice:</p>
+  <p>它在实际中的工作方式如下：</p>
 
   <p><img alt="three-stage-toggler" src="../Images/three-stage-toggler.gif"/></p>
 
-  <h4 id="sigil_toc_id_35">Mimicking e-ink screens</h4>
+  <h4 id="sigil_toc_id_35">模拟墨水屏</h4>
 
-  <p>The Cycle Custom CSS widget is not only for working with Sigil in dark mode; it can be used advantageously in light mode too.</p>
+  <p>循环切换自定义 CSS 部件不仅适用于 Sigil 的深色模式；在浅色模式下同样有用。</p>
 
-  <p>It is very common that an epub is composed with many images in color. And is also common, that some titles and text in an epub are written in color. But, how those images and text will look in an e-ink screen? Will they be quite legible in a screen with only 16 shades of gray?</p>
+  <p>一本 EPUB 中包含许多彩色图片是很常见的，EPUB 中的某些标题和文本使用彩色也很常见。但是，这些图片和文本在墨水屏（e-ink）上会是什么样子？在只有 16 级灰度的屏幕上它们还能清晰可读吗？</p>
 
-  <p>If we have a page like the following:</p>
+  <p>如果我们有如下页面：</p>
 
   <p><img alt="full-colorized-image" src="../Images/full-colorized-image.png"/></p>
 
-  <p>how will it look in an e-ink device?</p>
+  <p>它在墨水屏设备上会是什么样子？</p>
 
-  <p>The above question can be easily answered by employing a <span class="shortcut">custom_preview_style.css</span> (or <span class="shortcut">custom_preview_style_alt.css</span>) with the following code:</p>
+  <p>使用一个包含以下代码的 <span class="example">custom_preview_style.css</span>（或 <span class="example">custom_preview_style_alt.css</span>），即可轻松回答上述问题：</p>
 
   <pre class="example">body {
     background: initial !important;
@@ -248,14 +251,14 @@ svg, img {
 }
 </pre>
 
-  <p>(<span class="h4">Note:</span> The explanation of the above code is out of the scope of the present guide. That code is a mix of the employment of a svg filter and a css one and shows one of the most powerful features of epub3 and css3.)</p>
+  <p>（注意：上述代码的解释超出了本指南的范围。该代码混合使用了 svg 滤镜和 css 滤镜，展示了 EPUB3 与 CSS3 最强大的特性之一。）</p>
 
-  <p>Now, by pressing the Cycle Custom CSS button once, the precedent page will look as:</p>
+  <p>现在，按下一次 循环自定义 CSS 按钮后，前面的页面看起来将是：</p>
 
   <p><img alt="16-shades-of-gray-image" src="../Images/16-shades-of-gray-image.png"/></p>
 
-  <p>Thereby, by using the widget, it is possible to know how the epub will be displayed in an e-ink reader and if it is necessary to make any modifications so that the ebook is displayed in the best possible way on such devices.</p>
+  <p>借助该部件，可以了解 EPUB 在墨水屏阅读器上的显示效果，判断是否需要修改，使电子书在这类设备上以最佳方式显示。</p>
 
-  <p><span class="h4">Final words:</span><span class="nb"></span> the above code for <span class="shortcut">custom_preview_style.css</span> and <span class="shortcut">custom_preview_style_alt.css</span> are merely illustrative, the user has the greatest freedom to use the styles that he deems convenient to display the Preview Panel.</p>
+  <p>最后说明：上述 <span class="example">custom_preview_style.css</span> 和 <span class="example">custom_preview_style_alt.css</span> 的代码仅是示例，您可以自由使用任何认为合适的样式来显示预览面板。</p>
 </body>
 </html>

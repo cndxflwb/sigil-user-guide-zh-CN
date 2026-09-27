@@ -1,58 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Contributing to Sigil</title>
+  <title>为 Sigil 做贡献</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h1 id="developer">Contributing to Sigil</h1>
+  <h1 id="developer">为 Sigil 做贡献</h1>
 
-  <p class="h2subheading">— Helping Development —</p>
+  <p class="h2subheading">— 助力开发 —</p>
 
-  <p>Sigil is completely free and open-source software, and it is developed and supported entirely by volunteers who love books and want well-edited ebooks to be easily available. Your contributions, bug reports, and testing help others as you help yourself. Feel free to just say hi on the Sigil forum and let others know how useful Sigil is to you.</p>
+  <p>Sigil 是一款完全免费且开源的软件，由热爱书籍、希望精心编辑的电子书能够轻松获取的志愿者开发和支持。你的贡献、错误报告以及测试工作不仅帮助了他人，也帮助了自己。欢迎在 Sigil 论坛上打个招呼，与大家分享 Sigil 对您而言有多么实用。</p>
 
-  <h3 class="sigil_not_in_toc" id="translating">Translating Sigil</h3>
+  <h3 class="sigil_not_in_toc" id="translating">翻译 Sigil</h3>
 
-  <p>Translating Sigil into other languages is highly encouraged. There is an active community of volunteers who translate Sigil already, and new languages can always be added.</p>
+  <p>非常鼓励将 Sigil 翻译成其他语言。目前已有一个活跃的志愿者社区在翻译 Sigil，随时可以添加新语言。</p>
 
-  <p>The best way to translate Sigil is to use the web based translation system provided by Transifex. Translations done using Transifex are downloaded just before releasing a new version:</p>
-
-  <ul>
-    <li class="indent"><a href="https://www.transifex.com/zdpo/sigil/">Sigil translations @ Transifex</a></li>
-  </ul>
-
-  <p>Alternatively you can use local Desktop tools for translation. Sigil uses Qt’s Linguist tool for creating and editing translations. You can either download Qt and compile the tools manually or use the pre-built packages:</p>
-
-
-  <p>Updating and creating new translation files using the Desktop tools is the same process:</p>
+  <p>翻译 Sigil 的最佳方式是使用 Transifex 提供的基于网页的翻译系统。使用 Transifex 完成的翻译会在新版本发布前下载：</p>
 
   <ul>
-    <li>Open a terminal and change to the <span class="example">src/Sigil/Resource_Files/ts</span> directory. This holds all of the raw translation files.</li>
-
-    <li>Run <span class="example">lupdate ../../* -ts out.ts</span> to either generate a new translation file or to update an existing one with any new strings that have been added.</li>
-
-    <li>Use Linguist to write translations for the strings in a given ts file.</li>
+    <li class="indent"><a href="https://www.transifex.com/zdpo/sigil/">Sigil 翻译 @ Transifex</a></li>
   </ul>
 
-  <p>All translations files should have the form <span class="example">sigil_lang.ts</span>. Where lang is a two letter language code. For example the Polish translation will have the filename <span class="example">sigil_pl.ts</span>.</p>
+  <p>或者，你也可以使用本地桌面工具进行翻译。Sigil 使用 Qt 的 Linguist 工具来创建和编辑翻译。你可以下载 Qt 并手动编译这些工具，也可以使用预编译好的软件包：</p>
 
-  <h3 class="sigil_not_in_toc">Assisting Users</h3>
+  <p>使用桌面工具更新和创建新翻译文件的流程相同：</p>
 
-  <p>If you are an experienced Sigil user, EPUB expert, or working your way there, you can help by answering questions or commenting on your experiences – primarily at <a href="https://www.mobileread.com/forums/forumdisplay.php?f=203">the official Sigil Forum at MobileRead</a>. You can also check issues on our <a href="https://github.com/Sigil-Ebook"> github development website and add comments</a>.</p>
+  <ul>
+    <li>打开终端并切换到 <span class="example">src/Sigil/Resource_Files/ts</span> 目录。这里存放着所有原始翻译文件。</li>
 
-  <h3 class="sigil_not_in_toc">Coding</h3>
+    <li>运行 <span class="example">lupdate ../../* -ts out.ts</span> 生成新的翻译文件，或用新添加的字符串更新现有翻译文件。</li>
 
-  <p>If you are a C++ programmer and have suggestions for improvements or bug fixes you are welcome to submit patches or github pull requests for consideration.</p>
+    <li>使用 Linguist 为指定 ts 文件中的字符串编写翻译。</li>
+  </ul>
 
-  <!--  
+  <p>所有翻译文件都应采用 <span class="example">sigil_lang.ts</span> 的形式。其中 lang 是两位语言代码。例如波兰语翻译的文件名为 <span class="example">sigil_pl.ts</span>。</p>
+
+  <h3 class="sigil_not_in_toc">协助用户</h3>
+
+  <p>如果你是经验丰富的 Sigil 用户、EPUB 专家，或者正在朝这个方向努力，都可以通过回答问题或分享你的使用经验来提供帮助——主要是在<a href="https://www.mobileread.com/forums/forumdisplay.php?f=203">MobileRead 上的 Sigil 官方论坛</a>。你也可以在我们的<a href="https://github.com/Sigil-Ebook">GitHub 开发网站上查看问题并添加评论</a>。</p>
+
+  <h3 class="sigil_not_in_toc">编写代码</h3>
+
+  <p>如果你是 C++ 程序员，并且有改进建议或缺陷修复方案，欢迎提交补丁或 GitHub 拉取请求（pull request）供我们考虑。</p>
+
+<!--  
   <h3 class="sigil_not_in_toc">Donations</h3>
 
   <p>Please use <span class="menuitem">Help=&gt;Donate</span> to say thanks and to help maintain Sigil.</p>
   -->
 
-  <p>The Sigil User Guide is also free. If you have found it useful, you can say thanks by helping to update and improve the user’s guide. We always need help keeping the Sigil User Guide up to date.</p>
+  <p>Sigil 用户指南同样免费。如果你觉得它有用，可以通过帮助更新和改进本用户指南来表达感谢。我们始终需要帮助来让 Sigil 用户指南保持最新。</p>
 </body>
 </html>

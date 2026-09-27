@@ -1,132 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Advanced Topics</title>
+  <title>高级主题</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h1 id="user_interface">Advanced Topics: Python Function Replace</h1>
+  <h1 id="user_interface">高级主题：Python 函数替换</h1>
 
-  <h2 id="atenv">Using Regex Search with Python Function Replace</h2>
+  <h2 id="atenv">配合 Python 函数替换使用正则搜索</h2>
 
-  <p>Normal Regular Expressions search and replace is extremely powerful and handles most of what users will ever need.  That said, there are cases that can arise where something a bit more is needed.  Things like: </p>
+  <p>常规的正则表达式查找与替换功能已经非常强大，足以应付用户所需的绝大多数情形。话虽如此，有些情况下仍需要更进一步的能力，例如：</p>
 
   <ol>
-    <li><p>counting matches and using that count as part of the replacement</p></li>
+    <li><p>统计匹配次数，并将该计数用作替换内容的一部分</p></li>
 
-    <li><p>determining replacements that need to vary depending on what was captured in the search regex</p></li>
+    <li><p>让替换内容根据查找正则表达式所捕获的内容而动态变化</p></li>
 
-    <li><p>making a replacement be conditioned on earlier replacements in some way</p></li>
+    <li><p>让某次替换以某种方式依赖于先前的替换结果</p></li>
 
-    <li><p>making replacements that must be "processed" in some way depending captured context</p></li>
+    <li><p>根据捕获的上下文对替换内容进行某种“加工处理”</p></li>
 
-    <li><p>etc. ...</p></li>
+    <li><p>等等……</p></li>
   </ol>
 
-<p>For many of these cases, Sigil Python plugins exists to help but creating your own Sigil Python plugin requires some skill in Python and time to understand the the plugin API and produce and test your plugin.</p>
+  <p>对于上述许多情况，Sigil 已有 Python 插件可以提供帮助，但自行创建 Sigil Python 插件需要具备一定的 Python 技能，并且要花时间理解插件 API，还要编写和测试你的插件。</p>
 
-<p>For the simpler cases, Regex search with Python Function Replace will prove useful and faster to develop and deploy.  And python replacement functions can be easily shared with others - even users who do not know how to program in python -  making them a useful tool for everyone.</p>
+  <p>对于较简单的情况，配合 Python 函数替换的正则搜索会是一个实用工具，而且开发和部署起来更快。此外，Python 替换函数还可以轻松地分享给他人——即使是不懂 Python 编程的用户也能使用——因此它对每个人来说都是有用的工具。</p>
 
-<p>Creating your own Python Functions Replacement functions does require advanced regular expression (regex) search and replace knowledge as well as some ability to code in Python. </p>
+  <p>创建你自己的 Python 函数替换确实需要进阶的正则表达式查找与替换知识，还需要具备一定的 Python 编程能力。</p>
 
-<p>The following python code block shows an empty Python Function Replace function that does nothing (ie. it returns the exact same thing as what was matched):</p>
+  <p>下面这个 Python 代码块展示了一个什么都不做的空 Python 函数替换函数（即返回与匹配内容完全相同的东西）：</p>
 
-<pre><code>
-def replace (match, number, file_name, metadata, data) :
-    if match:
-        return match.group(0)
-</code>
+  <pre><code> def replace (match, number, file_name, metadata, data) : if match: return match.group(0) </code>
 </pre>
 
-The parameters passed to the replace function are important to understand:
+  The parameters passed to the replace function are important to understand:|→需要理解传递给 replace 函数的各个参数：←| 
 
-<pre><code>
-match:       the current python match object
+  
 
-number:      number starts at 1 and is incremented after each match
-             (only when using replace all)
-
-file_name:   the book path from the ebook's root to this file
-
-data:        a python dict object used to store any data across matches
-</code>
+  <pre><code> match: the current python match object|→当前的 Python 匹配对象←| number: number starts at 1 and is incremented after each match|→编号从 1 开始，每匹配一次递增 1←| (only when using replace all)|→（仅在使用“全部替换”时生效）←| file_name: the book path from the ebook's root to this file|→从电子书根目录到该文件的书籍内路径←| data: a python dict object used to store any data across matches|→一个 Python dict 对象，用于在多次匹配之间存储任意数据←| </code>
 </pre>
 
-<p>To more properly illustrate how these parameters can be used in your own Python Function Replace routine, what follows is a version of an increment ids python function that will only count and modify the very first h1 tag found in each file.</p>
+  <p>为了更贴切地说明如何在自己的 Python 函数替换例程中使用这些参数，下面给出一个递增 id 的 Python 函数版本，它只会统计并修改每个文件中找到的第一个 h1 标签。</p>
 
-<p>The Find is: <code>&lt;h1[^&gt;]*&gt;</code>.</p>
-<p>The mode is: <code>Regex</code>.</p>
-<p>The Target is: <code>All HTML Files</code> or <code>Selected HTML Files</code> (depending on if you only want your function to work on actual chapters or all html files).</p>
+  <p>查找内容为：<code>&lt;h1[^&gt;]*&gt;</code>。</p>
+
+  <p>模式为：<code>正则表达式</code>。</p>
+
+  <p>目标为：<code>所有 HTML 文件</code>或<code>选定的 HTML 文件</code>（取决于你希望函数只作用于实际章节还是所有 html 文件）。</p>
 
   <div class="image">
     <img alt="Python Function Replace code editor showing the pthon code." src="../Images/add_ids_to_first_h1.png"/>
   </div>
 
+  <p>以下是该 Python 代码的副本，方便复制粘贴使用：</p>
 
-<p>Here is a duplicate of that python code to use with copy and paste:</p>
+  <pre><code> # add_ids_to_first_h1 def replace(match, number, file_name, metadata, data): # Find: &lt;h1[^&gt;]*&gt; if number == 1: data["old_file_name"] = "" data["mycount"] = 1 old_file_name = data["old_file_name"] mycnt = data["mycount"] result = match.group(0) replace_debug_log("filename: " + file_name + '\n') replace_debug_log("old file name: " + old_file_name + '\n') replace_debug_log("mycount: " + str(mycnt) +'\n') if match: if file_name != old_file_name: result = match.group(0)[0:-1] + ' id="heading_' + str(mycnt) + '"&gt;' data["old_file_name"] = file_name mycnt = mycnt + 1 data["mycount"] = mycnt return result </code></pre>
 
-<pre><code>
-# add_ids_to_first_h1
-def replace(match, number, file_name, metadata, data):
-    # Find: &lt;h1[^&gt;]*&gt;
-    if number == 1:
-        data["old_file_name"] = ""
-        data["mycount"] = 1
+  <p>这段 “add_ids_to_first_h1” 代码展示了如何利用 <code>number</code> 参数来判断何时初始化你自己的数据变量，还展示了如何利用传入的 <code>data</code> 字典参数来保存和读取跨多次调用持续存在的状态信息，同时也展示了如何利用 <code>file_name</code> 参数来检测何时进入了一个新文件。</p>
 
-    old_file_name = data["old_file_name"]
-    mycnt = data["mycount"]
-    result = match.group(0)
-    replace_debug_log("filename: " + file_name + '\n')
-    replace_debug_log("old file name: " + old_file_name + '\n')
-    replace_debug_log("mycount: " + str(mycnt) +'\n')
-    if match:
-        if file_name != old_file_name:
-             result = match.group(0)[0:-1] + ' id="heading_' + str(mycnt) + '"&gt;'
-             data["old_file_name"] = file_name
-             mycnt = mycnt + 1
-             data["mycount"] = mycnt
-        return result
-</code></pre>
+  <p>这个 Python 函数还展示了如何使用 <code>replace_debug_log</code> 函数从你的函数生成调试输出，该函数会把 utf-8 字符串输出追加写入你所设置并控制的一个环境变量所指向的文件，这个环境变量名为 SIGIL_FUNCTION_REPLACE_LOGFILE。</p>
 
-<p>This "add_ids_to_first_h1" code illustrates how to use the <code>number</code> parameter to know when to initialize your own data variables. And shows how the <code>data</code> dictionary parameter passed in can be used to save and retrieve state information that lives on across invocations. It also illustrates how the <code>file_name</code> parameter can be used to detect when a new file has been entered.</p>
+  <p>设置此环境变量时，其值应为一个文本文件的完整路径（包括文件名），来自你的函数调试输出将被追加写入该文件。</p>
 
-<p>This python function also shows you how to generate debug output from your function by using the <code>replace_debug_log</code> function that will append utf-8 string output to the file pointed to by an environment variable you set and control named:  SIGIL_FUNCTION_REPLACE_LOGFILE.</p>
-
-<p>This environment variable when set should be the full path to a text file (including file name) where debug output from your function will be appended.</p>
-
-<pre><code>
-def replace_debug_log(message):
-    logfile = os.environ.get('SIGIL_FUNCTION_REPLACE_LOGFILE', None);
-    if logfile:
-        with open(logfile, "a", encoding="utf-8") as f:
-            f.write(message)
-</code>
+  <pre><code> def replace_debug_log(message): logfile = os.environ.get('SIGIL_FUNCTION_REPLACE_LOGFILE', None); if logfile: with open(logfile, "a", encoding="utf-8") as f: f.write(message) </code>
 </pre>
 
-<p>There is a built in Python Function Replace editor (with syntax highlighting) that can be invoked easily from the Find and Replace window using the <img style="height: 1em;;" src="../Images/function.svg" alt="svg image of the a stylized 'F' icon that invokes the Python Funmction Replace code editor."/>
-icon on the left side of the Find and Replace window.</p>
+  <p>Sigil 内置了一个带语法高亮的 Python 函数替换编辑器，只需点击查找与替换窗口左侧的 <img class="toolbar-icon" src="../Images/function.png" alt="svg image of the a stylized 'F' icon that invokes the Python Funmction Replace code editor."/> 图标即可轻松打开它。</p>
 
   <div class="image">
     <img alt="Find and Replace set up to use Python Function Replace." src="../Images/pf_find_and_replace.png"/>
   </div>
 
- <p>As illustrated in the image above, when using Python Function Replace you use a Replace field that starts with the escape string \F&lt;&gt; with the exact, case-sensitive name of your chosen Python Function Replace routine put between the &lt; and &gt; characters.  It this case you end up with: <code>\F&lt;add_ids_to_first_h1&gt;</code>.</p>
+  <p>如上图所示，使用 Python 函数替换时，替换框要以转义字符串 \F&lt;&gt; 开头，并在 &lt; 与 &gt; 字符之间放入你所选 Python 函数替换例程的准确名称（区分大小写）。本例中最终得到的内容是：<code>\F&lt;add_ids_to_first_h1&gt;</code>。</p>
 
-<p>From inside the Python Function Editor you can select the replacement routine you desire and then employ the <code>Use</code> button to auto fill in the Find and Replace window <code>Replace</code> field.</p>
+  <p>在 Python 函数编辑器内部，你可以选择所需的替换例程，然后使用<span class="buttonbox">使用</span>按钮自动填充查找与替换窗口的<code>替换</code>框。</p>
 
-<p>This editor will load up the code for your specified Python Function Replace routine if it exists.  Or you can select from a number of built-in Python Function Replace routines using the pull down menu:</p>
+  <p>如果所指定的 Python 函数替换例程存在，该编辑器会加载其代码；也可以使用下拉菜单从若干内置 Python 函数替换例程中选择：</p>
 
   <div class="image">
     <img style="height: 150px;" alt="List of prebuilt Python Function Replace routines." src="../Images/prebuilt_replace_functions.png"/>
   </div>
 
- <p>or use the New button to create your own Python replacement function.  The Python Function editor autosaves.  When you are ready to use the function you created you can select the Use button to fill in the Replace field in the normal Find and Replace window.
-</p>
+  <p>也可以使用<span class="buttonbox">新建</span>按钮来创建你自己的 Python 替换函数。Python 函数编辑器会自动保存。当你准备好使用所创建的函数时，可以选择<span class="buttonbox">使用</span>按钮来填充常规查找与替换窗口中的替换框。</p>
 
-<p>You invoke your search and replace function just like you do any other regular expression search and replace.  First specify the <code>Find</code> field, setting the <code>Replace</code> field to point to your Function Replacement routine, specify the search mode as <code>Regex</code>, selecting a target <code>All HTML Files</code> and opening the first file and place the cursor at the top then use the <code>Replace-All</code> button.  For this particular example ebook, it added a id with heading_1, heading_2, etc counting only the first h1 in every xhtml file.</p>
+  <p>调用查找与替换函数的方式与执行任何其他正则表达式查找与替换完全一样。先填写<code>查找</code>框，把<code>替换</code>框设置为指向你的函数替换例程，将搜索模式指定为<code>正则表达式</code>，选择目标为<code>所有 HTML 文件</code>，然后打开第一个文件并将光标置于顶部，再使用<code>全部替换</code>按钮。对于这个特定的示例电子书，该函数添加了 heading_1、heading_2 等 id，且只统计每个 xhtml 文件中的第一个 h1。</p>
 
   <div>
     <img style="height: 150px;" alt="Image showing the new heading_1 id has been added." src="../Images/heading_1.png"/>
@@ -136,75 +97,56 @@ icon on the left side of the Find and Replace window.</p>
     <img style="height: 150px;" alt="Image showing the new heading_2 id has been added." src="../Images/heading_2.png"/>
   </div>
 
-<p>and so on for the first h1 tag in every file.</p>
+  <p>以此类推，为每个文件中的第一个 h1 标签依次处理。</p>
 
-<p>For those users who understand Regular Expressions but not Python, these pre-built Python Function Replace routines you may be of interest. </p>
+  <p>对于懂正则表达式但不懂 Python 的用户，下面这些预置的 Python 函数替换例程也许会让你感兴趣。</p>
 
-<dl>
-<dt>replace_uppercase</dt>
-    <dd>
-    '''Make matched text upper case. If the regular expression contains groups, only the text in the groups will be changed, otherwise the entire text is changed.'''
-</dd>
+  <dl>
+    <dt>replace_uppercase</dt>
 
-<dt>replace_lowercase</dt>
-    <dd>
-    '''Make matched text lower case. If the regular expression contains groups,
-    only the text in the groups will be changed, otherwise the entire text is
-    changed.'''
-    </dd>
+    <dd>将匹配到的文本转为大写。如果正则表达式包含分组，则只更改分组内的文本；否则更改整个匹配到的文本。</dd>
 
-<dt>replace_capitalize</dt>
-    <dd>
-    '''Capitalize matched text. If the regular expression contains groups,
-    only the text in the groups will be changed, otherwise the entire text is
-    changed.'''
-    </dd>
+    <dt>replace_lowercase</dt>
 
-<dt>replace_titlecase</dt>
-    <dd>
-    '''Title-case matched text. If the regular expression contains groups,
-    only the text in the groups will be changed, otherwise the entire text is
-    changed.'''
-    </dd>
+    <dd>将匹配到的文本转为小写。如果正则表达式包含分组，则只更改分组内的文本；否则更改整个匹配到的文本。</dd>
 
-<dt>replace_swapcase</dt>
-    <dd>
-    '''Swap the case of the matched text. If the regular expression contains groups,
-    only the text in the groups will be changed, otherwise the entire text is
-    changed.'''
-    </dd>
+    <dt>replace_capitalize</dt>
 
-<dt>replace_uppercase_ignore_tags</dt>
-    <dd>
-    '''Make matched text upper case, ignoring the text inside tag definitions.'''
-    </dd>
+    <dd>将匹配到的文本首字母大写。如果正则表达式包含分组，则只更改分组内的文本；否则更改整个匹配到的文本。</dd>
 
-<dt>replace_lowercase_ignore_tags</dt>
-    <dd>
-    '''Make matched text lower case, ignoring the text inside tag definitions.'''
-    </dd>
+    <dt>replace_titlecase</dt>
 
-<dt>replace_capitalize_ignore_tags</dt>
-    <dd>
-    '''Capitalize matched text, ignoring the text inside tag definitions.'''
-    </dd>
+    <dd>将匹配到的文本转为标题格式（各单词首字母大写）。如果正则表达式包含分组，则只更改分组内的文本；否则更改整个匹配到的文本。</dd>
 
-<dt>replace_titlecase_ignore_tags</dt>
-    <dd>
-    '''Title-case matched text, ignoring the text inside tag definitions.'''
-    </dd>
+    <dt>replace_swapcase</dt>
 
-<dt>replace_swapcase_ignore_tags</dt>
-    <dd>
-    '''Swap the case of the matched text, ignoring the text inside tag definitions.'''
-    </dd>
-</dl>
+    <dd>反转匹配到的文本的大小写。如果正则表达式包含分组，则只更改分组内的文本；否则更改整个匹配到的文本。</dd>
 
+    <dt>replace_uppercase_ignore_tags</dt>
 
-<p>See <a href="https://github.com/Sigil-Ebook/Sigil/src/Resource_files/python3lib/functionrep.py">Sigil/src/Resource_files/python3lib/functionrep.py</a> for the complete source code to these built-in functions.  All python replace functions plus any you add are stored in your Sigil Preferences folder in a file called: <code>replace_functions.json</code>.</p>
+    <dd>将匹配到的文本转为大写，忽略标签定义内的文本。</dd>
+
+    <dt>replace_lowercase_ignore_tags</dt>
+
+    <dd>将匹配到的文本转为小写，忽略标签定义内的文本。</dd>
+
+    <dt>replace_capitalize_ignore_tags</dt>
+
+    <dd>将匹配到的文本首字母大写，忽略标签定义内的文本。</dd>
+
+    <dt>replace_titlecase_ignore_tags</dt>
+
+    <dd>将匹配到的文本转为标题格式（各单词首字母大写），忽略标签定义内的文本。</dd>
+
+    <dt>replace_swapcase_ignore_tags</dt>
+
+    <dd>反转匹配到的文本的大小写，忽略标签定义内的文本。</dd>
+  </dl>
+
+  <p>这些内置函数的完整源代码请参阅 <a href="https://github.com/Sigil-Ebook/Sigil/src/Resource_files/python3lib/functionrep.py">Sigil/src/Resource_files/python3lib/functionrep.py</a>。所有 Python 替换函数以及你自行添加的函数，都存放在 Sigil 首选项文件夹中一个名为 <span class="example">replace_functions.json</span> 的文件里。</p>
 
   <div class="tip">
-    <p class="tiptext">Just like any other Sigil regular expression search and replace, regex searches with Python Function Replace can also be saved and used in <span class="menuitem">Saved Searches</span>.  Python Function Replace routines can also be used with <span class="menuitem">Dry Run Replace All</span> and <span class="menuitem">Filter Replacements</span> as well as in normal Replace All done on a multi-file target.</p>
+    <p class="tiptext">与 Sigil 中其他任何正则表达式查找与替换一样，配合 Python 函数替换的正则搜索也可以被保存下来，并在 <span class="menuitem">搜索模板</span> 中使用。Python 函数替换例程还可以配合 <span class="menuitem">模拟运行替换全部</span> 和 <span class="menuitem">筛选替换</span> 使用，也可以用于针对多文件目标的常规全部替换。</p>
   </div>
 </body>
 </html>

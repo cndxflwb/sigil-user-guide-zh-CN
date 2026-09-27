@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Metadata Editor</title>
+  <title>元数据</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="metadata-editor">Metadata</h2>
+  <h2 id="metadata-editor">元数据</h2>
 
-  <p class="h2subheading">— Edit details about your book —</p>
+  <p class="h2subheading">— 编辑图书的详细信息 —</p>
 
-  <p>The Metadata Editor allows you to add or edit details about your book – like Author, Title and Language, as well as many of other entries defined by the EPUB standard.</p>
+  <p>元数据编辑器允许您添加或编辑图书的详细信息——如作者、书名和语言，以及 EPUB 标准定义的其他许多条目。</p>
 
-  <p>Edit your book details by clicking the Metadata Editor button <img alt="Image of the Metadata Editor icon." src="../Images/metadata-editor.png"/>, or selecting the menu item <span class="menuitem">Tools=&gt;Metadata Editor</span> or its keyboard shortcut:</p>
+  <p>点击元数据编辑器按钮<img class="toolbar-icon" alt="Image of the Metadata Editor icon." src="../Images/metadata-editor.png"/>，或选择菜单项 <span class="menuitem">工具=&gt;元数据编辑器</span> 或其键盘快捷键，即可编辑图书的详细信息：</p>
 
   <div class="image">
     <img alt="Image showing Sigil's Metadata Editor in action." src="../Images/metadata-editor-new.png"/>
   </div>
 
-  <p>All of the details about the book (called metadata) are stored in the <span class="example">content.opf</span> file in the EPUB. You can edit this information manually, but the Metadata Editor allows you to edit it more safely and easily.</p>
+  <p>图书的全部详细信息（称为元数据）都存储在 EPUB 中的 <span class="example">content.opf</span> 文件里。可手动编辑这些信息，但元数据编辑器更安全、更轻松。</p>
 
-  <h3 class="sigil_not_in_toc" id="metadata_required">Required Metadata</h3>
+  <h3 class="sigil_not_in_toc" id="metadata_required">必需的元数据</h3>
 
-  <p>There are 3 required metadata elements that you must fill in to create a valid EPUB:</p>
+  <p>要创建有效的 EPUB，必须填写 3 个必需的元数据条目：</p>
 
   <ul>
-    <li><span class="listheading">Title:</span> The main title of the book.</li>
+    <li><span class="listheading">标题（书名）：</span>图书的主标题。</li>
 
-    <li><span class="listheading">Author:</span> The primary author of the book, usually in the form of “Firstname Lastname”. You can add more authors using the fields below.</li>
+    <li><span class="listheading">创作者：</span>图书的主要作者，通常采用“Firstname Lastname（名·姓）”的形式。可用下方字段添加更多作者。</li>
 
-    <li><span class="listheading">Language:</span> The language the book is written in.</li>
+    <li><span class="listheading">语言：</span>图书所使用的语言。</li>
   </ul>
 
   <div>
-    You can also add the optional <span class="menuitem">File-As</span> property to provide the author’s name for sorting purposes, usually of the form “Lastname, Firstname”.
+    You can also add the optional <span class="menuitem">File-As</span> property to provide the author’s name for sorting purposes, usually of the form “Lastname, Firstname”.|→还可添加可选的 File-As（排序依据）属性，提供用于排序的作者姓名，通常采用“Lastname, Firstname（姓，名）”的形式。←|
   </div>
 
-  <h3 class="sigil_not_in_toc" id="metadata_optional">Additional Metadata</h3>
+  <h3 class="sigil_not_in_toc" id="metadata_optional">附加元数据</h3>
 
-  <p>You can add additional metadata using the <span class="buttonbox">Add Metadata</span> button to add metadata elements or <span class="buttonbox">Add Property</span> button to add additional properties to existing metadata elements.</p>
+  <p>可用<span class="buttonbox">添加元数据</span>按钮添加元数据条目，或用<span class="buttonbox">添加属性</span>按钮为已有的元数据项添加附加属性。</p>
 
   <div class="image">
     <img alt="Adding basic metadata dialog." src="../Images/metadata-add-basic.png"/>
   </div>
 
-  <p>If you click <span class="buttonbox">Add Metadata</span> or <span class="buttonbox">Add Property</span>, Sigil will display EPUB-type specific metadata/property dialog items.</p>
+  <p>如果您点击<span class="buttonbox">添加元数据</span>或<span class="buttonbox">添加属性</span>，Sigil 将显示针对 EPUB 类型的元数据/属性对话框条目。</p>
 
-  <p>For example, the Role metadata property list contains hundreds of possible activities that people may have performed in the creation of this book such as Authors, Editor, Proofreader, etc.:</p>
+  <p>例如，角色元数据属性列表包含数百种人们在这本书创作过程中可能承担的活动，如作者、编辑、校对等：</p>
 
   <div class="image">
     <img alt="Metadata Editor adding a role property." src="../Images/metadata-add-role.png"/>
   </div>
 
-  <p>You can add the same type of field multiple times.</p>
+  <p>可多次添加同一类型的字段。</p>
 
   <div class="tip delete">
-    <p class="tiptext">You can re-arrange the order of the entries (which may affect how e-readers display the information) by selecting the entries and clicking on the <span class="buttonbox">Up</span> or <span class="buttonbox">Down</span> buttons.</p>
+    <p class="tiptext">可选中条目，点击 <span class="buttonbox">上移</span>或<span class="buttonbox">下移</span>按钮重新排列条目顺序（这可能会影响电子书阅读器对信息的显示方式）。</p>
   </div>
 </body>
 </html>

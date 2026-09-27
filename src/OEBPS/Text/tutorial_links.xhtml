@@ -1,101 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Create Links and Footnotes</title>
+  <title>创建链接与脚注</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="links">Create Links and Notes</h2>
+  <h2 id="links">创建链接与注释</h2>
 
-  <p class="h2subheading">— Linking your Text —</p>
+  <p class="h2subheading">—为你的正文建立链接—</p>
 
-  <p>Sigil allows you to easily link text to other parts of your book, such as chapter names and notes, so that readers can select the link and jump to the identified text.</p>
+  <p>使用 Sigil 可以轻松把文字链接到书中的其他位置（例如章节名称和注释），读者选中链接后即可跳转到指定文字处。</p>
 
-  <h3 class="sigil_not_in_toc">IDs</h3>
+  <h3 class="sigil_not_in_toc">ID</h3>
 
-  <p>In order for Sigil to create a link from certain words in your book to other locations in your book, you first need to give an ID (effectively a unique name) to the text you want your link to go to.</p>
+  <p>要让 Sigil 将书中的某些文字链接到其他位置，首先要为链接的目标文字设置 ID（本质上是一个唯一名称）。</p>
 
-  <p>If the target for your link is just the top of a file, then you don’t need to do anything since you can use the filename as the target ID.</p>
+  <p>如果你的链接目标只是某个文件的开头，那么什么都不用做，因为可直接用文件名作为目标 ID。</p>
 
-  <p>But if you want to point to specific words in your book, then you need to assign an ID to the text.</p>
+  <p>但如果你想指向书中的具体文字，就需要给这段文字分配一个 ID。</p>
 
   <div class="tip">
-    <p class="tiptext">An ID is just a unique name, like <span class="example">note1</span> that you will assign to a some of your text so that you can refer to it. ID names must be unique within an HTML file (and start with a letter), but its best if they are unique throughout the whole EPUB in case you move text around.</p>
+    <p class="tiptext">ID 就是一个唯一名称，比如 <span class="example">note1</span>，你把它分配给某段文字以便引用。ID 名称在一个 HTML 文件内必须唯一（且以字母开头），但最好让它在整个 EPUB 中都保持唯一，以防你之后移动文字位置。</p>
 
-    <p class="tiptext">IDs and links are usually created with the HTML anchor tag ("a") – so the ID is often considered the anchor ID for a link, hence the button used for inserting IDs.</p>
+    <p class="tiptext">ID 和链接通常是用 HTML 锚标签（“a”）创建的——因此 ID 常被视为链接的锚 ID，插入 ID 所用的按钮也因此得名。</p>
   </div>
 
-  <h4 class="sigil_not_in_toc">Create an ID</h4>
+  <h4 class="sigil_not_in_toc">创建一个 ID</h4>
 
-  <p>To create an ID, select some text in your book and click on the Insert ID button <img alt="Insert Id icon." src="../Images/insert-id.png"/>:</p>
+  <p>要创建一个 ID，请在书中选中一段文字，然后点击插入 ID 按钮 <img class="toolbar-icon" alt="Insert Id icon." src="../Images/insert-id.png"/>：</p>
 
   <div class="image">
     <img alt="Using the Insert Id icon." src="../Images/tutorial-link-insert-id.png"/>
   </div>
 
-  <p>This will open the Insert ID dialog where you can type the name of your ID:</p>
+  <p>此时会打开插入 ID 对话框，供你输入 ID 名称：</p>
 
   <div class="image">
     <img alt="Showing Insert ID entry window." src="../Images/tutorial-link-insert-id-dialog.png"/>
   </div>
 
-  <h3 class="sigil_not_in_toc">Links</h3>
+  <h3 class="sigil_not_in_toc">链接</h3>
 
-  <p>A link is a way to point to your ID, and when selected by the reader it “jumps” the reader to the location of the ID.</p>
+  <p>链接是一种指向你的 ID 的方式，读者选中它后会“跳转”到该 ID 所在的位置。</p>
 
-  <p>To create a link in Sigil, select some text to use for the link and click on the Insert Link button <img alt="Insert Hyperlink icon." src="../Images/insert-hyperlink.png"/>:</p>
+  <p>要在 Sigil 中创建链接，请选中要用作链接的文字，然后点击插入链接按钮 <img class="toolbar-icon" alt="Insert Hyperlink icon." src="../Images/insert-hyperlink.png"/>：</p>
 
   <div class="image">
     <img alt="Using the Insert Hyperlink icon." src="../Images/tutorial-links-insert-link.png"/>
   </div>
 
-  <p>This will open the Select Target dialog which shows you the IDs in your book that you can link to:</p>
+  <p>此时会打开“选择目标”对话框，列出书中可链接的 ID：</p>
 
   <div class="image">
     <img alt="Selecting a hyperlink target dialog." src="../Images/tutorial-links-insert-link-dialog.png"/>
   </div>
 
-  <p>You will notice a number of different IDs in the list. At first it might not look like yours is there, so to find it, it helps to understand what a link looks like:</p>
+  <p>列表中有许多不同的 ID。起初可能找不到你的目标，先了解链接的格式会有所帮助：</p>
 
   <ul>
-    <li><p><span class="listheading">Filename.html:</span> This points to just a filename as the target of your link and tells the link to jump to the top of the file. This is what is used for the Generate Table Of Contents links.</p></li>
+    <li><p><span class="listheading">Filename.html：</span>以文件名作为链接目标，跳转到该文件的开头。生成目录的链接用的就是这种形式。</p></li>
 
-    <li><p><span class="listheading">Filename.html#ID1:</span> This points to a specific ID in a file. When you use this as the target of your link the reader will go to the exact location of the text with the ID in the file listed.</p></li>
+    <li><p><span class="listheading">Filename.html#ID1：</span>指向某个文件中的具体 ID。用它作为链接目标时，读者会跳转到该文件中该 ID 对应文字的准确位置。</p></li>
 
-    <li><p><span class="listheading">#ID1:</span> This is just the ID name, and implies that it is in the same file as your link so no filename is needed.</p></li>
+    <li><p><span class="listheading">#ID1：</span>只有 ID 名称，这表示它与你的链接在同一个文件中，因此不需要文件名。</p></li>
   </ul>
 
-  <p>When you select a link you will see that the Target text box shows the actual link that will be used. Click <span class="buttonbox">OK</span>, or double-click on an entry, and the link will be created for your text.</p>
+  <p>选中一个链接时，你会看到“目标”文本框中显示将要使用的实际链接。点击<span class="buttonbox">确定</span>或双击某个条目，即可为你的文字创建链接。</p>
 
-  <div><img alt="image of hyperlink inserted in text" src="../Images/tutorial-links-after-link-inserted.png"/></div>
+  <div>
+    <img alt="image of hyperlink inserted in text" src="../Images/tutorial-links-after-link-inserted.png"/>
+  </div>
 
-  <p>If you click on the newly created link in your text you will jump to where the ID is. You can then click the Back button <img alt="Back to Link arrow icon." src="../Images/back-to-link-style.png"/> to return to where you clicked the link.</p>
+  <p>点击文中刚创建的链接，你就会跳转到该 ID 所在的位置。之后可以点击返回按钮 <img class="toolbar-icon" alt="Back to Link arrow icon." src="../Images/back-to-link-style.png"/> 回到你点击链接的地方。</p>
 
-  <h4 class="sigil_not_in_toc">Reverse Linking</h4>
+  <h4 class="sigil_not_in_toc">反向链接</h4>
 
-  <p>Most e-readers have a Back button that you can select once you follow a link to take you back to the original linked text. But for those that don’t, you can create a link from your destination back to your original source text. This is often called reverse linking.</p>
+  <p>大多数电子书阅读器都有返回按钮，跟随链接跳转后点击即可回到原始链接文字处。但对于没有返回按钮的阅读器，可从目标位置创建一个链接指回来源文字。这通常称为反向链接。</p>
 
-  <p>Reverse linking is just like any other kind of linking – it just means you have to create a link from the source text to your destination note, and also from your destination note back to your source text – so both source and destination will need IDs and links, and will be mirror versions of each other:</p>
+  <p>反向链接与其他类型的链接并无不同——只是既要从来源文字创建链接指向目标注释，又要从目标注释创建链接指回来源文字——因此来源和目标都需要 ID 和链接，二者互为镜像：</p>
 
   <div class="image">
     <img alt="Showing to crosslink text to footnotes and back" src="../Images/note.png"/>
   </div>
 
-  <p>For example, in the typical case of creating endnotes:</p>
+  <p>例如，在创建尾注的典型情形下：</p>
 
   <ul>
-    <li>Select your note at the end of your book (or chapter) and assign an ID to it, e.g. <span class="example">note1</span>.</li>
+    <li>选中位于全书（或章节）末尾的注释，并为它分配一个 ID，例如 <span class="example">note1</span>。</li>
 
-    <li>Select your text in the book and assign an ID for it, e.g. <span class="example">text1</span>.</li>
+    <li>选中书中的文字，并为它分配一个 ID，例如 <span class="example">text1</span>。</li>
 
-    <li>Select the same text again and create a link to the note’s ID.</li>
+    <li>再次选中同一段文字，创建一个链接指向该注释的 ID。</li>
 
-    <li>Select your note again (click on the link to jump you to the note and to test the link), and create a link pointing back to your text’s ID.</li>
+    <li>再次选中你的注释（点击链接跳转到注释处并测试链接），然后创建一个链接指回你那段文字的 ID。</li>
 
-    <li>Click on the note to jump you back to your text to test the link.</li>
+    <li>点击注释，跳转回你的文字以测试链接。</li>
   </ul>
 </body>
 </html>

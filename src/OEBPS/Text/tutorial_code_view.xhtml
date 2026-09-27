@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Edit an EPUB</title>
+  <title>编辑 EPUB</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2>A Quick Introduction To Code View</h2>
+  <h2>代码视图快速入门</h2>
 
-  <h3 class="sigil_not_in_toc">Code View</h3>
+  <h3 class="sigil_not_in_toc">代码视图</h3>
 
-  <p>That’s quite a lot of text, but it’s not as jumbled as it appears. First, ignore everything at the top of the file up to and including the <span class="example">&lt;body&gt;</span> tag on line 11 in this example. The “header” is just information required by HTML files and not something you normally need to change.</p>
+  <p>这里的文字确实不少，但并不像看上去那么杂乱。首先，忽略文件顶部直到（包括）本例第 11 行 <span class="example">&lt;body&gt;</span> 标签在内的所有内容。“头部”只是 HTML 文件所需的信息，通常不需要修改。</p>
 
-  <p>Your text starts after the <span class="example">&lt;body&gt;</span> tag:</p>
+  <p>正文从 <span class="example">&lt;body&gt;</span> 标签之后开始：</p>
 
   <div class="image">
     <img alt="The main Code View Window" src="../Images/tutorial-cv.png"/>
   </div>
 
-  <p>You can see all the same words that are shown in Preview – the chapter name “Introduction” and several paragraphs of text. But you can also see the HTML code tags that tell readers how to display that text.</p>
+  <p>可以看到与预览中显示的完全相同的内容——章节名“简介”和若干段文字。但还能看到 HTML 代码标签，它们指示阅读器如何显示这些文字。</p>
 
-  <h3 class="sigil_not_in_toc">HTML Basics</h3>
+  <h3 class="sigil_not_in_toc">HTML 基础</h3>
 
-  <p>A full description of HTML is beyond this tutorial, but understanding the basics will help you edit your text.<a href="#section1">[1]</a></p>
+  <p>完整介绍 HTML 超出了本教程的范围，但了解基础知识有助于编辑文字。<a href="#section1">[1]</a></p>
 
-  <p>If you look at the HTML version of your file in Code View you will see lots of words like <span class="example">&lt;p&gt;</span> or <span class="example">&lt;h1&gt;</span>, etc. These are the HTML tags that tell e-readers what to do with your text.</p>
+  <p>在代码视图中查看文件的 HTML 版本时，会看到大量诸如 <span class="example">&lt;p&gt;</span> 或 <span class="example">&lt;h1&gt;</span> 之类的字样。这些就是 HTML 标签，用来指示电子书阅读器如何处理文字。</p>
 
-  <p>For instance, the HTML code below tells the e-reader that the text <span class="example">Chapter 8</span> is a level 1 Heading:</p>
+  <p>例如，下面的 HTML 代码指示电子书阅读器：文字 <span class="example">Chapter 8</span> 是一级标题：</p>
 
   <pre class="example">&lt;h1&gt;Chapter 8&lt;/h1&gt;</pre>
 
-  <p>The <span class="example">&lt;h1&gt;</span> tag is the start of the text to be treated like a heading, and the <span class="example">&lt;/h1&gt;</span> tag indicates the end of the text included in the heading. This is what Sigil enters into your document when you click the <img alt="Heading 1 icon." src="../Images/heading-1.png"/> icon. E-readers will typically make the text of a heading larger and center it on the screen.</p>
+  <p><span class="example">&lt;h1&gt;</span> 标签表示标题文本的起始位置，<span class="example">&lt;/h1&gt;</span> 标签则表示标题文本的结束位置。点击 <img class="toolbar-icon" alt="Heading 1 icon." src="../Images/heading-1.png"/> 图标时，Sigil 插入文档的正是这段代码。电子书阅读器通常会把标题文字放大并在屏幕上居中显示。</p>
 
-  <p>The HTML code below tells the e-reader that the text <span class="example">This is a paragraph</span> is an ordinary paragraph. Since it’s a paragraph the e-reader will apply a certain formatting, perhaps indenting the first line.</p>
+  <p>下面的 HTML 代码指示电子书阅读器：文字 <span class="example">This is a paragraph</span> 是正文段落。因为是段落，电子书阅读器会应用某种格式，例如首行缩进。</p>
 
   <pre class="example">&lt;p&gt;This is a paragraph.&lt;/p&gt;</pre>
 
-  <p>There are many more tags in HTML. The important point to remember is that the HTML tags tell e-readers how to format and display your content. They allow you to keep your content separate from your formatting which makes it easier to change how your book looks.</p>
+  <p>HTML 中还有更多的标签。需要记住的关键一点是：HTML 标签指示电子书阅读器如何排版并显示内容。它们使内容与格式相互分离，从而更容易更改书籍外观。</p>
 
-  <p>HTML tags can get more fancy since they can include attributes that modify how they are interpreted. For example, here is a paragraph with some tags that define an ID used for linking as shown in the last chapter:</p>
+  <p>HTML 标签还可以更复杂，因为可以包含属性来修改自身的解释方式。例如，下面是一个段落，其中的标签定义了上一章展示的、用于链接的 ID：</p>
 
   <pre class="example">&lt;p&gt;&lt;span id="note1"&gt;This is a note&lt;/span&gt; for linking.&lt;/p&gt;</pre>
 
-  <p>The span tag is used around small sections of text that need to be formatted differently or to contain information. In this case the information is that the words “This is a note” has an ID of “note1”. The span tags with the ID attribute are the code that Sigil inserts when you use Insert ID.</p>
+  <p>span 标签用于包裹需要不同格式或需要包含额外信息的一小段文字。在本例中，这个信息就是文字“This is a note”拥有 ID“note1”。带有 ID 属性的 span 标签，正是使用插入 ID 功能时 Sigil 插入的代码。</p>
 
-  <p>These are just a few examples of HTML code, but they give you an idea of what the majority of HTML is all about.</p>
+  <p>这些只是 HTML 代码的几个例子，但足以让你大致了解 HTML 的主要内容。</p>
 
-  <p>What is important to remember is that in Code View you have access to both your text and the formatting codes that control the look of your book – so you can find and change them.</p>
-
-  <div class="tip">
-    <p class="tiptext">See the <a href="introduction.xhtml">Introduction</a>, <a href="code_view.xhtml">Code View</a> and <a href="tutorial_stylesheets.xhtml">Stylesheets</a> chapters for more details.</p>
-  </div>
-
-  <h3 class="sigil_not_in_toc">Editing in Code View</h3>
-
-  <p>Try changing some of your words (but not the HTML tags just yet), and then watch the changes in Preview.</p>
+  <p>需要记住的重点是：在代码视图中，既能访问正文文字，也能访问控制书籍外观的格式代码——因此可以找到并修改它们。</p>
 
   <div class="tip">
-    <p class="tiptext">It is essential that you edit carefully. You will need to make sure all the tags you use are valid and are opened and closed properly – if they aren’t, you will get a pink error warning in Preview and you will be unable to save your ePub until they are fixed.</p>
+    <p class="tiptext">更多细节请参阅<a href="../Text/introduction.xhtml">简介</a>、<a href="../Text/code_view.xhtml">代码视图</a>和<a href="../Text/tutorial_stylesheets.xhtml">样式表</a>章节。</p>
   </div>
 
-  <h3 class="sigil_not_in_toc">Preview</h3>
+  <h3 class="sigil_not_in_toc">在代码视图中编辑</h3>
 
-  <p>To really see changing the code in action, you can open the Preview window using <span class="menuitem">View=&gt;Preview</span> (you can always close it using <span class="menuitem">View=&gt;Preview</span> or its shortcut again). You may need to make the window bigger or drag it to another part of your desktop.</p>
+  <p>试着修改几个字词（暂时不要动 HTML 标签），然后观察预览中的变化。</p>
 
-  <p>You can type in Code View and Preview will be updated to show your changes after a slight delay.</p>
+  <div class="tip">
+    <p class="tiptext">编辑时务必小心谨慎。需确保所使用的标签全部有效，并且正确开启和闭合——否则预览中会出现粉色的错误警告，在修复这些错误之前无法保存 EPUB。</p>
+  </div>
+
+  <h3 class="sigil_not_in_toc">预览</h3>
+
+  <p>要真正看到修改代码的效果，可使用 <span class="menuitem">视图=&gt;预览</span>打开预览窗口（随时可再次使用 <span class="menuitem">视图=&gt;预览</span>或其快捷键将其关闭）。可能需要把窗口放大，或者拖到桌面的其他位置。</p>
+
+  <p>在代码视图中输入后，预览会在短暂延迟后更新，显示修改结果。</p>
 
   <div class="image">
     <img alt="The main Preview window." src="../Images/tutorial-preview.png"/>
   </div>
 
   <div class="tip">
-    <p class="tiptext">Save often to have your code checked for any errors to catch them early.</p>
+    <p class="tiptext">请经常保存，以便尽早发现代码中的错误。</p>
   </div>
 
-<hr/>
+  <hr/>
 
-<p id="section1">[1] Many good HTML tutorial sites can be found on the Internet, <a href="https://www.w3schools.com/">W3Schools.com</a> being one.</p>
+  <p id="section1">[1] 互联网上可以找到许多优秀的 HTML 教程网站，<a href="https://www.w3schools.com/">W3Schools.com</a> 就是其中之一。</p>
 </body>
 </html>

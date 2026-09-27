@@ -1,180 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Clips</title>
+  <title>剪贴板</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
-  </head>
-  
+</head>
+
 <body>
-  <h2 id="clips">Clips</h2>
+  <h2 id="clips">剪贴板</h2>
 
-  <p class="h2subheading">— Saving Text and Styles —</p>
+  <p class="h2subheading">—保存文本与样式—</p>
 
-  <p>Clips allow you to save snippets of text and paste them into your document at any time. They can also be used to insert HTML style tags around your text. Create clips using the Clip Editor. You can even autofill all the styles in your CSS stylesheets into the Clips list. Then select and paste your clips using the Clip Editor, Clip Bar, Clips window, context menu, keyboard shortcuts, or main menu bar.</p>
+  <p>剪贴板可保存文本片段，并随时粘贴到文档中，也可在文本前后插入 HTML 样式标签。使用剪贴板编辑器创建剪贴板条目，甚至可把 CSS 样式表中的所有样式自动填充到剪贴板列表。之后通过剪贴板编辑器、剪贴板栏、剪贴板窗口、上下文菜单、键盘快捷键或主菜单栏选择和粘贴剪贴板条目。</p>
 
-  <h3 class="sigil_not_in_toc">Creating &amp; Editing Clips</h3>
+  <h3 class="sigil_not_in_toc">创建与编辑剪贴板条目</h3>
 
-		  <p>To create and edit clips, first open the Clip Editor using the menu item <span class="menuitem">Tools=&gt;Clip Editor</span> or its keyboard shortcut.</p>
+  <p>要创建和编辑剪贴板条目，请先使用菜单项 <span class="menuitem">工具=&gt;剪贴板编辑器</span> 或其键盘快捷键打开剪贴板编辑器。</p>
 
-		  <div class="image">
-			<img alt="Clip Editor main dialog." src="../Images/clip-editor-main.png"/>
-		  </div>
+  <div class="image">
+    <img alt="Clip Editor main dialog." src="../Images/clip-editor-main.png"/>
+  </div>
 
-	<h4 id="sigil_toc_id_12">Context Menu</h4>
+  <h4 id="sigil_toc_id_12">上下文菜单</h4>
 
-		  <p>While you can add clips and groups using the <span class="buttonbox">Add Entry</span> or <span class="buttonbox">Add Group</span> buttons in the Clip Editor window, the full array of commands are accessed via the right-click context menu:</p>
+  <p>虽然可使用剪贴板编辑器窗口中的<span class="buttonbox">添加条目</span>或<span class="buttonbox">添加组</span>按钮来添加剪贴板条目和组，但完整命令需通过右键上下文菜单访问：</p>
 
-		  <div class="image">
-			<img alt="Clip Editor Context menu." src="../Images/clip-editor-context-menu.png"/>
-		  </div>
+  <div class="image">
+    <img alt="Clip Editor Context menu." src="../Images/clip-editor-context-menu.png"/>
+  </div>
 
-		  <p>To use the context menu, first select one or more entries then right-click on the selection for the following options:</p>
+  <p>要使用上下文菜单，请先选中一个或多个条目，然后右键单击所选内容，会显示以下选项：</p>
 
-		  <ul>
-			<li><span class="listheading">Add Entry:</span> Add a new blank clip under the entry you clicked.</li>
+  <ul>
+    <li><span class="listheading">添加条目：</span>在你单击的条目下方添加一个新的空白剪贴板条目。</li>
 
-			<li><span class="listheading">Add Group:</span> Add a new group under the entry you clicked.</li>
+    <li><span class="listheading">添加组：</span>在你单击的条目下方添加一个新组。</li>
 
-			<li class="first"><span class="listheading">Edit:</span> Edit the entry.</li>
+    <li class="first"><span class="listheading">编辑：</span>编辑该条目。</li>
 
-			<li class="first"><span class="listheading">Cut:</span> Delete one or more entries that can be pasted later.</li>
+    <li class="first"><span class="listheading">剪切：</span>删除一个或多个条目，之后可以粘贴。</li>
 
-			<li><span class="listheading">Copy:</span> Copy one or more entries that can be pasted later.</li>
+    <li><span class="listheading">复制：</span>复制一个或多个条目，之后可以粘贴。</li>
 
-			<li><span class="listheading">Paste:</span> Paste any cut/copied entries.</li>
+    <li><span class="listheading">粘贴：</span>粘贴任何已剪切/复制的条目。</li>
 
-			<li class="first"><span class="listheading">Delete:</span> Delete entries or groups.</li>
+    <li class="first"><span class="listheading">删除：</span>删除条目或组。</li>
 
-			<li class="first"><span class="listheading">Import:</span> Read a list of exported entries from a file into the list.</li>
+    <li class="first"><span class="listheading">导入：</span>从文件中读取已导出的条目列表并加入列表。</li>
 
-			<li><span class="listheading">Reload:</span> Restore the list from the last saved state.</li>
+    <li><span class="listheading">重新加载：</span>将列表恢复到最后一次保存的状态。</li>
 
-			<li class="first"><span class="listheading">Export:</span> Save selected entries to a file for sharing or backup.</li>
+    <li class="first"><span class="listheading">导出：</span>把选中的条目保存到文件中，用于共享或备份。</li>
 
-			<li><span class="listheading">Export All:</span> Save all entries to a file.</li>
+    <li><span class="listheading">导出所有：</span>把所有条目保存到文件中。</li>
 
-			<li class="first"><span class="listheading">Autofill:</span> Create clips from styles in your CSS stylesheets.</li>
+    <li class="first"><span class="listheading">自动填充：</span>从 CSS 样式表中的样式创建剪贴板条目。</li>
 
-			<li class="first"><span class="listheading">Collapse All:</span> Collapse the display of all groups.</li>
+    <li class="first"><span class="listheading">全部折叠：</span>折叠所有组的显示。</li>
 
-			<li><span class="listheading">Expand All:</span> Expand the display of all groups.</li>
-		  </ul>
-	
-		  <div class="tip">
-		  <p class="tiptext">You can move entries or groups around using the arrow keys or drag-and-drop.</p>
+    <li><span class="listheading">全部展开：</span>展开所有组的显示。</li>
+  </ul>
 
-		  <p class="tiptext">To make groups of clips, first create a group to put the clips in.</p>
-		  </div>
+  <div class="tip">
+    <p class="tiptext">可使用方向键或拖放移动条目或组。</p>
 
+    <p class="tiptext">要创建剪贴板组，请先创建一个用于存放剪贴板条目的组。</p>
+  </div>
 
-  	<h4 class="sigil_not_in_toc">Save</h4>
+  <h4 class="sigil_not_in_toc">保存</h4>
 
-		  <p>Once you are done creating and editing your clips, be sure to save them by clicking <span class="buttonbox">Save</span>.</p>
+  <p>创建和编辑剪贴板条目完成后，请务必单击<span class="buttonbox">保存</span>。</p>
 
-		  <p>To exit without saving your entries, close the window with the <span class="buttonbox">Close</span> button or <span class="shortcut">Esc</span> key, then confirm that you don’t want to save, if prompted. You can also use the context menu <span class="menuitem">Reload</span> to reload your entries from disk, which will delete current unsaved entries.</p>
+  <p>若要不保存条目直接退出，请使用<span class="buttonbox">关闭</span>按钮或<span class="shortcut">Esc</span>键关闭窗口，然后在提示时确认不保存。也可使用上下文菜单 <span class="menuitem">重新加载</span> 从磁盘重新加载条目，这会删除当前未保存的条目。</p>
 
-		  <p>Use the <span class="menuitem">Export</span> and <span class="menuitem">Import</span> context menu items to save a copy of your clips so that they can be shared with others.</p>
+  <p>使用 <span class="menuitem">导出</span> 和 <span class="menuitem">导入</span> 上下文菜单项保存剪贴板条目的副本，以便与他人共享。</p>
 
-		  <div class="tip">
-			<p class="tiptext">If you save and are running more than one copy of Sigil, then the other instances of Sigil will automatically reload the newly saved clips to keep all copies in sync.</p>
-		  </div>
+  <div class="tip">
+    <p class="tiptext">若保存了剪贴板条目，且正在运行多个 Sigil 实例，其他实例会自动重新加载新保存的条目，以保持各实例同步。</p>
+  </div>
 
-  	<h4 class="sigil_not_in_toc">Filter</h4>
+  <h4 class="sigil_not_in_toc">过滤器</h4>
 
- 		<p>Use the filter text box to restrict the list of entries shown, making it easier to find the clips you want.</p>
+  <p>使用过滤器文本框可以限制显示的条目列表，便于找到想要的剪贴板条目。</p>
 
- 
- 	<h4 class="sigil_not_in_toc">Autofilling CSS Entries</h4>
+  <h4 class="sigil_not_in_toc">自动填充 CSS 条目</h4>
 
-		  <p>The Autofill context menu item will scan your CSS stylesheets and create a clip entry for each simple selector it finds. (For more on how formatting text with clips works, see next section.)</p>
+  <p>A自动填充 上下文菜单项会扫描 CSS 样式表，为找到的每个简单选择器创建一个剪贴板条目。（关于如何使用剪贴板格式化文本，请参见下一节。）</p>
 
-		  <p>For example, if you have the selector or style “p.first” then Autofill will create a clip for it as follows:</p>
+  <p>例如，若存在选择器或样式“p.first”，自动填充 会为其创建如下剪贴板条目：</p>
 
-		  <pre class="example">&lt;p class="first"&gt;\1&lt;/p&gt;</pre>
+  <pre class="example">&lt;p class="first"&gt;\1&lt;/p&gt;</pre>
 
-		  <p>If the selector is “*.quote” then Autofill will create entries for “p.quote”, “div.quote”, and “span.quote”.</p>
+  <p>如果选择器是“*.quote”，自动填充 会为“p.quote”“div.quote”和“span.quote”分别创建条目。</p>
 
-		  <p>All new Autofill clips are stored in the “Autofill” group. If the “Autofill” group does not exist, it will be created. You can rename the group once it has been created, and you can move or copy any entry to any group.</p>
+  <p>所有新的 自动填充 剪贴板条目都存放在“自动填充”组中；若该组不存在，会自动创建。组创建后可重命名，也可将任何条目移动或复制到任何组。</p>
 
-  <h3 class="sigil_not_in_toc">Using Clips to Format Text</h3>
+  <h3 class="sigil_not_in_toc">使用剪贴板格式化文本</h3>
 
-		  <p>Clips provide a great way to paste text before and after selected text, making it easier to format text.</p>
+  <p>剪贴板可在选中文本前后粘贴文本，让文本格式化更简单。</p>
 
-		  <p>First define a clip using “\1” in the text. Clips will then treat it as a Regex replacement command. When you paste the clip, the “\1” will be replaced with whatever text was selected.</p>
+  <p>首先在剪贴板条目文本中使用“\1”定义文本，剪贴板会将其视为正则替换命令。粘贴该条目时，“\1”将替换为选中的文本。</p>
 
-		  <p>For example, if your clip is</p>
+  <p>例如，若剪贴板条目为</p>
 
-		  <pre class="example">&lt;span class="name"&gt;\1&lt;/span&gt;</pre>
+  <pre class="example">&lt;span class="name"&gt;\1&lt;/span&gt;</pre>
 
-		  <p>and you select the text</p>
+  <p>而你选中的文本是</p>
 
-		  <pre class="example">Mad Hatter</pre>
+  <pre class="example">Mad Hatter</pre>
 
-		  <p>then when you apply the clip, the text will be changed to</p>
+  <p>那么应用该剪贴板条目后，文本会变成</p>
 
-		  <pre class="example">&lt;span class="name"&gt;Mad Hatter&lt;/span&gt;</pre>
+  <pre class="example">&lt;span class="name"&gt;Mad Hatter&lt;/span&gt;</pre>
 
-		  <p>You can use this to build a library of styles and formatting that can be applied quickly.</p>
+  <p>可借此建立一套可快速应用的样式和格式库。</p>
 
-		  <p>You can use other regex commands in your clip, although complex regex statements might not work.</p>
+  <p>也可在剪贴板条目中使用其他正则命令，但复杂正则表达式可能无法生效。</p>
 
-		  <div class="tip">
-			<p class="tiptext">Before pasting a formatting clip, be sure to remove any existing formatting by using the Remove Formatting keyboard shortcut (<span class="shortcut">Ctrl+Space</span> on Windows; <span class="shortcut">Cmd+Space</span> on Mac) or clicking the Remove Tag Pair toolbar button <img alt="Image of Remove Tag Pair icon." src="../Images/remove-tag-pair-button.png"/>. (For Remove Formatting, include the tag in your selection; for Remove Tag Pair, place your cursor inside the tag you want to remove.)</p>
-		  </div>
-		  
+  <div class="tip">
+    <p class="tiptext">在粘贴格式化剪贴板条目之前，请务必先移除任何已有格式：使用 移除格式 键盘快捷键（Windows 上为<span class="shortcut">Ctrl+Space</span>；Mac 上为<span class="shortcut">Cmd+Space</span>），或单击工具栏上的 移除标签对 按钮<img class="toolbar-icon" alt="Image of Remove Tag Pair icon." src="../Images/remove-tag-pair-button.png"/>。（使用 移除格式 时，选中内容要包含标签；使用 移除标签对 时，把光标放在要移除的标签内部。）</p>
+  </div>
 
-  <h3 class="sigil_not_in_toc">Pasting Clips</h3>
-  
-  	<p>Once you have created a list of clips, you can quickly and easily paste them into the active file in Code View using the Clip Editor, Clip Bar, Clips window, context menu, keyboard shortcuts, or main menu bar. You can also paste clips into the Find or Replace fields in the Find &amp; Replace box using the Clip Editor or Clip Bar.</p>
-  
-	  <h4 id="sigil_toc_id_13">Clip Editor</h4>
+  <h3 class="sigil_not_in_toc">粘贴剪贴板</h3>
 
-		  <p>To paste your clips using the Clip Editor, select the clip you want (if the list is long, use the Filter box to restrict the list of clips shown), then click the <span class="buttonbox">Paste Clip</span> button. If you select multiple clips or a group, the <span class="buttonbox">Paste Clip</span> button will paste all of the clips selected or in the group with a single click.</p>
-		  
-		  <p>You can also paste your clip into the Find or Replace field in the Find &amp; Replace box if you place your cursor in the appropriate field immediately before opening the Clip Editor window.</p>
+  <p>创建好剪贴板列表后，即可使用剪贴板编辑器、剪贴板栏、剪贴板窗口、上下文菜单、键盘快捷键或主菜单栏，快速轻松地将它们粘贴到代码视图中的当前文件里。也可通过剪贴板编辑器或剪贴板，将剪贴板条目粘贴到“查找与替换”框中的“查找”或“替换”字段里。</p>
 
+  <h4 id="sigil_toc_id_13">剪贴板编辑器</h4>
 
-	  <h4 id="sigil_toc_id_14">Clip Bar</h4>
+  <p>要使用剪贴板编辑器粘贴剪贴板条目，请选择需要的条目（若列表很长，可用 过滤 框缩小显示的条目列表范围），然后单击<span class="buttonbox">粘贴</span>按钮。若选择了多个条目或一个分组，<span class="buttonbox">粘贴</span>按钮单击一次即可粘贴所有选中条目或该分组的全部条目。</p>
 
-		  <p>Clip Bar and Clip Bar2 are optional toolbars that will show buttons for the first 60 clips (30 clips per bar) that are not in a group. You can display the clip bars by selecting the menu item <span class="menuitem">View=&gt;Toolbars=&gt;Clip Bar</span> and <span class="menuitem">View=&gt;Toolbars=&gt;Clip Bar2</span>:</p>
+  <p>若在打开剪贴板编辑器窗口前先把光标放在相应字段中，还可将剪贴板条目粘贴到“查找与替换”框的“查找”或“替换”字段里。</p>
 
-		  <div class="image">
-			<img alt="Image of Clips bar (toolbar)" src="../Images/clips-clips-bar.png"/>
-		  </div>
+  <h4 id="sigil_toc_id_14">剪贴板</h4>
 
-		  <p>The buttons will show the clip’s name, so it helps to keep names short. You can use them as shortcuts for your own styles or even for common special characters.</p>
-		  
-		  <p>You can use the clip bars to paste clips into both the active file in Code View or the Find or Replace field in the Find &amp; Replace box.</p>
+  <p>剪贴板 和 剪贴板2 是可选工具栏，会为不在分组中的前 60 个剪贴板条目（每栏 30 个）显示按钮。可通过选择菜单项 <span class="menuitem">视图=&gt;工具栏=&gt;剪贴板</span> 和 <span class="menuitem">视图=&gt;工具栏=&gt;剪贴板2</span> 来显示剪贴板：</p>
 
+  <div class="image">
+    <img alt="Image of Clips bar (toolbar)" src="../Images/clips-clips-bar.png"/>
+  </div>
 
-	  <h4 id="sigil_toc_id_15">Clips Window</h4>
+  <p>按钮上会显示剪贴板条目的名称，因此保持名称简短会有帮助。可将它们用作自定义样式的快捷方式，甚至用作常用特殊字符的快捷方式。</p>
 
-		  <p>The Clips window shows all of your Clips in a scrollable list. Simply click an entry to paste it into your book. You can dock the window in the user interface (shown here docked below the Book Browser), or drag it to the desktop as a floating palette. To display the Clips window go to menu item <span class="menuitem">View=&gt;Clips</span>.</p>
+  <p>使用剪贴板，可将剪贴板条目粘贴到代码视图中的当前文件，或粘贴到“查找与替换”框的“查找”或“替换”字段里。</p>
 
-		  <div class="image">
-			<img alt="Image of Clips Window" src="../Images/clips-clips-window.png"/>
-		  </div>
+  <h4 id="sigil_toc_id_15">剪贴板窗口</h4>
 
+  <p>剪贴板窗口以可滚动列表的形式显示你所有的剪贴板条目。单击某个条目即可将其粘贴到书中。该窗口可停靠在用户界面中（此处展示停靠在书籍浏览器下方），也可拖到桌面上作为浮动面板使用。要显示剪贴板窗口，请转到菜单项 <span class="menuitem">视图=&gt;剪贴板</span>。</p>
 
-	  <h4 id="sigil_toc_id_16">Context Menu</h4>
-  
-		  <p>Position your cursor or select the appropriate text in the Code View window where the clip should be inserted, then right-click to bring up the context menu and select a clip from the dropdown list.</p>
+  <div class="image">
+    <img alt="Image of Clips Window" src="../Images/clips-clips-window.png"/>
+  </div>
 
-		  <div class="image">
-			<img alt="Using the Clips content menu in Code View." src="../Images/clips-context-menu.png"/>
-		  </div>
+  <h4 id="sigil_toc_id_16">上下文菜单</h4>
 
-	  <h4 id="sigil_toc_id_17">Keyboard Shortcuts</h4>
+  <p>在代码视图窗口中，将光标定位到要插入剪贴板条目的位置或选中相应文本，然后右键单击调出上下文菜单，并从下拉列表中选择一个剪贴板条目。</p>
 
-			<p>You can assign keyboard shortcuts for up to 40 clips by going to <span class="menuitem">Edit=&gt;Preferences=&gt;Keyboard Shortcuts.</span></p>
-	
-		   <p>You can also paste a clip from the Clip Editor using just the keyboard by using the shortcut to open the Clip Editor, typing the clip name in the filter box, hitting return, then <span class="shortcut">Esc</span> (if you want to close the window).</p>
-	
-	
-		<h4 id="sigil_toc_id_18">Main Menu</h4>
-  
-			<p>Clips can also be accessed from the Main Menu under <span class="menuitem">Insert=&gt;Clip</span>.</p>
+  <div class="image">
+    <img alt="Using the Clips content menu in Code View." src="../Images/clips-context-menu.png"/>
+  </div>
+
+  <h4 id="sigil_toc_id_17">键盘快捷键</h4>
+
+  <p>可通过 <span class="menuitem">编辑=&gt;首选项=&gt;键盘快捷键</span>，为最多 40 个剪贴板条目分配键盘快捷键。</p>
+
+  <p>也可仅用键盘从剪贴板编辑器粘贴条目：先用快捷键打开剪贴板编辑器，在过滤框中输入条目名称，按回车键，然后按<span class="shortcut">Esc</span>（如果想关闭窗口）。</p>
+
+  <h4 id="sigil_toc_id_18">主菜单</h4>
+
+  <p>也可以通过主菜单中的 <span class="menuitem">插入=&gt;剪贴板</span> 来访问剪贴板。</p>
 </body>
 </html>

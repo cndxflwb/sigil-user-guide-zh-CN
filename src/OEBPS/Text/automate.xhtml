@@ -1,58 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Automate</title>
+  <title>自动化</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
-  
 </head>
 
 <body>
-  <h2 id="using_automate">Automate Lists</h2>
+  <h2 id="using_automate">自动化列表</h2>
 
-  <p class="h2subheading">— Perform a List of Routine Tasks with a Single Click —</p>
+  <p class="h2subheading">— 单击一次执行一系列常规任务 —</p>
 
-  <p>Many EPUB developers find themselves repeating the same set of tasks every time they start a new EPUB, or to clean up HTML imported from various sources, or in preparation for saving an EPUB to submit to a publisher. These tasks typically involve running some combination of internal Sigil commands/tools (e.g., Mend and Prettify HTML, Update Manifest Properties, etc.) and external plugins (e.g., EpubCheck, FolderIn, ePub3-itizer, Access-Aide, etc.). </p>
-  
-  <p>Starting with Sigil 1.8.0, a new feature called Automate Lists makes it possible to create a list of routine tasks, assign it to one of three <span class="buttonbox">Run Automate List</span> toolbar buttons, then run the entire list of tasks in sequence with a single click of the button.</p>
+  <p>许多 EPUB 开发者每次开始制作新 EPUB，或是清理从各种来源导入的 HTML，又或是为提交给出版商而保存 EPUB 做准备时，都会发现自己反复执行同一组任务。这些任务通常涉及按某种组合运行 Sigil 的内部命令/工具（例如修复并美化 HTML、更新 Manifest 属性等）和外部插件（例如 EPUBCheck、FolderIn、ePub3-itizer、Access-Aide 等）。</p>
 
-	<div class="image"><img alt="Automate Toolbar showing Automate Icons" src="../Images/automate_toolbar.png"/></div>
+  <p>从 Sigil 1.8.0 开始，一项名为“自动化列表”的新功能使你可以创建一个常规任务列表，将其分配给三个<span class="buttonbox">运行自动化列表</span>工具栏按钮之一，然后只需单击一次该按钮，即可按顺序运行整个任务列表。</p>
 
+  <div class="image">
+    <img class="toolbar-icon" alt="Automate Toolbar showing Automate Icons" src="../Images/automate_toolbar.png"/>
+  </div>
 
-<h3 id="sigil_toc_id_31">Creating and Editing Automate Lists</h3>
+  <h3 id="sigil_toc_id_31">创建与编辑自动化列表</h3>
 
-<p>To create and edit an Automate List, click and hold one of the three Automate List toolbar buttons and select Edit Automate List from the dropdown menu. This will bring up the Automate List Editor.</p>
-  
-	<div class="image"><img alt="Automate Toolbar showing Automate menu" src="../Images/automate_open_editor.png"/></div>
+  <p>要创建和编辑自动化列表，请按住三个自动化列表工具栏按钮之一，从下拉菜单中选择 <span class="menuitem">编辑自动化列表</span>。这将打开自动化列表编辑器。</p>
 
-	<div class="image"><img alt="Automate Editor main dialog" src="../Images/automate_list_editor.png"/></div>
+  <div class="image">
+    <img alt="Automate Toolbar showing Automate menu" src="../Images/automate_open_editor.png"/>
+  </div>
 
-<p>To add a Sigil tool to your Automate List, click the <span class="buttonbox">Add Tool</span> button. This will bring up a menu of Sigil tools to choose from. Select a tool to see a description of what it does. Click <span class="buttonbox">Okay</span> to add it to your Automate List. (Since many Sigil tools require user interaction to be effective, not all Sigil tools are currently supported.)</p>
+  <div class="image">
+    <img alt="Automate Editor main dialog" src="../Images/automate_list_editor.png"/>
+  </div>
 
-  <div class="image"><img alt="Automate Editor Add Tool dialog" src="../Images/automate_add_tool.png"/></div>
-  
-<div class="tip">
-  	<p class="tiptext">To run a Saved Search with Replace All, you must input the name of the Saved Search in the Parameter column. You can also run a Saved Search Group, by inputting the name of the group followed by a “/”. For example, let’s say you have a search group called “Automate Test” with two searches in the group named test1 and test2. If you input “Automate Test/”, all searches in the group will run in sequence. If you input “Automate Test/test2”, only test2 will run.</p>
-</div>
-	
-<p>To add a plugin to your Automate List, click the <span class="buttonbox">Add Plugin</span> button. This will bring up a menu of all of the plugins you have installed. (For more information on installing plugins, see <a href="manage_plugins.xhtml">Manage Plugins</a>.) Select a plugin to see a description of what it does. Click <span class="buttonbox">Okay</span> to add it to your Automate List.</p>
-  
-  <div class="image"><img alt="Automate Editor Add Plugin dialog" src="../Images/automate_add_plugin.png"/></div>
- 
-<p>Once you have created an Automate List, you can change the order of the tasks by selecting the command and clicking on the <span class="buttonbox">up</span> or <span class="buttonbox">down</span> buttons. To remove a command, select it and click <span class="buttonbox">Remove</span>.</p>
+  <p>要将 Sigil 工具添加到自动化列表，请单击<span class="buttonbox">添加工具</span>按钮。这将打开一个可供选择的 Sigil 工具菜单。选择某个工具即可查看其功能说明。单击<span class="buttonbox">确定</span>将其添加到自动化列表中。（由于许多 Sigil 工具需要用户交互才能发挥作用，目前并非所有 Sigil 工具都受支持。）</p>
 
-<div class="tip">
-  	<p class="tiptext">Since unexpected errors can always occur, it is a good idea to start your Automate List with a RepoCommit command to create a full Checkpoint of your existing EPUB. That way, if an Automate List fails, you can easily recover your entire EPUB using Sigil’s Checkpoint Restore feature. (For more information on using checkpoints, see <a href="checkpoints.xhtml">Using Checkpoints to Quickly Save/Restore EPUB State</a>.</p>
-</div>
+  <div class="image">
+    <img alt="Automate Editor Add Tool dialog" src="../Images/automate_add_tool.png"/>
+  </div>
 
-<h4 id="sigil_toc_id_34">Automate Lists Are Simple Text Files</h4>
+  <div class="tip">
+    <p class="tiptext">要运行带有“全部替换”的已保存搜索模板，你必须在 参数 列中输入该搜索模板的名称。你也可以运行已保存的搜索模板组，方法是输入组的名称并在其后加一个“/”。例如，假设你有一个名为“Automate Test”的搜索组，组内有两个名为 test1 和 test2 的搜索模板。如果你输入“Automate Test/”，该组中的所有搜索模板都会按顺序运行。如果你输入“Automate Test/test2”，则只有 test2 会运行。</p>
+  </div>
 
-<p>Automate Lists are simple text files located in the root of your Sigil Preferences directory. They are named: automate01.txt, automate02.txt and automate03.txt. As such, you can edit them using any text editor if you like. To jump directly to your Sigil Preferences directory, go to <span class="menuitem">Edit=&gt;Preferences</span> (on Mac: <span class="menuitem">Sigil=&gt;Preferences</span>) and click the <span class="buttonbox">Open Preferences Location</span> button in the lower left corner.</p>
+  <p>要将插件添加到自动化列表，请单击<span class="buttonbox">添加插件</span>按钮。这将打开一个菜单，列出你已安装的所有插件。（关于安装插件的更多信息，请参阅<a href="../Text/manage_plugins.xhtml">插件管理</a>。）选择某个插件即可查看其功能说明。单击<span class="buttonbox">确定</span>将其添加到自动化列表中。</p>
 
-<p>Here’s an example of an Automate List text file one might run as a final clean-up and validation check before publishing an EPUB:</p>
+  <div class="image">
+    <img alt="Automate Editor Add Plugin dialog" src="../Images/automate_add_plugin.png"/>
+  </div>
 
-<pre class="example"># start with Checkpoint save to prevent any data loss
+  <p>创建自动化列表后，你可以选择某个命令并单击<span class="buttonbox">上移</span>或<span class="buttonbox">下移</span>按钮来更改任务的顺序。要移除某个命令，请选择它并单击<span class="buttonbox">移除</span>。</p>
+
+  <div class="tip">
+    <p class="tiptext">由于随时可能发生意外的错误，建议以 RepoCommit 命令作为自动化列表的开头，为现有的 EPUB 创建一个完整的检查点。这样，如果自动化列表运行失败，你可以使用 Sigil 的检查点恢复功能轻松恢复整个 EPUB。（关于使用检查点的更多信息，请参阅<a href="../Text/checkpoints.xhtml">使用检查点快速保存/恢复 EPUB 状态</a>。）</p>
+  </div>
+
+  <h4 id="sigil_toc_id_34">自动化列表是简单的文本文件</h4>
+
+  <p>自动化列表就是位于 Sigil 首选项文件夹根目录下的简单文本文件。它们的名称为：<span class="example">automate01.txt</span>、<span class="example">automate02.txt</span> 和 <span class="example">automate03.txt</span>。因此，如果你愿意，可以使用任何文本编辑器来编辑它们。要直接跳转到 Sigil 首选项文件夹，请转到 <span class="menuitem">编辑=&gt;首选项</span>（在 Mac 上：<span class="menuitem">Sigil=&gt;首选项</span>），并单击左下角的<span class="buttonbox">打开首选项文件夹</span>按钮。</p>
+
+  <p>下面是一个自动化列表文本文件的示例，可以在发布 EPUB 之前作为最终的清理与验证检查来运行：</p>
+
+  <pre class="example"># start with Checkpoint save to prevent any data loss
 RepoCommit
 
 # run a basic well-formed test before running any advanced tools
@@ -79,16 +87,18 @@ EpubCheck
 Save
 </pre>
 
-	<div class="tip">
-  		<p class="tiptext">While there are only three Automate List toolbar buttons, you can create any number of lists and store them in your Preferences folder. To run a list, you will need to assign it to one of the three toolbar buttons by renaming it automate01.txt, automate02.txt or automate03.txt.</p>
-	</div>
+  <div class="tip">
+    <p class="tiptext">虽然自动化列表工具栏按钮只有三个，但你可以创建任意数量的列表并将其保存在首选项文件夹中。要运行某个列表，你需要将其重命名为 <span class="example">automate01.txt</span>、<span class="example">automate02.txt</span> 或 <span class="example">automate03.txt</span>，从而将其分配给三个工具栏按钮之一。</p>
+  </div>
 
-<h3 id="sigil_toc_id_32">Running an Automate List</h3>
+  <h3 id="sigil_toc_id_32">运行自动化列表</h3>
 
-<p>To run an Automate List, simply click on the appropriate <span class="buttonbox">Automate List</span> toolbar button.</p>
+  <p>要运行自动化列表，只需单击相应的<span class="buttonbox">自动化列表</span>工具栏按钮即可。</p>
 
-	<div class="image"><img alt="Automate Toolbar showing Automate Icons" src="../Images/automate_toolbar.png"/></div>
+  <div class="image">
+    <img class="toolbar-icon" alt="Automate Toolbar showing Automate Icons" src="../Images/automate_toolbar.png"/>
+  </div>
 
-<p>If any command fails to process, the Automate List is immediately terminated. Watch Sigil’s status bar for messages as the list is executed. Once the list is completed, a dialog showing a complete log of your Automate List output is displayed so you can see what succeeded, what failed, and most importantly, why.</p>
+  <p>如果任何命令处理失败，自动化列表会立即终止。在列表执行期间，请留意 Sigil 状态栏中的信息。列表完成后，会显示一个对话框，其中包含自动化列表输出的完整日志，这样你就可以看到哪些成功了、哪些失败了，以及最重要的——原因。</p>
 </body>
 </html>

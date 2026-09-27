@@ -1,435 +1,439 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Preferences</title>
+  <title>首选项</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="preferences">Preferences</h2>
+  <h2 id="preferences">首选项</h2>
 
-		  <p class="h2subheading">— Customize Sigil —</p>
+  <p class="h2subheading">— 自定义 Sigil —</p>
 
-		  <p>The Preferences dialog gives you control over many settings in Sigil and is divided into seven sections:</p>
+  <p>首选项对话框可控制 Sigil 的许多设置，分为七个部分：</p>
 
-		  <ul>
-			<li>Appearance</li>
-			<li>General Settings</li>
-			<li>Keyboard Shortcuts</li>
-			<li>Language</li>
-			<li>Spellcheck Dictionaries</li>
-			<li>Preserve Entities</li>
-			<li>Plugins</li>
-		  </ul>
+  <ul>
+    <li>外观</li>
 
-		  <p>To open Preferences, go to the main menu bar at the top of the screen and select <span class="menuitem">Edit=&gt;Preferences</span> (on Mac: <span class="menuitem">Sigil=&gt;Preferences</span>):</p>
+    <li>一般设定</li>
 
-		  <div class="image">
-			<img alt="Image of the Preferences menu." src="../Images/preferences-menu.png"/>
-		  </div>
+    <li>键盘快捷键</li>
 
-		  <p>Once the Preferences window is open, select the section you want from the list on the left. Some of the sections are further divided into tabs that run across the top. Once you are satisfied with your settings, click <span class="buttonbox">OK</span> or close the window to save the current settings.</p>
+    <li>语言</li>
 
-		  <div class="tip">
-			<p class="tiptext">Hover your mouse over the various preference options to see if they reveal a helpful tooltip.</p>
-		  </div>
+    <li>拼写检查词典</li>
 
-  <h3 class="sigil_not_in_toc" id="preferences_appearance">Appearance</h3>
+    <li>HTML 实体符号保留</li>
 
-  		<p>Sigil offers many options for how things appear on your screen. Appearance preferences are divided into four clickable tabs running across the top of the dialog window: Code View, Preview, Icon Themes, and Main UI.</p>
+    <li>插件</li>
+  </ul>
 
-  <h4 id="sigil_toc_id_4">Code View</h4>
+  <p>要打开首选项，请转到屏幕顶部的主菜单栏，选择 <span class="menuitem">编辑=&gt;首选项</span>（在 Mac 上：<span class="menuitem">Sigil=&gt;首选项</span>）：</p>
 
-		  <div class="image">
-			<img alt="Image of Appearance Preferences." src="../Images/preferences-appearance.png"/>
-		  </div>
-
-		  <ul>
-			<li class="first"><span class="listheading">Monospaced Code Font:</span> Select the font size and font family used for text in the Code View window.
-				<ul><li>Sigil’s Code View uses monospaced system fonts installed on your computer. If there is a monospaced font you would like to use that is not offered in the dropdown window, make sure it is installed on your computer.</li>
-				</ul>
-			</li>
-
-			<li class="first"><span class="listheading">Insert Special Characters:</span> Select the font size and font family used in the Insert Special Characters window.</li>
-
-			<li class="first"><span class="listheading">Colors:</span> 
-
-			<ul>
-			  <li>Select the color of HTML and CSS items.</li>
-
-			  <li>Select the color for highlighting text, the underline for misspelled words, etc.</li>
-
-			  <li>Choose whether matching tags are highlighted when the cursor is inside a tag.</li>
-			</ul></li>
-		  </ul>
-
-  <h4 id="sigil_toc_id_5">Preview</h4>
-
-		  <div class="image">
-			<img alt="Appearance Preferences, Preview tab." src="../Images/preferences-appearance-preview.png"/>
-		  </div>
-
-		  <ul>
-			<li><span class="listheading">Fonts:</span> Select the default font size and font family for text shown in the Preview window when none is specified in the CSS stylesheet. (“Standard” sets the overall default font.)</li>
-
-			<li class="first" id="previewDarkMode"><span class="listheading">Make Preview simulate a dark appearance in dark mode:</span> Choose whether the Preview window simulates a dark appearance when your computer is in dark mode.</li>
-		  </ul>
-
-  <h4 id="sigil_toc_id_6">Icon Themes</h4>
-
-		  <div class="image">
-			<img alt="Image of how to select a different icon theme." src="../Images/preferences-appearance-icons.png"/>
-		  </div>
-
-		  <ul>
-			<li class="first"><span class="listheading">Select your icon theme:</span> Sigil offers three different icon themes: Default, Fluent, and Material. Hover your mouse over the theme name to see a sample.
-
-				<ul>
-					<li>Sigil also supports custom user-supplied icon themes via a custom .rcc file. Check out <a href="https://github.com/Sigil-Ebook/IconThemes">https://github.com/Sigil-Ebook/IconThemes</a> for more information.</li>
-
-					<li>Restart Sigil after changing your icon theme for them to take effect.</li>
-				</ul>
-			</li>
-		  </ul>
-
-  <h4 id="sigil_toc_id_7">Main UI</h4>
-
-		  <div class="image">
-			<img alt="Appearances Preferences for the Main User Interface tab." style="width:95%" src="../Images/preferences-appearance-mainUI.png"/>
-		  </div>
-
-		  <ul>
-			<li class="first"><span class="listheading">Main Menu Icon Size:</span> Adjust the size of the toolbar buttons using a slider.</li>
-
-          <li class="first"><span class="listheading">Dark Theme Style (Windows Only):</span> Choose whether to use the classic Sigil dark style instead of the built in Qt one.</li>
-
-          <li class="first"><span class="listheading">UI Font</span>: Select the font family and font size used for Sigil’s menus, buttons, etc.</li>
-
-			<li class="first"><span class="listheading">Control Book Browser Appearance:</span> Choose whether the Book Browser shows full filepaths or abbreviated ones.</li>
-
-			<li class="first"><span class="listheading">Tweak Drag Distance (Windows-Only):</span> Adjust the distance (in pixels) necessary to drag an item before a move event is triggered. This is useful if you are accidentally moving tabs with a twitch of the mouse.</li>
-
-			<li class="first"><span class="listheading">Reset All:</span> Reset all Main UI Appearance preferences to default.</li>
-		  </ul>
-
-		  <div class="tip">
-			<p class="tiptext">Appearance settings affect how your book is displayed in Sigil. They do NOT affect how your book is displayed on e-readers!</p>
-		  </div>
-
-  <h3 class="sigil_not_in_toc">General Settings</h3>
-
-  		<p>General Settings are divided into four clickable tabs running across the top of the window: Basics, Security, Validation, and Advanced.</p>
-
-  <h4 id="sigil_toc_id_8">Basics</h4>
-
-		  <div class="image">
-			<img alt="Image of General Settings dialog." src="../Images/preferences-general-settings.png"/>
-		  </div>
-
-		  <ul>
-			<li class="first"><span class="listheading">Create New or Empty Epubs as:</span> Choose the version of EPUB (2 or 3) that will be used when new books are created in Sigil.</li>
-
-			<li class="first"><span class="listheading">Mend Not Well Formed HTML Source Code On:</span> When checked, Sigil will automatically mend HTML source code that is not well formed or are missing a DOCTYPE, html, head, or body element whenever you Open or Save a book. Mending is done using Google’s gumbo auto-repair parser. If ill-formed code is detected, a confirmation window will appear asking you to confirm whether you want to proceed with mending.</li>
-
-			<li class="first"><span class="listheading">Number of clipboard history items to save:</span> Specify the number of clipboard snippets that will be saved to a list for later recall; or specify 0 to disable clipboard history.</li>
-
-			<li class="first"><span class="listheading">Set your preferred external xhtml editor:</span> If you set a preferred external xhtml editor, it will launch whenever you click the Launch External Xhtml Editor toolbar button <img alt="Image of External Editor icon." src="../Images/external-editor-icon.png"/>. This allows you to quickly and easily open and edit selected html files using an external editor (such PageEdit, notepad++, or BBEdit) with the click of a button.</li>
-		  </ul>
-
-  <h4 id="sigil_toc_id_9">Security</h4>
-
-		  <div class="image">
-			<img alt="General Settings Security Tab." src="../Images/preferences-general-security.png"/>
-		  </div>
-
-		  <ul>
-			<li class="first"><span class="listheading">Control Access by Epubs to non-multimedia remote resources:</span> Choose whether to allow EPUBs to access non-multimedia remote resources</li>
-
-			<li class="first"><span class="listheading">Control Use of Javascript by Epubs:</span> Choose whether to allow EPUBs to use javascript.</li>
-		  </ul>
-
-  <h4 id="sigil_toc_id_10">Validation</h4>
-
-		  <div class="image">
-			<img alt="General Settings, Validation Tab" src="../Images/preferences-general-validation.png"/>
-		  </div>
-
-		  <ul>
-			<li class="first"><span class="listheading">EPUB2 W3C Stylesheet Validation Level:</span> Choose the CSS level that the W3C stylesheet validation tool will use for EPUB2 books.</li>
-
-			<li class="first"><span class="listheading">EPUB3 W3C Stylesheet Validation Level:</span> Choose the CSS level that the W3C stylesheet validation tool will use for EPUB3 books.</li>
-		  </ul>
-
-  <h4 id="sigil_toc_id_11">Advanced</h4>
-
-		  <div class="image">
-			<img alt="General Settings Advanced Tab" src="../Images/preferences-general-advanced.png"/>
-		  </div>
-
-		  <ul>
-            <li class="first"><span class="listheading">Alternative Temporary Folder</span> Set an alternative folder that Sigil will use for its temporary EPUB work files. If left as &lt;SIGIL_DEFAULT_TEMP_HOME&gt; this will default to the "workspace" folder inside your Sigil Preferences Location folder.</li>
-
-            <li class="first"><span class="listheading">Disable use of the GPU Acceleration in QtWebEngine/Preview</span> Check this if you are seeing artifacts or having issues with Preview properly displaying your epub especially useful if your graphics drivers are not up to date.</li>
-
-            <li class="first"><span class="listheading">Preview Print Settings</span> check the Skip Print Preview box to speed up printing of multiple items; Set a Print DPI when printing from Preview</li>
-        </ul>
-
-  <h3 class="sigil_not_in_toc">Keyboard Shortcuts</h3>
-
-		  <p>Sigil offers a variety of keyboard shortcuts, which you can customize to your liking. For example, if you want <span class="shortcut">F12</span> to always open Find &amp; Replace, you can change it here.</p>
-
-		  <div class="tip">
-			<p class="tiptext">You can assign or re-assign a shortcut temporarily if you need a function to be easier to access for a short time.</p>
-		  </div>
-
-		  <div class="image">
-			<img alt="Keyboard Shortcuts Preferences" src="../Images/preferences-shortcuts.png"/>
-		  </div>
-
-		  <p>To assign or remove a shortcut:</p>
-
-		  <ul>
-			<li>Select an entry from the list of commands.</li>
-
-			<li>Click in the Shortcut text box.</li>
-
-			<li>Press the key combination you want to use – do not spell it out using letters, just press the key combination.</li>
-
-			<li>Click <span class="buttonbox">Assign</span> to set the shortcut. If the key combination is already being used for another command, an alert message showing the conflict will appear.</li>
-
-			<li>To remove a shortcut, select an entry and click <span class="buttonbox">Remove</span>.</li>
-
-			<li>Use <span class="buttonbox">Reset All</span> to change all shortcuts back to their defaults.</li>
-		  </ul>
-
-		  <div class="tip">
-			<p class="tiptext">Use the Filter text box to easily search for shortcuts.</p>
-		  </div>
-
-  <div class="tip">
-	<p class="tiptext"><b>Note to Mac users:</b> References to the <span class="shortcut">Ctrl</span> key in Sigil correspond to the <span class="shortcut">Cmd</span> key on the Macintosh keyboard, and references to the <span class="shortcut">Meta</span> key correspond to the <span class="shortcut">Ctrl</span> key on Mac.</p>
-
-	<p class="tiptext">This is due to Qt’s automatic remapping, which allows each platform’s most common shortcut key sequences to work as expected. For example, when Windows/Linux users press <span class="shortcut">Ctrl+C</span>, they get the Copy command, as they expect; and thanks to Qt’s automatic remapping of <span class="shortcut">Ctrl</span> to <span class="shortcut">Cmd</span> on macOS, when Mac users press <span class="shortcut">Cmd+C</span>, they get the Copy command, as they expect.</p>
+  <div class="image">
+    <img alt="Image of the Preferences menu." src="../Images/preferences-menu.png"/>
   </div>
 
-  <h3 class="sigil_not_in_toc" id="preferences_language">Language</h3>
+  <p>首选项窗口打开后，从左侧列表选择所需部分；某些部分进一步细分为窗口顶部排列的多个选项卡。设置完毕后，点击<span class="buttonbox">确定</span>或关闭窗口，保存当前设置。</p>
 
-		  <p>Sigil has been translated into many languages.</p>
+  <div class="tip">
+    <p class="tiptext">将鼠标悬停在各个首选项上，查看是否有工具提示。</p>
+  </div>
 
-		  <div class="image">
-			<img alt="Language Preferences Dialog" src="../Images/preferences-language.png"/>
-		  </div>
+  <h3 class="sigil_not_in_toc" id="preferences_appearance">外观</h3>
 
-		  <ul>
-			<li><span class="listheading">User Interface Language:</span> Choose your preferred language for Sigil’s user interface. If a translation is not available for specific words, they will be shown in English.<br/>
-			<img alt="Image of selecting a user interface language." src="../Images/preferences-language-dropdown.png"/></li>
+  <p>Sigil 提供了许多关于屏幕显示效果的选项。外观首选项于对话框窗口顶部排列四个可点击选项卡：源码视图、预览、图标主题和主用户界面。</p>
 
-			<li class="first"><span class="listheading">Default Language For Metadata:</span> Set the default language that will be used by the Metadata Editor for new books or books that do not already have a language set.</li>
-		  </ul>
+  <h4 id="sigil_toc_id_4">源码视图</h4>
 
-		  <div class="tip">
-			<p class="tiptext">You must restart Sigil in order for a new user interface language to take effect.</p>
+  <div class="image">
+    <img alt="Image of Appearance Preferences." src="../Images/preferences-appearance.png"/>
+  </div>
 
-			<p class="tiptext">Try setting the interface to another language and restarting Sigil to see the translations volunteers have created.</p>
-		  </div>
+  <ul>
+    <li class="first"><span class="listheading">Monospaced Code Font:</span> Select the font size and font family used for text in the Code View window.|→<span class="listheading">等宽代码字体：</span>选择源码视图窗口中文本所用的字号和字体。←| 
 
-  <h3 class="sigil_not_in_toc" id="preferences_spellcheck_dictionaries">Spellcheck Dictionaries</h3>
+    <ul>
+      <li>Sigil 的源码视图使用你计算机上安装的等宽系统字体。如果有你想使用但未出现在下拉窗口中的等宽字体，请确认它已安装在你的计算机上。</li>
+    </ul></li>
 
-		  <p>Sigil supports spellchecking and offers a variety of spellchecking options, including a choice of standard dictionaries and the use of personal user dictionaries.</p>
+    <li class="first"><span class="listheading">插入特殊字符：</span>选择“插入特殊字符”窗口中所用的字号和字体。</li>
 
-		  <div class="image">
-			<img alt="Spellcheck Dictionaries Settings dialog." src="../Images/preferences-spellcheck.png"/>
-		  </div>
+    <li class="first"><span class="listheading">Colors:</span>|→颜色：←| 
 
-		  <ul>
-			<li><span class="listheading">Primary Language Dictionary:</span> Choose your primary language dictionary from a dropdown menu.<br/><img alt="Spellcheck Preferences setting the Primary Language Dictionary." src="../Images/preferences-spellcheck-standard-dictionary.png"/> 
+    <ul>
+      <li>选择 HTML 与 CSS 条目的颜色。</li>
 
-			<ul>
-			  <li>To add new standard dictionaries (which must be in the hunspell format), click <span class="buttonbox">Open Preferences Location</span> and go into the “hunspell_dictionaries” directory. Put your new dictionary files into the “hunspell_dictionaries” directory then restart Sigil.</li>
+      <li>选择文本高亮、拼写错误单词下划线等的颜色。</li>
 
-			  <li>One source for additional dictionaries is the <a href="https://wiki.openoffice.org/wiki/Dictionaries">OpenOffice Dictionaries</a> site. To add these dictionaries, download, extract, and copy the files (e.g. en_GB.aff, en_GB.dic, hyph_en_GB.dic) to the “hunspell_dictionaries” directory location and restart Sigil.</li>
-			</ul></li>
+      <li>选择光标位于标签内时是否高亮匹配的标签。</li>
+    </ul></li>
+  </ul>
 
-			<li class="first"><span class="listheading">Secondary Language Dictionary:</span> Choose your secondary language dictionary.</li>
+  <h4 id="sigil_toc_id_5">预览</h4>
 
-			<li class="first"><span class="listheading">Highlight Misspelled Words:</span> Choose whether misspelled words are highlighted in Code View with a wavy red underline. You will then be able to right-click on the word to select a suggested correction or add it to a dictionary.</li>
+  <div class="image">
+    <img alt="Appearance Preferences, Preview tab." src="../Images/preferences-appearance-preview.png"/>
+  </div>
 
-			<li class="first"><span class="listheading">Check Numbers:</span> Enabling this option will allow words that have numbers in them, such as 32nd or HTML5, to be checked for spelling.</li>
+  <ul>
+    <li><span class="listheading">字体：</span>选择 CSS 样式表未指定字体时预览窗口中文本的默认字号和字体。（“标准”设置总体默认字体。）</li>
 
-			<li class="first"><span class="listheading">User Dictionaries:</span> 
+    <li class="first" id="previewDarkMode"><span class="listheading">使预览在深色模式下模拟一个深色的外观：</span>选择计算机处于深色模式时，预览窗口是否模拟深色外观。</li>
+  </ul>
 
-			<ul>
-			  <li>You can create your own personal user dictionaries, and even use different ones for different books and different types of words (e.g., places, names, etc.).</li>
+  <h4 id="sigil_toc_id_6">图标主题</h4>
 
-			  <li>If you have not created any user dictionaries, Sigil will create and enable a “default” user dictionary for you, which you can rename or delete.</li>
+  <div class="image">
+    <img alt="Image of how to select a different icon theme." src="../Images/preferences-appearance-icons.png"/>
+  </div>
 
-			  <li>To create a new user dictionary, click on the User Dictionaries tab, click <span class="buttonbox">Add</span>, then enter a name for your new dictionary:<br/> <img alt="SpellCheck Preferences adding a dictionary." src="../Images/preferences-spellcheck-add-dictionary.png"/></li>
+  <ul>
+    <li class="first"><span class="listheading">Select your icon theme:</span> Sigil offers three different icon themes: Default, Fluent, and Material. Hover your mouse over the theme name to see a sample.|→<span class="listheading">选择你的图标主题：</span>Sigil 提供三种不同的图标主题：默认图标、Fluent 图标和 Material图标。将鼠标悬停在主题名称上可预览图标主题。←| 
 
-			  <li>You can see the words in each User Dictionary by selecting the dictionary under the User Dictionaries tab, then clicking on the User Dictionary Word List tab. You will then see all the words in that dictionary, which you can add to, edit, or remove.</li>
+    <ul>
+      <li>Sigil 还支持通过自定义 <span class="example">.rcc</span> 文件提供的<a href="https://github.com/Sigil-Ebook/IconThemes">用户自定义图标主题</a>。更多信息请查看该链接。</li>
 
-			  <li>To add words directly to a user dictionary, select the dictionary from the User Dictionaries tab, click on the User Dictionary Word List, then click <span class="buttonbox">Add</span>. Type in as many words as you want, or paste them in from a file. Words can be separated by commas, spaces, or listed one per line.<br/><img alt="Spellcheck Preferences adding words to a dictionary." src="../Images/preferences-spellcheck-add-words.png"/></li>
+      <li>更改图标主题后需重启 Sigil 才能生效。</li>
+    </ul></li>
+  </ul>
 
-			  <li>You can also add words to a dictionary using Spellcheck, or by right-clicking on misspelled words in Code View and selecting one of the <span class="menuitem">Add To Dictionary</span> options.</li>
+  <h4 id="sigil_toc_id_7">主用户界面</h4>
 
-			  <li>You can copy a complete dictionary using <span class="buttonbox">Copy</span>, and then rename it as needed.</li>
+  <div class="image">
+    <img alt="Appearances Preferences for the Main User Interface tab." style="width:95%" src="../Images/preferences-appearance-mainUI.png"/>
+  </div>
 
-			  <li>You can select which user dictionaries are enabled by marking the checkbox next to the dictionary’s name. Multiple dictionaries can be enabled at the same time. All enabled dictionaries will be used when checking words to see if they are misspelled.</li>
-			</ul></li>
-		  </ul>
+  <ul>
+    <li class="first"><span class="listheading">主菜单图标大小：</span>使用滑块调整工具栏按钮的大小。</li>
 
-		  <div class="tip">
-			<p class="tiptext">The <b>default dictionary</b> is the one that is selected and highlighted. It is also identified at the bottom left corner of User Dictionaries section of the Preferences window. The default dictionary is used when you add words using the Add Misspelled Word shortcut or the context menu item <span class="menuitem">Add To Default Dictionary</span>.</p>
+    <li class="first"><span class="listheading">深色主题样式（仅 Windows）：</span>选择使用经典的 Sigil 深色样式，而不是内置的 Qt 深色样式。</li>
 
-			<p class="tiptext">An <b>enabled dictionary</b> is marked with a checkmark to the left. While only one user dictionary can be selected and set as the <i>default</i> at any one time, multiple dictionaries can be <i>enabled</i>. All enabled dictionaries are used when spellchecking is run.</p>
-		  </div>
+    <li class="first"><span class="listheading">用户界面字体：</span>选择 Sigil 菜单、按钮等所用的字体和字号。</li>
 
-  <h3 class="sigil_not_in_toc">Preserve Entities</h3>
+    <li class="first"><span class="listheading">控制书籍浏览器外观：</span>选择书籍浏览器显示完整文件路径还是仅文件名。</li>
 
-		  <p>When you run Mend (<span class="menuitem">Tools=&gt;Reformat HTML=&gt;Mend All HTML Files</span>), Sigil automatically converts all character entities to Unicode characters <i>unless</i> they are included in the Entities to Preserve list.</p>
+    <li class="first"><span class="listheading">调整拖拽距离（仅 Windows）：</span>调整触发移动事件前需要拖动的距离（单位：像素）。若轻微抖动鼠标就误移动选项卡，可调大该值。</li>
 
-		  <div class="image">
-			<img alt="Preserve Entities Preferences dialog." src="../Images/preferences-preserve-entities.png"/>
-		  </div>
+    <li class="first"><span class="listheading">全部重置：</span>将所有主界面外观首选项重置为默认值。</li>
+  </ul>
 
-		  <ul>
-			<li>To preserve specific entities and prevent Mend from converting them to Unicode characters, click <span class="buttonbox">Add</span>, and add them to the Entities to Preserve list. Multiple entities can be input at one time when separated by spaces, line breaks, or commas.</li>
+  <div class="tip">
+    <p class="tiptext">外观设置只影响书籍在 Sigil 中的显示，不影响它在电子书阅读器上的显示！</p>
+  </div>
 
-			<li class="first">Use <span class="buttonbox">Remove</span> or <span class="buttonbox">Remove All</span> to remove entities from the list. Entities not on the list will be converted to Unicode characters on Mend.</li>
-		  </ul>
+  <h3 class="sigil_not_in_toc">一般设定</h3>
 
-		  <div class="tip">
-			<p class="tiptext">Please note that you can’t use named entities (e.g. <span class="example">&amp;nsbp;</span>) in EPUB3 books; you must use numerical entities (e.g., <span class="example">&amp;#160;</span>) instead.</p>
+  <p>一般设定分为窗口顶部排列的四个可点击选项卡：基本、安全、有效性和高级。</p>
 
-			<p class="tiptext">If you have Mend Not Well Formed HTML Source Code turned on for Open or Save, and the source code is well formed, entities will <b><i>not</i></b> be automatically converted (because entities are perfectly valid code). To convert entities in html files with well formed code, you must manually invoke <span class="menuitem">Tools=&gt;Reformat HTML=&gt;Mend All HTML Files</span>.</p>
-		  </div>
+  <h4 id="sigil_toc_id_8">基本</h4>
 
-  <h3 class="sigil_not_in_toc">Plugins</h3>
+  <div class="image">
+    <img alt="Image of General Settings dialog." src="../Images/preferences-general-settings.png"/>
+  </div>
 
-		  <p>Sigil supports a wide variety of useful plugins that augment Sigil’s editing power.</p>
+  <ul>
+    <li class="first"><span class="listheading">选择何种标准新建空白EPUB：</span>选择在 Sigil 中创建新书时使用的 EPUB 版本（2 或 3）。</li>
 
-		  <div class="image">
-			<img alt="Plugin Preferences and management dialog." src="../Images/preferences-plugins.png"/>
-		  </div>
+    <li class="first"><span class="listheading">在以下位置修复格式不正确的HTML源代码：</span>勾选后，每次打开或保存书时，Sigil 会自动修复非良好结构或缺少 DOCTYPE、html、head 或 body 元素的 HTML 源代码。修复由 Google gumbo 自动修复解析器完成。检测到不良代码时，会弹出确认窗口，询问是否继续修复。</li>
 
-		  <ul>
-			<li><span class="listheading">Use Bundled Python:</span> Enable this option to select the Python interpreter bundled with Sigil (recommended). Please note that if you disable this option, you will need to select an external Python 3 interpreter.</li>
+    <li class="first"><span class="listheading">要保存的剪贴板历史记录项目数：</span>指定保存到列表中以供以后调用的剪贴板片段数量；指定 0 则禁用剪贴板历史。</li>
 
-			<li class="first"><span class="listheading">Path to Interpreter Executable:</span> This option is intended for plugin developers; you’ll also need to set it if Use Bundled Python is disabled (or can’t be selected). Click <span class="buttonbox">Auto</span> or <span class="buttonbox">Set</span> to choose an external Python 3 interpreter.</li>
+    <li class="first"><span class="listheading">设置首选的外部 xhtml 编辑器：</span>设置首选外部 xhtml 编辑器后，点击工具栏<img class="toolbar-icon" alt="Image of External Editor icon." src="../Images/external-editor-icon.png"/>“启动外部 Xhtml 编辑器”按钮即可启动该编辑器。只需一键，即可快速用外部编辑器（如 PageEdit、notepad++ 或 BBEdit）打开并编辑选中的 html 文件。</li>
+  </ul>
 
-			<li class="first"><span class="listheading">Add/Remove</span> 
+  <h4 id="sigil_toc_id_9">安全</h4>
 
-			<ul>
-			  <li><span class="listheading">Add Plugin:</span> Click this button to install a plugin.</li>
+  <div class="image">
+    <img alt="General Settings Security Tab." src="../Images/preferences-general-security.png"/>
+  </div>
 
-			  <li><span class="listheading">Remove Plugin:</span> Click this button to uninstall the currently selected plugin.</li>
+  <ul>
+    <li class="first"><span class="listheading">控制EPUB对非多媒体远程资源的访问：</span>选择是否允许 EPUB 访问非多媒体远程资源</li>
 
-			  <li><span class="listheading">Remove All Plugins:</span> Click this button to uninstall all plugins.</li>
-			</ul></li>
+    <li class="first"><span class="listheading">控制EPUB使用JavaScript：</span>选择是否允许 EPUB 使用 JavaScript。</li>
+  </ul>
 
-			<li class="first"><span class="listheading">Shortcuts</span> 
+  <h4 id="sigil_toc_id_10">有效性</h4>
 
-			<ul>
-			  <li>Assign plugins to the 10 plugin buttons on the toolbar. When you click on a plugin button, the assigned plugin will launch automatically.</li>
-			</ul></li>
-		  </ul>
+  <div class="image">
+    <img alt="General Settings, Validation Tab" src="../Images/preferences-general-validation.png"/>
+  </div>
 
-		  <div>
-			<p>Toolbar buttons: <img alt="Assigning a plugin to an icon shortcut." src="../Images/ui_toolbar-plugins.png"/></p>
-		  </div>
+  <ul>
+    <li class="first"><span class="listheading">针对EPUB2文件，W3C样式表校验器应依据：</span>选择 W3C 样式表验证工具用于 EPUB2 书的 CSS 级别。</li>
 
-		  <div>
-			<img alt="Image of a set of 10 pulldowns used to assign a current plugin to a toolbar icon" src="../Images/preferences-plugins-shortcuts.png"/>
-		  </div>
+    <li class="first"><span class="listheading">针对EPUB3文件，W3C样式表校验器应依据：</span>选择 W3C 样式表验证工具用于 EPUB3 书的 CSS 级别。</li>
+  </ul>
 
-  <h3 class="sigil_not_in_toc" id="Prefer_Location">Open Preferences Location</h3>
+  <h4 id="sigil_toc_id_11">高级</h4>
 
-		  <p>The <span class="buttonbox">Open Preferences Location</span> button at the bottom left corner of all Preferences screens will open the directory containing all of your preferences files. You can copy the files for backup or for sharing with others.</p>
+  <div class="image">
+    <img alt="General Settings Advanced Tab" src="../Images/preferences-general-advanced.png"/>
+  </div>
 
-		  <p>The preferences location will likely be in the following locations:</p>
+  <ul>
+    <li class="first"><span class="listheading">备用临时文件夹</span> 设置 Sigil 存放临时 EPUB 工作文件的备用文件夹。保留 &lt;SIGIL_DEFAULT_TEMP_HOME&gt; 时，默认使用 Sigil 首选项文件夹内的 "workspace" 文件夹。</li>
 
-		  <p>Windows:</p>
+    <li class="first"><span class="listheading">在 QtWebEngine/Preview 中禁用GPU加速</span>如果你看到伪影，或预览无法正常显示你的 epub，请勾选此项；在显卡驱动不是最新时尤其有用。</li>
 
-		  <pre class="example">…\Local Settings\Application Data\sigil-ebook\sigil</pre>
+    <li class="first"><span class="listheading">“打印预览”设置</span>勾选“跳过打印预览”框可加快多个项目的打印速度；从预览打印时可设置打印 DPI</li>
+  </ul>
 
-		  <p>Mac:</p>
+  <h3 class="sigil_not_in_toc">键盘快捷键</h3>
 
-		  <pre class="example">/Users/[Username]/Library/Application\ Support/sigil-ebook/sigil/</pre>
+  <p>Sigil 提供了各种键盘快捷键，你可以按自己的喜好自定义。例如，如果你想让 <span class="shortcut">F12</span> 始终打开“查找与替换”，可以在这里更改。</p>
 
-		  <p>Linux:</p>
+  <div class="tip">
+    <p class="tiptext">如果需要在短时间内更方便地访问某个功能，可以临时指定或重新指定快捷键。</p>
+  </div>
 
-		  <pre class="example">$HOME/.local/share/sigil-ebook/sigil</pre>
+  <div class="image">
+    <img alt="Keyboard Shortcuts Preferences" src="../Images/preferences-shortcuts.png"/>
+  </div>
 
-		  <p>The files/folders you may see include:</p>
+  <p>要指定或移除快捷键：</p>
 
-		  <ul>
+  <ul>
+    <li>从命令列表中选择一个条目。</li>
 
-			<li><span class="listheading">automate01.txt, automate02.txt, automate03.txt:</span> Optional user automated task lists for use with the <span class="buttonbox">Run Automate List</span> toolbar buttons.</li>
+    <li>点击“快捷键”文本框。</li>
 
-          <li><span class="listheading">cover-template2.xhtml, cover-template3.xhtml</span>: Optional cover xhtml templates for epub2 and epub3 respectively.</li>
- 
-          <li><span class="listheading">custom_preview_style.css</span>: Optional user CSS for Sigil’s Preview window.</li>
+    <li>按下你想使用的组合键——不要用字母拼出来，直接按下组合键即可。</li>
 
-          <li><span class="listheading">custom_preview_style_alt.css</span>: Optional alternative CSS for Preview.</li>
+    <li>点击<span class="buttonbox">指定</span>设置快捷键。如果该组合键已被另一个命令使用，会弹出显示冲突的警告消息。</li>
 
-			<li><span class="listheading">hunspell_dictionaries:</span> Where any standard dictionaries you add are stored.</li>
-			<li><span class="listheading">env-vars.txt:</span> a user created text file for setting Sigil environment variables. Starting with Sigil 2.6.2</li>
+    <li>要移除快捷键，选择一个条目并点击<span class="buttonbox">移除</span>。</li>
 
-			<li><span class="listheading">local-devtools:</span> Where data for Preview’s Inspector is stored.</li>
+    <li>使用<span class="buttonbox">全部重置</span>将所有快捷键恢复为默认值。</li>
+  </ul>
 
-			<li><span class="listheading">local-storage:</span> Where JavaScript local storage data is stored.</li>
+  <div class="tip">
+    <p class="tiptext">使用“过滤”文本框可以轻松搜索快捷键。</p>
+  </div>
 
-			<li><span class="listheading">plugins:</span> Where any plugins you install are stored.</li>
+  <div class="tip">
+    <p class="tiptext"><b>Mac 用户注意：</b>Sigil 中提到的 <span class="shortcut">Ctrl</span> 键对应 Macintosh 键盘上的 <span class="shortcut">Cmd</span> 键，提到的 <span class="shortcut">Meta</span> 键对应 Mac 上的 <span class="shortcut">Ctrl</span> 键。</p>
 
-			<li><span class="listheading">plugins_prefs:</span> Where plugin preferences files are stored.</li>
+    <p class="tiptext">这是由于 Qt 的自动重映射，它让每个平台最常用的快捷键序列按预期工作。例如，Windows/Linux 用户按 <span class="shortcut">Ctrl+C</span> 时会得到预期的复制命令；多亏 Qt 在 MacOS 上将 <span class="shortcut">Ctrl</span> 自动重映射为 <span class="shortcut">Cmd</span>，Mac 用户按 <span class="shortcut">Cmd+C</span> 时也会得到预期的复制命令。</p>
+  </div>
 
-			<li><span class="listheading">qt_styles.qss:</span> Optional custom Qt styles for Sigil GUI elements.</li>
+  <h3 class="sigil_not_in_toc" id="preferences_language">语言</h3>
 
-			<li><span class="listheading">QtWebEngine:</span> Where data for Preview is stored.</li>
+  <p>Sigil 已被翻译成多种语言。</p>
 
-			<li><span class="listheading">repo:</span> Where checkpoint git repositories stored.</li>
+  <div class="image">
+    <img alt="Language Preferences Dialog" src="../Images/preferences-language.png"/>
+  </div>
 
-			<li><span class="listheading">sgc-toc.css:</span> Optional custom TOC stylesheet for EPUB2 books.</li>
+  <ul>
+    <li><span class="listheading">用户界面语言：</span>为 Sigil 的用户界面选择你偏好的语言。如果某些词语没有可用的翻译，将以英文显示。<br/> <img alt="Image of selecting a user interface language." src="../Images/preferences-language-dropdown.png"/></li>
 
-			<li><span class="listheading">sgc-nav.css:</span> Optional custom TOC stylesheet for EPUB3 books.</li>
+    <li class="first"><span class="listheading">元数据默认语言：</span>设置元数据编辑器用于新书或该书尚未设置语言的默认语言。</li>
+  </ul>
 
-			<li><span class="listheading">sigil_clips_v6.ini:</span> Your saved Clips.</li>
+  <div class="tip">
+    <p class="tiptext">必须重启 Sigil 才能使新的用户界面语言生效。</p>
 
-			<li><span class="listheading">sigil_index_v6.ini:</span> Your Index entries.</li>
+    <p class="tiptext">试着把界面设为另一种语言并重启 Sigil，看看志愿者们创建的翻译。</p>
+  </div>
 
-			<li><span class="listheading">sigil_searches_v6.ini:</span> Your Saved Searches.</li>
+  <h3 class="sigil_not_in_toc" id="preferences_spellcheck_dictionaries">拼写检查词典</h3>
 
-			<li><span class="listheading">sigil_v6.ini:</span> General configuration setting file information for Sigil.</li>
+  <p>Sigil 支持拼写检查，并提供多种拼写检查选项，包括选择标准词典和使用个人用户词典。</p>
 
-			<li><span class="listheading">user_dictionaries:</span> Where any personal user dictionaries are stored.</li>
+  <div class="image">
+    <img alt="Spellcheck Dictionaries Settings dialog." src="../Images/preferences-spellcheck.png"/>
+  </div>
 
-			<li><span class="listheading">user-template2.css, user-template3.css</span>: Optional user CSS templates for use with the Add Blank Stylesheet command.</li>
+  <ul>
+    <li><span class="listheading">首选语言词典：</span>从下拉菜单中选择你的主语言词典。<br/><img alt="Spellcheck Preferences setting the Primary Language Dictionary." src="../Images/preferences-spellcheck-standard-dictionary.png"/> 
 
-			<li><span class="listheading">user-template2.xhtml, user-template3.xhtml</span>: Optional user XHTML templates for use with the Add Blank HTML File command.</li>
+    <ul>
+      <li>要添加新的标准词典（必须是 hunspell 格式），点击<span class="buttonbox">打开首选项文件夹</span>，进入 "hunspell_dictionaries" 目录。把新的词典文件放入 "hunspell_dictionaries" 目录，然后重启 Sigil。</li>
 
-          <li><span class="listheading">workspace</span>: The default location where Sigil stores the epub files it is currently working in separate epub specific subfolders and any temporary files needed.</li>
+      <li>额外词典的一个来源是 <a href="https://wiki.openoffice.org/wiki/Dictionaries">OpenOffice Dictionaries</a> 网站。要添加这些词典，请下载、解压并把文件（如 <span class="example">en_GB.aff</span>、<span class="example">en_GB.dic</span>、<span class="example">hyph_en_GB.dic</span>）复制到 “hunspell_dictionaries” 目录，然后重启 Sigil。</li>
+    </ul></li>
 
-		  </ul>
+    <li class="first"><span class="listheading">第二语言词典：</span>选择你的次语言词典。</li>
 
-  <h3 class="sigil_not_in_toc">Change the Font Size of GUI Controls</h3>
+    <li class="first"><span class="listheading">突出拼错的单词：</span>选择是否在代码视图中用红色波浪下划线高亮拼写错误的单词。之后你就可以右键点击该单词，选择建议的更正或将其添加到词典中。</li>
 
-		  <p>Since Sigil is a Qt app, you can customize the font size of some GUI controls by creating a <b>qt_styles.qss</b> stylesheet file and placing it in the Sigil preferences folder. (<b>qt_styles.qss</b> needs to contain valid <a href="https://doc.qt.io/qt-5/stylesheet-syntax.html">Qt style sheet</a> declarations.)</p>
+    <li class="first"><span class="listheading">核对数字：</span>启用此选项后，含数字的单词（如 32nd 或 HTML5）也会进行拼写检查。</li>
 
-		  <p>For example, the following styles will increase the font size of the fields in the Find &amp; Replace window:</p>
+    <li class="first"><span class="listheading">User Dictionaries:</span>|→<span class="listheading">用户词典：</span>←| 
+
+    <ul>
+      <li>你可以创建自己的个人用户词典，甚至可以为不同的书和不同类型的词（如地名、人名等）使用不同的词典。</li>
+
+      <li>如果你没有创建过任何用户词典，Sigil 会为你创建并启用一个 "default" 用户词典，你可以重命名或删除它。</li>
+
+      <li>要创建新的用户词典，点击“用户词典”选项卡，点击<span class="buttonbox">添加</span>，然后为新词典输入名称：<br/> <img alt="SpellCheck Preferences adding a dictionary." src="../Images/preferences-spellcheck-add-dictionary.png"/></li>
+
+      <li>在“用户词典”选项卡下选择某个词典，然后点击“用户词典单词列表”选项卡，即可查看该词典中的单词。列表中显示该词典的所有单词，可添加、编辑或移除。</li>
+
+      <li>要直接向用户词典添加单词，在“用户词典”选项卡中选择词典，点击“用户词典单词列表”，然后点击<span class="buttonbox">添加</span>。输入任意多个单词，或从文件粘贴。单词可以用逗号、空格分隔，或每行一个。<br/><img alt="Spellcheck Preferences adding words to a dictionary." src="../Images/preferences-spellcheck-add-words.png"/></li>
+
+      <li>也可使用“拼写检查”向词典添加单词，或在代码视图中右键点击拼写错误的单词，选择 <span class="menuitem">添加到词典</span> 选项之一。</li>
+
+      <li>可使用<span class="buttonbox">复制</span>复制整个词典，然后根据需要重命名。</li>
+
+      <li>勾选词典名称旁的复选框，即可选择启用哪些用户词典。可同时启用多个词典。检查单词拼写时，会使用所有已启用的词典。</li>
+    </ul></li>
+  </ul>
+
+  <div class="tip">
+    <p class="tiptext"><b>默认词典</b>即选中并高亮显示的那个，也会在首选项窗口“用户词典”部分的左下角标出。使用“添加拼写错误的单词”快捷键或上下文菜单项 <span class="menuitem">添加到默认词典</span> 添加单词时，使用的就是默认词典。</p>
+
+    <p class="tiptext"><b>已启用的词典</b>左侧有一个对勾。虽然一次只能选中一个用户词典并将其设为<i>默认</i>，但可以<i>启用</i>多个词典。运行拼写检查时会使用所有已启用的词典。</p>
+  </div>
+
+  <h3 class="sigil_not_in_toc">保留实体</h3>
+
+  <p>当你运行“修复”（<span class="menuitem">工具=&gt;HTML 重新格式化=&gt;修复所有 HTML 文档</span>）时，<i>除非</i>实体被包含在“要保留的实体”列表中，否则 Sigil 会自动把所有字符实体转换为 Unicode 字符。</p>
+
+  <div class="image">
+    <img alt="Preserve Entities Preferences dialog." src="../Images/preferences-preserve-entities.png"/>
+  </div>
+
+  <ul>
+    <li>要保留特定实体、防止“修复”把它们转换为 Unicode 字符，请点击<span class="buttonbox">添加</span>，把它们加入“要保留的实体”列表。用空格、换行或逗号分隔，可以一次输入多个实体。</li>
+
+    <li class="first">使用<span class="buttonbox">移除</span>或<span class="buttonbox">全部移除</span>从列表中移除实体。不在列表中的实体在“修复”时会被转换为 Unicode 字符。</li>
+  </ul>
+
+  <div class="tip">
+    <p class="tiptext">请注意，EPUB3 书中不能使用命名实体（如 <span class="example">&amp;nsbp;</span>），必须改用数字实体（如 <span class="example">&amp;#160;</span>）。</p>
+
+    <p class="tiptext">如果你在打开或保存时开启了“修复非良好结构的 HTML 源代码”，且源代码是良好的，实体将<b><i>不会</i></b>被自动转换（因为实体是完全有效的代码）。要在代码良好的 html 文件中转换实体，必须手动调用 <span class="menuitem">工具=&gt;HTML 重新格式化=&gt;修复所有 HTML 文档</span>。</p>
+  </div>
+
+  <h3 class="sigil_not_in_toc">插件</h3>
+
+  <p>Sigil 支持各种各样能增强其编辑能力的实用插件。</p>
+
+  <div class="image">
+    <img alt="Plugin Preferences and management dialog." src="../Images/preferences-plugins.png"/>
+  </div>
+
+  <ul>
+    <li><span class="listheading">使用捆绑的 Python 解释器：</span>启用此选项用于选择随 Sigil 捆绑的 Python 解释器（推荐）。若禁用此选项，则需选择一个外部 Python 3 解释器。</li>
+
+    <li class="first"><span class="listheading">设置运行环境：</span>此选项面向插件开发者；如果“使用捆绑的 Python”被禁用（或无法选择），你也需要设置它。点击<span class="buttonbox">自动</span>或<span class="buttonbox">设置</span>以选择外部 Python 3 解释器。</li>
+
+    <li class="first"><span class="listheading">Add/Remove</span>|→<span class="listheading">添加/移除</span>←| 
+
+    <ul>
+      <li><span class="listheading">添加插件：</span>点击此按钮安装插件。</li>
+
+      <li><span class="listheading">移除插件：</span>点击此按钮卸载当前选中的插件。</li>
+
+      <li><span class="listheading">移除全部插件：</span>点击此按钮卸载所有插件。</li>
+    </ul></li>
+
+    <li class="first"><span class="listheading">Shortcuts</span>|→<span class="listheading">快捷方式</span>←| 
+
+    <ul>
+      <li>把插件指定给工具栏上的 10 个插件按钮。点击某个插件按钮时，指定的插件会自动启动。</li>
+    </ul></li>
+  </ul>
+
+  <div>
+    <p>工具栏按钮：</p>
+  </div>
+
+  <div>
+    <img alt="Image of a set of 10 pulldowns used to assign a current plugin to a toolbar icon" src="../Images/preferences-plugins-shortcuts.png"/>
+  </div>
+
+  <h3 class="sigil_not_in_toc" id="Prefer_Location">打开首选项文件夹</h3>
+
+  <p>所有首选项界面左下角的<span class="buttonbox">打开首选项文件夹</span>按钮，会打开包含全部首选项文件的目录。可复制这些文件用于备份或与他人共享。</p>
+
+  <p>首选项文件夹很可能在以下路径：</p>
+
+  <p>Windows：</p>
+
+  <pre class="example">…\Local Settings\Application Data\sigil-ebook\sigil</pre>
+
+  <p>Mac：</p>
+
+  <pre class="example">/Users/[Username]/Library/Application\ Support/sigil-ebook/sigil/</pre>
+
+  <p>Linux：</p>
+
+  <pre class="example">$HOME/.local/share/sigil-ebook/sigil</pre>
+
+  <p>可能看到的文件/文件夹包括：</p>
+
+  <ul>
+    <li><span class="listheading">automate01.txt, automate02.txt, automate03.txt：</span>可选的用户自动化任务列表，供<span class="buttonbox">运行自动化列表</span>工具栏按钮使用。</li>
+
+    <li><span class="listheading">cover-template2.xhtml, cover-template3.xhtml：</span>分别用于 EPUB2 和 EPUB3 的可选封面 xhtml 模板。</li>
+
+    <li><span class="listheading">custom_preview_style.css：</span>用于 Sigil 预览窗口的可选用户 CSS。</li>
+
+    <li><span class="listheading">custom_preview_style_alt.css：</span>预览的可选备用 CSS。</li>
+
+    <li><span class="listheading">hunspell_dictionaries：</span>存放你添加的所有标准词典的位置。</li>
+
+    <li><span class="listheading">env-vars.txt：</span>用户创建的用于设置 Sigil 环境变量的文本文件。自 Sigil 2.6.2 起。</li>
+
+    <li><span class="listheading">local-devtools：</span>存放预览检查器数据的位置。</li>
+
+    <li><span class="listheading">local-storage：</span>存放 JavaScript 本地存储数据的位置。</li>
+
+    <li><span class="listheading">plugins：</span>存放你安装的所有插件的位置。</li>
+
+    <li><span class="listheading">plugins_prefs：</span>存放插件首选项文件的位置。</li>
+
+    <li><span class="listheading">qt_styles.qss：</span>用于 Sigil 界面元素的可选自定义 Qt 样式。</li>
+
+    <li><span class="listheading">QtWebEngine：</span>存放预览数据的位置。</li>
+
+    <li><span class="listheading">repo：</span>存放检查点 git 仓库的位置。</li>
+
+    <li><span class="listheading">sgc-toc.css：</span>用于 EPUB2 书的可选自定义目录样式表。</li>
+
+    <li><span class="listheading">sgc-nav.css：</span>用于 EPUB3 书的可选自定义目录样式表。</li>
+
+    <li><span class="listheading">sigil_clips_v6.ini：</span>你保存的剪贴板。</li>
+
+    <li><span class="listheading">sigil_index_v6.ini：</span>你的索引条目。</li>
+
+    <li><span class="listheading">sigil_searches_v6.ini：</span>你已保存的搜索模板。</li>
+
+    <li><span class="listheading">sigil_v6.ini：</span>Sigil 的常规配置设置文件信息。</li>
+
+    <li><span class="listheading">user_dictionaries：</span>存放所有个人用户词典的位置。</li>
+
+    <li><span class="listheading">user-template2.css, user-template3.css：</span>供“添加空白样式表”命令使用的可选用户 CSS 模板。</li>
+
+    <li><span class="listheading">user-template2.xhtml, user-template3.xhtml：</span>供“添加空白 HTML 文件”命令使用的可选用户 XHTML 模板。</li>
+
+    <li><span class="listheading">workspace：</span>默认位置，Sigil 把当前正在处理的 epub 文件存放在各自独立的 epub 专用子文件夹中，并存放所需的临时文件。</li>
+  </ul>
+
+  <h3 class="sigil_not_in_toc">更改 GUI 控件的字号</h3>
+
+  <p>由于 Sigil 是一个 Qt 应用，你可以通过创建 <span class="example">qt_styles.qss</span> 样式表文件并把它放入 Sigil 首选项文件夹，来自定义某些 GUI 控件的字号。（<span class="example">qt_styles.qss</span> 需要包含有效的 <a href="https://doc.qt.io/qt-5/stylesheet-syntax.html">Qt 样式表</a>声明。）</p>
+
+  <p>例如，以下样式将增大“查找与替换”窗口中各输入框的字号：</p>
 
   <pre class="example">QLabel { font-size: 16pt }
 QLineEdit { font-size: 16pt }
 QComboBox { font-size: 16pt }
 </pre>
 
-  <h3 class="sigil_not_in_toc">Customizing the Background of Preview</h3>
+  <h3 class="sigil_not_in_toc">自定义预览的背景</h3>
 
-		  <p>Since Preview is technically a browser showing rendered (x)html/CSS, the only way to alter font and/or background colors is by specifying that info via styles: either inline or via CSS from within the EPUB.</p>
+  <p>预览从技术上讲是显示渲染后 (x)html/CSS 的浏览器，改变字体或背景颜色的唯一方法是借助样式指定：要么内联，要么通过 EPUB 内的 CSS。</p>
 
-		  <p>The only exception to the above is that a custom user-specified CSS file will be applied to Preview (no matter what EPUB is open) if a file named <b>custom_preview_style.css</b> exists in the Sigil preferences folder and contains valid CSS.</p>
+  <p>唯一的例外是，如果 Sigil 首选项文件夹中存在名为 <span class="example">custom_preview_style.css</span> 的文件且包含有效 CSS，这个用户自定义的 CSS 文件会应用于预览（无论打开的是哪个 EPUB）。</p>
 
-		  <p>For example, the following styles will give Preview a light gray background with blue text:</p>
+  <p>例如，以下样式会让预览显示浅灰色背景和蓝色文字：</p>
 
   <pre class="example">body {
   background-color: #D3D3D3;
@@ -437,6 +441,6 @@ QComboBox { font-size: 16pt }
 }
 </pre>
 
-		  <p>Note: Applying such CSS can possibly adversely affect the visibility of some styled elements within an EPUB, depending on what CSS has already been applied via the EPUB and how.</p>
+  <p>注意：应用此类 CSS 可能影响 EPUB 中某些已设样式元素的可见性，具体取决于 EPUB 中已应用的 CSS 及其应用方式。</p>
 </body>
 </html>

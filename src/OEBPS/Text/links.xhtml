@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN" xmlns:xml="http://www.w3.org/XML/1998/namespace">
 <head>
-  <title>Links and Styles</title>
+  <title>链接与 ID</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="links">Links and IDs</h2>
+  <h2 id="links">链接与 ID</h2>
 
-  <p class="h2subheading">— Links, Notes, and IDs —</p>
+  <p class="h2subheading">— 链接、注释与 ID —</p>
 
-  <p>Sigil provides some helpful tools for creating ids and links which can make creating footnotes, endnotes, and cross-references easier.</p>
+  <p>Sigil 提供了一些实用工具，可用于创建 ID 和链接，使得创建脚注、尾注和交叉引用更轻松。</p>
 
-  <h3 class="sigil_not_in_toc">Insert IDs</h3>
+  <h3 class="sigil_not_in_toc">插入 ID</h3>
 
-  <p>To mark text as a destination for a link you need to give it a name by inserting an anchor ID.</p>
+  <p>若要将文本标记为链接目标，需插入锚点 ID 为其命名。</p>
 
-  <p>Select the text you want to mark with an ID and click the button <img alt="Insert ID icon." src="../Images/insert-id.png"/> or select the menu item <span class="menuitem">Insert=&gt;ID</span>:</p>
+  <p>选择要用 ID 标记的文本，然后单击按钮<img class="toolbar-icon" alt="Insert ID icon." src="../Images/insert-id.png"/>，或选择菜单项 <span class="menuitem">插入=&gt;ID</span>：</p>
 
   <div class="image">
     <img alt="Links Insert ID dialog." src="../Images/links-insert-id.png"/>
   </div>
 
-  <p>Type the name you want for this ID, e.g. footnote-1 (it must start with a letter).</p>
+  <p>输入 ID 名称，例如 footnote-1（须以字母开头）。</p>
 
-  <p>To edit the ID, select the word or click somewhere in the word then click the <img alt="Insert ID icon" src="../Images/insert-id.png"/>button again.</p>
+  <p>要编辑 ID，请选中该词或单击词内任意位置，然后再次单击<img class="toolbar-icon" alt="Insert ID icon" src="../Images/insert-id.png"/>按钮。</p>
 
-  <p>The ID is actually inserted using HTML code like this:</p>
+  <p>ID 实际通过如下 HTML 代码插入：</p>
 
   <pre class="example">&lt;a id="footnote-1"&gt;Footnote 1&lt;/a&gt;</pre>
 
   <div class="tip">
-    <p class="tiptext">You cannot use identical IDs in the same file.</p>
+    <p class="tiptext">同一文件中不能使用完全相同的 ID。</p>
   </div>
 
-  <p>If you click on the drop-down arrow you will see a list of existing IDs for the file for reference.</p>
+  <p>单击下拉箭头，可查看该文件中现有 ID 的列表。</p>
 
-  <p>To delete an ID you will need to edit the HTML code in Code View to remove the tags completely.</p>
+  <p>要删除 ID，需在代码视图中编辑 HTML 代码，完全移除相应标签。</p>
 
   <div class="tip">
-    <p class="tiptext">To identify IDs in your book you can search in Code View. Or you can highlight them in Preview in color by adding the following CSS temporarily to your stylesheet:</p>
+    <p class="tiptext">要找出书中的 ID，可在代码视图中搜索；也可以把以下 CSS 临时加入样式表，在预览中用颜色高亮显示：</p>
 
     <pre>[id class!=sigil_index_marker] { color:#00ff00; }</pre>
   </div>
 
-  <h3 class="sigil_not_in_toc">Insert Links</h3>
+  <h3 class="sigil_not_in_toc">插入链接</h3>
 
-  <p>To create a link to another part of the document select the text you want to link and then click the button <img alt="Insert hyperlink icon." src="../Images/insert-hyperlink.png"/> or select the menu item <span class="menuitem">Insert=&gt;Link</span>:</p>
+  <p>要创建指向文档其他位置的链接，请选择要链接的文本，然后单击按钮<img class="toolbar-icon" alt="Insert hyperlink icon." src="../Images/insert-hyperlink.png"/>，或选择菜单项 <span class="menuitem">插入=&gt;链接</span>：</p>
 
   <div class="image">
     <img alt="Insert Hyperlink main dialog." src="../Images/links-insert-hyperlink.png"/>
   </div>
 
-  <p>You will be given a list of valid targets in the EPUB that you can select (double-click one or select and click <span class="buttonbox">OK</span>). A valid target in the EPUB is any filename, any anchor IDs that have been created, or even any images. The list will be sorted so that targets in the current file are listed first, followed by all remaining files in book order.</p>
+  <p>界面列出 EPUB 中可供选择的有效目标（双击其一，或选中后单击<span class="buttonbox">确定</span>）。有效目标包括文件名、已创建的锚点 ID，甚至图像。列表经过排序：当前文件中的目标排在最前，其余文件按书籍顺序排列。</p>
 
-  <p>To edit a link, select the text again or move your cursor in the text using the arrow keys (you can’t click in it or you will be taken to the link) and then click the button <img alt="Insert hyperlink icon." src="../Images/insert-hyperlink.png"/>. The link will be highlighted in the list if it is valid.</p>
+  <p>要编辑链接，请再次选中文本，或用方向键在文本中移动光标（不要直接单击，否则会跳转到链接），然后单击按钮<img class="toolbar-icon" alt="Insert hyperlink icon." src="../Images/insert-hyperlink.png"/>。若链接有效，列表中会将其高亮显示。</p>
 
-  <p>You can also enter any URL you want as a target for the link (e.g. to point to web sites) by typing the entry in the Target box.</p>
+  <p>也可以在 目标 框中输入任意 URL 作为链接目标（例如指向网站）。</p>
 
-  <h3 class="sigil_not_in_toc">Navigating Links</h3>
+  <h3 class="sigil_not_in_toc">导航链接</h3>
 
-  <p>To go to a link in Preview just click on it.</p>
+  <p>在预览中，单击链接即可前往。</p>
 
-  <p>To go to a link in Code View, hold the <span class="shortcut">Ctrl</span> key down while clicking on the HTML opening tag.</p>
+  <p>在代码视图中，按住<span class="shortcut">Ctrl</span>键并单击 HTML 起始标签，即可前往链接。</p>
 
   <div class="tip">
-    <p class="tiptext">Ctrl-clicking on text will take you to the link if the text is a link, or it will take you to the CSS style defined for the tag if the text is just a tag.</p>
+    <p class="tiptext">按住 Ctrl 单击文本：若文本是链接，将跳转到该链接；若文本只是标签，将跳转到为该标签定义的 CSS 样式。</p>
   </div>
 
-  <p>To go back to where you clicked the link, just click the Back button <img alt="back to link icon image" src="../Images/back-to-link-style.png"/> or select the menu item <span class="menuitem">Go Bac</span>.</p>
+  <p>要返回单击链接前的位置，单击 返回 按钮<img class="toolbar-icon" alt="back to link icon image" src="../Images/back-to-link-style.png"/>，或选择菜单项 <span class="menuitem">返回</span>。</p>
 </body>
 </html>

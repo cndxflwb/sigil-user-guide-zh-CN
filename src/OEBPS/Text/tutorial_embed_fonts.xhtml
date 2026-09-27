@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Include Custom Fonts</title>
+  <title>包含自定义字体</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="fonts">Include Custom Fonts</h2>
+  <h2 id="fonts">包含自定义字体</h2>
 
-  <p class="h2subheading">— Embedding Fonts In Your Book —</p>
+  <p class="h2subheading">—在你的书中嵌入字体—</p>
 
-  <p>This tutorial shows you how to use custom fonts in your EPUB.</p>
-
-  <div class="tip">
-    <p class="tiptext">One of the benefits of e-readers is that you can choose your own font, so it’s usually best to only use embedded fonts to highlight specific types of text – such as chapter headings, quotes, etc. – and not to change the font of the entire book.</p>
-  </div>
-
-  <p>To use a font in an EPUB you need to load the font into the EPUB, define a style for the font, and then apply the style to your text.</p>
+  <p>本教程教你如何在 EPUB 中使用自定义字体。</p>
 
   <div class="tip">
-    <p class="tiptext">You will need to know about stylesheets to embed fonts so you should read through the <a href="tutorial_stylesheets.xhtml">Stylesheets</a> chapter first.</p>
+    <p class="tiptext">电子书阅读器的一大优势是可以自选字体，因此通常最好只用嵌入字体来突出显示特定类型的文字——比如章节标题、引文等——而不要改变全书的字体。</p>
   </div>
 
-  <h3 class="sigil_not_in_toc">Adding Fonts to your EPUB</h3>
-
-  <p>To add fonts to your book, use the Add Existing Files button <img alt="Add Files icon." src="../Images/document-add.png"/>. This will display a dialog allowing you to select one or more files from your computer. Select as many font files as you want.</p>
+  <p>要在 EPUB 中使用某种字体，你需要先把字体加载进 EPUB，为字体定义一个样式，再把这个样式应用到文字上。</p>
 
   <div class="tip">
-    <p class="tiptext">Many fonts are not free. Before you include fonts in your EPUB please make sure that you have a license or permission to use them. There are many free fonts available online if you search for them.</p>
-
-    <p class="tiptext">A number of different font types are supported by the EPUB specification including OpenType (<span class="example">.otf</span>), TrueType (<span class="example">.ttf</span>),and Web Open Font Format (<span class="example">.woff or .woff2</span>) formats. Almost all e-readers support at least TrueType and OpenType formats.</p>
+    <p class="tiptext">嵌入字体需要先了解样式表，因此你应该先通读<a href="../Text/tutorial_stylesheets.xhtml">样式表</a>一章。</p>
   </div>
 
-  <p>The fonts will be added to the Fonts folder in the Book Browser. However, they are not yet actually used anywhere in your book – they are just available to use.</p>
+  <h3 class="sigil_not_in_toc">向 EPUB 添加字体</h3>
 
-  <h3 class="sigil_not_in_toc" id="inserting_images">Defining Styles for Your Font</h3>
+  <p>要向书中添加字体，请使用添加现有文件按钮 <img class="toolbar-icon" alt="Add Files icon." src="../Images/document-add.png"/>。此时会显示对话框，供你从计算机中选择一个或多个文件。想选多少字体文件就选多少。</p>
 
-  <p>Once the fonts are in your EPUB, you must define a style that includes them.</p>
+  <div class="tip">
+    <p class="tiptext">许多字体并非免费。在把字体放入进 EPUB 之前，请确认你拥有使用它们的许可或授权。只要上网搜索，就能找到许多免费字体。</p>
 
-  <p>Add or open a stylesheet that is linked to your HTML files (see the <a href="tutorial_stylesheets.xhtml">Stylesheets</a> chapter for more details).</p>
+    <p class="tiptext">EPUB 规范支持多种字体类型，包括 OpenType（<span class="example">.otf</span>）、TrueType（<span class="example">.ttf</span>）和 Web 开放字体格式（<span class="example">.woff 或 .woff2</span>）。几乎所有电子书阅读器都至少支持 TrueType 和 OpenType 格式。</p>
+  </div>
 
-  <p>Add a definition of the font, e.g.:</p>
+  <p>字体会添加到书籍浏览器的 Fonts（字体） 文件夹。不过此时书中还没有实际用到它们——只是处于可用状态。</p>
+
+  <h3 class="sigil_not_in_toc" id="inserting_images">为字体定义样式</h3>
+
+  <p>字体放入 EPUB 之后，你必须定义一个使用它们的样式。</p>
+
+  <p>添加或打开已链接到 HTML 文件的样式表（详见<a href="../Text/tutorial_stylesheets.xhtml">样式表</a>一章）。</p>
+
+  <p>添加字体定义，例如：</p>
 
   <pre class="example">@font-face {
     font-family: 'Garamond';
@@ -66,33 +66,33 @@
 }</pre>
 
   <div class="tip">
-    <p class="tiptext">Font names are case-sensitive!</p>
+    <p class="tiptext">字体名称区分大小写！</p>
 
-    <p class="tiptext">You must define one @font-face rule for each style of font (normal, bold, italics, etc.).</p>
+    <p class="tiptext">你必须为每种字体样式（正常、粗体、斜体等）分别定义一条 @font-face 规则。</p>
 
-    <p class="tiptext">When using the name of a font-family the font name must either be quoted or unquoted every time you use it – you cannot mix quoted and unquoted names. Always using quotes around the font name makes things more consistent and avoids having to check if a name is valid without quotes.</p>
+    <p class="tiptext">使用 font-family 名称时，每次都要么带引号、要么不带引号，不能混用。建议始终给字体名称加上引号，这样更统一，也无需检查名称不带引号时是否有效。</p>
   </div>
 
-  <p>The font still isn’t actually being used in the book yet, that’s the next step.</p>
+  <p>此时书中还没有真正使用字体，那是下一步要做的事。</p>
 
-  <h3 class="sigil_not_in_toc">Apply Your Font to Text</h3>
+  <h3 class="sigil_not_in_toc">把字体应用到文字</h3>
 
-  <p>To make use of the font you need to create another style that you will then assign to sections of your text.</p>
+  <p>要使用这种字体，你需要再创建一个样式，然后把它分配给文中的各个部分。</p>
 
-  <p>So, for example, to use your new font for headings, define the style for the heading tag as follows:</p>
+  <p>例如，要让标题使用新字体，可以这样定义标题元素的样式：</p>
 
   <pre class="example">h1 { 
     font-family: 'Garamond', serif;
 }</pre>
 
-  <p>Or to certain paragraphs:</p>
+  <p>或者应用到某些段落：</p>
 
   <pre class="example">p.longhand { 
     font-family: 'Garamond', serif;
     font-style: italic;
 }</pre>
 
-  <p>Or if you want, although it’s not recommended, you can apply the font to all text in the book:</p>
+  <p>或者，如果你愿意——虽然不推荐——也可以把字体应用到全书的所有文字上：</p>
 
   <pre class="example">body { 
     font-family: 'Garamond', serif;
@@ -100,27 +100,27 @@
 }</pre>
 
   <div class="tip">
-    <p class="tiptext">The font-family rules above instruct the e-reader to use your font if possible for the text, but if it’s not possible use a generic serif font.</p>
+    <p class="tiptext">上面的 font-family 规则会指示电子书阅读器尽可能对文字使用你的字体，如果无法使用，则改用通用的衬线字体。</p>
   </div>
 
-  <h3 class="sigil_not_in_toc">Font Obfuscation</h3>
+  <h3 class="sigil_not_in_toc">字体混淆</h3>
 
-  <p>When you use a font in an EPUB, the font file could be extracted by someone and used somewhere else. If your fonts are licensed you may want to prevent this.</p>
+  <p>在 EPUB 中使用字体时，字体文件可能被人提取出来用到别处。如果你的字体受许可协议限制，可能需要防止这种情况。</p>
 
-  <p>You can use Sigil’s font obfuscation menu to scramble the font file using one of two standard methods, Adobe or IDPF – which one is up to you, but you should test on your target e-reader to make sure the font is still readable. Obfuscation is not encryption – it just modifies the font file making it hard to use elsewhere while still being useable by readers to display fonts.</p>
+  <p>可使用 Sigil 的字体混淆菜单，通过 Adobe 或 IDPF 这两种标准方法之一打乱字体文件——选哪种由你决定，但应在目标电子书阅读器上测试，确保字体仍可读。混淆不是加密——它只是修改字体文件，使其难以在其他地方使用，而阅读器仍能正常显示字体。</p>
 
-  <p>To use font obfuscation, right-click on your fonts in the Book Browser window, right-click and select Font Obfuscation from the menu and choose a method to use for obfuscation.</p>
+  <p>要使用字体混淆，请在书籍浏览器窗口中右键点击你的字体，从菜单中选择 <span class="menuitem">字体混淆</span>，然后选择一种混淆方法。</p>
 
   <div class="image">
     <img alt="Using menus to enable or disable font obfuscation." src="../Images/tutorial-font-obfuscate.png"/>
   </div>
 
- <h3 class="sigil_not_in_toc">Font Subsetting</h3>
+  <h3 class="sigil_not_in_toc">字体子集化</h3>
 
-  <p>A better alternative to Font Obfuscation might be to use Font Subsetting tools to restrict the font descriptions to only the exact characters used in your text. The act of subsetting a font, renders the font file useless for any other more general use. There are <a href="https://www.mobileread.com/forums/showthread.php?t=247431">plugins available for Sigil</a> such as the <b>“ePUB Optimizer”</b> and <b>“Subset Fonts”</b> plugins that can subset a font. You can use the <a href="reports.xhtml">Characters Report</a> of Sigil to provide the list of characters actually used in your EPUB.</p>
-  
-  <h3 class="sigil_not_in_toc">Testing Your Font</h3>
+  <p>比字体混淆更好的替代方案，也许是使用字体子集化工具，把字体描述限制为仅包含文中实际用到的字符。字体子集化之后，该文件对其他任何更一般的用途都不再有用。<a href="https://www.mobileread.com/forums/showthread.php?t=247431">适用于 Sigil 的插件</a>可以子集化字体，例如 <b>ePUB Optimizer</b> 和 <b>Subset Fonts</b> 插件。可使用 Sigil 的<a href="../Text/reports.xhtml">字符报告</a>获取 EPUB 中实际用到的字符列表。</p>
 
-  <p>Not all devices will show embedded fonts. Even Sigil may not show all your embedded fonts. Its best to test on your target device to check if your fonts are displayed as you expect.</p>
+  <h3 class="sigil_not_in_toc">测试你的字体</h3>
+
+  <p>并非所有设备都会显示嵌入的字体。即使是 Sigil，也可能无法显示你所有的嵌入字体。最好在目标设备上测试，检查字体的显示是否符合预期。</p>
 </body>
 </html>

@@ -1,37 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Preferred External Xhtml Editor</title>
+  <title>首选外部 XHTML 编辑器</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="opening_xhtml_externally">Preferred External Xhtml Editor</h2>
+  <h2 id="opening_xhtml_externally">首选外部 XHTML 编辑器</h2>
 
-  <p class="h2subheading">— Integrating PageEdit WYSIWYG Editor into Sigil —</p>
+  <p class="h2subheading">— 将 PageEdit 所见即所得编辑器集成到 Sigil —</p>
 
-  <p>WYSIWYG editing mode – referred to as BookView in older Sigil User Guides – was removed from Sigil in version 0.9.15 because that editing mode used live html editing based on the QtWebEngine/Chromium browser engine that often resulted in incorrect or broken xhtml. Since this browser engine was embedded in Qt, we had no way of changing or fixing that behaviour. This broken xhtml was often rejected by epubcheck and therefore most publishers would not accept it. Sigil 0.9.14 is the last version of Sigil to include the BookView mode of editing.</p>
+  <p>所见即所得编辑模式——旧版 Sigil 用户指南称之为 书籍视图——已在 0.9.15 版本中移除。该模式基于 QtWebEngine/Chromium 浏览器引擎实时编辑 HTML，常导致 XHTML 出错或损坏。由于该引擎内嵌于 Qt 中，这一行为无法更改或修复。损坏的 XHTML 常常无法通过 EPUBCheck 校验，因此大多数出版商不予接受。Sigil 0.9.14 是最后一个保留 书籍视图 编辑模式的版本。</p>
 
-   <p>If you need still need the ability to do minor editing and proofing in a WYSIWYG environment, the maintainers of Sigil have created a standalone app called PageEdit that can be launched via Sigil’s Preferred External XHtml Editor tool by setting the path to the external editor’s executable in Sigil’s preferences (<span class="menuitem">Edit=&gt;Preferences=&gt;General Settings=&gt;Set your preferred external xhtml editor</span>).</p>
+  <p>如果仍需在所见即所得环境中进行少量编辑和校对，可以使用 Sigil 维护者开发的独立应用 PageEdit。在 Sigil 的首选项（<span class="menuitem">编辑=&gt;首选项=&gt;一般设定=&gt;设置首选外部 XHTML 编辑器</span>）中设置外部编辑器可执行文件路径后，即可通过 Sigil 的“首选外部 XHTML 编辑器”工具启动 PageEdit。</p>
 
-    <div><img alt="Preferred External Editor Preferences Setting." src="../Images/external_xhtml_editor_setting.png"/></div>
-
-    <p>Users can use the <img alt="External Xhtml Editor Icon" src="../Images/external-editor-icon.png"/> icon on the Sigil toolbar to launch the file/chapter in Sigil’s current Code View tab inside of PageEdit. Users can also use/assign the keyboard shortcut for the button to launch the editor (defaults to F2).</p>
-
-    <p>When editing is complete in PageEdit these edits are then saved back into Sigil so they appear in Code View and can be validated and corrected if needed.</p>
-
-    <div><img alt="Image of PageEdit WYSIWYG Editor Launched from Sigil" src="../Images/pageedit.png"/></div>
-
-    <p> The editing interface to PageEdit is very similar to the old BookView interface with toolbars and menus to format text, set paragraph alignment, cut and paste, insert existing images, insert links to existing xhtml files, move forward or backwards by chapter, and etc. Page edit can be used in either of two modes: Preview Mode to enable navigation by clicking links, and Edit mode to enable editing of content. PageEdit always opens in Edit mode. Toggling this mode is done by hitting the pencil icon in PageEdit.</p>
-
-    <p>If the user would like to edit multiple xhtml files from within Sigil at the same time, the OPF (ie. the content.opf) can be selected and opened via Book Browser before hitting the External Editor Icon. This will enable all Chapters/Files listed in the OPF spine element to be edited. PageEdit will provide a simple pulldown menu to allow the user to select which file to work on. All edits can be saved back into Sigil. Using this approach, PageEdit makes it easier to proofread an entire EPUB in chapter order, making minor edits or fixes as needed.</p>
-
- <div class="tip">
-    <p class="tiptext">Just like when using Sigil’s Open With features, if you make changes to the file in Sigil while the file is being edited in PageEdit then you may lose data. You should always open the file for editing externally, make the changes, then save and close the file in PageEdit before making any changes to that file in Sigil.</p>
+  <div>
+    <img alt="Preferred External Editor Preferences Setting." src="../Images/external_xhtml_editor_setting.png"/>
   </div>
 
-<p>PageEdit is available for all 3 main platforms including Linux, Windows, and macOS. It is free and can be downloaded from <a href="https://github.com/Sigil-Ebook/PageEdit/releases">Sigil-Ebook’s GitHub repository for PageEdit.</a> Linux users should check their local repositories for PageEdit in the same places they find Sigil itself.</p>
+  <p>单击 Sigil 工具栏上的<img class="toolbar-icon" alt="External Xhtml Editor Icon" src="../Images/external-editor-icon.png"/>图标，即可在 PageEdit 中打开当前代码视图标签页中的文件/章节。也可以为该按钮使用或指定键盘快捷键来启动编辑器（默认为 F2）。</p>
+
+  <p>在 PageEdit 中完成编辑后，改动会保存回 Sigil 并显示在代码视图中，必要时可进行验证和修正。</p>
+
+  <div>
+    <img alt="Image of PageEdit WYSIWYG Editor Launched from Sigil" src="../Images/pageedit.png"/>
+  </div>
+
+  <p>PageEdit 的编辑界面与旧版 书籍视图 界面非常相似，同样提供工具栏和菜单，可用于格式化文本、设置段落对齐、剪切粘贴、插入现有图像、插入指向现有 XHTML 文件的链接、按章节前后跳转等。PageEdit 有两种模式：预览模式 通过单击链接导航；编辑模式 用于编辑内容。PageEdit 始终以编辑模式打开，单击 PageEdit 中的铅笔图标即可切换。</p>
+
+  <p>如需在 Sigil 中同时编辑多个 XHTML 文件，可先在书籍浏览器中选中并打开 OPF（即 <span class="example">content.opf</span>），再单击外部编辑器图标。这样即可编辑 OPF spine 元素列出的所有章节/文件。PageEdit 提供简单的下拉菜单，供用户选择要处理的文件。所有改动均可写回 Sigil。这样，按章节顺序校对整本 EPUB 会更轻松，可随时进行少量编辑或修正。</p>
+
+  <div class="tip">
+    <p class="tiptext">与使用 Sigil 的“打开方式”功能一样，文件正在 PageEdit 中编辑时，若同时在 Sigil 中修改，可能会丢失数据。请始终先在外部打开文件编辑，完成修改后在 PageEdit 中保存并关闭文件，然后回到 Sigil 中修改该文件。</p>
+  </div>
+
+  <p>PageEdit 支持 Linux、Windows 和 macOS 三大主要平台，免费提供，可从<a href="https://github.com/Sigil-Ebook/PageEdit/releases">Sigil-Ebook 的 PageEdit GitHub 仓库</a>下载。Linux 用户可在本地软件仓库中查找 PageEdit，途径与获取 Sigil 相同。</p>
 </body>
 </html>

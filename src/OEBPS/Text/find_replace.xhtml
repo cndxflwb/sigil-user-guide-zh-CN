@@ -1,348 +1,347 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Find &amp; Replace</title>
+  <title>查找与替换</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="find_and_replace">Find &amp; Replace</h2>
+  <h2 id="find_and_replace">查找与替换</h2>
 
-  <p class="h2subheading">— Searching in Code View —</p>
+  <p class="h2subheading">—在代码视图中搜索—</p>
 
-  <p>Finding text and updating it is one of the most common tasks in Sigil – to look for words, to remove or replace unwanted text, or to change the formatting. In fact, if you ever need to make lots of changes to your text, you will almost certainly want to use Find &amp; Replace (and its related <a href="saved_searches.xhtml">Saved Searches</a> feature), since it allows you to quickly make a large number of edits across all your files.</p>
+  <p>在 Sigil 中，查找并更新文本是最常见的操作之一，可用于查找单词、删除或替换多余文本，或更改格式。需要大量修改文本时，几乎必然要用到查找与替换（及相关的<a href="../Text/saved_searches.xhtml">搜索模板</a>功能），借助它可在所有文件中快速批量修改。</p>
 
   <div class="tip">
-    <p class="tiptext">See the <a href="tutorial_regex_reference.xhtml">Regex</a> tutorial for information about advanced searching.</p>
+    <p class="tiptext">参见<a href="../Text/tutorial_regex_reference.xhtml">正则表达式</a>教程，了解高级搜索的相关信息。</p>
   </div>
 
-  <p>To open the Find &amp; Replace dialog, select the menu item <span class="menuitem">Search=&gt;Find &amp; Replace</span>, its keyboard shortcut, or toolbar button <img alt="Find Replace icon." src="../Images/find-replace-button.png"/>.</p>
+  <p>要打开查找与替换对话框，可选择菜单项 <span class="menuitem">搜索=&gt;查找与替换</span> 、对应快捷键或工具栏按钮<img class="toolbar-icon" alt="Find Replace icon." src="../Images/find-replace-button.png"/>。</p>
 
   <div class="image">
     <img alt="Find Replace Dialog window." src="../Images/find-replace-options.png"/>
   </div>
 
-  <p>When open, the Find &amp; Replace dialog is always positioned at the bottom of the editing window for easy access. Advanced regular expression options have their own menu.</p>
-  
-  <div class="tip">
-    <p class="tiptext">Keyboard shortcuts exist for all Find &amp; Replace operations, such as <span class="shortcut">Ctrl+F</span> to find and <span class="shortcut">Ctrl+G</span> to find again (on Mac use <span class="shortcut">Cmd</span> instead of <span class="shortcut">Ctrl</span>). See the <span class="menuitem">Search</span> menu for a list of shortcuts.</p>
-  </div>
-
-  <h3 class="sigil_not_in_toc" id="find_actions">Action Buttons</h3>
-
-  <p>The buttons on the right are used to run your search commands: Find , Restart, Replace, Replace/Find, Replace All, and Count All.</p>
-
-  <h4 class="sigil_not_in_toc">Find ( <img width="24" alt="find button" src="../Images/find.svg"/> )</h4>
-
-  <p>Finds the next occurrence of your search term and highlights it in Code View.</p>
-  
-  <p>To find text:</p>
-
-  	<ul>
-		<li>Enter the text you wish to find in the Find box.</li>
-
-		<li>Click <span class="buttonbox"><img width="14" alt="find button" src="../Images/find.svg"/></span> to search for and highlight the next match in the Code View window.</li>
-	</ul>
-
-  <p>Any text in the Replace box is ignored if you are just doing a Find.</p>
+  <p>打开后，查找与替换对话框始终位于编辑窗口底部，便于使用。高级正则表达式选项另有独立菜单。</p>
 
   <div class="tip">
-    <p class="tiptext">If you select text in Code View, then use <span class="shortcut">Ctrl+F</span> (on Mac: <span class="shortcut">Cmd+F</span>) to open the Find &amp; Replace window, Sigil will automatically place your selected text in the Find box.</p>
-    
-    <p class="tiptext">After you run a search, the text you entered in either the Find or Replace box is automatically saved to a history list that is available for later use. Click the down-arrow to the right of the Find or Replace text box to see a dropdown menu of your search history list.</p>
-    
-    <p class="tiptext">Status messages appear in the lower right corner.</p>
+    <p class="tiptext">所有查找与替换操作都有键盘快捷键，例如<span class="shortcut">Ctrl+F</span>查找、<span class="shortcut">Ctrl+G</span>再次查找（Mac 上使用<span class="shortcut">Cmd</span>代替<span class="shortcut">Ctrl</span>）。快捷键列表请参见 <span class="menuitem">搜索</span> 菜单。</p>
   </div>
 
-  <h4 class="sigil_not_in_toc">Restart ( <img width="24" alt="restart button" src="../Images/restart.svg"/> )</h4>
+  <h3 class="sigil_not_in_toc" id="find_actions">操作按钮</h3>
 
-  <p>Restarts a multiple file Find and Replace Search back at the top of the first file.  The next Find will begin from there.</p>
-  
+  <p>右侧的按钮用于执行搜索命令：查找、重新开始、替换、替换/查找、全部替换和计算全部匹配。</p>
 
-  <h4 class="sigil_not_in_toc">Replace ( <img width="24" alt="replace button" src="../Images/replace.svg"/> )</h4>
+  <h4 class="sigil_not_in_toc">查找（<img class="toolbar-icon" alt="find button" src="../Images/find.png"/>）</h4>
 
-  <p>Replaces one occurrence of the text matched by Find.</p>
+  <p>查找搜索词的下一个出现位置，并在代码视图中高亮显示。</p>
 
-  <p>To replace text:</p>
+  <p>要查找文本：</p>
 
   <ul>
-    <li>Enter the text to find in the Find box.</li>
+    <li>在 查找 框中输入要查找的文本。</li>
 
-    <li>Enter the text you want to replace it with in the Replace box.</li>
+    <li>单击<span class="buttonbox"><img width="14" alt="find button" src="../Images/find.png"/></span>，在代码视图窗口中搜索并高亮显示下一个匹配项。</li>
+  </ul>
 
-    <li>Click <span class="buttonbox"><img width="14" alt="find button" src="../Images/find.svg"/></span> to search for and highlight the next match.</li>
+  <p>仅执行查找时，替换 框中的内容不会生效。</p>
 
-    <li>Click <span class="buttonbox"><img width="14" alt="replace button" src="../Images/replace.svg"/></span> to do the replacement.</li>
+  <div class="tip">
+    <p class="tiptext">先在代码视图中选中文本，再按<span class="shortcut">Ctrl+F</span>（Mac 上：<span class="shortcut">Cmd+F</span>）打开查找与替换窗口，Sigil 会自动将选中的文本放入 查找 框。</p>
+
+    <p class="tiptext">执行搜索后，查找 框或 替换 框中输入的文本会自动存入历史列表，供日后使用。单击输入框右侧的下拉箭头，即可打开搜索历史下拉菜单。</p>
+
+    <p class="tiptext">状态消息显示在右下角。</p>
+  </div>
+
+  <h4 class="sigil_not_in_toc">重新开始（<img width="24" alt="restart button" src="../Images/restart.png"/>）</h4>
+
+  <p>将多文件查找与替换搜索重置到第一个文件的开头，下一次查找从该位置开始。</p>
+
+  <h4 class="sigil_not_in_toc">替换（<img width="24" alt="replace button" src="../Images/replace.png"/>）</h4>
+
+  <p>替换 查找 匹配到的一处文本。</p>
+
+  <p>要替换文本：</p>
+
+  <ul>
+    <li>在 查找 框中输入要查找的文本。</li>
+
+    <li>在 替换 框中输入要替换成的文本。</li>
+
+    <li>单击<span class="buttonbox"><img width="14" alt="find button" src="../Images/find.png"/></span>，搜索并高亮显示下一个匹配项。</li>
+
+    <li>单击<span class="buttonbox"><img width="14" alt="replace button" src="../Images/replace.png"/></span>执行替换。</li>
   </ul>
 
   <div class="tip">
-    <p class="tiptext">To undo changes, use <span class="shortcut">Ctrl+Z</span> (on Mac: <span class="shortcut">Cmd+Z</span>) or the Undo button <img alt="Showing Undo icon." src="../Images/edit-undo.png"/>, or right-click in the Code View window and select <span class="menuitem">Undo</span> to change the text back. But if you are replacing across multiple files and your next match is in a different file, you need to switch back to the file containing the replaced text before selecting undo.</p>
+    <p class="tiptext">要撤销更改，可使用<span class="shortcut">Ctrl+Z</span>（Mac 上：<span class="shortcut">Cmd+Z</span>）或 撤销 按钮<img class="toolbar-icon" alt="Showing Undo icon." src="../Images/edit-undo.png"/>，也可在代码视图窗口中右键单击，选择 <span class="menuitem">撤销</span> 恢复原文。跨文件替换时，若下一个匹配项位于其他文件，需先切换回包含已替换文本的标签页，再执行撤销。</p>
   </div>
 
-  <h4 class="sigil_not_in_toc">Replace/Find ( <img width="24" alt="replace-find button" src="../Images/replace-find.svg"/> )</h4>
+  <h4 class="sigil_not_in_toc">替换/查找（<img width="24" alt="replace-find button" src="../Images/replace-find.png"/>）</h4>
 
-  <p>Replaces one occurrence of the next match then automatically finds and highlights the subsequent match.</p>
-  
-  <p>The first time you do a Replace/Find the first match will be highlighted but not replaced. Subsequent use of Replace/Find will replace the highlighted matched text and then automatically find the next match.</p>
+  <p>替换下一个匹配项，然后自动查找并高亮显示其后的匹配项。</p>
 
-   <p>To replace text then automatically find the next match:</p>
+  <p>首次执行 替换/查找 时，第一个匹配项仅高亮显示，不会替换。之后执行 替换/查找 将替换已高亮的匹配文本，并自动查找下一个匹配项。</p>
 
-	  <ul>
-		<li>Enter the text to find in the Find box.</li>
+  <p>要替换文本然后自动查找下一个匹配项：</p>
 
-		<li>Enter the text you want to replace it with in the Replace box.</li>
-	
-		<li>Click <span class="buttonbox"><img width="14" alt="replace-find button" src="../Images/replace-find.svg"/></span> to search for and highlight the first match.</li>
+  <ul>
+    <li>在 查找 框中输入要查找的文本。</li>
 
-		<li>Click <span class="buttonbox"><img width="14" alt="replace-find button" src="../Images/replace-find.svg"/></span> to replace the match, then automatically find and highlight the next match.</li>
-	  </ul>
-	  
+    <li>在 替换 框中输入要替换成的文本。</li>
+
+    <li>单击<span class="buttonbox"><img width="14" alt="replace-find button" src="../Images/replace-find.png"/></span>，搜索并高亮显示第一个匹配项。</li>
+
+    <li>单击<span class="buttonbox"><img width="14" alt="replace-find button" src="../Images/replace-find.png"/></span>替换匹配项，然后自动查找并高亮显示下一个匹配项。</li>
+  </ul>
 
   <div class="tip">
-    <p class="tiptext">You can safely use Replace/Find instead of Find if no text is selected since it will act just like Find until a match is highlighted.</p>
+    <p class="tiptext">如果没有选中文本，可放心使用 替换/查找 代替 查找，因为在高亮显示匹配项之前，两者的行为完全一致。</p>
   </div>
 
-  <h4 class="sigil_not_in_toc">Replace All ( <img width="24" alt="replace all button" src="../Images/replace-all.svg"/> )</h4>
+  <h4 class="sigil_not_in_toc">全部替换（<img width="24" alt="replace all button" src="../Images/replace-all.png"/>）</h4>
 
-  <p>Replaces all text matching your search term with your replace term, according to your settings. This is done all at once automatically.</p>
-  
+  <p>按当前设置，将所有匹配搜索词的文本替换为替换词，自动一次性完成。</p>
+
+  <div class="tip">
+    <p class="tiptext">全部替换 无法撤销——请先保存，或创建<a href="../Text/checkpoints.xhtml">检查点</a></p>
+  </div>
+
+  <p>要执行全部替换：</p>
+
+  <ul>
+    <li>在 查找 框中输入要查找的文本。</li>
+
+    <li>在 替换 框中输入要替换成的文本。</li>
+
+    <li>单击<span class="buttonbox"><img width="14" alt="replace all button" src="../Images/replace-all.png"/></span>，一次性替换所有匹配项。</li>
+  </ul>
+
+  <p>全部替换 始终从文件开头开始替换。</p>
+
+  <div class="tip">
+    <p class="tiptext">为避免意外，请先用 计算全部匹配 测试查找与替换字符串，确认匹配数量在预期范围内；也可先用简单的 替换 试几次。</p>
+
+    <p class="tiptext">从 Sigil-1.9.10 开始，可用 模拟运行替换全部 工具，在实际替换前先在表格中安全预览所有潜在替换结果。</p>
+
+    <p class="tiptext">执行 全部替换 前，请先保存书籍或创建检查点，事后再检查是否有问题。</p>
+
+    <p class="tiptext">执行 全部替换 前，请确认模式设为 当前文件 还是 所有 HTML 文件。</p>
+  </div>
+
+  <h4 class="sigil_not_in_toc" id="count_all">计算全部匹配（<img width="24" alt="count-all button" src="../Images/count-all.png"/>）</h4>
+
+  <p>统计 查找 文本框中的搜索词在所选文件中出现的次数，结果显示在查找与替换窗口右下角。计算全部匹配 遵循所有 模式 设置（包括 向上/向下）及 循环 选项。</p>
+
+  <p>要统计所选文件中的所有匹配项：</p>
+
+  <ul>
+    <li>在 查找 框中输入要查找的文本。</li>
+
+    <li>单击<span class="buttonbox"><img width="14" alt="count-all button" src="../Images/count-all.png"/></span>。</li>
+  </ul>
+
+  <div class="tip">
+    <p class="tiptext">执行 全部替换 前，建议先用 全部计数 确认替换数量符合预期。全部替换 之后也应再运行一次，以防替换操作产生了新的匹配项。也可改用新的 模拟运行替换全部 工具（见下文）。</p>
+  </div>
+
+  <h4 class="sigil_not_in_toc">模拟运行替换全部（<span class="shortcut">SHIFT + <img width="24" alt="Shift + count-all button" src="../Images/count-all.png"/></span>）（Sigil 1.9.10 新增）</h4>
+
+  <p>编写查找与替换的正则表达式时，往往难以判断查找字符串能否准确命中所需内容、排除无关内容。此表格以试运行方式，在上下文中显示当前查找与替换内容的匹配结果，不会实际更改任何内容。匹配项“之前”和“之后”显示的上下文长度（按字符计）可自行调节。按住 Shift 单击 计算全部匹配 按钮即可启动此工具。</p>
+
+  <div>
+    <img alt="Dry Run Replace All" src="../Images/dry-run-replace-dialog.png"/>
+  </div>
+
+  <p>模拟运行替换全部 可安全试验搜索词，查看哪些最为有效。双击表格中任意一行，代码视图 会显示该匹配项的确切上下文，便于进一步检查或编辑。借此可确认“查找并全部替换”操作完全符合预期。若底层文本的更改影响了表格内容，可随时单击 刷新 按钮重建表格。</p>
+
+  <p>要创建模拟运行替换全部表格：</p>
+
+  <ul>
+    <li>在 查找 框中输入要查找的文本。</li>
+
+    <li>在 替换 框中输入要替换成的文本。</li>
+
+    <li>单击<span class="shortcut">SHIFT + <img width="14" alt="count-all" src="../Images/count-all.png"/></span>。</li>
+  </ul>
+
+  <h4 class="sigil_not_in_toc">过滤替换（<span class="shortcut">SHIFT + <img width="24" alt="replace-all button" src="../Images/replace-all.png"/></span>）（Sigil 1.9.10 新增）</h4>
+
+  <p>此工具可帮助更有效地使用查找与全部替换：在上下文中列出所有匹配项，并在相同上下文中显示每处替换结果。匹配项“之前”和“之后”显示的上下文长度（按字符计）可自行调节。</p>
+
+  <div>
+    <img alt="Replace-Delete-Unwanted" src="../Images/replace-delete-unwanted.png"/>
+  </div>
+
+  <p>若发现不需要的匹配项（即不希望执行的替换），可在表格中选中该行，取消勾选，将改行从替换队列中移除。移除所有多余匹配项后，单击 应用更改 按钮，即只执行表格中剩余的更改。</p>
+
+  <p>过滤替换 可降低误替换的风险，使 全部替换 更安全。</p>
+
+  <p>要创建过滤替换表格：</p>
+
+  <ul>
+    <li>在 查找 框中输入要查找的文本。</li>
+
+    <li>在 替换 框中输入要替换成的文本。</li>
+
+    <li>单击<span class="shortcut">SHIFT + <img width="14" alt="replace-all" src="../Images/replace-all.png"/></span>。</li>
+  </ul>
+
+  <h3 class="sigil_not_in_toc" id="find_what">搜索模式</h3>
+
+  <p>Sigil 提供三个下拉菜单，包含不同的搜索模式，便于更精细地控制搜索。</p>
+
+  <h4 id="sigil_toc_id_29">搜索内容</h4>
+
+  <ul>
+    <li><p><span class="listheading">正常：</span>按 查找 框中输入的内容搜索，但忽略大小写，例如“A”和“a”视为同一个字母。</p></li>
+
+    <li><p><span class="listheading">区分大小写：</span>按 查找 框中输入的内容搜索，例如“A”和“a”视为不同的字母。</p></li>
+
+    <li><p><span class="listheading">正则表达式：</span>正则是“正则表达式”的缩写。正则模式可按模式搜索，而不局限于确切的单词或字符。正则功能强大，也是用 Sigil 处理电子书的主要优势之一。例如搜索“Page [0-9]+”，可查找“Page ”后跟一个或多个数字的内容。</p>
+
     <div class="tip">
-    <p class="tiptext">You cannot undo a Replace All – save first! Or create a <a href="checkpoints.xhtml">Checkpoint</a></p>
-  </div>
+      <p class="tiptext">参见<a href="../Text/tutorial_regex_reference.xhtml">正则表达式</a>一章，了解使用正则的更多细节。</p>
+    </div></li>
+  </ul>
 
-	 <p>To replace all:</p>
+  <h4 class="sigil_not_in_toc">在哪里搜索</h4>
 
-	  <ul>
-		<li>Enter the text to find in the Find box.</li>
+  <ul>
+    <li><p><span class="listheading">当前文件：</span>仅在代码视图当前标签页文件中搜索。支持所有文件类型，包括 HTML、XHTML、CSS、OPF、NCX。</p>
 
-		<li>Enter the text you want to replace it with in the Replace box.</li>
+    <p>若搜索到达文件末尾且已开启 循环，会自动循环到文件另一端继续搜索。此时屏幕会闪现箭头图标，提示搜索已循环。</p>
 
-		<li>Click <span class="buttonbox"><img width="14" alt="replace all button" src="../Images/replace-all.svg"/></span> to replace all matches in one go.</li>
-	  </ul>
+    <div class="tip">
+      <p class="tiptext">要临时只在当前文件中搜索，可在单击操作按钮时按住<span class="shortcut">Ctrl</span>键（Mac 上：<span class="shortcut">Cmd</span>键）。模式设为 所有 HTML 文件 时，用此法搜索单个样式表很方便。</p>
+    </div></li>
 
-  <p>Replace All always replaces from the start of a file.</p>
+    <li><p><span class="listheading">所有 HTML 文件：</span>在每个 HTML/XHTML 文件中搜索——但不在其他文件类型（如 CSS、OPF 或 NCX）中搜索。</p>
 
-  <div class="tip">
-    <p class="tiptext">To avoid unpleasant surprises, test your find and replace string using Count All to see if the number of matches is in the expected range. You can also tests with a simple Replace a few times.</p>
+    <p>当搜索到达文件的末尾或开头时，会自动移动到下一个或上一个文件（按书籍浏览器中列出的顺序）。搜索多个文件时，<b>循环</b>不适用。</p></li>
 
-<p class="tiptext"> Starting with Sigil-1.9.10 you can use the Dry-Run Replace All tool to safely see all of the potential replacements in one table before actually performing any replacements.</p>
+    <li><p><span class="listheading">选中的 HTML 文件：</span>仅搜索在书籍浏览器中选中的 HTML 文件。</p>
 
-    <p class="tiptext">Save your book or create a Checkpoint before a Replace All and check it for issues afterward.  </p>
+    <p>当搜索到达文件的末尾或开头时，会自动移动到下一个或上一个选中的文件（按书籍浏览器中列出的顺序）。搜索多个文件时，<b>循环</b>不适用。</p></li>
 
-    <p class="tiptext">Before executing a Replace All, check if your mode is set for Current File or All HTML Files.</p>
-  </div>
+    <li><p><span class="listheading">标签页中的 HTML 文件：</span>仅搜索在标签管理器中以标签页形式打开的 HTML 文件。</p>
 
-  <h4 class="sigil_not_in_toc" id="count_all">Count All ( <img width="24" alt="count-all button" src="../Images/count-all.svg"/> )</h4>
-  
-  <p>Counts the number of times the search term you entered in the Find text box occurs in the selected files, then displays the results in the lower right corner of the Find &amp; Replace window. Count All uses all Mode settings including Up/Down, plus the Wrap option.</p>
+    <p>当搜索到达文件的末尾或开头时，会自动移动到下一个或上一个选中的文件（按标签管理器中打开的顺序）。搜索多个文件时，<b>循环</b>不适用。</p></li>
 
-	 <p>To count all matches in the selected files:</p>
+    <li><p><span class="listheading">所有 CSS 文件：</span>在每个 CSS 文件中搜索——但不在其他文件类型（如 HTML、OPF 或 NCX）中搜索。</p>
 
-	  <ul>
-		<li>Enter the text to find in the Find box.</li>
+    <p>当搜索到达文件的末尾或开头时，会自动移动到下一个或上一个文件（按书籍浏览器中列出的顺序）。搜索多个文件时，<b>循环</b>不适用。</p></li>
 
-		<li>Click <span class="buttonbox"><img width="14" alt="count-all button" src="../Images/count-all.svg"/></span>.</li>
-	  </ul>
+    <li><p><span class="listheading">选中的 CSS 文件：</span>仅搜索在书籍浏览器中选中的 CSS 文件。</p>
 
-  <div class="tip">
-    <p class="tiptext">It’s a good idea to use Count All before doing a Replace All to confirm that the number of replacements will be what you expect. You should also run it after a Replace All in case the particular search and replace created new matches. Alternatively use the new Dry Run Replace All tool (see next).</p>
-  </div>
+    <p>当搜索到达文件的末尾或开头时，会自动移动到下一个或上一个选中的文件（按书籍浏览器中列出的顺序）。搜索多个文件时，<b>循环</b>不适用。</p></li>
 
-  <h4 class="sigil_not_in_toc">Dry Run Replace All ( SHIFT + <img width="24" alt="Shift + count-all button" src="../Images/count-all.svg"/> ) (New in Sigil 1.9.10)</h4>
+    <li><p><span class="listheading">标签页中的 CSS 文件：</span>仅搜索在标签管理器中以标签页形式打开的 CSS 文件。</p>
 
-  <p>Often when crafting regular expression for Find and Replace, it is difficult to know if your find string will properly detect the cases you want while excluding the cases you do not want.  This table shows the results of a trial dry-run of your current find and replace terms in context. No actual replacements/changes are ever made. The amount of context both "before" and "after" a match (in characters) can be controlled by the user. This tool can by launched by Shift clicking on the Count-All button.</p>
+    <p>当搜索到达文件的末尾或开头时，会自动移动到下一个或上一个选中的文件（按标签管理器中打开的顺序）。搜索多个文件时，<b>循环</b>不适用。</p></li>
 
-<div><img alt="Dry Run Replace All" src="../Images/dry-run-replace-dialog.png"/></div>
+    <li><p><span class="listheading">OPF File:</span>仅搜索 OPF 文件。</p>
 
-<p>Dry Run Replace All allows the user to safely experiment with their search terms to see which if any would be most effective.  Any row in the table can be double-clicked and the exact context for that particular match will be brought up in CodeView for the user to examine in more detail or to edit.  This way a user can verify that a find replace all sequence will do exactly what they expect it to do. If the user makes changes to the underlying text that will impact the table, the user can click on the "Refresh" button at any time to force the table to be rebuilt.</p>
-  
-	 <p>To create a Dry Run Replace All Table:</p>
+    <p>在 OPF 文件中使用 替换 须格外小心，因为它实际上是 EPUB 的核心，几乎影响所有功能。请务必先创建检查点或保存文件。</p></li>
 
-	  <ul>
-		<li>Enter the text to find in the Find box.</li>
+    <li><p><span class="listheading">NCX 文件：</span>仅搜索 EPUB2 和 EPUB3 中的 NCX 文件（如果存在）</p></li>
 
-		<li>Enter the text you want to replace it with in the Replace box.</li>
+    <li><p><span class="listheading">标记的文本：</span>这是特殊选项，仅在标记文本后显示。要将搜索范围限定在某段文本内，请先在代码视图中选中部分文本，再选择菜单项 <span class="menuitem">搜索=&gt;标记选中的文本</span>，或使用右键菜单中的 <span class="menuitem">标记选中的文本</span>。</p>
 
-		<li>Click <span class="buttonbox">SHIFT + <img width="14" alt="count-all" src="../Images/count-all.svg"/></span>.</li>
-	  </ul>
+    <p>未选中文本时再次执行该菜单项，即可取消文本标记。使用撤销、输入任意文本或切换标签页，也会取消标记。仅使用 替换 或 全部替换 时，标记保持有效，但标记内容会随替换更新。</p></li>
 
+    <li><p><span class="listheading">选中的 SVG 文件：</span>仅搜索当前在书籍浏览器中选中的 SVG 图像文件。</p></li>
 
-  <h4 class="sigil_not_in_toc">Filter Replacements ( SHIFT + <img width="24" alt="replace-all button" src="../Images/replace-all.svg"/> ) (New in Sigil 1.9.10)</h4>
+    <li><p><span class="listheading">选中的 javascript 文件：</span>仅搜索当前在书籍浏览器中选中的 javascript 文件。</p></li>
 
-  <p>This tool helps users use Find and Replace All more effectively. It lists all of the matches found in context and shows each replacement in that same context.  The amount of context both "before" and "after" a match (in characters) can be controlled by the user.</p>
+    <li><span class="listheading">Selected Misc XML files:</span><span class="listheading">选中的 Misc XML 文件：</span>仅搜索当前在书籍浏览器 Misc 文件夹内选中的 XML 文件。目前包括下列媒体类型的纯 XML 文件：
 
-<div><img alt="Replace-Delete-Unwanted" src="../Images/replace-delete-unwanted.png"/></div>
+    <ul>
+      <li>application/ttml+xml</li>
 
-<p>If the user sees a match that is unwanted – i.e. they do not want that replacement to be made, they can select that match's row in the table and use the delete key or select delete on the pop-up menu to remove it.  When all unwanted matches have been found and deleted, the user can then use the "Apply Changes" button to have just the changes remaining in the table made.</p>
+      <li>application/smil+xml</li>
 
-<p>Filter Replacements allows the user to more safely use Replace All by lowering the risk or undesirable replacements.</p>
-  
-	 <p>To create a Filter Replacements Table:</p>
+      <li>application/smil</li>
 
-	  <ul>
-		<li>Enter the text to find in the Find box.</li>
+      <li>application/pls+xml</li>
 
-		<li>Enter the text you want to replace it with in the Replace box.</li>
+      <li>application/oebps-page-map+xml</li>
 
-		<li>Click <span class="buttonbox">SHIFT + <img width="14" alt="replace-all" src="../Images/replace-all.svg"/></span>.</li>
-	  </ul>
+      <li>application/vnd.adobe-page-map+xml</li>
 
+      <li>application/adobe-page-template+xml</li>
 
-  <h3 class="sigil_not_in_toc" id="find_what">Search Modes</h3>
-  
-  <p>Sigil provides three dropdown menus containing different search modes to give you greater control over your search.</p>
-  
-  <h4 id="sigil_toc_id_29">What to Search For</h4>
-  
-  		<ul>
-  			<li><p><span class="listheading">Normal:</span> Search for exactly what you type in the Find box except ignore case, e.g. “A” and “a” will be considered the same letter.</p></li>
-  			
-  	  		<li><p><span class="listheading">Case Sensitive:</span> Search for exactly what you type in the Find box, e.g. “A” and “a” will be considered different letters.</p></li>
-  	  		
-  			<li><p><span class="listheading">Regex:</span> Short for “Regular Expression”, Regex mode allows you to search for patterns instead of exact words or characters. Regex is very powerful and one of the main benefits of using Sigil to work with ebooks. For instance, you can search for “Page [0-9]+” which will find “Page ” followed by one or more numbers.</p>
-  			
-  			  <div class="tip">
-				<p class="tiptext">See the <a href="tutorial_regex_reference.xhtml">Regular Expressions</a> chapter for more details about using regex.</p>
-			  </div>
-			</li>
-  		</ul>
+      <li>application/vnd.adobe-page-template+xml</li>
 
-  <h4 class="sigil_not_in_toc">Where to Search</h4>
-  
-  	<ul>
-  		<li><p><span class="listheading">Current File:</span> Search only in the file displayed in the Code View window. You can search all file types, including HTML, XHTML, CSS, OPF, NCX.</p>
+      <li>application/xml</li>
 
-  			<p>If your search reaches the end of the file and Wrap is turned on, it will automatically wrap around and search from the other end of the file. A small picture of an arrow will flash on the screen to indicate that the search wrapped around.</p>
-  			
-  			  <div class="tip">
-    			<p class="tiptext">To temporarily run the search on the Current File only, hold the <span class="shortcut">Ctrl</span> key down (on Mac: <span class="shortcut">Cmd</span> key) while clicking on an action button. This is useful if you want to search a stylesheet while the mode is set on All HTML Files.</p>
-  			</div>
-		</li>
+      <li>text/xml</li>
+    </ul></li>
+  </ul>
 
-  		<li><p><span class="listheading">All HTML Files:</span> Search in every HTML/XHTML file – but do not search in other file types, such as CSS, OPF or NCX.</p>
+  <h4 class="sigil_not_in_toc">搜索方向</h4>
 
-  			<p>When a search reaches the end or beginning of a file, it will automatically move to the next or previous file (in the order listed in the Book Browser). <b>Wrap</b> does not apply when searching multiple files.</p></li>
+  <ul>
+    <li><p><span class="listheading">向前：</span>从当前文档位置向上搜索，查找搜索词的上一个出现位置。</p></li>
 
-  		<li><p><span class="listheading">Selected HTML Files:</span> Search only the HTML files selected in the Book Browser.</p>
+    <li><p><span class="listheading">向后：</span>从当前文档位置向下搜索，查找搜索词的下一个出现位置。</p></li>
+  </ul>
 
-  			  <p>When a search reaches the end or beginning of a file, it will automatically move to the next or previous selected file (in the order listed in the Book Browser). <b>Wrap</b> does not apply when searching multiple files.</p></li>
-  		
-        <li><p><span class="listheading">Tabbed HTML Files:</span> Search only the HTML files that are open as Tabs in the Tab Manager.</p>
+  <h3 class="sigil_not_in_toc">搜索选项</h3>
 
-  			  <p>When a search reaches the end or beginning of a file, it will automatically move to the next or previous selected file (in the order opened in the Tab Manager). <b>Wrap</b> does not apply when searching multiple files.</p></li>
+  <p>选项 菜单提供正则模式下的实用开关，另有一个复选框，用于控制当前文件的 循环 开启或关闭。</p>
 
-   		<li><p><span class="listheading">All CSS Files:</span> Search in every CSS file – but do not search in other file types, such as HTML, OPF or NCX.</p>
-
-  			<p>When a search reaches the end or beginning of a file, it will automatically move to the next or previous file (in the order listed in the Book Browser). <b>Wrap</b> does not apply when searching multiple files.</p></li>
-
-  		<li><p><span class="listheading">Selected CSS Files:</span> Search only the CSS files selected in the Book Browser.</p>
-
-  			  <p>When a search reaches the end or beginning of a file, it will automatically move to the next or previous selected file (in the order listed in the Book Browser). <b>Wrap</b> does not apply when searching multiple files.</p></li>
-  		
-        <li><p><span class="listheading">Tabbed CSS Files:</span> Search only the CSS files that are open as Tabs in the Tab Manager.</p>
-
-  			  <p>When a search reaches the end or beginning of a file, it will automatically move to the next or previous selected file (in the order opened in the Tab Manager). <b>Wrap</b> does not apply when searching multiple files.</p></li>
- 			
-  		<li><p><span class="listheading">OPF File:</span> Search only the OPF file.</p>
-  			  <p>Special care must be used when using Replace in the OPF file as it is effectively the heart of the epub and controls pretty much everything. The importance of Checkpoints or saving the file first can not be overstated.</p></li>
-
-  		<li><p><span class="listheading">NCX File:</span> Search only the NCX file in EPUB2 and EPUB3 if one exists </p></li>
-
-  		<li><p><span class="listheading">Marked Text:</span> This is a special option that is only shown when you mark text. To restrict your search to a portion of text, first select some text in Code View, then go to menu item <span class="menuitem">Search=&gt;Mark Selected Text</span> or use right-click context menu <span class="menuitem">Mark Selected Text</span>.</p>
-
-		  <p>Text can be unmarked by using the menu item again without a selection. Text will also be unmarked if you use Undo, type any text, or change tabs. If you just use Replace or Replace All, the marked text will remain marked, but it will be revised according to your replacement.</p></li>
-
-
-      <li><p><span class="listheading">Selected SVG files</span>: Search only in the set of SVG image files currently selected in the Book Browser.</p></li>
-
-      <li><p><span class="listheading">Selected Javascript files</span>: Search only in the set of javascript files currently selected in the Book Browser.</p></li>
-
-      <li><span class="listheading">Selected Misc XML files</span>: Search only in the set of XML files currently selected inside the Misc folder in the Book Browser. Currently this includes pure XML files with any of the following media types:
-      <ul>
-        <li>application/ttml+xml</li>
-        <li>application/smil+xml</li>
-        <li>application/smil</li>
-        <li>application/pls+xml</li>
-        <li>application/oebps-page-map+xml</li>
-        <li>application/vnd.adobe-page-map+xml</li>
-        <li>application/adobe-page-template+xml</li>
-        <li>application/vnd.adobe-page-template+xml</li>
-        <li>application/xml</li>
-        <li>text/xml</li>
-      </ul>
-      </li>
-
-	</ul>
- 
-  <h4 class="sigil_not_in_toc">Search Direction</h4>
-  
-  	<ul>
-  		<li><p><span class="listheading">Up:</span> Search from your position in the document upwards and find the previous occurrence of your search.</p></li>
-  		
-  		<li><p><span class="listheading">Down:</span> Search from your position in the document downwards and find the next occurrence of your search.</p></li>
-	</ul>
- 
- 
-  <h3 class="sigil_not_in_toc">Search Options</h3>
-
-  <p>The Options menu offers useful switches when using Regex mode, as well as a checkbox to control whether Wrap in the Current File is turned on or off.</p>
-  
   <div class="image">
     <img alt="Find and Replace Dialog showing options." src="../Images/find-replace-options.png"/>
   </div>
 
-
-  <p>Regular Expression Search Options include:</p>
-  
-	<ul>
-		<li><p><span class="listheading">DotAll:</span> This regex option prepends (?s) to all regex searches and is used when you want .* to match any character, even across lines.</p></li>
-
-		<li><p><span class="listheading">Minimal Match:</span> This regex option prepends (?U) to all regex searches and is used when you want a pattern to match the shortest occurrence instead of the longest match.</p></li>
-
-		<li><p><span class="listheading">Auto-Tokenise:</span> When using <span class="shortcut">Ctrl-F</span> (on Mac: <span class="shortcut">Cmd-F</span>) on selected text to copy it into the Find box, this will convert spaces to \s and escape certain characters so they are suitable for regex.</p></li>
-
-       <li><p><span class="listheading">Unicode Property</span>: Tells search that you want to treat all regex character placeholders with their unicode property equivalents. See Regex documentation for the flag: (*UCP)</p></li>
-
-   </ul>
-
-  <p>Other General Search Options</p>
-
-   <ul>		
-		<li><p><span class="listheading">Wrap:</span> When enabled in Current File mode, if your search reaches the end of the file, it will automatically wrap around to the beginning of the file to continue the search (or the reverse if searching Up). When disabled, searches will stop at the end of the file (or the beginning if searching Up).</p>
-
-  			<p>When searching in a mode that uses multiple files, when your search reaches the last file (in the order listed in the Book Browser), you will need to use the <span class="buttonbox">Restart</span> button otherwise the search will stop. <b>Wrap</b> does not apply when searching multiple files.</p></li>
-
-		<li><p><span class="listheading">Text:</span> When enabled in any mode, if searching XHTML files, it will match only text outside of &lt; XHTML tags &gt;. This option has no effect when not searching in XHTML files.</p>
-
-           <p>This is can be useful when doing find and replace on words that can incidentally be valid XHTML attributes, attribute values, or tag names that you no want to replace.</p>
-       </li>
-
-	</ul>
-
-
-  <h3 class="sigil_not_in_toc">Context Menu</h3>
-
-  <p>If you right-click on the Find or Replace box, it will bring up a context menu with the following options:</p>
+  <p>正则表达式搜索选项包括：</p>
 
   <ul>
-    <li><p><span class="listheading"><i>Saved Searches</i>:</span> At the top of the context menu will be a list of your Saved Searches (see <a href="saved_searches.xhtml">Saved Searches</a> chapter for more information). Selecting one will load it into the Find &amp; Replace window.</p></li>
+    <li><p><span class="listheading">覆盖全部：</span>此正则选项会在所有正则搜索前添加 (?s)，使 .* 可匹配任意字符（包括换行）。</p></li>
 
-    <li><p><span class="listheading">Save Search:</span> Save the current Find &amp; Replace search to Saved Searches.</p></li>
+    <li><p><span class="listheading">懒惰匹配：</span>此正则选项会在所有正则搜索前添加 (?U)，使模式匹配最短结果而非最长结果。</p></li>
 
-    <li><p><span class="listheading">Tokenise Selection:</span> Convert spaces to \s and escape certain characters.</p></li>
+    <li><p><span class="listheading">自动转义：</span>使用<span class="shortcut">Ctrl+F</span>（Mac 上：<span class="shortcut">Cmd+F</span>）将选中文本复制到 查找 框时，会把空格转换为 \s 并转义某些字符，使其适合正则搜索。</p></li>
 
-    <li><p><span class="listheading">Clear Find Replace History:</span> Clears out the all recent history or previous Find and Replace values.</p></li>
+    <li><p><span class="listheading">Unicode 属性：</span>启用后，所有正则字符占位符将按其对应的 Unicode 属性处理。标志说明参见正则表达式文档：(*UCP)</p></li>
   </ul>
 
+  <p>其他通用搜索选项</p>
 
-  <h3 class="sigil_not_in_toc">Handling Special Characters in Find and Replace</h3>
+  <ul>
+    <li><p><span class="listheading">循环：</span>在当前文件模式下启用时，如果搜索到达文件末尾，会自动循环到文件开头继续搜索（向上搜索时则相反）。禁用时，搜索会在文件末尾（向上搜索时是开头）停止。</p>
 
-  As some characters are hard for many keyboards to produce easily, Find and Replace now supports using hex escape codes to allow the user to specify a character by its 4-digit hexadecimal numeric code.
+    <p>使用多文件模式搜索时，搜索到达最后一个文件（按书籍浏览器中的顺序）后，需单击<span class="buttonbox">重新开始</span>按钮，否则搜索将停止。搜索多个文件时，<b>循环</b>不适用。</p></li>
 
-  <p>The format is \x{hhhh} where each "h" represents the a single hexadecimal value – 0 to 9 and A to F.</p>
+    <li><p><span class="listheading">文本：</span>在任何模式下启用时，如果搜索的是 XHTML 文件，只会匹配 &lt;XHTML 标签&gt; 之外的文本。搜索非 XHTML 文件时该选项无效。</p>
 
-  <p>For example: to replace all non-breaking space (nbsp) characters which have a character code 160 you could use: \x{00A0} to represent that character.</p>
+    <p>若要查找替换的单词恰好是有效的 XHTML 属性、属性值或标签名，又不想替换这些标签内容，此选项会很有用。</p></li>
+  </ul>
+
+  <h3 class="sigil_not_in_toc">上下文菜单</h3>
+
+  <p>右键单击 查找 框或 替换 框会弹出包含以下选项的上下文菜单：</p>
+
+  <ul>
+    <li><p><span class="listheading"><i>搜索模板：</i></span>上下文菜单顶部列出已保存的搜索模板（详见<a href="../Text/saved_searches.xhtml">搜索模板</a>一章）。选择某一项即可加载到查找与替换窗口。</p></li>
+
+    <li><p><span class="listheading">保存搜索：</span>把当前的查找与替换搜索保存到搜索模板中。</p></li>
+
+    <li><p><span class="listheading">分词选中内容：</span>把空格转换为 \s 并转义某些字符。</p></li>
+
+    <li><p><span class="listheading">清除查找替换历史记录：</span>清除所有近期的历史记录及此前使用过的查找与替换值。</p></li>
+  </ul>
+
+  <h3 class="sigil_not_in_toc">在查找与替换中处理特殊字符</h3>
+
+  <p>某些字符在多数键盘上难以直接输入，因此查找与替换现支持十六进制转义代码，可通过 4 位十六进制数字编码指定字符。</p>
+
+  <p>格式为 \x{hhhh}，其中每个“h”代表一个十六进制值——0 到 9 和 A 到 F。</p>
+
+  <p>例如：要替换字符编码为 160 的不换行空格（nbsp），可用 \x{00A0} 表示该字符。</p>
 </body>
 </html>

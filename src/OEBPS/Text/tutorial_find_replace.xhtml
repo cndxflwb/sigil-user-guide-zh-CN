@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Edit an EPUB</title>
+  <title>编辑 EPUB</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 title="Edit With Find &amp; Replace">Edit With Find &amp; Replace</h2>
+  <h2 title="Edit With Find &amp; Replace">使用查找与替换编辑</h2>
 
-  <p>In Sigil, Find &amp; Replace can be used to find any text in any of your files. And even more important, it can be used to change text – but only in Code View.</p>
+  <p>在 Sigil 中，查找与替换可以用来查找任何文件中的任意文字。更重要的是，它还可以用来修改文字——但只能在代码视图中使用。</p>
 
-  <p>To open the Find &amp; Replace, use <span class="menuitem">Search=&gt;Find &amp; Replace</span> or its shortcut. The Find &amp; Replace window will open just below your editing window, and will stay there until you close it.</p>
+  <p>要打开查找与替换，请使用菜单项 <span class="menuitem">搜索=&gt;查找与替换</span> 或其快捷键。查找与替换窗口会在编辑窗口正下方打开，并一直保持显示，直到关闭。</p>
 
   <div class="image">
     <img alt="Find-replace window with Options hidden" src="../Images/find-replace-basic.png"/>
   </div>
 
   <div class="tip">
-    <p class="tiptext">The Find and Replace text boxes are where you enter what to look for and change. The buttons on the right (Find, Replace, Restart, Replace/Find, Replace All, and Count All) are used to run your search. The Mode dropdown boxes on the bottom allow you to change what to search for, where to search, and which direction to search in.</p>
+    <p class="tiptext">“查找”和“替换”文本框分别用于输入要查找的内容和要替换成的内容。右侧的按钮（查找、替换、重新开始、替换/查找、替换所有和计数所有）用于执行搜索。底部的模式下拉框可以更改搜索内容、搜索位置以及搜索方向。</p>
 
-    <p class="tiptext">Each dropdown and button has a tooltip with more details.</p>
+    <p class="tiptext">每个下拉框和按钮都有包含更多详情的工具提示。</p>
   </div>
 
-  <h3 class="sigil_not_in_toc">Using Find &amp; Replace</h3>
+  <h3 class="sigil_not_in_toc">使用查找与替换</h3>
 
-  <p>To make a simple change enter some text to search for in the Find box, and in the Replace box enter the new text to replace it with:</p>
+  <p>要进行简单的修改，请在查找框中输入要搜索的文字，并在替换框中输入用来替换的新文字：</p>
 
   <div class="image">
     <img alt="Find and Replace dialog filled in and ready to start search" src="../Images/tutorial-find-start.png"/>
   </div>
 
-  <p>Click on <span class="buttonbox">Count All</span> <img width="20" src="../Images/count-all.svg" alt="count-all button"/> to show how many matches there are for the text in the Find box (Count and Find ignore what is in the Replace box):</p>
+  <p>点击<span class="buttonbox">计数所有</span> <img class="toolbar-icon" src="../Images/count-all.png" alt="count-all button"/>，显示查找框中文字的匹配数量（统计和查找会忽略替换框中的内容）：</p>
 
   <div class="image">
     <img alt="Getting the Find count." src="../Images/tutorial-find-count.png"/>
   </div>
 
-  <p>You’ll notice that you switched to Code View if you weren’t already using it! This is because all major searches are done in Code View. You should stay in Code View for this tutorial.</p>
+  <p>你会发现，如果之前不在代码视图，现在已经自动切换过去了！这是因为主要搜索都在代码视图中完成。本教程中请一直留在代码视图。</p>
 
-  <p>Note that the number of matches is shown on the bottom right.</p>
+  <p>注意，匹配数量会显示在右下角。</p>
 
-  <p>Now click on <span class="buttonbox">Find</span> <img width="20" src="../Images/find.svg" alt="find button"/>. The next occurrence of the word in the Find box will be highlighted:</p>
+  <p>现在点击<span class="buttonbox">查找</span> <img class="toolbar-icon" src="../Images/find.png" alt="find button"/>。查找框中文字的下一处出现位置将高亮显示：</p>
 
   <div class="image">
     <img alt="Using the Find button." src="../Images/tutorial-find-the.png"/>
   </div>
 
-  <p>Click on <span class="buttonbox">Replace</span> <img width="20" src="../Images/replace.svg" alt="replace button"/> – this changes the text to what is in the Replace box and leaves the new text highlighted:</p>
+  <p>点击<span class="buttonbox">替换</span> <img class="toolbar-icon" src="../Images/replace.png" alt="replace button"/>——这会把文字改成替换框中的内容，并保持新文字处于高亮状态：</p>
 
   <div class="image">
     <img alt="Finding text" src="../Images/tutorial-find-test.png"/>
   </div>
 
-  <p>To make it a little easier to find and replace one occurrence after another, you can use the <span class="buttonbox">Replace/Find</span> <img width="20" src="../Images/replace-find.svg" alt="replace-find button"/> button. When you click on this button Sigil will replace the selected text if it matches, and then find and highlight the next match.</p>
+  <p>为了更轻松地逐个查找并替换，你可以使用<span class="buttonbox">替换/查找</span> <img class="toolbar-icon" src="../Images/replace-find.png" alt="replace-find button"/>按钮。点击该按钮时，如果选中的文字匹配，Sigil 就会替换它，然后查找并高亮显示下一个匹配项。</p>
 
-  <p>If you are satisfied that the Replace is working okay, you can use <span class="buttonbox">Replace All</span> <img width="20" src="../Images/replace-all.svg" alt="replace-all button"/>  to update all the matching text in your document at once instead of one at a time.</p>
+  <p>如果你确认替换功能工作正常，可以使用<span class="buttonbox">替换所有</span> <img class="toolbar-icon" src="../Images/replace-all.png" alt="replace-all button"/>，一次性更新文档中所有匹配的文字，而不必逐个替换。</p>
 
   <div class="tip">
-    <p class="tiptext">Always use Count All and possibly a few Replace commands before using Replace All – to make sure you have entered your find and replace strings correctly.</p>
+    <p class="tiptext">在使用全部替换之前，务必先用全部统计，并可能执行几次替换——以确保查找与替换字符串输入正确。</p>
   </div>
 
-  <p>You may have noticed the selection box containing “Current File”. If you change “Current File” to “All HTML Files”, your Find or Replace will be done across every HTML file in your EPUB:</p>
+  <p>你可能注意到了包含“当前文件”的选择框。如果把“当前文件”改成“所有 HTML 文件”，查找或替换将在 EPUB 中的每个 HTML 文件中执行：</p>
 
   <div class="image">
     <img alt="Using Find all." src="../Images/tutorial-find-all.png"/>
   </div>
 
-  <p>This is why editing in Sigil can be done quickly.</p>
+  <p>这就是为什么在 Sigil 中编辑可以如此快速。</p>
 
-  <p>The last main part of Find &amp; Replace is its ability to use Regular Expressions – but see the <a href="tutorial_advanced_find.xhtml">Advanced Find &amp; Replace</a> chapter for more details.</p>
+  <p>查找与替换最后一个主要功能是支持使用正则表达式——更多细节请参阅<a href="../Text/tutorial_advanced_find.xhtml">高级查找与替换</a>一章。</p>
 </body>
 </html>

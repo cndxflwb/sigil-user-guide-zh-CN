@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN" xmlns:xml="http://www.w3.org/XML/1998/namespace">
 <head>
-  <title>Splitting and Merging</title>
+  <title>拆分与合并</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="splitting_and_merging">Splitting and Merging</h2>
+  <h2 id="splitting_and_merging">拆分与合并</h2>
 
-  <p class="h2subheading">— Working with Chapters and Files —</p>
+  <p class="h2subheading">—处理章节与文件—</p>
 
-  <p>An EPUB could consist of one large HTML file with all of your text but that EPUB would not load on some older ebook readers and will be slower to load and edit. Imagine having to layout an entire book in order to show the very first page. For this reason well designed EPUBs consist of multiple files each containing part of your book. This makes the EPUB accessible on even older e-reading devices while at the same time greatly speeding up loading, displaying, and even editing. All of your files can be easily accessed using the <a href="book_browser.xhtml">Book Browser</a>.</p>
+  <p>EPUB 可以由一个包含所有文本的大型 HTML 文件构成，但这样的 EPUB 无法在某些较旧的电子书阅读器上加载，而且加载和编辑速度也更慢。想象一下，为了显示第一页而必须排版整本书。因此，设计良好的 EPUB 由多个文件组成，每个文件包含书籍的一部分。这使得 EPUB 即使在较旧的电子阅读设备上也能访问，同时还大大加快了加载、显示乃至编辑的速度。所有文件都可以使用<a href="../Text/book_browser.xhtml">书籍浏览器</a>轻松访问。</p>
 
-  <p>If you have loaded an large HTML file into Sigil and want to divide it into separate files or chapters, then you can use Sigil’s Split functions. And if you have several smaller files that you want to combine into a larger file, then you can use the Merge function.</p>
+  <p>如果在 Sigil 中打开了大型 HTML 文件，想把它拆分为多个独立的文件或章节，可以使用拆分功能。如果有多个较小的文件，想合并为一个较大的文件，可以使用合并功能。</p>
 
   <div class="tip">
-    <p class="tiptext">Most e-readers start each new HTML file on a new page – giving you automatic page breaks between chapters if you split your Chapters into separate files.</p>
+    <p class="tiptext">大多数电子书阅读器都会从新页面开始显示每个新的 HTML 文件——如果你把各章拆分为独立的文件，章节之间就会自动分页。</p>
   </div>
 
-  <h3 class="sigil_not_in_toc">Split One File</h3>
+  <h3 class="sigil_not_in_toc">拆分单个文件</h3>
 
-  <p>You can split a file into 2 files at your cursor position immediately by clicking the Split At Cursor button <img alt="Image of Split at Cursor icon." src="../Images/split-section.png"/> or selecting the menu item <span class="menuitem">Edit=&gt;Split At Cursor</span>.</p>
+  <p>单击 在光标处拆分 按钮<img class="toolbar-icon" alt="Image of Split at Cursor icon." src="../Images/split-section.png"/>或选择菜单项 <span class="menuitem">编辑=&gt;在光标处拆分</span>，即可立即在光标位置把一个文件拆分为 2 个文件。</p>
 
-  <p>This is the easiest way to split a single file. Simply click in your document exactly where you want the file to be split, e.g. at the beginning of a chapter name:</p>
+  <p>这是拆分单个文件最简单的方法。只需在文档中想要拆分的确切位置单击，例如章节名称的开头：</p>
 
   <div class="image">
     <img alt="Showing how to split a file." src="../Images/split-start.png"/>
   </div>
 
-  <p>Then click <img alt="Showing split at cursor icon." src="../Images/split-section.png"/> to split the file:</p>
+  <p>然后单击<img class="toolbar-icon" alt="Showing split at cursor icon." src="../Images/split-section.png"/>拆分文件：</p>
 
   <div class="image">
     <img alt="Showing result of top part of split." src="../Images/split-after1.png"/>
@@ -40,44 +40,44 @@
     <img alt="Showing result of bottom part of split." src="../Images/split-after2.png"/>
   </div>
 
-  <p>Everything from the beginning of the original file up to the point where you clicked is kept in the first file, and everything after the point you clicked on is put into a new file. Note that the first file kept its name, and a new file with a new name was created to hold the second file. You can rename and edit the files as necessary.</p>
+  <p>从原文件开头到你单击位置之间的所有内容保留在第一个文件中，单击位置之后的所有内容放入一个新文件。请注意，第一个文件保留了原名称，并创建了一个具有新名称的新文件来存放第二部分内容。你可以根据需要重命名和编辑这些文件。</p>
 
-  <h3 class="sigil_not_in_toc">Split Multiple Files</h3>
+  <h3 class="sigil_not_in_toc">拆分多个文件</h3>
 
-  <p>If you want to split several files or a large file into many files, then you can use the file marking approach.</p>
+  <p>如果你想把多个文件或一个大型文件拆分为许多文件，可以使用文件标记法。</p>
 
-  <p>1. Scroll through your file, and wherever you want a new chapter to start click in the document to set your cursor position. Then select the menu item <span class="menuitem">Insert=&gt;Split Marker</span> or its shortcut. This will insert code into your document telling Sigil to remember that you want a new chapter to begin here – you will see a horizontal line in Preview exactly where you inserted the marker:</p>
+  <p>1. 滚动浏览当前文件，在希望开始新章节的地方单击文档以设置光标位置。然后选择菜单项 <span class="menuitem">插入=&gt;拆分标记</span> 或其快捷键。这会在文档中插入一段代码，标记新章节从此处开始——预览中会在插入标记的位置显示一条水平线：</p>
 
   <div class="image">
     <img alt="Image showing a Split at Marker in place in the Code View window." src="../Images/split-marker.png"/>
   </div>
 
-  <p>2. When you have marked all your chapters, use <span class="menuitem">Edit=&gt;Split At Markers</span>. This will automatically split all of your files into as many files as you marked. If you decide not to split the file, you can delete the horizontal marker lines.</p>
+  <p>2. 标记完所有章节后，使用 <span class="menuitem">编辑=&gt;在章节标记处拆分</span>。这会自动把文件拆分为与标记数量相同的文件。如果决定不拆分文件，可以删除水平标记线。</p>
 
-  <p>Once you have split your files you can rename them. And you can even Merge some or all of them together again.</p>
+  <p>拆分文件后可以重命名它们，甚至可以把其中部分或全部文件再次合并到一起。</p>
 
   <div class="tip">
-    <p class="tiptext">You can use Find and Replace to insert split markers just before every chapter heading if you have a lot of chapters.</p>
+    <p class="tiptext">如果章节很多，可以使用查找与替换在每个章节标题前插入拆分标记。</p>
 
-    <p class="tiptext">If you split a file, any header information is copied to the new file.</p>
+    <p class="tiptext">拆分文件时，任何头部信息都会复制到新文件中。</p>
   </div>
 
-  <h3 class="sigil_not_in_toc">Merging Files</h3>
+  <h3 class="sigil_not_in_toc">合并文件</h3>
 
-  <p>If you want to combine two or more files into one file, you can use Merge.</p>
+  <p>如果你想把两个或多个文件合并为一个文件，可以使用合并功能。</p>
 
-  <p>To Merge two adjacent files, right-click on the second file and then select the menu item <span class="menuitem">Merge</span>, or select the second file and use the Merge shortcut. The second file will be merged into the first file (the file above). You will not be prompted to confirm the merge.</p>
+  <p>要合并两个相邻的文件，右键单击第二个文件并选择菜单项 <span class="menuitem">合并</span>，或者选中第二个文件并使用合并快捷键。第二个文件会合并到第一个文件（上方的文件）中。合并时不会提示确认。</p>
 
-  <p>To Merge more than two files, select all the files you want to merge, then right-click on the selection and choose <span class="menuitem">Merge</span>. You will be prompted to confirm the merge:</p>
+  <p>要合并两个以上的文件，选中所有要合并的文件，然后右键单击所选内容并选择 <span class="menuitem">合并</span>。此时会提示确认合并：</p>
 
   <div class="image">
     <img alt="Merge two files, warning dialog." src="../Images/split-merge-warning.png"/>
   </div>
 
-  <p>Once you confirm OK, your files will be combined into the first file.</p>
+  <p>确定 后，所有文件会合并到第一个文件中。</p>
 
   <div class="tip">
-    <p class="tiptext">Save your EPUB before Splitting or Merging! Or alternatively make a Checkpoint to create a restore point in case you ever need to revert.</p>
+    <p class="tiptext">在拆分或合并之前请先保存 EPUB！或者创建一个检查点作为还原坐标，以防需要恢复。</p>
   </div>
 </body>
 </html>

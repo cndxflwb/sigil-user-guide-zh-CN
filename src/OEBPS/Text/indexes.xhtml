@@ -1,182 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Indexes</title>
+  <title>索引</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="indexes">Indexes</h2>
+  <h2 id="indexes">索引</h2>
 
-  <p class="h2subheading">— Create an Index For Your Book —</p>
+  <p class="h2subheading">— 为你的书创建索引 —</p>
 
-  <p>If you want to create an Index for your book, you can use Sigil to identify what to index and then to automatically create a new HTML page containing the index.</p>
+  <p>如果你想为书创建索引，可以使用 Sigil 确定要索引的内容，然后自动创建一个包含索引的新 HTML 页面。</p>
 
-  <p>You can mark individual words in your text for indexing, or use the Index Editor to make sure every occurrence of the word is indexed.</p>
+  <p>你可以在文本中标记单个单词加入索引，也可以使用索引编辑器来确保该单词的每一次出现都被索引。</p>
 
-  <h3 class="sigil_not_in_toc">Mark Entries for Indexing</h3>
+  <h3 class="sigil_not_in_toc">标记索引条目</h3>
 
-  <p>The first way to identify entries to include in the index is to mark specific words or phrases in your text. Only the occurrence of the word or phrase you mark will be included in the Index – if you need all occurrences use the Index Editor.</p>
+  <p>确定要纳入索引的条目的第一种方法是在文本中标记特定的单词或短语。只有你标记的那个单词或短语的出现才会被纳入索引——如果你需要所有出现，请使用索引编辑器。</p>
 
-  <p>Highlight a word or phrase in Code View and then select the menu item <span class="menuitem">Tools=&gt;Index=&gt;Mark For Index</span> or its keyboard shortcut (which you can change). This will then open a prompt for you to enter how you want these words to appear in the index:</p>
+  <p>在代码视图中高亮显示一个单词或短语，然后选择菜单项 <span class="menuitem">工具=&gt;索引=&gt;标记为索引</span> 或其键盘快捷键（可以更改）。这将打开一个提示，让你输入希望这些单词在索引中的显示方式：</p>
 
   <div class="image">
     <img alt="Mark for Index dialog." src="../Images/index-mark.png"/>
   </div>
 
-  <p>The text you enter as the name to use in the Index will show up in the Index as follows:</p>
+  <p>你输入的在索引中使用的名称文本将在索引中显示如下：</p>
 
   <ul>
-    <li><span class="listheading">[blank]:</span> If you leave the name empty, then the exact words you highlighted will be used in the index.</li>
+    <li><span class="listheading">[空白]：</span>如果你将名称留空，则索引中将使用你高亮显示的确切单词。</li>
 
-    <li><span class="listheading">words:</span> If you enter a word or phrase, then that word or phrase will be used (e.g. Oak instead of oak).</li>
+    <li><span class="listheading">单词：</span>如果你输入一个单词或短语，则将使用该单词或短语（例如使用 Oak 而不是 oak）。</li>
 
-    <li><span class="listheading">heading/words:</span> If you use a “/” in the name then a hierarchical group will be created (e.g. Forest/Tree/Oak will create an entry Oak filed under Tree filed under Forest).</li>
+    <li><span class="listheading">标题/单词：</span>如果在名称中使用“/”，则会创建一个层级分组（例如 Forest/Tree/Oak 会创建一个条目 Oak，该条目归档在 Tree 下，而 Tree 归档在 Forest 下）。</li>
 
-    <li><span class="listheading">entrya;entryb:</span> If you use a “;” then multiple entries will be created for this word or phrase.</li>
+    <li><span class="listheading">条目a;条目b：</span>如果使用“;”，则会为该单词或短语创建多个条目。</li>
   </ul>
 
-  <p>When you mark text for indexing, it just adds add some Sigil-specific HTML code that tells Sigil to include these words when you create the index. In code view it might appear as follows:</p>
+  <p>当您将文本标记为索引后，它只是添加了一些 Sigil 特定的 HTML 代码，告诉 Sigil 在创建索引时包含这些词语。在代码视图中，它可能显示如下：</p>
 
   <pre class="example">&lt;a class="sigil_index_marker" title="Character/Alice"&gt;Alice&lt;/a&gt;
 </pre>
 
-  <p>If you no longer want a word or phrase to be indexed by Sigil, you will need to delete the special HTML tags around the word.</p>
+  <p>如果你不再希望某个单词或短语被 Sigil 索引，你需要删除该单词周围的特殊 HTML 标签。</p>
 
   <div class="tip">
-    <p class="tiptext">To find indexed words you can search in Code View. Or you can highlight them in Preview in color by adding the following CSS temporarily to your stylesheet:</p>
+    <p class="tiptext">要找到已索引的单词，你可以在代码视图中搜索。或者，你可以将以下 CSS 临时添加到样式表中，从而在预览中以颜色高亮显示它们：</p>
 
     <pre>[class="sigil_index_marker"] { color:#335500; }</pre>
   </div>
 
-  <h3 class="sigil_not_in_toc">Add Entries to Index Editor</h3>
+  <h3 class="sigil_not_in_toc">将条目添加到索引编辑器</h3>
 
-  <p>The second way identify words to index is to add the words to a list. Then when you create the index every occurrence of that word will be included in the index automatically. You can use words marked for indexing and a list of words to index at the same time.</p>
+  <p>识别要索引的单词的第二种方法是将单词添加到列表中。这样，在你创建索引时，该单词的每一次出现都会被自动纳入索引。你可以同时使用标记为索引的单词和要索引的单词列表。</p>
 
-  <p>To add specific words to the index list, highlight the word or phrase, and then select the menu item <span class="menuitem">Tools=&gt;Index=&gt;Add To Index Editor</span>. If your selected text includes any HTML tags, you should remove them.</p>
+  <p>要将特定单词添加到索引列表，请高亮显示该单词或短语，然后选择菜单项 <span class="menuitem">工具=&gt;索引=&gt;添加到索引编辑器</span>。如果所选文本包含任何 HTML 标签，应将其移除。</p>
 
-  <p>This will bring up the Index Editor with the word added to the list of entries to index. You can also enter words directly in the Index Editor as described below.</p>
+  <p>这将打开索引编辑器，并将该单词添加到要索引的条目列表中。你也可以按下面所述在索引编辑器中直接输入单词。</p>
 
-  <h3 class="sigil_not_in_toc">Create the Index</h3>
+  <h3 class="sigil_not_in_toc">创建索引</h3>
 
-  <p>To actually create your index once you have marked words and/or added them to the list just select the menu item <span class="menuitem">Tools=&gt;Index=&gt;Create Index</span>.</p>
+  <p>在标记单词或将它们添加到列表之后，要实际创建索引，只需选择菜单项 <span class="menuitem">工具=&gt;索引=&gt;创建索引</span>。</p>
 
-  <p>This will create or update an HTML page called <span class="shortcut">index.xhtml</span>. It will be marked with the semantic type “index”. Entries are listed alphabetically, and, using the default styling, look like this:</p>
+  <p>这将创建或更新一个名为 <span class="example">Index.xhtml</span> 的 HTML 页面。该页面会被标记为语义类型“index”。条目按字母顺序排列，使用默认样式时看起来像这样：</p>
 
   <div class="image">
     <img alt="Showing a created Index in Preview." src="../Images/index-html.png"/>
   </div>
 
   <div class="tip">
-    <p class="tiptext">You can edit the index page as with any HTML page, but if you re-create the index your changes will be over-written.</p>
+    <p class="tiptext">你可以像编辑任何 HTML 页面一样编辑索引页面，但如果你重新创建索引，新索引会覆盖你的更改。</p>
   </div>
 
-  <h4 class="sigil_not_in_toc">Custom Index Stylesheet</h4>
+  <h4 class="sigil_not_in_toc">自定义索引样式表</h4>
 
-  <p>The index page uses a separate CSS file (<span class="example">sgc-index.css</span>) to format the index. If the file already exists in your book it will not be overwritten (so you can customise it without losing your changes). But if it does not exist, it will look for <span class="example">sgc-index.css</span> in your preferences directory and use that as the default file. If there is no file in your preferences directory, then Sigil will create a default stylesheet for the index.</p>
+  <p>索引页面使用一个单独的 CSS 文件（<span class="example">sgc-index.css</span>）来格式化索引。如果该文件已经存在于你的书中，它不会被覆盖（因此你可以在不丢失更改的情况下自定义它）。但如果它不存在，则会到你的首选项文件夹中查找<span class="example">sgc-index.css</span>，并将其用作默认文件。如果你的首选项文件夹中没有该文件，那么 Sigil 会为索引创建一个默认的样式表。</p>
 
-  <h3 class="sigil_not_in_toc">Index Editor</h3>
+  <h3 class="sigil_not_in_toc">索引编辑器</h3>
 
-  <p>The Index Editor is used to manage the list of entries that will be included in the index. It does not include the words you marked for indexing – they are included automatically.</p>
+  <p>索引编辑器用于管理将纳入索引的条目列表。它不包含你标记为索引的单词——那些单词会被自动纳入。</p>
 
-  <p>To open the Index Editor select the menu item <span class="menuitem">Tools=&gt;Index=&gt;Index Editor</span> or its keyboard shortcut:</p>
+  <p>要打开索引编辑器，请选择菜单项 <span class="menuitem">工具=&gt;索引=&gt;索引编辑器</span> 或其键盘快捷键：</p>
 
   <div class="image">
     <img alt="Image of Index Editor dialog." src="../Images/index-editor.png"/>
   </div>
 
-  <h4 class="sigil_not_in_toc">Text To Include</h4>
+  <h4 class="sigil_not_in_toc">要包含的文本</h4>
 
-  <p>The “Text To Include” column is a list of patterns you want Sigil to search for in your text and then to create an Index entry for using the format in the “Index Entries” column. Entries in the “Text To Include” column can use the following formats:</p>
+  <p>“要包含的文本”列是你希望 Sigil 在文本中搜索的模式列表，然后使用“索引条目”列中的格式为其创建索引条目。“要包含的文本”列中的条目可以使用以下格式：</p>
 
   <ul>
-    <li><span class="listheading">words:</span> The words in the book must exactly match the listed words (case-sensitive). Do not include any HTML tags, just the words as they appear in Preview.</li>
+    <li><span class="listheading">单词：</span>书中的单词必须与列出的单词完全匹配（区分大小写）。不要包含任何 HTML 标签，只要预览中显示的那些单词即可。</li>
 
-    <li><span class="listheading">Regex:</span> You can enter most regex patterns – they will be match on a paragraph by paragraph basis. For example, to match words while ignoring case sensitivity you can use “<span class="example">[Gg]utenberg</span>” or “<span class="example">(?i)Gutenberg</span>”.</li>
+    <li><span class="listheading">正则表达式：</span>你可以输入大多数正则表达式模式——它们将按段落逐个匹配。例如，要在忽略大小写敏感性的情况下匹配单词，可以使用“<span class="example">[Gg]utenberg</span>”或“<span class="example">(?i)Gutenberg</span>”。</li>
   </ul>
 
   <div class="tip">
-    <p class="tiptext">You can paste text into the Text To Include field – e.g. from a file containing a list of words – and the text will be automatically split into separate entries for each line.</p>
+    <p class="tiptext">你可以将文本粘贴到 要包含的文本 字段中——例如从包含单词列表的文件中粘贴——该文本会自动按行拆分为单独的条目。</p>
 
-    <p class="tiptext">You can also use Open to open a text file of words (and entries separated by tabs).</p>
+    <p class="tiptext">你也可以使用 打开 来打开一个单词（以及用制表符分隔的条目）文本文件。</p>
   </div>
 
-  <h4 class="sigil_not_in_toc">Index Entries</h4>
+  <h4 class="sigil_not_in_toc">索引条目</h4>
 
-  <p>The “Index Entries” column is what will actually appear in the Index for words matching the “Text To Include” column.</p>
+  <p>“索引条目”列是与“要包含的文本”列匹配的单词实际显示在索引中的内容。</p>
 
-  <p>Entries in the “Index Entries” column can use the following formats:</p>
-
-  <ul>
-    <li><span class="listheading">blank:</span> If you leave the entry blank, then the words entered in the Text to Include column will be used for the entry’s name.</li>
-
-    <li><span class="listheading">words:</span> If you enter a word or phrase, then that word or phrase will be used (e.g. Oak instead of oak).</li>
-
-    <li><span class="listheading">heading/words:</span> If you use a “/” in your name then a hierarchical group will be created (e.g. Forest/Tree/Oak will create an entry Oak filed under Tree filed under Forest).</li>
-
-    <li><span class="listheading">heading/:</span> If you use a “/” at the end of the entry name, then a hierarchical group will be created and the words in the Text to Include column will be used as a sub-entry.</li>
-  </ul>
-
-  <h4 class="sigil_not_in_toc">Context Menu</h4>
-
-  <p>Most actions concerning editing clips can be done by using the context menu.</p>
-
-  <p>Select one or more entries then right-click on the selection for the following options:</p>
+  <p>“索引条目”列中的条目可以使用以下格式：</p>
 
   <ul>
-    <li><span class="listheading">Add Entry:</span> Add a blank search under the entry you clicked.</li>
+    <li><span class="listheading">空白：</span>如果你将条目留空，则 要包含的文本 列中输入的单词将用于该条目的名称。</li>
 
-    <li class="first"><span class="listheading">Edit:</span> Edit the entry.</li>
+    <li><span class="listheading">单词：</span>如果你输入一个单词或短语，则将使用该单词或短语（例如使用 Oak 而不是 oak）。</li>
 
-    <li class="first"><span class="listheading">Cut:</span> Delete one or more entries that can be pasted later.</li>
+    <li><span class="listheading">标题/单词：</span>如果在名称中使用“/”，则会创建一个层级分组（例如 Forest/Tree/Oak 会创建一个条目 Oak，该条目归档在 Tree 下，而 Tree 归档在 Forest 下）。</li>
 
-    <li><span class="listheading">Copy:</span> Copy one or more entries that can be pasted later.</li>
-
-    <li><span class="listheading">Paste:</span> Paste any cut/copied entries.</li>
-
-    <li class="first"><span class="listheading">Delete:</span> Delete entries.</li>
-
-    <li class="first"><span class="listheading">Open:</span> Replace the current Index List with entries from a file (either an index file or a text file).</li>
-
-    <li><span class="listheading">Reload:</span> Restore the list from the last saved state.</li>
-
-    <li class="first"><span class="listheading">Save As:</span> Save all entries to a file for keeping a per-book list of index entries.</li>
-
-    <li class="first"><span class="listheading">Autofill:</span> Fill the list with every word in the book.</li>
-
-    <li class="first"><span class="listheading">Select All:</span> Select all entries (for easy deletion).</li>
+    <li><span class="listheading">标题/：</span>如果在条目名称末尾使用“/”，则会创建一个层级分组，且 要包含的文本 列中的单词将用作子条目。</li>
   </ul>
 
-  <h4 class="sigil_not_in_toc">Save</h4>
+  <h4 class="sigil_not_in_toc">上下文菜单</h4>
 
-  <p>To save your entries to disk, click <span class="buttonbox">Save</span>.</p>
+  <p>大多数与编辑条目相关的操作都可以通过使用上下文菜单来完成。</p>
 
-  <p>To exit without saving your entries you can just close the window (with the close button or the <span class="shortcut">Esc</span> key). You can also use the context menu <span class="menuitem">Reload</span> to reload your entries from disk – which will delete your current entries.</p>
+  <p>选择一个或多个条目，然后在所选内容上右键单击，可获得以下选项：</p>
+
+  <ul>
+    <li><span class="listheading">添加条目：</span>在你单击的条目下方添加一个空白条目。</li>
+
+    <li class="first"><span class="listheading">编辑：</span>编辑该条目。</li>
+
+    <li class="first"><span class="listheading">剪切：</span>删除一个或多个以后可以粘贴的条目。</li>
+
+    <li><span class="listheading">复制：</span>复制一个或多个以后可以粘贴的条目。</li>
+
+    <li><span class="listheading">粘贴：</span>粘贴任何已剪切/复制的条目。</li>
+
+    <li class="first"><span class="listheading">删除：</span>删除条目。</li>
+
+    <li class="first"><span class="listheading">打开：</span>用文件中的条目（索引文件或文本文件）替换当前的索引列表。</li>
+
+    <li><span class="listheading">重新加载：</span>从上次保存的状态恢复列表。</li>
+
+    <li class="first"><span class="listheading">另存为：</span>将所有条目保存到一个文件，以保存每本书各自的索引条目列表。</li>
+
+    <li class="first"><span class="listheading">自动填充：</span>自动将书中的每个单词填充为索引条目。</li>
+
+    <li class="first"><span class="listheading">全选：</span>选择所有条目（便于删除）。</li>
+  </ul>
+
+  <h4 class="sigil_not_in_toc">保存</h4>
+
+  <p>要将条目保存到磁盘，请单击<span class="buttonbox">保存</span>。</p>
+
+  <p>要退出而不保存条目，只需关闭窗口即可（使用关闭按钮或<span class="shortcut">Esc</span>键）。你也可以使用上下文菜单 <span class="menuitem">重新加载</span> 从磁盘重新加载条目——这会删除你当前的条目。</p>
 
   <div class="tip">
-    <p class="tiptext">If you save and are running more than one copy of Sigil, then the other instances of Sigil will automatically reload the newly saved index entries to keep all copies in sync.</p>
+    <p class="tiptext">如果你保存时正在运行多个 Sigil 实例，其他 Sigil 实例会自动重新加载新保存的索引条目，以保持所有实例同步。</p>
   </div>
 
-  <h4 class="sigil_not_in_toc">Filter</h4>
+  <h4 class="sigil_not_in_toc">过滤</h4>
 
-  <p>You can use the filter text box to restrict the list of searches shown to make it easier to find a search.</p>
+  <p>你可以使用过滤文本框来限制显示的条目列表，以便更容易找到某个条目。</p>
 
-  <h4 class="sigil_not_in_toc">Opening or Importing Text Files</h4>
+  <h4 class="sigil_not_in_toc">打开或导入文本文件</h4>
 
-  <p>The <span class="menuitem">Open</span> context menu item can be used to open saved Index files, but it can also open text files.</p>
+  <p>上下文菜单项 <span class="menuitem">打开</span> 可用于打开已保存的索引文件，也可以打开文本文件。</p>
 
-  <p>You can list just the Text To Include words in the text file – one per line. Or you can include both the Text To Include and Index Entry values by separating them with a tab – one per line.</p>
+  <p>你可以在文本文件中只列出 要包含的文本 单词——每行一个。或者，你可以用制表符分隔同时包含 要包含的文本 和 索引条目 值——每行一个。</p>
 
-<h4 class="sigil_not_in_toc">The Index Toolbar</h4>
-<p>To make creation of an index a bit quicker, users can use the <span class="menuitem">View=&gt;Toolbars=&gt;Index</span> menu to show the Index Toolbar.</p>
-<div><img style="width:30%" alt="image of the index toolbar icons" src="../Images/index_toolbar.png"/></div>
-<ul>
-<li>Open the Index Editor</li>
-<li>Add word to Index Editor</li>
-<li>Mark Text for Inclusion in the Index</li>
-<li>Generate the Index HTML file.</li>
-</ul>
+  <h4 class="sigil_not_in_toc">索引工具栏</h4>
+
+  <p>为了让更快捷地创建索引，用户可以使用 <span class="menuitem">视图=&gt;工具栏=&gt;索引</span> 菜单来显示索引工具栏。</p>
+
+  <div class="toolbar">
+    <img class="toolbar-icon" alt="image of the index toolbar icons" src="../Images/index_toolbar.png"/>
+  </div>
+
+  <ul>
+    <li>打开索引编辑器</li>
+
+    <li>将单词添加到索引编辑器</li>
+
+    <li>标记要纳入索引的文本</li>
+
+    <li>生成索引 HTML 文件。</li>
+  </ul>
 </body>
 </html>

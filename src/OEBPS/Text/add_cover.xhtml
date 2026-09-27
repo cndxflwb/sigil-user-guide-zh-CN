@@ -1,46 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Add Cover</title>
+  <title>添加封面</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="add-cover">Add Cover</h2>
+  <h2 id="add-cover">添加封面</h2>
 
-  <p class="h2subheading">— Pick a cover for your book —</p>
+  <p class="h2subheading">— 为你的图书选择一张封面 —</p>
 
-  <p>The Add Cover feature allows you to pick an image for your cover and have Sigil automatically make the necessary updates to mark the image as your cover.</p>
+  <p>添加封面功能可让您为封面挑选一张图片，Sigil 会自动完成必要的更新，将该图片标记为封面。</p>
 
-  <p>Add a cover by selecting the menu item <span class="menuitem">Tools=&gt;Add Cover</span> or its keyboard shortcut:</p>
+  <p>选择菜单项 <span class="menuitem">工具=&gt;添加封面</span> 或其键盘快捷键即可添加封面：</p>
 
   <div class="image">
     <img alt="Image fo Add Cover dialog." src="../Images/add-cover.png"/>
   </div>
 
-  <p>You can pick an image in your EPUB, or use <span class="buttonbox">Other Files</span> to pick one from your computer.</p>
+  <p>您可以从 EPUB 中选择一张图片，也可以使用<span class="buttonbox">其他文件</span>从你的计算机中挑选一张。</p>
 
-  <h3 class="sigil_not_in_toc">Details</h3>
+  <h3 class="sigil_not_in_toc">细节</h3>
 
-  <p>Sigil makes the following changes when you add a cover:</p>
+  <p>添加封面后，Sigil 会做以下更改：</p>
 
   <ul>
-    <li>Creates a <span class="example">cover.xhtml</span> file if one does not exist. If it does exist, it will use the file. If another file with a semantic of Cover exists, it will use that file.</li>
+    <li>如果 <span class="example">cover.xhtml</span> 文件不存在则创建它；如果已存在，则使用该文件。如果存在另一个语义为 Cover（封面）的文件，则使用那个文件。</li>
 
-    <li>Inserts the necessary HTML code to display and resize your image into the HTML file.</li>
+    <li>在 HTML 文件中插入显示和调整图片大小所必需的 HTML 代码。</li>
 
-    <li>Marks the HTML cover file with the semantic of Cover.</li>
+    <li>将 HTML 封面文件标记为 Cover（封面）语义。</li>
 
-    <li>Marks the image file with the semantic of Cover.</li>
+    <li>将图片文件标记为 Cover（封面）语义。</li>
   </ul>
 
-  <h3 class="sigil_not_in_toc">Custom HTML Cover File</h3>
+  <h3 class="sigil_not_in_toc">自定义 HTML 封面文件</h3>
 
-  <p>Sigil inserts code in the HTML cover file that allows your cover to be re-sized and displayed on most e-readers, but you may want to use different code. You can edit the code after the file is created, or provide your own code for Sigil to use.</p>
+  <p>Sigil 会在 HTML 封面文件中插入代码，使封面在大多数电子书阅读器上可调整大小并显示，但您可能希望使用不同的代码。文件创建后可编辑代码，也可提供您自己的代码供 Sigil 使用。</p>
 
-  <p>This is the HTML code Sigil inserts into the cover file by default:</p>
+  <p>以下是 Sigil 默认插入封面文件的 HTML 代码：</p>
 
   <pre class="example">&lt;?xml version="1.0" encoding="UTF-8" standalone="no" ?&gt;
 &lt;!DOCTYPE html&gt;
@@ -64,16 +64,16 @@
 
 </pre>
 
-  <p>To modify the template Sigil uses for the HTML cover file, create a file in your Preferences directory called <span class="example">cover-template2.xhtml</span> (for Epub2) and <span class="example">cover-template3.xhtml</span> (for Epub3).</p>
+  <p>要修改 Sigil 用于 HTML 封面文件的模板，请在你的首选项文件夹中创建一个名为 <span class="example">cover-template2.xhtml</span>（用于 EPUB2）和 <span class="example">cover-template3.xhtml</span>（用于 EPUB3）的文件。</p>
 
-  <p>You can use certain placeholders in your text and Sigil will replace them with the appropriate values:</p>
+  <p>您可以在文本中使用某些占位符，Sigil 会用相应的值替换它们：</p>
 
   <ul>
-    <li><span class="listheading">SGC_IMAGE_FILENAME:</span> this will be replaced by the path to the image in your EPUB.</li>
+    <li><span class="listheading">SGC_IMAGE_FILENAME：</span>将被替换为 EPUB 中图片的路径。</li>
 
-    <li><span class="listheading">SGC_IMAGE_WIDTH:</span> this will be replaced by the width in pixels of your image.</li>
+    <li><span class="listheading">SGC_IMAGE_WIDTH：</span>将被替换为您图片的宽度（像素）。</li>
 
-    <li><span class="listheading">SGC_IMAGE_HEIGHT:</span> this will be replaced by the height in pixels of your image.</li>
+    <li><span class="listheading">SGC_IMAGE_HEIGHT：</span>将被替换为您图片的高度（像素）。</li>
   </ul>
 </body>
 </html>

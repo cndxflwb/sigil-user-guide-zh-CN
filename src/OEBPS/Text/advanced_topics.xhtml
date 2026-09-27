@@ -1,290 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Advanced Topics</title>
+  <title>高级主题</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h1 id="user_interface">Advanced Topics</h1>
+  <h1 id="user_interface">高级主题</h1>
 
-  <h2 id="atenv">Using Sigil's Environment Variables</h2>
+  <h2 id="atenv">使用 Sigil 的环境变量</h2>
 
-
-  <p>Some rarely needed settings in Sigil are controlled by "Environment Variables". An environment variable is a user-definable value that can affect the way running processes will behave on a computer.  See <a href="https://en.wikipedia.org/wiki/Environment_variable">https://en.wikipedia.org/wiki/Environment_variable</a> for more information on setting and using environment variables on your computer. Starting with Sigil 2.6.2, we have tried to make the process of setting and changing Sigil's environment variables much easier. With that release or later you can now simply use any text editor you want (Notepad, BBedit, emacs, vi, kate, etc) and create a file called "env-vars.txt" inside your Sigil Preferences folder. Add each environment variable and its value, one per line, in the following format:</p>
+  <p>Sigil 中一些很少用到的设置由“环境变量”控制。环境变量是一个可由用户定义的值，它可以影响运行中的进程在计算机上的行为。关于如何在你的计算机上设置和使用<a href="https://en.wikipedia.org/wiki/Environment_variable">环境变量</a>，更多信息请参阅相关说明。从 Sigil 2.6.2 开始，我们努力让设置和修改 Sigil 环境变量的过程变得更简单。使用该版本或更高版本时，你只需用任意文本编辑器（记事本、BBedit、emacs、vi、kate 等）在 Sigil 首选项文件夹中创建一个名为 <span class="example">env-vars.txt</span> 的文件，然后按以下格式逐行添加每个环境变量及其值：</p>
 
   <p>ENVIRONMENT_VARIABLE_NAME=VALUE</p>
 
-  <p> where you replace ENVIRONMENT_VARIABLE_NAME with one of the environment variable names listed below and replace the VALUE with the what you want to set whether it is numeric or string or the value 1 for true.  No quotes are used.  For example:</p>
+  <p>其中，将 ENVIRONMENT_VARIABLE_NAME 替换为下面列出的某个环境变量名，并将 VALUE 替换为你想设置的值（无论是数字、字符串，还是表示“真”的值 1）。不使用引号。例如：</p>
 
   <p>SIGIL_DISABLE_VERSION_META=1</p>
 
   <div class="tip">
-    <p class="tiptext">Remember, if you open Sigil's Preferences via the menu you can use a button on the bottom left to have it show you where your Sigil Preferences folder is located.</p>
+    <p class="tiptext">请记住，如果你通过菜单打开 Sigil 的首选项，可以使用左下角的按钮来显示你的 Sigil 首选项文件夹所在的位置。</p>
   </div>
 
-  <p>Then save this file.  Please note Sigil will only read this file when it is first launched, so remember to close and exit out of Sigil before making any changes to your env-vars.txt file and restart Sigil after the change.</p>
+  <p>然后保存此文件。请注意，Sigil 只在首次启动时读取此文件，因此在对 <span class="example">env-vars.txt</span> 文件做任何修改之前，请记得先关闭并退出 Sigil，并在修改后重新启动 Sigil。</p>
 
-  <p>Sigil Uses the following Environment Variables:</p>
+  <p>Sigil 使用以下环境变量：</p>
 
   <ul>
-    <li><p><span class="listheading">SIGIL_DISABLE_VERSION_META</span> Set this environment variable to any value to prevent Sigil from adding the metadata that identifies Sigil as the producer of this epub.</p></li>
+    <li><p><span class="listheading">SIGIL_DISABLE_VERSION_META</span> 将此环境变量设置为任意值，即可阻止 Sigil 添加用于标识 Sigil 是本 epub 制作工具的元数据。</p></li>
 
-    <li><p><span class="listheading">SIGIL_DISABLE_NFC_NORMALIZATION</span> Set this environment variable to disable conversion of user content to use Unicode Normalization Form C. Please note, disabling use of NFC form means that many e-readers will be unable to properly search your epub for texts that include accents.</p></li>
+    <li><p><span class="listheading">SIGIL_DISABLE_NFC_NORMALIZATION</span> 设置此环境变量可禁止将用户内容转换为 Unicode 规范化形式 C（NFC）。请注意，禁用 NFC 形式意味着许多电子书阅读器将无法正确搜索你的 epub 中包含重音符号的文本。</p></li>
 
-    <li><p><span class="listheading">SIGIL_FOCUS_HIGHLIGHT_COLOR</span> This allows the user to control the color used when Focus Highlight Rectangles are enabled.  Its value should be a standard css color value beginning with '#' followed by 6 hex digits.</p></li>
+    <li><p><span class="listheading">SIGIL_FOCUS_HIGHLIGHT_COLOR</span> 此项允许用户控制启用焦点高亮矩形时所使用的颜色。其值应为标准 CSS 颜色值，以 '#' 开头，后跟 6 位十六进制数字。</p></li>
 
-    <li><p><span class="listheading">SIGIL_ALLOW_CODEVIEW_DROP</span> If this value is set, drag and drop editing inside CodeView is enabled.  Be warned that on some platforms, using drag and drop to edit inside CodeView can be unstable causing Sigil to crash. No support will be provided to people who decide to enable drag and drop as fixing these issues are outside our control (internal to Qt6).</p></li>
+    <li><p><span class="listheading">SIGIL_ALLOW_CODEVIEW_DROP</span> 设置此值后，将启用代码视图内部的拖放编辑。请注意，在某些平台上，使用拖放在代码视图中编辑可能不稳定，会导致 Sigil 崩溃。对于决定启用拖放的用户，我们不会提供支持，因为修复这些问题超出了我们的控制范围（属于 Qt6 的内部问题）。</p></li>
 
-    <li><p><span class="listheading">SIGIL_DEBUG_LOGFILE</span> Setting this to the full path (including file name and extension) to a user-writeable location will cause Sigil to output any additional debug information to that log file.  Unset this environment after debugging is important as this file will continue to build up output eventually filling up user disk space and slowing down Sigil.</p></li>
+    <li><p><span class="listheading">SIGIL_DEBUG_LOGFILE</span> 将此环境变量设置为用户可写位置的完整路径（包括文件名和扩展名），Sigil 就会把所有额外的调试信息输出到该日志文件。调试结束后务必取消设置此环境变量，因为该文件会不断累积输出，最终占满用户的磁盘空间并拖慢 Sigil。</p></li>
 
-<li><p><span class="listheading">SIGIL_FUNCTION_REPLACE_LOGFILE</span> Setting this to the full path (including file name and extension) to a user-writeable location will cause Sigil to output any Python Function Replace log messages to that log file.  Unset this environment after debugging is important as this file will continue to build up output eventually filling up user disk space and slowing down Sigil.</p></li>
+    <li><p><span class="listheading">SIGIL_FUNCTION_REPLACE_LOGFILE</span> 将此环境变量设置为用户可写位置的完整路径（包括文件名和扩展名），Sigil 就会把所有 Python 函数替换 的日志消息输出到该日志文件。调试结束后务必取消设置此环境变量，因为该文件会不断累积输出，最终占满用户的磁盘空间并拖慢 Sigil。</p></li>
 
-  <li><p><span class="listheading">SIGIL_USE_FREETYPE_FONTENGINE</span> This environment variable is <b>Windows Only</b>. Setting this will tell Sigil to use the FreeType Font Engine.  This is useful on Windows for users who make heavy use of // Woff/woff2 fonts in their epub.  Current Qt version of the Windows Font Engine does not support these font types.</p></li>
+    <li><p><span class="listheading">SIGIL_USE_FREETYPE_FONTENGINE</span> 此环境变量仅适用于 <b>Windows</b>。设置此项将让 Sigil 使用 FreeType 字体引擎。这对在 epub 中大量使用 Woff/woff2 字体的 Windows 用户很有用，因为当前 Qt 版本的 Windows 字体引擎尚不支持这些字体类型。</p></li>
 
-    <li><p><span class="listheading">SIGIL_PREVIEW_TIMEOUT</span> Setting this to a number (of milliseconds) will determine the length of time after user input stops while editing in CodeView until Preview is updated.  The minimum delay is 1000 milliseconds and the maximum delay can be set up to 10000 milliseconds.  There is typically no reason to set this unless you are editing huge xhtml files that take too long for Preview to update.</p></li>
+    <li><p><span class="listheading">SIGIL_PREVIEW_TIMEOUT</span> 将此环境变量设置为一个数值（单位为毫秒），即可决定在代码视图中编辑时，用户停止输入后经过多长时间更新预览。最短延迟为 1000 毫秒，最长延迟可设置为 10000 毫秒。通常没有理由设置此项，除非你正在编辑体积巨大的 xhtml 文件，导致更新预览耗时过长。</p></li>
 
-    <li><p><span class="listheading">SIGIL_DRAG_DISTANCE_TWEAK</span> This environment variable is <b>Windows Only</b>. You can set this to change the distance in pixels needed to move something before drag and drop is detected by the system.  Its valid values range from -20 to 20 pixels.</p></li>
+    <li><p><span class="listheading">SIGIL_DRAG_DISTANCE_TWEAK</span> 此环境变量仅适用于 <b>Windows</b>。你可以设置此项来改变系统检测到拖放操作之前所需移动的像素距离。其有效值范围为 -20 到 20 像素。</p></li>
 
-    <li><p><span class="listheading">SIGIL_DISABLE_CURSOR_BLINK</span> Many people have sensitivities to flashing and blinking.  If you are one of those people, you can set this environment variable to disable the constant cursor blinking used in CodeView and in many input dialogs.</p></li>
+    <li><p><span class="listheading">SIGIL_DISABLE_CURSOR_BLINK</span> 许多人对闪烁和闪动敏感。如果你正是这类人群，可以设置此环境变量来禁用代码视图和许多输入对话框中持续闪烁的光标。</p></li>
 
-    <li><p><span class="listheading">SIGIL_SKIP_UPDATE_CHECK</span> Setting this tells Sigil *NOT* to use the network to query for the latest version of Sigil.  This may be important for Linux distributions who build and release their own versions of Sigil and would prefer you use their builds.</p></li>
+    <li><p><span class="listheading">SIGIL_SKIP_UPDATE_CHECK</span> 设置此项将告诉 Sigil <b>不要</b> 使用网络查询最新版本。对于那些自行构建并发布 Sigil 版本、并希望用户使用其构建版本的 Linux 发行版来说，这一点可能很重要。</p></li>
 
-   <li><p><span class="listheading">SIGIL_PREFS_DIR</span> You can set to override where Sigil's Preferences folder is located. Note, this is one environment variable that can not be set in your env-vars.txt file as this location must be known in advance for Sigil to even find that file.</p></li>
+    <li><p><span class="listheading">SIGIL_PREFS_DIR</span> 你可以设置此项来改变 Sigil 首选项文件夹的位置。请注意，这是唯一一个不能写在 <span class="example">env-vars.txt</span> 文件里的环境变量，因为 Sigil 必须先知道该目录的位置，才能找到那个文件。</p></li>
 
-   <li><p><span class="listheading">SIGIL_USE_COLORSCHEME_CHANGED</span> This environment Variable is <b>Linux Only</b>. Setting this tells Sigil that your Linux desktop works with Qt's built-in QStyleHints::colorSchemeChanged signal for detecting when your desktop theme changes from light to dark and visa-versa.</p></li>
+    <li><p><span class="listheading">SIGIL_USE_COLORSCHEME_CHANGED</span> 此环境变量仅适用于 <b>Linux</b>。设置此项将告诉 Sigil，你的 Linux 桌面可以配合 Qt 内置的 QStyleHints::colorSchemeChanged 信号，检测桌面主题在浅色与深色之间的切换。</p></li>
 
-   <li><p><span class="listheading">SIGIL_EXTRA_ROOT</span> This environment Variable is primarily <b>Linux Only</b>. Setting this tells Sigil where your share/sigil folder is located.</p></li>
+    <li><p><span class="listheading">SIGIL_EXTRA_ROOT</span> 此环境变量主要用于 <b>Linux</b>。设置此项将告诉 Sigil 你的 share/sigil 文件夹所在的位置。</p></li>
 
-    <li><p><span class="listheading">SIGIL_DICTIONARIES</span> This environment Variable is primarily <b>Linux Only</b>. Setting this tells Sigil where to locate the hunspell dictionaries installed on your system.</p></li>
+    <li><p><span class="listheading">SIGIL_DICTIONARIES</span> 此环境变量主要用于 <b>Linux</b>。设置此项将告诉 Sigil 到何处查找安装在系统上的 hunspell 词典。</p></li>
 
-    <li><p><span class="listheading">SIGIL_NO_CUSTOM_DIRECTORY_ICONS</span> This environment variable is is useful if you make heavy use of networked drives with lots and lots of files.  It prevents the constant search for system level custom file icons and so it can greatly speed up the performance of non-native file dialogs, like "Add Existing...".</p></li>
+    <li><p><span class="listheading">SIGIL_NO_CUSTOM_DIRECTORY_ICONS</span> 如果你大量使用存有海量文件的网络驱动器，此环境变量会很有用。它可以避免不断搜索系统级的自定义文件图标，从而大幅提升非原生文件对话框（如“添加现有文件……”）的性能。</p></li>
 
- <li><p><span class="listheading">SIGIL_FORCE_NATIVE_FILE_DIALOG</span> This environment variable forces Sigil to use the operating system's native file dialog.  Unfortunately, using native file dialogs has resulted in a number of crashing issues in recent versions of Qt.  Use at your own risk.</p></li>
+    <li><p><span class="listheading">SIGIL_FORCE_NATIVE_FILE_DIALOG</span> 此环境变量强制 Sigil 使用操作系统的原生文件对话框。不幸的是，在近期版本的 Qt 中，使用原生文件对话框已导致了一些崩溃问题，使用风险自负。</p></li>
   </ul>
 
   <div class="tip">
-    <p class="tiptext">In addition to the Sigil specific environment variables, you can also use Qt6 specific environment variables including QT_QPA_PLATFORM and QTWEBENGINE_CHROMIUM_FLAGS.  You will need a search engine to find recent Qt6 information on how these environment variables can be used to control Sigil as these change with newer releases.</p>
+    <p class="tiptext">除了 Sigil 特有的环境变量之外，你还可以使用 Qt6 特有的环境变量，包括 QT_QPA_PLATFORM 和 QTWEBENGINE_CHROMIUM_FLAGS。由于这些变量的用法会随新版本发布而变化，你需要借助搜索引擎查找最新的 Qt6 资料，了解如何用这些环境变量来控制 Sigil。</p>
   </div>
 
-<hr class="narrow"/>
+  <hr class="narrow"/>
 
-  <h2 id="attf">Using Sigil's Template Files</h2>
-  
-  <p>Many users of Sigil develop their own versions of starting xhtml, and css files that they would much prefer using over what Sigil defaults to.  To address these concerns, Sigil has added the ability to load user defined starting xhtml, and css files.  To create these "templates" simply edit any blank xhtml or css page to your liking and then save it to your Sigil Preferences Location with one of these specific filenames.  When you are adding Blank HTML or Blank CSS files using Sigil's BookBrowser, sigil will use your templates instead.  To prevent their use simply rename or delete them.</p>
+  <h2 id="attf">使用 Sigil 的模板文件</h2>
+
+  <p>许多 Sigil 用户会自行制作起始 xhtml 和 css 文件，比起 Sigil 的默认文件，他们更愿意使用自己的版本。为满足这一需求，Sigil 增加了加载用户自定义起始 xhtml 和 css 文件的功能。要创建这些“模板”，只需按自己的喜好编辑任意空白的 xhtml 或 css 页面，然后用下列特定文件名之一将其保存到 Sigil 首选项文件夹中。当你使用 Sigil 的书籍浏览器添加空白 HTML 或空白 CSS 文件时，Sigil 就会改用你的模板。如果想停用它们，只需重命名或删除这些文件即可。</p>
 
   <ul>
-     <li><p><span class="listheading">user-template2.xhtml</span> Epub2 specific xhtml file.</p></li>
+    <li><p><span class="listheading">user-template2.xhtml</span> EPUB2 专用 xhtml 文件。</p></li>
 
-     <li><p><span class="listheading">user-template3.xhtml</span> Epub3 specific xhtml file.</p></li>
+    <li><p><span class="listheading">user-template3.xhtml</span> EPUB3 专用 xhtml 文件。</p></li>
 
-     <li><p><span class="listheading">user-template2.css</span> Epub2 specific css file.</p></li>
+    <li><p><span class="listheading">user-template2.css</span> EPUB2 专用 css 文件。</p></li>
 
-     <li><p><span class="listheading">user-template3.css</span> Epub3 specific css file.</p></li>
+    <li><p><span class="listheading">user-template3.css</span> EPUB3 专用 css 文件。</p></li>
+  </ul>
 
-</ul>
+  <p>类似地，许多人希望封面图片的 xhtml 页面采用特定的布局。为方便实现这一点，Sigil 允许用户创建 <span class="example">cover-template2.xhtml</span> 或 <span class="example">cover-template3.xhtml</span> 文件，并将其存放在 Sigil 首选项文件夹中。</p>
 
-  <p>In a similar manner, many people prefer specific layouts for their cover images xhtml pages. To facilitate this Sigil allows the user to create a cover-template2.xhtml or cover-template3.xhtml file and store it in Sigil's Preferences Location.</p>
-  <p>Sigil allows these cover templates to use a set of PLACEHOLDERS that Sigil will automatically fill in values for when creating the cover: </p>
-    <ul>
-        <li>SGC_IMAGE_FILENAME - the relative path to the chosen image.</li>
-        <li>SGC_IMAGE_WIDTH - the width in pixels of the chosen image.</li>
-        <li>SGC_IMAGE_HEIGHT - the height in pixels of the chosen image.</li>
-    </ul>
+  <p>Sigil 允许这些封面模板使用一组占位符，在创建封面时 Sigil 会自动填入相应的值：</p>
 
-  <p>Here is an example of a cover-template3.xhtml that uses SVG and makes use of these PLACEHOLDERS:</p>
+  <ul>
+    <li>SGC_IMAGE_FILENAME —— 所选图像的相对路径。</li>
 
-<div class="image"><img style="width:75%" src="../Images/cover-template-svg.png" alt="code showing use of svg to create a cover."/></div>
+    <li>SGC_IMAGE_WIDTH —— 所选图像的宽度（像素）。</li>
 
-<pre hidden="hidden" style="display:none; visibility: hidden"><code>
-    &lt;?xml version="1.0" encoding="UTF-8" standalone="no" ?&gt;
-    &lt;!DOCTYPE html&gt;
+    <li>SGC_IMAGE_HEIGHT —— 所选图像的高度（像素）。</li>
+  </ul>
 
-    &lt;html xmlns="http://www.w3.org/1999/xhtml" 
-          xmlns:epub="http://www.idpf.org/2007/ops" 
-          lang="en" xml:lang="en"&gt;
+  <p>下面是一个使用 SVG 并利用这些占位符的 <span class="example">cover-template3.xhtml</span> 示例：</p>
 
-    &lt;head&gt;
-      &lt;title&gt;Cover&lt;/title&gt;
-    &lt;/head&gt;
-    
-    &lt;body&gt;
+  <div class="image">
+    <img style="width:75%" src="../Images/cover-template-svg.png" alt="code showing use of svg to create a cover."/>
+  </div>
 
-      &lt;div style="height: 100vh; text-align: center; 
-                  padding: 0pt; margin: 0pt;"&gt;
+  <pre hidden="hidden" style="display:none; visibility: hidden"><code> &lt;?xml version="1.0" encoding="UTF-8" standalone="no" ?&gt; &lt;!DOCTYPE html&gt; &lt;html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN"&gt; &lt;head&gt; &lt;title&gt;Cover&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div style="height: 100vh; text-align: center; padding: 0pt; margin: 0pt;"&gt; &lt;svg xmlns="http://www.w3.org/2000/svg" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 SGC_IMAGE_WIDTH SGC_IMAGE_HEIGHT" width="100%" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"&gt; &lt;image width="SGC_IMAGE_WIDTH" height="SGC_IMAGE_HEIGHT" xlink:href="SGC_IMAGE_FILENAME\"/&gt; &lt;/svg&gt; &lt;/div&gt; &lt;/body&gt; &lt;/html&gt; </code></pre>
 
-        &lt;svg xmlns="http://www.w3.org/2000/svg" 
-             height="100%" preserveAspectRatio="xMidYMid meet" 
-             viewBox="0 0 SGC_IMAGE_WIDTH SGC_IMAGE_HEIGHT" 
-             width="100%" version="1.1" 
-             xmlns:xlink="http://www.w3.org/1999/xlink"&gt;
+  <hr class="narrow"/>
 
-             &lt;image width="SGC_IMAGE_WIDTH" 
-                    height="SGC_IMAGE_HEIGHT" 
-                    xlink:href="SGC_IMAGE_FILENAME\"/&gt;
-        &lt;/svg&gt;
-      &lt;/div&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-</code></pre>
+  <h2 id="atpdf">在 EPUB3 中嵌入 PDF</h2>
 
-<hr class="narrow"/>
+  <p>许多电子书阅读器采用 Adobe Digital Editions 软件开发工具包作为底层渲染和显示引擎，还有许多采用基于网页浏览器的显示引擎。这些阅读器都具备在 epub 中嵌入 Adobe PDF 文档的能力。</p>
 
-  <h2 id="atpdf">Embedding a PDF inside an Epub3</h2>
+  <p>遗憾的是，许多旧款电子书阅读器并不支持 PDF。EPUB3 规范考虑到了这种情况，它提供了“递补”资源（有时是 OPF 绑定），以应对阅读器没有能力显示某种资源类型的情形。</p>
 
-  <p> Many e-readers employ the Adobe Digital Editions Software Development Kit as their underlying rendering and display engine.  Many other employ Web Browser-based display engines.  All of these e-readers have the capability to include Adobe PDF documents inside their epub.</p>
+  <p>更不巧的是，据 EPUBCheck 的开发者说，几乎没有阅读器真正支持递补资源或 OPF 绑定的用法。这让 EPUB3 开发者陷入了两难境地。幸运的是，可以使用 “object” 标签创建一个基于 xhtml/html 的替补方案，从而使书脊完全由 xhtml 文件构成。</p>
 
-  <p>Unfortunately many older e-readers do not support PDF.  The epub3 specification does allow for this case by providing "fallback" resources (or sometimes OPF bindings) to handle the cases when the e-reader does not have the ability to display a resource type.</p>
+  <p>下面是一个示例，展示如何在 xhtml 文件中使用 “object” 标签来显示嵌入的 PDF，或以基于 xhtml 的替代内容作为替补方案——该方案适用于许多无法处理 PDF 格式的旧款电子书阅读器。</p>
 
-  <p>More unfortunately, according to the developers of Epubcheck, few e-readers actually support the use of fallback resources or OPF bindings.  This leaves epub3 developers in a quandary.  Luckily the "object" tag can be used to create an xhtml/html based fallback allowing the spine to be comprised of purely xhtml files.</p>
+  <div class="image">
+    <img src="../Images/pdf-object-tag-fallback.png" style="width:75%" alt="code showing use of the object tag"/>
+  </div>
 
-  <p>Here is an example of how to use the "object" tag in an xhtml file to display an embedded PDF or an xhtml-based alternative as a fallback that works on many older e-readers that cannot handle the PDF format.</p>
+  <pre hidden="hidden" style="display:none; visibility: hidden"><code> &lt;?xml version="1.0" encoding="utf-8"?&gt; &lt;!DOCTYPE html&gt; &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt; &lt;head&gt; &lt;title&gt;PDF Test Page&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;object type="application/pdf" data="../Misc/demo.pdf" width="500" height="500"&gt; &lt;!-- The child of the object tag holds the xhtml fallback --&gt; &lt;h3&gt;PDF Fallback text&lt;/h3&gt; &lt;p&gt;This text is being displayed, if the reader or reading device doesn't support embedded .pdf files.&lt;/p&gt; &lt;/object&gt; &lt;/body&gt; &lt;/html&gt; </code></pre>
 
-<div class="image"><img src="../Images/pdf-object-tag-fallback.png" style="width:75%" alt="code showing use of the object tag"/></div>
+  <p>此外，也可以直接链接到 PDF，或将链接加载到 iframe 中，但这些方式无法为旧款阅读器提供替补方案，应尽可能避免使用。</p>
 
-<pre hidden="hidden" style="display:none; visibility: hidden"><code>
-&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;!DOCTYPE html&gt;
- 
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-&lt;head&gt;
-  &lt;title&gt;PDF Test Page&lt;/title&gt;
-&lt;/head&gt;
+  <hr class="narrow"/>
 
-&lt;body&gt;
+  <h2 id="atqss">使用 Qt QSS 自定义 Sigil</h2>
 
-  &lt;object type="application/pdf" data="../Misc/demo.pdf" 
-           width="500" height="500"&gt;
+  <p>Sigil 所使用的图形用户界面（GUI）库 Qt 支持一种自有的、类似 css 的用户样式，称为 QSS，它允许用户按自己的偏好修改 Sigil 的许多方面。Sigil 首次启动时，会自动加载你的 Sigil 首选项文件夹中名为 <span class="example">qt_styles.qss</span> 的 QSS 样式表，找到的所有 QSS 样式。</p>
 
-        &lt;!-- The child of the object tag holds the xhtml fallback --&gt;
-        &lt;h3&gt;PDF Fallback text&lt;/h3&gt;
+  <p>下面是一些简单示例，展示如何使用 Qt 的 QSS 样式来自定义 Sigil。</p>
 
-        &lt;p&gt;This text is being displayed, if the reader or 
-           reading device doesn't support embedded .pdf files.&lt;/p&gt;
+  <p>如果想尝试其中任何一个，只需复制下面某个 QSS 代码块，将其保存为名为 <span class="example">qt_styles.qss</span> 的文本文件，放进你的 Sigil 首选项文件夹中即可。</p>
 
-  &lt;/object&gt;
+  <p><b>让查找与替换按钮只显示文字</b></p>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+  <pre><code>QFrame QToolButton#findNext, QFrame QToolButton#replaceCurrent, QFrame QToolButton#replaceFind, QFrame QToolButton#restart, QFrame QToolButton#replaceAll, QFrame QToolButton#count { qproperty-toolButtonStyle: ToolButtonTextOnly; } </code></pre>
 
+  <p><b>让查找与替换按钮同时显示图标和文字</b></p>
 
-  <p>In addition direct links to the PDF are possible and loading the links into a iframe is also possible but these approaches do not allow for fallbacks for older e-readers and should be avoided if at all possible.</p>
+  <pre><code>QFrame QToolButton#findNext, QFrame QToolButton#replaceCurrent, QFrame QToolButton#replaceFind, QFrame QToolButton#restart, QFrame QToolButton#replaceAll, QFrame QToolButton#count { qproperty-toolButtonStyle: ToolButtonTextBesideIcon; } </code></pre>
 
-<hr class="narrow"/>
+  <p><b>使用 QSS 隐藏所有工具提示。</b></p>
 
-  <h2 id="atqss">Customizing Sigil with Qt QSS</h2>
+  <pre><code>QToolTip { max-width:0; max-height:0; margin:0; padding:0; } </code></pre>
 
+  <p><b>隐藏查找与替换历史</b></p>
 
-  <p>Qt, the Graphical User Interface (GUI) library used by Sigil supports its own user css-like styles called QSS that allow the user to modify many aspects of Sigil to their preference.  Sigil when first launched will automatically load any QSS styles it finds in the QSS stylesheet named <b>qt_styles.qss</b> found in your Sigil Preferences Location folder.</p>
+  <pre><code>QFrame QComboBox QAbstractItemView::item { max-height: 0; } #cbFind, #cbReplace { qproperty-maxCount:0; } </code></pre>
 
-  <p>Here are some simple examples of how you can use Qt's QSS styles to customize Sigil.</p>
+  <p><b>设置查找与替换输入框的字体和字号</b></p>
 
-<p>To try any of these, simply copy one of the following QSS code blocks and save it as a text file called "qt_styles.qss" inside your Sigil Preferences Location folder.</p>
+  <pre><code>#cbFind, #cbReplace { font-family: "Georgia"; font-size: 16px; } </code></pre>
 
-<p><b>Show Find Replace Buttons as Text Only</b></p>
-<pre><code>QFrame QToolButton#findNext, 
-QFrame QToolButton#replaceCurrent, 
-QFrame QToolButton#replaceFind, 
-QFrame QToolButton#restart, 
-QFrame QToolButton#replaceAll, 
-QFrame QToolButton#count {
-    qproperty-toolButtonStyle: ToolButtonTextOnly;
-}
-</code></pre>
+  <p><b>将 关于 对话框中的 Sigil 版本号改为其他颜色</b></p>
 
-<p><b>Show Find Replace Buttons as icons and text</b></p>
-<pre><code>QFrame QToolButton#findNext, 
-QFrame QToolButton#replaceCurrent, 
-QFrame QToolButton#replaceFind, 
-QFrame QToolButton#restart, 
-QFrame QToolButton#replaceAll, 
-QFrame QToolButton#count {
-    qproperty-toolButtonStyle: ToolButtonTextBesideIcon;
-}
-</code></pre>
+  <pre><code>QLabel#lbVersionDisplay { color: #FFA000; } </code></pre>
 
-<p><b>Use QSS to hide all tooltips.</b></p>
-<pre><code>QToolTip {
-    max-width:0; max-height:0; margin:0; padding:0;
-}
-</code></pre>
+  <p><b>为 关于 对话框的作者选项卡设置灰色背景</b></p>
 
-<p><b>Hide Find Replace History</b></p>
-<pre><code>QFrame QComboBox QAbstractItemView::item {
-    max-height: 0;
-}
-#cbFind, #cbReplace {
-    qproperty-maxCount:0;
-}
-</code></pre>
+  <pre><code>QTextEdit#creditsDisplay { background-color: #323232; } </code></pre>
 
-<p><b>Set the Font Family and Font size for the Find and Replace fields</b></p>
-<pre><code>#cbFind, #cbReplace {
-    font-family: "Georgia"; font-size: 16px;
-}
-</code></pre>
+  <p><b>为书籍浏览器面板设置灰色背景</b></p>
 
-<p><b>Change the Sigil Version Number in the About Box to a Different Color</b></p>
-<pre><code>QLabel#lbVersionDisplay {
-    color: #FFA000;
-}
-</code></pre>
+  <pre><code>#bookbrowser { background-color: #323232; } </code></pre>
 
-<p><b>Put a Gray Background in the About Box on Authors tab</b></p>
-<pre><code>QTextEdit#creditsDisplay {
-    background-color: #323232;
-}
-</code></pre>
+  <p><b>将书籍浏览器面板的边框设为灰色</b></p>
 
-<p><b>Put a Gray background on the BookBrowser Panel</b></p>
-<pre><code>#bookbrowser {
-    background-color: #323232;
-}
-</code></pre>
+  <pre><code>#bookbrowser { border: 1px solid #323232; } </code></pre>
 
-<p><b>Make the BookBrowser Panel Borders Gray</b></p>
-<pre><code>#bookbrowser {
-    border: 1px solid #323232;
-}
-</code></pre>
+  <p><b>将查找与替换栏的边框设为灰色</b></p>
 
-<p><b>Make the Find Replace Borders Gray</b></p>
-<pre><code>QFrame {
-    border: 1px solid #323232;
-}
-</code></pre>
+  <pre><code>QFrame { border: 1px solid #323232; } </code></pre>
 
-<p><b>Change the Default Selection Color</b></p>
-<pre><code>*,
-*::separator,
-*::handle,
-*::tab-bar,
-*::tab,
-*::section {
-    selection-background-color: #00404a;
-    selection-color: white;
-}
-</code></pre>
+  <p><b>更改默认的选区颜色</b></p>
 
-<p><b>Change the QDockWidget Close and UnDock Icon size.</b> (This will affect Preview, Table of Contents, BookBrowser, Clips, and Validation windows)</p>
-<pre><code>QDockWidget::float-button, QDockWidget::close-button {
-  icon-size: 16px;
-}
-</code></pre>
+  <pre><code>*, *::separator, *::handle, *::tab-bar, *::tab, *::section { selection-background-color: #00404a; selection-color: white; } </code></pre>
 
-<p><b>Set the Font Family in Plugin Runner window</b></p>
-<pre><code>QTextEdit#textEdit {
-    font-family: Consolas;
-}
-</code></pre>
+  <p><b>更改 QDockWidget 关闭与解除停靠图标的大小。</b>（此项会影响预览、目录、书籍浏览器、剪贴板和验证窗口）</p>
 
-<p>This is just a smattering of the styling changes you can make to Sigil using Qt's QSS styles.  For further information about QSS and Sigil visit our <a href="https://www.mobileread.com/forums/forumdisplay.php?f=203">Mobileread Sigil Users Forum</a> and check out these website resources about Qt styles:</p>
-<ul>
-<li><a href="https://doc.qt.io/qt-6/stylesheet-syntax.html">https://doc.qt.io/qt-6/stylesheet-syntax.html</a></li>
-<li><a href="https://doc.qt.io/qt-6/stylesheet-reference.html">https://doc.qt.io/qt-6/stylesheet-reference.html</a></li>
-</ul>
+  <pre><code>QDockWidget::float-button, QDockWidget::close-button { icon-size: 16px; } </code></pre>
+
+  <p><b>设置插件运行器窗口中的字体</b></p>
+
+  <pre><code>QTextEdit#textEdit { font-family: Consolas; } </code></pre>
+
+  <p>以上只是用 Qt 的 QSS 样式修改 Sigil 外观的几个示例。如需了解关于 QSS 与 Sigil 的更多信息，请访问我们的 <a href="https://www.mobileread.com/forums/forumdisplay.php?f=203">Mobileread Sigil 用户论坛</a>，并查看以下关于 Qt 样式的网站资源：</p>
+
+  <ul>
+    <li><a href="https://doc.qt.io/qt-6/stylesheet-syntax.html">https://doc.qt.io/qt-6/stylesheet-syntax.html</a></li>
+
+    <li><a href="https://doc.qt.io/qt-6/stylesheet-reference.html">https://doc.qt.io/qt-6/stylesheet-reference.html</a></li>
+  </ul>
 </body>
 </html>

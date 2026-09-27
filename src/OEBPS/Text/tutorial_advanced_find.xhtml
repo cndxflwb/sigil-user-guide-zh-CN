@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Edit an EPUB</title>
+  <title>编辑 EPUB</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2>Advanced Find &amp; Replace – Regex</h2>
+  <h2>高级查找与替换 – 正则表达式</h2>
 
-  <p>The real power of Find &amp; Replace in Sigil is provided by its support of Regular Expressions (also called regex). Regex is basically using patterns instead of plain text for searches to make matching text more flexible.</p>
+  <p>Sigil 中查找与替换的真正威力来自它对正则表达式（也称 regex）的支持。正则表达式本质上是用模式而非纯文本进行搜索，使文本匹配更加灵活。</p>
 
-  <p>You can use regex in Find &amp; Replace by changing the mode of the search from Normal to Regex.</p>
+  <p>你可以在查找与替换中将搜索模式从“正常”改为“正则表达式”来使用正则表达式。</p>
 
   <div class="image">
     <img alt="Using Regular Expressions (regex) in Find and Replace" src="../Images/tutorial-find-adv-regex.png"/>
   </div>
 
-  <p>Regex is a very important tool in Sigil, but only a very brief introduction can be given in this tutorial. See the next chapter (<a href="tutorial_regex_reference.xhtml">Regular Expression Reference</a>) for a reference list of regular expressions.</p>
+  <p><a href="../Text/tutorial_regex_reference.xhtml">正则表达式参考</a>：正则表达式是 Sigil 中非常重要的工具，但本教程只能作非常简要的介绍。正则表达式的参考列表请参见下一章。</p>
 
-  <p>For example, instead of searching for very specific text to replace or delete, such as “Page 123”, it would be much more useful to search for text that contains “Page” followed by a number – that’s exactly what regular expressions can provide.</p>
+  <p>例如，搜索“Page 123”这样非常具体的文本来替换或删除，远不如搜索包含“Page”后跟一个数字的文本有用——这正是正则表达式能做到的。</p>
 
-  <p>Instead of putting your actual text into the Find or Replace boxes, you can substitute it with special regex codes. So in the example above you could search for “Page \d+” instead of “Page 123” because “\d+” is a regex code that means any digit (the “\d”) repeated at least once (the “+”).</p>
+  <p>你可以在“查找”或“替换”框中用特殊的正则代码代替实际文本。因此上面的例子可以搜索“Page \d+”而不是“Page 123”，因为“\d+”是正则代码，表示任意数字（“\d”）至少重复一次（“+”）。</p>
 
   <div class="image">
     <img alt="Regex being used in Find field" src="../Images/tutorial-find-adv-page.png"/>
   </div>
 
-  <h3 class="sigil_not_in_toc">Using Regex to Replace Text</h3>
+  <h3 class="sigil_not_in_toc">使用正则表达式替换文本</h3>
 
-  <p>But even more useful is that you can use regex to help with replacing text as well. In the example above, you might want to keep the page numbers but replace the word “Page”. You could use then use something like:</p>
+  <p>更有用的是，你还可以用正则表达式辅助替换文本。在上面的例子中，你可能想保留页码但替换掉“Page”这个词。你可以这样使用：</p>
 
   <ul>
-    <li><span class="listheading">Find:</span> 
+    <li><span class="listheading">查找：</span> 
 
     <pre class="example">Page (\d+)</pre></li>
 
-    <li><span class="listheading">Replace:</span> 
+    <li><span class="listheading">替换：</span> 
 
     <pre class="example">This is page \1</pre></li>
   </ul>
@@ -46,37 +46,37 @@
     <img alt="Using regex captures in the Replace field." src="../Images/tutorial-find-adv-replace.png"/>
   </div>
 
-  <p>This will replace any occurrence of “Page” followed by a number with “This is page” followed by the same number:</p>
+  <p>这会把所有“Page”后跟数字的文本替换为“This is page”后跟相同的数字：</p>
 
   <ul>
-    <li><span class="listheading">Before:</span> 
+    <li><span class="listheading">替换前：</span> 
 
     <pre class="example">Page 418</pre></li>
 
-    <li><span class="listheading">After:</span> 
+    <li><span class="listheading">替换后：</span> 
 
     <pre class="example">This is page 418</pre></li>
   </ul>
 
-  <p>The first point to note about this replacement is the use of the regex code <span class="example">(\d+)</span> in the Find box. The <span class="example">\d+</span> code tells the search to look for numbers as above. But the use of parenthesis around the code tells the search to remember what those numbers were – to remember anything matched in the parenthesis. The other point to note is the use of the regex code <span class="example">\1</span> in the Replace box, which tells Replace to substitute the characters remembered in the Find statement for the string <span class="example">\1</span> wherever it finds it.</p>
+  <p>关于这个替换，首先要注意的是“查找”框中使用了正则代码 <span class="example">(\d+)</span>。<span class="example">\d+</span> 代码让搜索像上面那样查找数字，而给代码加上括号则让搜索记住匹配到的数字——即记住括号内匹配到的任何内容。另一点要注意的是“替换”框中使用了正则代码 <span class="example">\1</span>，它的作用是在找到 <span class="example">\1</span> 的地方，用“查找”中记住的字符来替换。</p>
 
-  <h3 class="sigil_not_in_toc" id="tutorial_regex_formatting">Using Regex to Change Formatting</h3>
+  <h3 class="sigil_not_in_toc" id="tutorial_regex_formatting">使用正则表达式更改格式</h3>
 
-  <p>As a further example of regex, this is how you might change the formatting of certain text into chapter headings.</p>
+  <p>再举一个正则表达式的例子，这里演示如何把某些文本的格式改为章节标题。</p>
 
-  <p>Let’s say that you have an imported HTML file that contains lots of chapter headings, but none of them are marked using the <span class="example">h1</span> heading tag. Instead they are all marked as paragraphs like this:</p>
+  <p>假设你导入了一个 HTML 文件，其中包含许多章节标题，但没有一个使用 <span class="example">h1</span> 标题元素标记。实际上，它们都标记为如下所示的段落：</p>
 
   <pre class="example">&lt;p&gt;CHAPTER 7&lt;/p&gt;
 </pre>
 
-  <p>Assuming every paragraph like this is a chapter heading, you could use this regex:</p>
+  <p>假设每一个这样的段落都是章节标题，你可以使用这个正则表达式：</p>
 
   <ul>
-    <li><span class="listheading">Find:</span> 
+    <li><span class="listheading">查找</span> 
 
     <pre class="example">&lt;p&gt;\sCHAPTER\s(\d+)\s&lt;/p&gt;</pre></li>
 
-    <li><span class="listheading">Replace:</span> 
+    <li><span class="listheading">替换：</span> 
 
     <pre class="example">&lt;h1&gt;Chapter \1&lt;/h1&gt;</pre></li>
   </ul>
@@ -85,68 +85,68 @@
     <img alt="Fully configured regex Find and Replace." src="../Images/tutorial-find-regex-chapter.png"/>
   </div>
 
-  <p>That’s quite a lot to digest, but if you look carefully you can see that it’s very similar to the Page number example above in that it’s remembering the digits in the chapter name and using them in the replace.</p>
+  <p>这有不少内容需要消化，但如果你仔细看，会发现它与上面的页码例子非常相似，都是记住章节名中的数字并在替换中使用它们。</p>
 
-  <p>It’s the Find that is the most interesting. It breaks down like this:</p>
+  <p>最有趣的是“查找”部分。它可以这样拆解：</p>
 
   <ul>
-    <li><span class="example">&lt;p&gt;</span> – Look for a starting paragraph tag.</li>
+    <li><span class="example">&lt;p&gt;</span> 查找起始段落标签。</li>
 
-    <li><span class="example">\s</span> – Regex code to match any white space (blanks, tabs, etc.).</li>
+    <li><span class="example">\s</span> – 匹配任意空白（空格、制表符等）的正则代码。</li>
 
-    <li><span class="example">CHAPTER</span> – Match the word CHAPTER (Regex is case-sensitive by default).</li>
+    <li><span class="example">CHAPTER</span> – 匹配单词 CHAPTER（正则表达式默认区分大小写）。</li>
 
-    <li><span class="example">\s</span> – Regex code to match any white space.</li>
+    <li><span class="example">\s</span> – 匹配任意空白的正则代码。</li>
 
-    <li><span class="example">(\d+)</span> – Regex code to match any number of digits in a row and remember them.</li>
+    <li><span class="example">(\d+)</span> – 匹配连续任意多个数字并记住它们的正则代码。</li>
 
-    <li><span class="example">\s</span> – Regex code to match any white space.</li>
+    <li><span class="example">\s</span> – 匹配任意空白的正则代码。</li>
 
-    <li><span class="example">&lt;/p&gt;</span> – Look for an end paragraph tag.</li>
+    <li><span class="example">&lt;/p&gt;</span> – 查找结束段落标签。</li>
   </ul>
 
-  <p>You could just use a space instead of <span class="example">\s</span> but <span class="example">\s</span> is more flexible since it will match any number of blank spaces and tabs.</p>
+  <p>你也可以用空格代替 <span class="example">\s</span>，但 <span class="example">\s</span> 更灵活，因为它能匹配任意数量的空格和制表符。</p>
 
-  <p>So the results of that search could be:</p>
+  <p>因此，该搜索的结果可能是：</p>
 
   <ul>
-    <li><span class="listheading">Before:</span> 
+    <li><span class="listheading">替换前：</span> 
 
     <pre class="example">&lt;p&gt;  CHAPTER    14&lt;/p&gt;</pre></li>
 
-    <li><span class="listheading">After:</span> 
+    <li><span class="listheading">替换后：</span> 
 
     <pre class="example">&lt;h1&gt;Chapter 14&lt;h1&gt;</pre></li>
   </ul>
 
   <div class="tip">
-    <p class="tiptext">It becomes more difficult to use regex if the formatting used in a file is not consistent – in these cases you may have to do several Find &amp; Replace passes and even resort to making the updates one by one manually.</p>
+    <p class="tiptext">如果文件中的格式不一致，使用正则表达式会更困难——这时可能需要多轮查找与替换，甚至不得不手动逐一更新。</p>
   </div>
 
-  <p>This is only a very basic description of what regex is, but it gives you an idea of what is possible. The trick with regex is getting the right find and replace strings, and that only comes from reading, asking questions, and testing.</p>
+  <p>这只是对正则表达式非常基础的介绍，但已能展示它的可能性。使用正则表达式的诀窍在于写出正确的查找与替换字符串，而这只能通过阅读、提问和测试来获得。</p>
 
-  <h3 class="sigil_not_in_toc">Helpful Options</h3>
+  <h3 class="sigil_not_in_toc">有用的选项</h3>
 
-  <p>You may have noticed the extra Options in Find &amp; Replace: DotAll, Minimal Match, Auto-Tokenise, and Unicode Property. All of these options are useful when using Regex. If you are starting out using regex, then the recommendation is to check each of the boxes except for the Unicode Property box.</p>
+  <p>你可能已经注意到查找与替换中的额外选项：覆盖全部、懒惰匹配、自动转义和 Unicode 属性。使用正则表达式时这些选项都很有用。如果你刚开始使用正则表达式，建议勾选除 Unicode 属性框之外的所有选项框。</p>
 
   <div class="image">
     <img alt="Showing Regex Search Options" src="../Images/tutorial-find-adv-options.png"/>
   </div>
 
-  <p>This is what each of the options is used for:</p>
+  <p>下面是每个选项的用途：</p>
 
   <p class="sigil_not_in_toc"></p>
 
   <ul>
-    <li><p><span class="listheading">DotAll:</span> This regex option prepends (?s) to all regex searches and is used when you want the “.*” pattern to match across separate lines.</p></li>
+    <li><p><span class="listheading">覆盖全部：</span>这个正则选项会在所有正则搜索前加上 (?s)，当你想让“.*”模式跨行匹配时使用。</p></li>
 
-    <li><p><span class="listheading">Minimal Match:</span> This regex option prepends (?U) to all regex searches and is used when you want a pattern to match the shortest occurrence instead of the longest match.</p></li>
+    <li><p><span class="listheading">懒惰匹配：</span>这个正则选项会在所有正则搜索前加上 (?U)，当你想让模式匹配最短的出现而不是最长匹配时使用。</p></li>
 
-    <li><p><span class="listheading">Auto-Tokenise:</span> When using Ctrl-F on selected text to add text to Find &amp; Replace, this will convert spaces to \s and escape certain characters so they are suitable for regex.</p></li>
+    <li><p><span class="listheading">自动转义：</span>当对选中的文本使用 Ctrl+F 将文本添加到查找与替换时，此选项会把空格转换为 \s 并转义某些字符，使其适合正则表达式。</p></li>
 
-    <li><p><span class="listheading">Unicode Property:</span> This option tells Search to replace search character classes such a \w to be based on Unicode Properties of each character.  The use of this option can greatly slow down Find and Replace but may be quite useful when searching using regex character placeholders in many languages.</p></li>
+    <li><p><span class="listheading">Unicode 属性：</span>此选项让搜索把 \w 等搜索字符类替换为基于每个字符的 Unicode 属性。使用该选项会大大减慢查找与替换的速度，但在多种语言中使用正则字符占位符搜索时可能非常有用。</p></li>
   </ul>
 
-  <p>See the <a href="tutorial_regex_reference.xhtml">Regular Expression Reference</a> chapter for more details.</p>
+  <p>更多细节请参见<a href="../Text/tutorial_regex_reference.xhtml">正则表达式参考</a>一章。</p>
 </body>
 </html>

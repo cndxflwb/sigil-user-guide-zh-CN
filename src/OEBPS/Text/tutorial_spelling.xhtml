@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Create an EPUB</title>
+  <title>创建 EPUB</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="tutorial_check_spelling">Check For Spelling Mistakes</h2>
+  <h2 id="tutorial_check_spelling">检查拼写错误</h2>
 
-  <p>Sigil can check the spelling in your book using standard dictionaries, and dictionaries you create.</p>
+  <p>Sigil 可以使用标准词典以及你自己创建的词典来检查书中的拼写。</p>
 
-  <p>Before checking the spelling in your book, you should first configure a dictionary using <span class="menuitem"><a href="preferences.xhtml#preferences_spellcheck_dictionaries">Preferences=&gt;Spellcheck Dictionaries</a></span>. You will need to select a primary dictionary (English, French, etc.). You can just use the “default” personal user dictionary to store any words you want to remember, or create a new user dictionary for each book.</p>
+  <p>检查书中拼写之前，请先通过 <span class="menuitem"><a href="../Text/preferences.xhtml#preferences_spellcheck_dictionaries">首选项=&gt;拼写检查词典</a></span> 配置词典。需要选择一个主词典（英语、法语等）。可以直接使用“default”个人用户词典保存想记住的单词，也可以为每本书创建新的用户词典。</p>
 
-  <h3 class="sigil_not_in_toc">Spellcheck</h3>
+  <h3 class="sigil_not_in_toc">拼写检查</h3>
 
-  <p>To check the spelling in your book click the Spellcheck button <img alt="Spellcheck dialog icon." src="../Images/document-spellcheck.png"/> or use the menu item <span class="menuitem">Tools=&gt;Spellcheck=&gt;Spellcheck:</span></p>
+  <p>要检查书中的拼写，可以点击拼写检查按钮 <img class="toolbar-icon" alt="Spellcheck dialog icon." src="../Images/document-spellcheck.png"/>，或使用菜单项 <span class="menuitem">工具=&gt;拼写检查=&gt;拼写检查</span>：</p>
 
   <div class="image">
     <img alt="Main Spellcheck Dialog window." src="../Images/spellcheck-main.png"/>
   </div>
 
-  <p>This will open a dialog that shows you every word Sigil has identified as misspelled.</p>
+  <p>这会打开一个对话框，显示 Sigil 识别出的所有拼写错误的单词。</p>
 
-  <p>If you select a word you will notice that Sigil will find the first occurrence of that word in your book – and display it in Code View. This is useful to see the word in context, but can be a little confusing if you are not used to Code View, but is necessary to ensure Sigil can find your misspelled word accurately.</p>
+  <p>选中一个单词后，Sigil 会在书中定位该单词首次出现的位置，并在代码视图中显示。这有助于查看单词的上下文；如果不熟悉代码视图，可能会感到困惑，但这是确保 Sigil 准确找到拼写错误单词的必要步骤。</p>
 
-  <p>Once you have selected a word, you have several choices:</p>
-
-  <ul>
-    <li>Use <span class="buttonbox">Ignore</span> to skip marking this word as misspelled until you switch to a new book or restart Sigil. Sigil will not remember to ignore this word if you restart.</li>
-
-    <li>Click on the button <span class="buttonbox">Add To Dictionary</span> to add the word to the dictionary you select from the list below the button. You will start with just a “default” dictionary in the list unless you created additional user dictionaries in Preferences.</li>
-
-    <li>Use <span class="buttonbox">Change Selected Word To</span> to change every occurrence of the selected word in your book to the word you enter below. The dropdown list contains a list of suggested alternatives, or you can type your own word.</li>
-  </ul>
-
-  <p>The other options available to you are:</p>
+  <p>选中一个单词之后，你有以下几种选择：</p>
 
   <ul>
-    <li><span class="buttonbox">Refresh</span> can be used if you edit your book while Spellcheck is open. You do not need to use it if you are just ignoring, adding, or changing a word.</li>
+    <li>使用 <span class="menuitem">忽略</span> 可跳过将此单词标记为拼写错误，直到你切换到一本新书或重启 Sigil 为止。重启后 Sigil 不会记住要忽略这个单词。</li>
 
-    <li><span class="listheading">Show All Words:</span> Check this to show all unique words in the book and not just the misspelled words.</li>
+    <li>点击 <span class="menuitem">添加到词典</span> 按钮，可将该单词添加到按钮下方列表中所选的词典。如果未在首选项中创建额外的用户词典，列表中一开始只有“default”词典。</li>
 
-    <li><span class="listheading">Locale-Aware Sort:</span> Enable this to typically sort words as AaBbCc instead of ABCabc.</li>
+    <li>使用 <span class="menuitem">将所选单词更改为</span>，可把书中该单词的所有出现都更改为下方输入的单词。下拉列表提供建议的替代词，也可以自行输入。</li>
   </ul>
 
-  <p>You may also notice that in Code View, misspelled words are optionally underlined. This is another way to check spelling with Sigil.</p>
+  <p>你还可以使用以下其他选项：</p>
+
+  <ul>
+    <li>在拼写检查窗口打开期间编辑了书，可使用<span class="buttonbox">刷新</span>。如果只是忽略、添加或更改单词，则无需刷新。</li>
+
+    <li><span class="listheading">显示所有单词：</span>勾选此项可显示书中所有不重复的单词，而不只是拼写错误的单词。</li>
+
+    <li><span class="listheading">区域感知排序：</span>启用此项后，单词通常会按 AaBbCc 排序，而不是按 ABCabc 排序。</li>
+  </ul>
+
+  <p>你可能还会注意到，在代码视图中，拼写错误的单词可以选择显示下划线。这是用 Sigil 检查拼写的另一种方式。</p>
 
   <div class="tip">
-    <p class="tiptext">See the <a href="spellcheck.xhtml">Spellcheck</a> chapter for more details.</p>
+    <p class="tiptext">更多细节请参阅<a href="../Text/spellcheck.xhtml">拼写检查</a>一章。</p>
   </div>
 </body>
 </html>

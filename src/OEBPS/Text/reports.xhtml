@@ -1,103 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Reports</title>
+  <title>报告</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="find_and_replace">Reports</h2>
+  <h2 id="find_and_replace">报告</h2>
 
-  <p class="h2subheading">— View Details About Your Book —</p>
+  <p class="h2subheading">— 查看书的详细信息 —</p>
 
-  <p>Sigil provides several reports that list details about the files and css styles in your book.</p>
+  <p>Sigil 提供多个报告，列出书中文件和 CSS 样式的详细信息。</p>
 
-  <p>You can usually double-click on an entry in the report to jump to the filename listed.</p>
+  <p>通常双击报告中的条目，即可跳转到所列文件名处。</p>
 
   <div class="tip">
-    <p class="tiptext">Some entries have tooltip information. For instance in the Image Report the number of times used column shows which files use the image.</p>
+    <p class="tiptext">有些条目带有工具提示。例如在图像报告中，“使用次数”列显示哪些文件使用了该图像。</p>
   </div>
 
-  <p>Use <span class="menuitem">Tools=&gt;Reports</span> to generate the reports and then select which report to view:</p>
+  <p>使用 <span class="menuitem">工具=&gt;报告</span> 生成报告，然后选择要查看的报告：</p>
 
-  <h3 class="sigil_not_in_toc">All Files</h3>
+  <h3 class="sigil_not_in_toc">所有文件</h3>
 
-  <p>This report lists all of the files in the EPUB, the size of the file, the location and type of the file, and whether there are any guide semantic types applied to the file.</p>
+  <p>此报告列出 EPUB 中的所有文件，包括文件大小、位置和类型，以及是否应用了 guide 语义类型。</p>
 
   <div class="image">
     <img alt="Image of All Files Report." src="../Images/reports-all-files.png"/>
   </div>
 
-  <h3 class="sigil_not_in_toc">HTML Files</h3>
+  <h3 class="sigil_not_in_toc">HTML 文件</h3>
 
-  <p>This report lists all of your HTML files and details about the files.</p>
+  <p>此报告列出所有 HTML 文件及其详细信息。</p>
 
   <div class="image">
     <img alt="HTML Files Report." src="../Images/reports-html-files.png"/>
   </div>
 
-  <p>You can delete files from the EPUB while in the report by right-clicking on selected files and choosing <span class="menuitem">Delete From Book</span>.</p>
+  <p>在报告界面中，可通过右键单击所选文件并选择 <span class="menuitem">从书中删除</span>，将文件从 EPUB 中删除。</p>
 
-  <h3 class="sigil_not_in_toc">Image Files</h3>
+  <h3 class="sigil_not_in_toc">图像文件</h3>
 
-  <p>This report lists all of your images and indicates whether or not they were used in the book and how many times. You can double-click on an entry to jump to the first occurrence of the image in your HTML files (not images in CSS files).</p>
+  <p>此报告列出所有图像，标明是否已在书内使用及使用次数。双击某个条目，即可跳转到该图像在 HTML 文件中的首次出现位置（不含 CSS 文件链接的图像）。</p>
 
   <div class="image">
     <img alt="Image Files Report" src="../Images/reports-image-files.png"/>
   </div>
 
-  <p>You can delete files from the EPUB while in the report by right-clicking on selected files and choosing <span class="menuitem">Delete From Book</span>.</p>
+  <p>在报告界面中，可通过右键单击所选文件并选择 <span class="menuitem">从书中删除</span>，将文件从 EPUB 中删除。</p>
 
-  <h3 class="sigil_not_in_toc">CSS Files</h3>
+  <h3 class="sigil_not_in_toc">CSS 文件</h3>
 
-  <p>This report lists all of your CSS Stylesheets and indicates whether or not they were linked to and how many times.</p>
+  <p>此报告列出所有 CSS 样式表，标明是否已被链接及链接次数。</p>
 
   <div class="image">
     <img alt="CSS Files Report" src="../Images/reports-css-files.png"/>
   </div>
 
-  <p>You can delete files from the EPUB while in the report by right-clicking on selected files and choosing <span class="menuitem">Delete From Book</span>.</p>
+  <p>在报告界面中，可通过右键单击所选文件并选择 <span class="menuitem">从书中删除</span>，将文件从 EPUB 中删除。</p>
 
-  <h3 class="sigil_not_in_toc">Classes Used in HTML Files</h3>
+  <h3 class="sigil_not_in_toc">HTML 文件中已使用的类</h3>
 
-  <p>This report scans the HTML files in your book and extracts a list of style class names that are used in the files. For each class name it lists whether or not it was found in a CSS Stylesheet or an Inline Style.</p>
+  <p>此报告扫描书中的 HTML 文件，提取已使用的样式类名列表。对每个类名，列出其是否存在于某个 CSS 样式表或内联样式中。</p>
 
   <div class="image">
     <img alt="Classes Used in HTML Files Report" src="../Images/reports-classes-used.png"/>
   </div>
 
-  <h3 class="sigil_not_in_toc">CSS Selectors</h3>
+  <h3 class="sigil_not_in_toc">CSS 选择器</h3>
 
-  <p>This report scans the CSS stylesheets in your book and for each style selector it lists whether it was used in the book or not.</p>
+  <p>此报告扫描书中的 CSS 样式表，对每个样式选择器列出其是否已在书内用过。</p>
 
   <div class="image">
     <img alt="CSS Selectors Report" src="../Images/reports-css-selectors.png"/>
   </div>
 
-  <p>You can delete specific style classes from the stylesheets while in the report by right-clicking on selected styles and choosing <span class="menuitem">Delete From Stylesheet</span>.</p>
+  <p>在报告界面中，可通过右键单击所选样式并选择 <span class="menuitem">从样式表中删除</span>，将特定的样式类从样式表中删除。</p>
 
-  <h3 class="sigil_not_in_toc">Links And Footnotes</h3>
+  <h3 class="sigil_not_in_toc">链接与脚注</h3>
 
-  <p>This report lists every link (href) found in your HTML files. These are the “&lt;a&gt;” tags in your code. It includes whether the link has an id, what the target of the link is, and whether that target exists.</p>
+  <p>此报告列出 HTML 文件中的每个链接（href），即代码里的“&lt;a&gt;”标签，并包含链接是否有 ID、链接目标是什么，以及该目标是否存在。</p>
 
-  <p>In addition, to help with footnotes or endnotes, it checks for reverse links. A reverse link is a link from a target that points back to the original link. In other words, if you create links like this for footnotes the report can confirm if they both link to each other:</p>
+  <p>此外，为便于处理脚注或尾注，报告还会检查反向链接。反向链接是从目标指回原始链接的链接。若按如下方式为脚注创建链接，此报告即可确认两者是否互相链接：</p>
 
-  <pre class="example">Link in text:      &lt;a id="t1" target="../Text/footfile1.xhtml#f1"&gt;text to footnote&lt;/a&gt;
-Link in footnote: &lt;a id="f1" target="../Text/file1.xhtml#t1"&gt;footnote back to text&lt;/a&gt;</pre>
+  <pre class="example">注标: &lt;a id="t1" target="../Text/footfile1.xhtml#f1"&gt;跳转到注释&lt;/a&gt;
+脚注: &lt;a id="f1" target="../Text/file1.xhtml#t1"&gt;返回到注标&lt;/a&gt;</pre>
 
-  <p>This only works if you use ids within the anchor ("a") tag.</p>
+  <p>仅在锚点（“a”）标签内使用 ID 时，此功能才有效。</p>
 
   <div class="image">
     <img alt="Links Report" src="../Images/reports-links.png"/>
   </div>
 
-  <h3 class="sigil_not_in_toc">Characters in HTML Files</h3>
+  <h3 class="sigil_not_in_toc">HTML 文件中的字符</h3>
 
-  <p>This report extracts a list of all the characters that are used in your HTML files. More specifically, it lists any character that is displayed in Preview. HTML entity codes are listed if they exist for the character, along with their decimal and hexadecimal codes. And all characters are listed at the bottom for easy cut and paste.</p>
+  <p>此报告提取 HTML 文件中使用的全部字符。具体而言，它列出预览中显示的所有字符；若某字符存在 HTML 实体编码，会连同其十进制和十六进制编码一并列出。全部字符都列在底部，便于剪切和粘贴。</p>
 
-  <p>This report can be used to identify if extra characters are being used in the book unexpectedly, and it may be of assistance if you are subsetting fonts.</p>
+  <p>此报告可用于识别书中是否意外使用了多余字符；若正在对字体做子集化处理，也可能有所帮助。</p>
 
   <div class="image">
     <img alt="Characters Report" src="../Images/reports-characters.png"/>

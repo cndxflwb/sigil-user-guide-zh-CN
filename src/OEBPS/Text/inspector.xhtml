@@ -1,241 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Inspect Page</title>
+  <title>检查页面</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="customize">Using the Page Inspector</h2>
+  <h2 id="customize">使用页面检查器</h2>
 
-  <p class="h1subheading">— Inspect the DOM of Your Page —</p>
+  <p class="h1subheading">— 检查页面的 DOM —</p>
 
-<p>At the bottom of the Preview window is a button that displays
-the Inspector tool. The icon looks like this:</p>
-<div class="image">
-<img alt="Page Inspector tool icon." src="../Images/tutorial-inspector.png"/>
-</div>
+  <p>在预览窗口的底部有一个按钮，用于显示检查器工具。图标看起来像这样：</p>
 
-<p>When you click on the button, the Page Inspector tool is displayed.
-</p>
-<div class="image">
-<img alt="Inspector window" src="../Images/tutorial-inspector-window.png"/>
-</div>
+  <div class="image">
+    <img class="toolbar-icon" alt="Page Inspector tool icon." src="../Images/tutorial-inspector.png"/>
+  </div>
 
-<p>The Page Inspector allows you to inspect and modify the Document Object Model
-(DOM) of the page being viewed in the Preview window.</p>
+  <p>当你单击该按钮时，就会显示页面检查器工具。</p>
 
-<p>The DOM is a memory-resident version of the page that you have
-composed using HTML. Sigil parses the HTML file and creates a tree
-structure in memory that represents the information you have entered
-into the HTML. The Preview Page is
-actually displaying what is in the DOM.</p>
+  <div class="image">
+    <img alt="Inspector window" src="../Images/tutorial-inspector-window.png"/>
+  </div>
 
-<p>If you are interested in learning more about the DOM, you
-can find those details at:</p>
+  <p>页面检查器允许你检查和修改预览窗口中正在查看页面的文档对象模型（DOM）。</p>
 
-<p><a href="https://www.w3schools.com/js/js_htmldom.asp
-">https://www.w3schools.com/js/js_htmldom.asp</a>
-</p>
+  <p>DOM 是你使用 HTML 构建的页面的内存驻留版本。Sigil 解析 HTML 文件，并在内存中创建一个表示你所输入 HTML 信息的树形结构。预览页面实际显示的就是 DOM 中的内容。</p>
 
-<p>Since the DOM is a memory-resident version of your page, you can
-change it on the fly and see the results immediately in the preview.</p>
-<p>
-The Inspector allows you to inspect and modify the DOM as you like.
-That makes it possible for you to change the contents of the page,
-and/or the style sheets and see the results of those changes immediately
-in the preview.</p>
+  <p>如果你想进一步了解 DOM，可以在以下地址找到相关详情：</p>
 
-<div class="tip">
-<p class="tiptext">Since you are changing only the DOM in memory, none of the
-changes that you make in the Inspector will change your HTML file.</p>
-</div>
+  <p><a href="https://www.w3schools.com/js/js_htmldom.asp">https://www.w3schools.com/js/js_htmldom.asp</a></p>
 
-<p>When you first open the Inspector, the DOM tree shows two
-nodes with arrows,
-<img alt="Inspector Expand DOM tree using arrows." src="../Images/tutorial-inspector-window-arrow.png"/>
-, pointing to the right, as you can see in the previous figure.
-There is one for the &lt;head&gt; tag and one for the &lt;body&gt; tag.
-If you click on one of the arrows, the tree
-expands so show the contents of that node, as shown below.</p>
-<div class="image">
-<img alt="Inspector window DOM node level 1" src="../Images/tutorial-inspector-window-level1.png"/>
-</div>
+  <p>由于 DOM 是页面的内存驻留版本，你可以即时修改它，并立即在预览中看到结果。</p>
 
-<p>In the figure above, you can see that the &lt;body&gt; tag has been expanded to show
-the contents of the body. Clicking successively on the arrows allows
-you to dig down through the tree of nodes.</p>
-<div class="image">
-<img alt="Inspector window DOM node level 2" src="../Images/tutorial-inspector-window-level2.png"/>
-</div>
+  <p>检查器允许你随意检查和修改 DOM。这使得你可以更改页面内容或样式表，并立即在预览中看到这些更改的结果。</p>
 
-<p>When you select one of the tags in the tree, the window on the
-right hand side displays the style information about that node.</p>
-<div class="image">
-<img alt="Inspector window showing styles applied." src="../Images/tutorial-inspector-window-styles.png"/>
-</div>
+  <div class="tip">
+    <p class="tiptext">由于你修改的只是内存中的 DOM，因此在检查器中所做的任何更改都不会改变你的 HTML 文件。</p>
+  </div>
 
-<p>You can see that the styles applied to that node are
-shown in the Styles panel. Of particular interest is the figure in the lower right hand
-corner of the Styles panel. That is called a Box Model.</p>
-<div class="image">
-<img alt="Inspector window show Box Model dimensions" src="../Images/tutorial-inspector-window-boxmodel.png"/>
-</div>
+  <p>首次打开检查器时，DOM 树会显示两个带箭头、指向右侧的节点<img class="toolbar-icon" alt="Inspector Expand DOM tree using arrows." src="../Images/tutorial-inspector-window-arrow.png"/>，如前图所示。一个对应 &lt;head&gt; 标签，一个对应 &lt;body&gt; 标签。单击其中一个箭头，树就会展开以显示该节点的内容，如下所示。</p>
 
-<p>The box model shows the values of position, margin, border, padding and contents of the node. The units of the 
-numbers shown are pixels. So you can tell from the image above that the selected
-paragraph has a top and bottom margin of 16 pixels, no border, no padding, and is
-288 pixels wide and 72 pixels tall.</p>
+  <div class="image">
+    <img alt="Inspector window DOM node level 1" src="../Images/tutorial-inspector-window-level1.png"/>
+  </div>
 
+  <p>在上图中，你可以看到展开的 &lt;body&gt; 标签，显示了 body 的内容。连续单击箭头，可以让你沿节点树逐层深入。</p>
 
+  <div class="image">
+    <img alt="Inspector window DOM node level 2" src="../Images/tutorial-inspector-window-level2.png"/>
+  </div>
 
-<p>Another way that you can select a node for inspection is
-to use the Element Tool, which allows you to select the desired
-node in the Preview panel. Activate the Element Tool by clicking the
-button in the upper left corner of the Inspector window,
-indicated by the mouse cursor in the figure below.</p>
-<div class="image">
-<img alt="Inspector element tool" src="../Images/tutorial-inspector-element-tool.png"/>
-</div>
+  <p>当你在树中选择某个标签时，右侧窗口会显示该节点的样式信息。</p>
 
-<p>Once you have
-activated the Element Tool, you can select the desired element
-in the Preview panel. The elements in the Preview panel are
-highlighted as you track the mouse cursor over them.
-</p>
-<div class="image">
-<img alt="Inspector Element Selection" src="../Images/tutorial-inspector-element-selection.png"/>
-</div>
+  <div class="image">
+    <img alt="Inspector window showing styles applied." src="../Images/tutorial-inspector-window-styles.png"/>
+  </div>
 
-<p>Simply click on the highlighted element.
-Once you have selected a node in the Elements tree, you
-can make changes to its contents and styles and see the effect
-of those changes immediately in the Preview window. In the
-figure below, I have changed the style for the paragraph
-tag to add the color: red.</p>
-<div class="image">
-<img alt="Inspector window Styles in red" src="../Images/tutorial-inspector-window-styles-red.png"/>
-</div>
+  <p>你可以看到，应用于该节点的样式显示在样式面板中。特别值得关注的是样式面板右下角的图形，它被称为盒模型（Box Model）。</p>
 
-<p>You can see immediately in the Preview window
-that all the paragraph tags show the text in red.</p>
-<div class="image">
-<img alt="Inspector window style change results" src="../Images/tutorial-inspector-window-styles-red-results.png"/>
-</div>
+  <div class="image">
+    <img alt="Inspector window show Box Model dimensions" src="../Images/tutorial-inspector-window-boxmodel.png"/>
+  </div>
 
-<p>You can change the contents of the node as well.
-Double-click on the contents of the paragraph to select it.</p>
-<div class="image">
-<img alt="Using Inspector window to edit" src="../Images/tutorial-inspector-window-edit.png"/>
-</div>
+  <p>盒模型显示了节点的位置、外边距（margin）、边框（border）、内边距（padding）以及内容的值。所显示数值的单位是像素。因此，从上图可以看出，所选段落的上、下外边距为 16 像素，无边框，无内边距，宽 288 像素，高 72 像素。</p>
 
-<p>Enter the new text to see it change immediately in
-the Preview window.</p>
-<div class="image">
-<img alt="Result of editin via Inspector window" src="../Images/tutorial-inspector-window-edit-result.png"/>
-</div>
+  <p>另一种选择节点进行检查的方式是使用元素工具，它允许你在预览面板中选择所需的节点。通过单击检查器窗口左上角的按钮来激活元素工具，如下图所示，鼠标光标即指示该按钮。</p>
 
+  <div class="image">
+    <img alt="Inspector element tool" src="../Images/tutorial-inspector-element-tool.png"/>
+  </div>
 
-<div class="tip">
-<p class="tiptext">Remember, since you are changing only the DOM in memory, none of the
-changes that you make in the Inspector will change your HTML file.</p>
-</div>
+  <p>激活元素工具后，你可以在预览面板中选择所需的元素。当鼠标光标扫过预览面板中的元素时，这些元素会被高亮显示。</p>
 
-<p>Another feature of the Inspector is the Console, which
-interprets JavaScript commands.</p>
+  <div class="image">
+    <img alt="Inspector Element Selection" src="../Images/tutorial-inspector-element-selection.png"/>
+  </div>
 
-<p>Once you have selected a node in the inspector tree, you can
-access it using normal JavaScript commands in the Console. The Console
-can be activated by switching to it with the Console
-tab.</p>
-<div class="image">
-<img alt="Inspector window Console Tab" src="../Images/tutorial-inspector-console-tab.png"/>
-</div>
+  <p>只需单击被高亮的元素。在 DOM 树中选择某个节点后，你可以更改其内容和样式，并立即在预览窗口中看到这些更改的效果。在下图中，我更改了段落标签的样式，添加了 color: red。</p>
 
-<p>That results in the Console taking over the entire Inspector
-window.</p>
-<div class="image">
-<img alt="Inspector Content Full area" src="../Images/tutorial-inspector-console-total.png"/>
-</div>
+  <div class="image">
+    <img alt="Inspector window Styles in red" src="../Images/tutorial-inspector-window-styles-red.png"/>
+  </div>
 
+  <p>你可以立即在预览窗口中看到，所有段落标签的文本都显示为红色。</p>
 
-<p>You can also place a Console panel beneath the Elements panel
-by typing the Esc key.</p>
-<div class="image">
-<img alt="Inspector Console relocated" src="../Images/tutorial-inspector-console.png"/>
-</div>
+  <div class="image">
+    <img alt="Inspector window style change results" src="../Images/tutorial-inspector-window-styles-red-results.png"/>
+  </div>
 
-<p>The currently selected node in the Elements panel
-is accessed using '$0'. The node that is accessed
-using $0 is indicated in the
-Elements panel where the tool has appended '== $0'
-to the line of text that is selected.</p>
-<div class="image">
-<img alt="Inspector showing node id." src="../Images/tutorial-inspector-node-id-0.png"/>
-</div>
+  <p>你还可以更改节点的内容。双击段落的内容即可选中它。</p>
 
+  <div class="image">
+    <img alt="Using Inspector window to edit" src="../Images/tutorial-inspector-window-edit.png"/>
+  </div>
 
-<p>In the previous figure of the Console, you can see that I have
-typed '$0' into the Console, and
-it is displaying the contents of the selected node.
-Clicking on the arrows in the Console allows you to dig
-down into the node that is displayed.</p>
+  <p>输入新文本，即可看到它立即在预览窗口中发生变化。</p>
 
-<p>You can use $0 to access and traverse the DOM tree
-as you normally would with JavaScript commands. For example
-you can access the parent of the selected node by typing
-$0.parentElement. As you enter the command, autocompletion
-popups are displayed to help you.</p>
-<div class="image">
-<img alt="Inspector Console using autocomplete" src="../Images/tutorial-inspector-console-autocomplete.png"/>
-</div>
+  <div class="image">
+    <img alt="Result of editin via Inspector window" src="../Images/tutorial-inspector-window-edit-result.png"/>
+  </div>
 
-<p>You can use the mouse to select the desired method from the menu,
-or you can type the Tab key to finish the selection by accepting
-the highlighted element.</p>
+  <div class="tip">
+    <p class="tiptext">请记住，由于你修改的只是内存中的 DOM，因此在检查器中所做的任何更改都不会改变你的 HTML 文件。</p>
+  </div>
 
-<p>You can see in the following figure that the parent
-of the selected paragraph node is the &lt;body&gt; node.</p>
-<div class="image">
-<img alt="Inspector Console to show parent" src="../Images/tutorial-inspector-console-parent.png"/>
-</div>
+  <p>检查器的另一个功能是控制台（Console），它可以解释 JavaScript 命令。</p>
 
-<p>Once again, you can use the arrows in the Console output
-to dig down into the node that you are inspecting.</p>
-<div class="image">
-<img alt="Inspector Console parent expanded" src="../Images/tutorial-inspector-console-parent-expanded.png"/>
-</div>
+  <p>在检查器中选中某个节点后，你可以在控制台中使用常规的 JavaScript 命令来访问它。通过切换到 Console（控制台）标签页即可激活控制台。</p>
 
-<p>One last tip for using the JavaScript console is that
-the Inspector tool keeps a history of selected nodes. The most
-recently selected node is accessed using $0, and the node
-selected before the current selection is accessed as
-$1. In the figure below, I first selected the paragraph node,
-and then I selected the image node. So $0 refers to the image
-node, the most recent selection, and $1 refers to the paragraph node,
-the previous selection.</p>
-<div class="image">
-<img alt="Inspector Console Node History" src="../Images/tutorial-inspector-console-node-history.png"/>
-</div>
+  <div class="image">
+    <img alt="Inspector window Console Tab" src="../Images/tutorial-inspector-console-tab.png"/>
+  </div>
 
-<p>Cascading style sheets are also
-supported in the Inspector. 
-The Styles panel provides information about cascading
-styles.</p>
-<div class="image">
-<img alt="Inspector window shopwing Cascading Styles" src="../Images/tutorial-inspector-window-cascading-styles.png"/>
-</div>
+  <p>这样做的结果是，控制台会占据整个检查器窗口。</p>
 
-<p>In the figure above, the cascading styles are shown
-with information about the source of each style. The styles
-that are crossed out with a line through them, have been
-superseded by the other styles in the display.</p>
+  <div class="image">
+    <img alt="Inspector Content Full area" src="../Images/tutorial-inspector-console-total.png"/>
+  </div>
 
+  <p>你也可以通过按下 <span class="shortcut">Esc</span> 键，在元素面板下方放置一个控制台面板。</p>
 
-<p>This tutorial is only a brief overview of the features of
-the Page Inspector. More details can be found at
-<a href="https://developers.google.com/web/tools/chrome-devtools/">Google Chrome Developer Tools Documentation</a></p>
+  <div class="image">
+    <img alt="Inspector Console relocated" src="../Images/tutorial-inspector-console.png"/>
+  </div>
+
+  <p>可以使用 '$0' 来访问元素面板中当前选中的节点。通过 $0 访问的节点会在元素面板中显示出来——该工具已在所选文本行的末尾追加了 '== $0'。</p>
+
+  <div class="image">
+    <img alt="Inspector showing node id." src="../Images/tutorial-inspector-node-id-0.png"/>
+  </div>
+
+  <p>在上一个控制台示例图中，你可以看到我在控制台中输入了 '$0'，它正在显示所选节点的内容。单击控制台中的箭头，可以让你深入查看所显示的节点。</p>
+
+  <p>你可以像使用常规 JavaScript 命令那样，用 $0 来访问和遍历 DOM 树。例如，你可以输入 $0.parentElement 来访问所选节点的父元素。在输入命令时，会显示自动补全弹窗来帮助你。</p>
+
+  <div class="image">
+    <img alt="Inspector Console using autocomplete" src="../Images/tutorial-inspector-console-autocomplete.png"/>
+  </div>
+
+  <p>你可以用鼠标从菜单中选择所需的方法，也可以按 <span class="shortcut">Tab</span> 键接受高亮的元素来完成选择。</p>
+
+  <p>在下图中可以看到，所选段落节点的父元素是 &lt;body&gt; 节点。</p>
+
+  <div class="image">
+    <img alt="Inspector Console to show parent" src="../Images/tutorial-inspector-console-parent.png"/>
+  </div>
+
+  <p>同样，你可以使用控制台输出中的箭头，深入查看正在检查的节点。</p>
+
+  <div class="image">
+    <img alt="Inspector Console parent expanded" src="../Images/tutorial-inspector-console-parent-expanded.png"/>
+  </div>
+
+  <p>使用 JavaScript 控制台的最后一个技巧是：检查器工具会保留所选节点的历史记录。最近选中的节点使用 $0 访问，而当前选择之前所选的节点使用 $1 访问。在下图中，我先选中了段落节点，然后选中了图像节点。因此 $0 指的是图像节点（最近的选择），$1 指的是段落节点（上一次的选择）。</p>
+
+  <div class="image">
+    <img alt="Inspector Console Node History" src="../Images/tutorial-inspector-console-node-history.png"/>
+  </div>
+
+  <p>检查器也支持层叠样式表（CSS）。样式面板提供了有关层叠样式的信息。</p>
+
+  <div class="image">
+    <img alt="Inspector window shopwing Cascading Styles" src="../Images/tutorial-inspector-window-cascading-styles.png"/>
+  </div>
+
+  <p>在上图中，层叠样式连同每个样式的来源信息一起显示。被划线划掉的样式，表示被页面上的其他样式覆盖。</p>
+
+  <p>本教程只是对页面检查器功能的简要概述。更多详情可在<a href="https://developers.google.com/web/tools/chrome-devtools/">Google Chrome 开发者工具文档</a>中找到。</p>
 </body>
 </html>

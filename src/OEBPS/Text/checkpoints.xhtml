@@ -1,52 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Tutorials</title>
+  <title>教程</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="tutorial_checkpoints">Using Checkpoints to Quickly Save/Restore Epub State</h2>
+  <h2 id="tutorial_checkpoints">使用检查点快速保存/恢复 EPUB 状态</h2>
 
-  <p>Sigil has many powerful tools to automate repairing, splitting, merging, renaming, and moving xhtml, images, stylesheets, and other resources. These tools can make numerous changes that a simple Undo/Redo can not handle. To help prevent inadvertent data loss and to provide a way to “undo” even larger scale changes, we have added a Checkpoint capability to Sigil.</p>
+  <p>Sigil 提供了许多强大的工具，可自动修复、拆分、合并、重命名和移动 xhtml、图片、样式表及其他资源。这些工具可能产生大量更改，简单的撤销/重做难以应对。为防止意外丢失数据，并为更大规模的更改提供“撤销”途径，Sigil 新增了检查点功能。</p>
 
-  <div class="image"><img alt="Image of the Checkpoints menu." style="width:45%" src="../Images/cp-menu.png"/></div>
+  <div class="image">
+    <img alt="Image of the Checkpoints menu." style="width:45%" src="../Images/cp-menu.png"/>
+  </div>
 
-  <p>A checkpoint is a quick snapshot of the entire state of the EPUB that is stored in its own git repository that is kept inside your Sigil Preferences folder inside the "repo" folder. Creating a checkpoint can be as simple as one click on the Checkpoint icon or by using the Checkpoint Menus. Each Checkpoint made of an EPUB is named/numbered sequentially.</p>
+  <p>检查点是 EPUB 完整状态的快速快照，保存在专属 git 仓库中；该仓库位于 Sigil 首选项文件夹内的“repo”目录。创建检查点很简单：点击检查点图标或使用检查点菜单即可。每个 EPUB 的检查点按顺序命名/编号。</p>
 
-  <div class="image"><img alt="Checkpoint dialog to select a previous checkpoint." style="width:30%" src="../Images/cp-select.png"/></div>
+  <div class="image">
+    <img alt="Checkpoint dialog to select a previous checkpoint." style="width:30%" src="../Images/cp-select.png"/>
+  </div>
 
- <p>Once a Checkpoint is made, users can feel safe to make larger changes to their copy knowing that they can easily restore to their last checkpoint.</p>
+  <p>创建检查点后，即可放心地对副本做更大的改动，需要时可轻松恢复到上一个检查点。</p>
 
-<p>Users can also edit and attach their own short description of each Checkpoint: <span class="menuitem">Checkpoints=&gt;Edit Checkpoint Descriptions</span> to help keep track of at what point in the editing process this checkpoint was made.</p>
+  <p>还可为每个检查点编辑并附加简短描述：选择 <span class="menuitem">检查点=&gt;编辑检查点描述</span>，便于记录检查点处于编辑流程的哪个阶段。</p>
 
-  <p>An added advantage of using checkpoints is that a user can always compare the current state of their EPUB against any of their earlier checkpoints to see exactly what was changed and how. Here is image showing the output of a comparison done against an earlier checkpoint during an editing session. After selecting the checkpoint to compare against the following dialog is shown showing which files have changed:</p>
+  <p>使用检查点的另一好处，是可随时将 EPUB 当前状态与任一较早的检查点比较，精确查看改动内容和方式。下图展示了一次编辑过程中与较早检查点比较的输出结果。选择要比较的检查点后，会显示如下对话框，列出已更改的文件：</p>
 
-  <div class="image"><img alt="Dialog showing differences between current epub and an earlier checkpoint." src="../Images/cp-differences.png"/></div>
+  <div class="image">
+    <img alt="Dialog showing differences between current epub and an earlier checkpoint." src="../Images/cp-differences.png"/>
+  </div>
 
-  <p>Users can select and view any of the files that only exist in the current EPUB or only exist in the checkpoint.</p>
+  <p>可以选择并查看仅存在于当前 EPUB 或仅存在于检查点中的文件。</p>
 
-  <div class="image"><img alt="Text file Viewer window." src="../Images/cp-viewer.png"/></div>
+  <div class="image">
+    <img alt="Text file Viewer window." src="../Images/cp-viewer.png"/>
+  </div>
 
-  <p>For text files that have been modified, the user is provided with a side by side highlighted view of both the lines changes and the areas within the lines that have been changed.</p>
+  <p>对于已修改的文本文件，会以并排高亮视图展示发生更改的行，以及行内具体的更改区域。</p>
 
-  <div class="image"><img alt="A 'Diff' Window showing side by side changes in an xhtml file." src="../Images/cp-compare2.png"/></div>
+  <div class="image">
+    <img alt="A 'Diff' Window showing side by side changes in an xhtml file." src="../Images/cp-compare2.png"/>
+  </div>
 
-  <p>When the final version of the EPUB has been produced and saved, the user can manage their checkpoint repositories to remove them and free up disk space.</p>
+  <p>EPUB 最终版本制作并保存后，可管理检查点仓库，将其移除以释放磁盘空间。</p>
 
-  <div class="image"><img alt="Checkpoint Manage Repos dialog." src="../Images/cp-manage.png"/></div>
+  <div class="image">
+    <img alt="Checkpoint Manage Repos dialog." src="../Images/cp-manage.png"/>
+  </div>
 
-  <p>Or they can generate a summary of the changes made in each checkpoint:  <span class="menuitem">Checkpoints=&gt;Show Log of Checkpoints</span> to help them select earlier versions to restore from if needed.</p>
+  <p>还可生成每个检查点的更改摘要：选择 <span class="menuitem">检查点=&gt;显示检查点日志</span>，便于需要时选择要恢复的较早版本。</p>
 
-  <div class="image"><img alt="CheckPoint Repo Log viewer." src="../Images/cp-log.png"/></div>
+  <div class="image">
+    <img alt="CheckPoint Repo Log viewer." src="../Images/cp-log.png"/>
+  </div>
 
- <div class="tip">
-    <p class="tiptext">Some Sigil tools like “Mend” or “Mend and Prettify” can make a large number of changes to white space which can help hide more significant changes later. Therefore it is a good idea that after using a tool that makes large white space changes, you checkpoint both right before and immediately after using the tool so you can make finding later changes much easier.</p>
-</div>
-<div class="tip">
-    <p class="tiptext">Since the both the EPUB file name and title can be easily changed, especially during editing, relying on the file name or title to uniquely identify an EPUB across changes not a good idea. To uniquely identify your EPUB, the Checkpoint tool will add a dc:identifier using the UUID scheme to your EPUB <b>if one does not already exist</b>. This identifier will form the basis of the repository name. It should remain unchanged during editing. This UUID identifier need not be your book’s unique-identifier, it just has to exist unchanged until you are finished using the Checkpoint tool.</p>
+  <div class="tip">
+    <p class="tiptext">某些 Sigil 工具（如 修复 或 修复并美化）会大量更改空白符，可能掩盖之后更重要的更改。因此，使用这类工具前和使用后建议立即各建一个检查点，以便日后更轻松地区分更改。</p>
+  </div>
+
+  <div class="tip">
+    <p class="tiptext">EPUB 的文件名和书名很容易更改（尤其在编辑期间），因此不宜将文件名或书名作为多次更改中锚定的唯一标识。为唯一标识你的 EPUB，若 <b>尚不存在相应标识符</b>，检查点工具会为其添加采用 UUID 方案的 dc:identifier。该标识符构成仓库名称的基础，编辑期间应保持不变。此 UUID 标识符不必是图书的 unique-identifier（唯一标识符），只需在您使用检查点工具期间保持不变即可。</p>
   </div>
 </body>
 </html>

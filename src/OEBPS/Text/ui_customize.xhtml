@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Customize the User Interface</title>
+  <title>自定义用户界面</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="customize">Customize the User Interface</h2>
+  <h2 id="customize">自定义用户界面</h2>
 
-  <p class="h1subheading">— Make it Work the Way You Want —</p>
+  <p class="h1subheading">— 让它按你想要的方式工作 —</p>
 
-<p>The Sigil user interface is highly configurable.</p>
+  <p>Sigil 的用户界面可深度定制。</p>
 
-<p>Sigil supports both Dark and Light themes inherited directly from your System preferences settings.</p>
+  <p>Sigil 同时支持深色和浅色主题，它们直接继承自你的系统偏好设置。</p>
 
-<div class="image">
-  <p><img alt="image of Sigil using a Dark theme" src="../Images/sigil_dark.png"/></p>
-<p><img alt="image of Sigil using a Light theme" src="../Images/sigil_light.png"/></p>
-</div>
+  <div class="image">
+    <p><img alt="image of Sigil using a Dark theme" src="../Images/sigil_dark.png"/></p>
 
-<p>On macOS, your System Preferences can be used to change from Light to Dark themes at any time or even automatically based on time of day. The same is now true for both Windows and most Linux Distributions. On Windows and Linux, your System theme is detected and set at Sigil’s launch.</p>
+    <p><img alt="image of Sigil using a Light theme" src="../Images/sigil_light.png"/></p>
+  </div>
+
+  <p>在 macOS 上，你可以使用系统偏好设置随时在浅色主题和深色主题之间切换，甚至可以根据一天中的时间自动切换。如今 Windows 和大多数 Linux 发行版也同样如此。在 Sigil 启动时会检测并设置 Windows 和 Linux 上的系统主题。</p>
 
 <!--
 <ul>
@@ -32,172 +33,134 @@
 </ul>
 -->
 
-<p>Sigil’s primary interface consists of a main window
-in which are displayed several panels plus a set of toolbars. Which of these
-items you want to display are configurable using the View menu.</p>
+  <p>Sigil 的主界面由一个主窗口组成，其中显示多个面板以及一组工具栏。你可以使用 视图 菜单来配置要显示其中的哪些项目。</p>
 
   <div class="image">
     <img alt="Using Sigil View menu to customize the user interface." src="../Images/ui_customize_view_menu.png"/>
   </div>
 
-<p>The panels you want to display can be customized in the main View
-menu.</p>
+  <p>你可以在 视图 菜单中自定义要显示的面板。</p>
 
-<div class="image">
-<img alt="Using View menu to select what windows are shown versus hidden." src="../Images/ui_customize_view_menu_windows.png"/>
-</div>
+  <div class="image">
+    <img alt="Using View menu to select what windows are shown versus hidden." src="../Images/ui_customize_view_menu_windows.png"/>
+  </div>
 
-<p>The panels you can use are:</p>
+  <p>你可以使用的面板有：</p>
 
   <ul>
-    <li><span class="listheading"><a href="book_browser.xhtml">Book Browser</a>:</span> For browsing the files in your book.</li>
+    <li><span class="listheading"><a href="../Text/book_browser.xhtml">书籍浏览器</a></span>：用于浏览书中的文件。</li>
 
-    <li><span class="listheading"><a href="clips.xhtml">Clips:</a></span> Your defined clips</li>
+    <li><span class="listheading"><a href="../Text/clips.xhtml">剪贴板</a></span>：你定义的剪贴板条目</li>
 
-    <li><span class="listheading"><a href="preview.xhtml">Preview</a>:</span> Dynamically updated preview of your book.</li>
+    <li><span class="listheading"><a href="../Text/preview.xhtml">预览</a></span>：动态更新的书籍预览。</li>
 
-    <li><span class="listheading"><a href="table_of_contents.xhtml">Table of Contents</a>:</span> The Table of Contents.</li>
+    <li><span class="listheading"><a href="../Text/table_of_contents.xhtml">目录</a>：</span>目录。</li>
 
-    <li><span class="listheading"><a href="validation.xhtml">Validation Results</a>:</span> The output from validating your book.</li>
+    <li><span class="listheading"><a href="../Text/validation.xhtml">验证结果</a>：</span>验证书籍后的输出信息。</li>
   </ul>
 
-<p>The Toolbars can be customized using the Toolbars menu,
-which is posted by hovering the mouse over the “Toolbars” item at
-the top of the View menu.</p>
+  <p>工具栏可以使用 工具栏 菜单来自定义，该菜单通过将鼠标悬停在 视图 菜单顶部的“工具栏”项上来显示。</p>
 
-<div class="image">
-<img alt="Hiding View Menu toolbars." src="../Images/ui_customize_view_menu_toolbars.png"/>
-</div>
+  <div class="image">
+    <img alt="Hiding View Menu toolbars." src="../Images/ui_customize_view_menu_toolbars.png"/>
+  </div>
 
-<p>The rest of this chapter discusses three topics</p>
+  <p>本章其余部分将讨论三个主题</p>
 
-<ul>
-    <li>Customizing the Toolbars</li>
-    <li>Customizing the Panels</li>
-    <li>Customizing the Icons</li>
-</ul>
+  <ul>
+    <li>自定义工具栏</li>
 
-<h3 id="sigil_toc_id_1">Customizing the Toolbars</h3>
+    <li>自定义面板</li>
 
-<p>Open the <span class="menuitem">View=&gt;Toolbars</span> menu and select the toolbars that
-you want to see in the UI. Then, move them to the locations
-that best suit you.</p>
+    <li>自定义图标</li>
+  </ul>
 
-<p>To move a toolbar to a different location, hover
-the cursor over the grab bar on the left side of the toolbar.
-When you do that, a move cursor will appear.</p>
+  <h3 id="sigil_toc_id_1">自定义工具栏</h3>
 
-<div class="image">
-<img alt="Using drag and rop to move toolbar segments around." src="../Images/ui_customize_toolbar_move.png"/>
-</div>
+  <p>打开 <span class="menuitem">视图=&gt;工具栏</span> 菜单，选择你想在界面中看到的工具栏。然后，将它们移动到你觉得最舒服的位置。</p>
 
-<p>Drag the toolbar to a different location on the main window.
-An area will highlight where the toolbar will be placed when
-you release the mouse.</p>
+  <p>要将工具栏移动到其他位置，请将光标悬停在工具栏左侧的抓取栏上。这样操作时，会出现移动光标。</p>
 
-<div class="image">
-<img alt="Selecting a toolbar segment drop location." src="../Images/ui_customize_toolbar_droplocation.png"/>
-</div>
+  <div class="image">
+    <img alt="Using drag and rop to move toolbar segments around." src="../Images/ui_customize_toolbar_move.png"/>
+  </div>
 
-<p>You can also resize the toolbar by dragging the move mouse cursor to
-the left and right.</p>
+  <p>将工具栏拖动到主窗口中的其他位置。某个区域会高亮显示，指示你松开鼠标时工具栏将被放置的位置。</p>
 
-<div class="image">
-<img alt="Resizing toolbars" src="../Images/ui_customize_toolbar_resize.png"/>
-</div>
+  <div class="image">
+    <img alt="Selecting a toolbar segment drop location." src="../Images/ui_customize_toolbar_droplocation.png"/>
+  </div>
 
-<p>If you make the toolbar smaller than a size that will display
-all of the icons, an arrow will appear at the right side of the
-toolbar. When you click on that arrow, a submenu will appear allowing
-access to all the buttons in the toolbar.</p>
+  <p>你也可以左右拖动光标来调整工具栏的大小。</p>
 
-<div class="image">
-<img alt="Using toolbar submenus." src="../Images/ui_customize_toolbar_submenu.png"/>
-</div>
+  <div class="image">
+    <img alt="Resizing toolbars" src="../Images/ui_customize_toolbar_resize.png"/>
+  </div>
 
-<h3 id="sigil_toc_id_2">Customizing the Panels</h3>
+  <p>如果你把工具栏缩小到无法显示所有图标，工具栏右侧会出现一个箭头。单击该箭头后，会出现一个子菜单，让你可以访问工具栏中的所有按钮。</p>
 
-<p>The panels are customized in a similar way that you customize the toolbars. 
-If you move the mouse cursor to the top banner of a panel and press the left
-mouse button, the move cursor appears. You can then drag the panel out of
-the main window to undock it from the main window. The panel becomes a
-free floating window.</p>
-<div class="image">
-<img alt="Showing main windows can be detached and floated" src="../Images/ui_customize_window_floating.png"/>
-</div>
+  <div class="image">
+    <img alt="Using toolbar submenus." src="../Images/ui_customize_toolbar_submenu.png"/>
+  </div>
 
-<p>To re-dock the window back into the main window, drag it until the
-area where you want to place it is highlighted and release the
-mouse button.</p>
+  <h3 id="sigil_toc_id_2">自定义面板</h3>
 
+  <p>自定义面板的方式与自定义工具栏类似。如果你把光标移到面板顶部的横幅上并按下鼠标左键，会出现移动光标。然后你可以把面板拖出主窗口，使其与主窗口分离。该面板会变成一个自由浮动窗口。</p>
 
-<div class="image">
-<img alt="Showing redocking a main window" src="../Images/ui_customize_window_redocking.png"/>
-</div>
+  <div class="image">
+    <img alt="Showing main windows can be detached and floated" src="../Images/ui_customize_window_floating.png"/>
+  </div>
 
-<p>You can drop the floating window onto an existing panel to
-create a tabbed interface for the two panels.
-You do this by dragging it over the existing
-panel so that the existing panel is highlighted.
-</p>
+  <p>要将窗口重新停靠回主窗口，请拖动它，直到你想放置的区域高亮显示，然后松开鼠标按键。</p>
 
-<div class="image">
-<img alt="Showing you can redock some windows as Tabs" src="../Images/ui_customize_toc_redocked_as_tab.png"/>
-</div>
+  <div class="image">
+    <img alt="Showing redocking a main window" src="../Images/ui_customize_window_redocking.png"/>
+  </div>
 
-<p>When you drop the window, a tab will be created so that you
-can switch between the two panels.</p>
+  <p>你可以将浮动窗口放置到已有面板上，为两个面板创建选项卡式界面。操作方法是将其拖到已有面板上方，使已有面板高亮显示。</p>
 
-<div class="image">
-<img alt="Showing Table of Contents Window now tabbed." src="../Images/ui_customize_window_redocked_as_tab.png"/>
-</div>
+  <div class="image">
+    <img alt="Showing you can redock some windows as Tabs" src="../Images/ui_customize_toc_redocked_as_tab.png"/>
+  </div>
 
-<p>To dock the window back in as a separate panel next to an existing panel, drag
-it over the main window until an area is highlighted to the
-side, top or bottom of the existing panel, then release the mouse button.</p>
+  <p>放置窗口后，会创建一个选项卡，以便你在两个面板之间切换。</p>
 
-<div class="image">
-<img alt="Windows can be redocked as panels." src="../Images/ui_customize_window_redock_as_panel.png"/>
-</div>
+  <div class="image">
+    <img alt="Showing Table of Contents Window now tabbed." src="../Images/ui_customize_window_redocked_as_tab.png"/>
+  </div>
 
-<p>The window will be redocked into the main window as a
-separate panel.</p>
+  <p>要将窗口重新停靠为紧挨已有面板的独立面板，请将其拖到主窗口上方，直到已有面板的侧面、顶部或底部有区域高亮显示，然后松开鼠标按键。</p>
 
+  <div class="image">
+    <img alt="Windows can be redocked as panels." src="../Images/ui_customize_window_redock_as_panel.png"/>
+  </div>
 
-<div class="image">
-<img alt="Redocked Table of Contents as a panel." src="../Images/ui_customize_window_redocked_as_panel.png"/>
-</div>
+  <p>该窗口会作为一个独立面板重新停靠到主窗口中。</p>
 
+  <div class="image">
+    <img alt="Redocked Table of Contents as a panel." src="../Images/ui_customize_window_redocked_as_panel.png"/>
+  </div>
 
-<p>The relative sizes of the panels can be adjusted by
-hovering the cursor over the boundary between the two panels
-and dragging the boundary to a new location.</p>
+  <p>面板之间的相对大小可以通过以下方式调整：将光标悬停在两个面板之间的边界上，然后把边界拖到新位置。</p>
 
+  <div class="image">
+    <img alt="Windows can be resized." src="../Images/ui_customize_window_resize.png"/>
+  </div>
 
-<div class="image">
-<img alt="Windows can be resized." src="../Images/ui_customize_window_resize.png"/>
-</div>
+  <h3 id="sigil_toc_id_3">自定义图标</h3>
 
+  <p>图标可以在 首选项 对话框中自定义。</p>
 
-<h3 id="sigil_toc_id_3">Customizing the Icons</h3>
+  <p>要自定义图标主题，请使用 <span class="menuitem">编辑=&gt;首选项</span> 菜单打开 首选项 对话框。单击左侧的 外观 标签页，再单击 图标主题 标签页。如果你将光标悬停在每个可选择的主题上，会有一个工具提示显示该主题中图标的缩略图。</p>
 
+  <div class="image">
+    <img alt="Different Icon themes can be selected in Preferences." src="../Images/ui_customize_icon_themes.png"/>
+  </div>
 
-<p>The icons can be customized in the Preferences dialog.</p>
+  <p>单击 主用户界面 标签页并调整滑块，即可调整图标的大小。</p>
 
-<p>To customize the icons theme, open the Preferences
-dialog using the <span class="menuitem">Edit=&gt;Preferences…</span> menu. Click on the
-Appearance tab on the left and on the Icon Themes tab. If you hover the cursor
-over each of the selectable themes, a tooltip will display thumbnails
-of the icons in that theme.</p>
-
-<div class="image">
-<img alt="Different Icon themes can be selected in Preferences." src="../Images/ui_customize_icon_themes.png"/>
-</div>
-
-<p>Adjust the size of the icons by clicking on the Main UI tab and
-adjusting the slider.</p>
-<div class="image">
-<img alt="Icon sizes can be adjusted with sizing bar in Preferences" src="../Images/ui_customize_icon_size.png"/>
-</div>
+  <div class="image">
+    <img alt="Icon sizes can be adjusted with sizing bar in Preferences" src="../Images/ui_customize_icon_size.png"/>
+  </div>
 </body>
 </html>

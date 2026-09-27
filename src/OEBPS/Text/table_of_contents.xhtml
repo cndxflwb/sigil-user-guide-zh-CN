@@ -1,133 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops" lang="zh-CN" xml:lang="zh-CN">
 <head>
-  <title>Table of Contents</title>
+  <title>目录</title>
   <link href="../Styles/styles.css" type="text/css" rel="stylesheet"/>
 </head>
 
 <body>
-  <h2 id="table_of_contents">Table of Contents</h2>
+  <h2 id="table_of_contents">目录</h2>
 
-  <p class="h2subheading">— A Map Of Your Book —</p>
+  <p class="h2subheading">— 图书的地图 —</p>
 
-  <p>EPUB supports a Table of Contents (abbreviated as TOC) to help readers navigate their way around your book. Typically EPUB e-readers provide a button or menu item to open the TOC.</p>
+  <p>EPUB 支持目录（Table of Contents，缩写为 TOC），用于帮助读者在书中导航。通常 EPUB 阅读器会提供一个按钮或菜单项来打开目录。</p>
 
-  <p>Sigil provides several ways to work with a TOC. The Table of Contents window in Sigil gives you a dynamic view of your TOC – you can view exactly what your TOC looks like, and select entries to jump to. The Generate TOC function can create a new TOC based on the headings in your document. The Edit TOC function allows you to update an existing TOC when you can’t or don’t want to use Generate TOC. And Create HTML TOC can create a new HTML page in your document showing what is in the EPUB TOC.</p>
+  <p>Sigil 提供多种使用目录的方式。Sigil 中的目录窗口为您提供目录的动态视图——您可以确切地查看目录的样子，并选择条目进行跳转。生成目录功能可以基于文档中的标题创建新的目录。当无法或不想使用生成目录时，编辑目录功能允许您更新现有目录。而创建 HTML 目录则可以在你的文档中创建一个新 HTML 页面，展示 EPUB 目录中的内容。</p>
 
-  <p>The EPUB TOC is stored in a special XML file called the NCX (typically named toc.ncx) under EPUB2 and in an XHTML document called the NAV (typically named nav.xhtml) under EPUB3. These files are designed to be machine readable so that both e-readers and accessibility software can use them to allow the user to quickly and efficiently navigate throughout the EPUB.</p>
+  <p>EPUB 的目录在 EPUB2 中存储于一个名为 NCX 的特殊 XML 文件（通常命名为 <span class="example">toc.ncx</span>）中，在 EPUB3 中则存储于一个名为 NAV 的 XHTML 文档（通常命名为 <span class="example">nav.xhtml</span>）中。这些文件被设计为机器可读，以便阅读器和无障碍软件都能使用它们，让用户快速高效地在整本 EPUB 中导航。</p>
 
-  <h3 class="sigil_not_in_toc">View the TOC</h3>
+  <h3 class="sigil_not_in_toc">查看目录</h3>
 
-  <p>To open the TOC window if it isn’t already open select the menu item <span class="menuitem">View=&gt;Table of Contents</span>:</p>
+  <p>如果目录窗口尚未打开，请选择菜单项 <span class="menuitem">视图=&gt;目录</span> 来打开它：</p>
 
   <div class="image">
     <img alt="Image of Sigil's Table of Contents window." src="../Images/toc-main.png"/>
   </div>
 
-  <p>You can single-click on an entry to jump to its location in the book, and expand or collapse entries by clicking on the icons to the left of the chapter names if there are sub-chapters.</p>
+  <p>单击某个条目即可跳转到它在书中的位置；如果存在子章节，可以点击章节名称左侧的图标来展开或折叠条目。</p>
 
   <div class="tip">
-    <p class="tiptext">Use the right-click context menu to select <span class="menuitem">Collapse All</span> or <span class="menuitem">Expand All</span> to quickly show or hide sub-chapters.</p>
+    <p class="tiptext">使用右键上下文菜单选择 <span class="menuitem">全部折叠</span>或 <span class="menuitem">全部展开</span>，可快速显示或隐藏子章节。</p>
   </div>
 
-  <h3 class="sigil_not_in_toc">Generate Table of Contents</h3>
+  <h3 class="sigil_not_in_toc">生成目录</h3>
 
-  <p>In order to create a Table of Contents automatically you first need to define the headings or chapters in your book.</p>
+  <p>要自动创建目录，您首先需要定义书中的标题或章节。</p>
 
-  <p>In Code View you can create the your headings by selecting the text you want to make into a heading, and then selecting the level of the heading you want from the <span class="menuitem">Format=&gt;Heading</span> menu. Or more easily by using the formatting buttons on the toolbar.</p>
+  <p>在代码视图中，您可以先选中要设为标题的文本，然后从 <span class="menuitem">格式=&gt;标题</span> 菜单中选择所需的标题级别来创建标题；更简单的方式是直接使用工具栏上的格式按钮。</p>
 
   <div class="image">
     <img alt="Heading toolbar menu." src="../Images/headings.png" style="width:40%"/>
   </div>
 
   <div class="tip">
-    <p class="tiptext">If your chapter names do not use heading tags (<span class="example">h1</span>, <span class="example">h2</span>, etc.) as described above, then you will not be able to generate a TOC automatically. As heading tags are very important for Accessibility reasons you should strongly consider adding them.</p>
+    <p class="tiptext">如果章节名称没有使用如上所述的标题标签（h1、h2 等），您将无法自动生成目录。由于标题标签对无障碍性（Accessibility）非常重要，您应当认真考虑添加它们。</p>
   </div>
 
-  <p>Start your TOC generation by clicking the Generate Table of Contents button <img alt="Image of Generate Tabl;e of Contents icon." src="../Images/generate-toc.png"/>, or selecting the menu item <span class="menuitem">Tools=&gt;Table Of Contents=&gt;Generate Table Of Contents</span> then select the headings you want included in the book’s Table of Contents:</p>
+  <p>点击 生成目录按钮 <img class="toolbar-icon" alt="Image of Generate Tabl;e of Contents icon." src="../Images/generate-toc.png"/>，或选择菜单项 <span class="menuitem">工具=&gt;目录=&gt;生成目录</span>，然后选择要包含在图书目录中的标题，即可开始生成目录：</p>
 
   <div class="image">
     <img alt="Generate Table of Contents dialog." src="../Images/toc-generate-toc.png"/>
   </div>
 
-  <p>Check any name that you want to be included in the Table of Contents, and uncheck any entry that you don’t want included.</p>
+  <p>勾选要包含在目录中的任何名称，取消勾选不想包含的任何条目。</p>
 
   <div class="tip">
-    <p class="tiptext">When you use Generate Table Of Contents Sigil will update not only your TOC, but also your HTML documents – to make sure that the information you enter can be used again when you next generate the TOC.</p>
+    <p class="tiptext">当您使用生成目录时，Sigil 不仅会更新你的目录，还会更新你的 HTML 文档——以确保您输入的信息在下次生成目录时能够再次使用。</p>
   </div>
 
-  <p>You can use the <span class="buttonbox">Show TOC Items Only</span> checkbox to show or hide entries that will not be included in the TOC. This does not affect your TOC, only what you see in the dialog. You can also use the <span class="buttonbox">Select headings to include in TOC</span> drop-down menu to quickly select or unselect headings of a certain type, and then fine tune the selections manually.</p>
+  <p>您可以使用 <span class="buttonbox">仅显示目录项</span> 复选框来显示或隐藏不会包含在目录中的条目。这不会影响你的目录，只会影响您在对话框中看到的内容。您还可以使用 <span class="buttonbox">选择要包含在目录中的标题</span> 下拉菜单来快速选中或取消选中某一类型的标题，然后手动微调选择。</p>
 
-  <p>You can rename the TOC entry by clicking <span class="buttonbox">Rename</span>. This will also change your HTML code to set the “title” attribute of your heading.</p>
+  <p>点击 <span class="buttonbox">重命名</span>即可重命名目录项。这也会修改你的 HTML 代码，以设置标题的 “title” 属性。</p>
 
-  <p>You can change the level of your Headings using the left and right arrow keys. This will also change the level of the headings in your HTML code.</p>
+  <p>您可以使用左右方向键更改标题的级别。这也会更改 HTML 代码中标题的级别。</p>
 
   <div class="tip">
-    <p class="tiptext">The tooltip for each title (just move your mouse over the title and leave it for a few seconds) will show you which file the heading is in and its HTML code.</p>
+    <p class="tiptext">每个标题的工具提示（只需将鼠标移到标题上并停留几秒）会显示该标题位于哪个文件及其 HTML 代码。</p>
   </div>
 
-  <p>The tooltip for the headings of table will show you the number of headings of each type:</p>
+  <p>表格中各标题的工具提示会显示每种类型标题的数量：</p>
 
   <div class="image">
     <img alt="Using tool tips to show additional information in Table of Contents generator." src="../Images/toc-tooltip.png"/>
   </div>
 
-  <p>When you select <span class="buttonbox">OK</span>, Sigil will add or update automatically generated IDs to any headings you have selected if they don’t have regular IDs already. It will then create a new NCX file on EPUB2 and Update the NAV file on EPUB3 that contain links to your chapters. If your heading is “near” the beginning of your HTML file, Sigil will link directly to the file and not to the heading ID. This is because on some e-readers linking directly to an element slows down the display of the TOC.</p>
+  <p>当您选择 <span class="buttonbox">确定</span>时，如果您所选的标题还没有赋予 ID，Sigil 会为它们添加或更新自动生成的 ID。然后它会在 EPUB2 中创建新的 NCX 文件、在 EPUB3 中更新 NAV 文件，其中包含指向各章节的链接。如果某个标题“处于” HTML 文件的开头，Sigil 会直接链接到该文件而不是标题 ID。这是因为在某些电子书阅读器上，直接链接到某个元素会拖慢目录的显示速度。</p>
 
   <div class="tip">
-    <p class="tiptext">Generating the TOC automatically will overwrite any existing TOC in the <span class="example">toc.ncx file of an EPUB2</span> or the <span class="example">nav.xhtml file of an EPUB3</span>.</p>
+    <p class="tiptext">自动生成目录会覆盖 EPUB2 的 <span class="example">toc.ncx</span> 文件或 EPUB3 的 <span class="example">nav.xhtml</span> 文件中任何已有的目录。</p>
   </div>
 
-  <h3 class="sigil_not_in_toc" id="edit_toc">Edit Table of Contents</h3>
+  <h3 class="sigil_not_in_toc" id="edit_toc">编辑目录</h3>
 
-  <p>If you can’t or don’t want to generate the TOC from the headings in the document, you can use Edit Table Of Contents to make changes to the existing TOC. Any changes made to the TOC will not affect your HTML files, and all changes would be lost if you use Generate TOC.</p>
+  <p>如果无法或不想从文档中的标题生成目录，您可以使用编辑目录来修改现有目录。对目录所做的任何更改都不会影响你的 HTML 文件，而且如果您使用生成目录，所有更改都会丢失。</p>
 
   <div class="image">
     <img alt="Image of Table of Contents Editor in action." src="../Images/edit-toc.png"/>
   </div>
 
-  <p>You can edit an entry by double-clicking on it. You can add new entries or delete existing ones. Use the arrows to increase or decrease the heading level of an entry.</p>
+  <p>双击条目即可编辑它。您可以添加新条目或删除现有条目。使用箭头可以提升或降低条目的标题级别。</p>
 
-  <p>To change what a TOC entry points to you can type in the target destination directly, or use the <span class="buttonbox">Insert Link</span> button. This will open the Select Target dialog where you can choose which location to point the TOC entry to:</p>
+  <p>要更改目录项指向的位置，您可以直接键入目标位置，或使用 <span class="buttonbox">插入链接</span> 按钮。这将打开 选择目标 对话框，您可以在其中选择目录项要指向的位置：</p>
 
   <div class="image">
     <img alt="Insert Link select target dialog." src="../Images/select-target.png"/>
   </div>
 
-  <p>The right-click context menu allows you to delete or rename entries, or expand or collapse the list.</p>
+  <p>右键上下文菜单允许您删除或重命名条目，或者展开/折叠目录。</p>
 
   <div class="tip">
-    <p class="tiptext">TOC entries must point to a valid target. If you just want a heading in the TOC, point it to the next valid entry.</p>
+    <p class="tiptext">目录项必须指向有效的目标。如果您只想在目录中显示一个标题，请让它指向下一个有效条目。</p>
   </div>
 
-  <h3 class="sigil_not_in_toc" id="generate_html_toc">Generate HTML Table of Contents</h3>
+  <h3 class="sigil_not_in_toc" id="generate_html_toc">生成 HTML 目录</h3>
 
-  <p>You can use the menu <span class="menuitem">Tools=&gt;Table Of Contents=&gt;Generate HTML Table of Contents</span> to create an Inline HTML TOC for your EPUB. This type of table of contents is meant to be seen and used by human readers and need not be machine readable unlike the NCX or NAV.</p>
+  <p>您可以使用菜单 <span class="menuitem">工具=&gt;目录=&gt;生成 HTML 目录</span> 为你的 EPUB 创建一个内联 HTML 目录。这种目录是供人类读者查看和使用的，与 NCX 或 NAV 不同，它不需要机器可读。</p>
 
   <div class="image">
     <img alt="Image of Generated HTML Table of Contents in Preview" src="../Images/toc-html.png"/>
   </div>
 
-  <p>An inline TOC is just another HTML page in the EPUB that contains the Table of Contents in text format with links that can be used to jump to specific chapters.</p>
+  <p>内联目录不过是 EPUB 中的另一个 HTML 页面，它以文本形式包含目录，并带有可用于跳转到特定章节的链接。</p>
 
-  <p>Another reason for creating an HTML Table of Contents is that these can be converted to other ebook formats that do not support the NCX of EPUB2 or NAV of EPUB3.</p>
+  <p>创建 HTML 目录的另一个原因是，它可以转换为不支持 EPUB2 的 NCX 或 EPUB3 的 NAV 的其他电子书格式。</p>
 
-  <p>The Generate HTML Table of Contents menu item will overwrite any existing HTML TOC file (if it has a semantic type of TOC). If no such file exists it will create an HTML file called <span class="example">toc.html</span> and mark its semantic type as TOC. If <span class="example">toc.html</span> already exists it will be replaced.</p>
+  <p>生成 HTML 目录 菜单项会覆盖任何已有的 HTML 目录文件（如果其语义类型为 TOC）。如果不存在这样的文件，它会创建一个名为 <span class="example">toc.html</span> 的 HTML 文件，并将其语义类型标记为 TOC。如果 <span class="example">toc.html</span> 已存在，它将被替换。</p>
 
   <div class="tip">
-    <p class="tiptext">You can change the contents of the inline TOC once you’ve created it – but remember to do this each time you create the TOC.</p>
+    <p class="tiptext">创建内联目录之后，您可以修改它的内容——但请记住，每次重新创建目录时都会覆盖已修改的 HTML 目录。</p>
   </div>
 
-  <h4 class="sigil_not_in_toc">Custom HTML TOC Stylesheet</h4>
+  <h4 class="sigil_not_in_toc">自定义 HTML 目录样式表</h4>
 
-  <p>The generated HTML TOC page uses a separate CSS file (<span class="example">sgc-toc.css</span>) to format the TOC. If the file already exists in your book it will not be overwritten (so you can customise it without losing your changes). But if it does not exist, it will look for <span class="example">sgc-toc.css</span> in your preferences directory and use that as the default file. If there is no file in your preferences directory, then Sigil will create a default stylesheet for the TOC.</p>
+  <p>生成的 HTML 目录页面使用一个独立的 CSS 文件（<span class="example">sgc-toc.css</span>）来格式化目录。如果该文件已存在于你的书中，它不会被覆盖（因此您可以自定义它而不会丢失更改）。但如果它不存在，Sigil 会在你的首选项文件夹中查找 <span class="example">sgc-toc.css</span>，并将其用作默认文件。如果首选项文件夹中没有该文件，Sigil 会为目录创建一个默认样式表。</p>
 
-  <p>If you’re generating an EPUB3 TOC, Sigil will look for <span class="example">sgc-nav.css</span> in your preferences directory and use that as the default file.</p>
+  <p>如果您正在生成 EPUB3 目录，Sigil 会在你的首选项文件夹中查找 <span class="example">sgc-nav.css</span>，并将其用作默认文件。</p>
 
-  <h4 class="sigil_not_in_toc">Update The NCX TOC In EPUB3 Books</h4>
+  <h4 class="sigil_not_in_toc">更新 EPUB3 图书中的 NCX 目录</h4>
 
-  <p>If you create an EPUB3 book with Sigil or open an EPUB3 book without an NCX file, no NCX will exist. If you would like to add an NCX to make your EPUB3 more backwards compatible after editing is finished, use <span class="menuitem">Tools=&gt;Epub3 Tools=&gt;Generate NCX/Guide for epub2 e-readers</span> menu item to generate and add a NCX that older EPUB2-only devices should be able to use.</p>
+  <p>如果您用 Sigil 创建 EPUB3 图书，或打开一本没有 NCX 文件的 EPUB3 图书，则不存在 NCX。如果您希望在编辑完成后添加 NCX 以使你的 EPUB3 具有更好的向后兼容性，请使用菜单项 <span class="menuitem">工具=&gt;EPUB3 工具=&gt;为 EPUB2 用户生成 NCX/Guide 文件</span> 来生成并添加一个旧的仅支持 EPUB2 的设备也能使用的 NCX。</p>
 </body>
 </html>
