@@ -1,37 +1,37 @@
-# <center>This is the repository for the Sigil User Guide</center>
+# <center>本仓库是 Sigil 用户指南的源代码仓库</center>
 
 <br/>
 
-[View this user guide online](https://sigil-ebook.com/sigil-user-guide)
+[在线阅读本用户指南](https://sigil-ebook.com/sigil-user-guide)
 
 <br/>
 
-## <center>Guidelines for contributing</center>
+## <center>贡献指南</center>
 
 <br/>
 
-1. __NO ARTISTIC/AESTHETIC CHANGES PLEASE!__ We're only interested in content updates and corrections, or updated screenshots that show new menus or new features. If you're hoping to "jazz things up" or redo the the style of the epub to reflect your personal style or formatting preferences, you're probably going to be disappointed. Pull Requests that include stylistic changes or "upgrades" will be declined (unless such work has been pre-approved of course).
+1. __请勿进行美术/审美方面的改动！__ 我们只接受内容更新与勘误，或者展示新菜单、新功能的截图更新。如果你想"把它做得更花哨"，或者按照个人风格、排版偏好重做这本 epub 的样式，那你多半要失望了。包含样式改动或"升级"的 Pull Request 会被拒绝（当然，事先获得批准的工作除外）。
 
-2. __Less is best__. Several smaller, tightly focused Pull Requests are always going to be preferred over ones that represent grand, sweeping changes to large swathes of the manual. We don't want to have to read the entire manual each and every time we're evaluating a new Pull Request. Neither would you.  Be considerate if you want to see your efforts incorporated.
+2. __少即是好__。若干个小而聚焦的 Pull Request，永远比那种对整个手册大范围"大刀阔斧"改动的 PR 更受欢迎。我们不想在每次评审新的 Pull Request 时都要把整本手册读一遍，换作是你也一样。如果你希望自己的贡献被采纳，请多为他人着想。
 
-3. __Don't Break anything__. Changes that break the resulting epub or cause validation issues will be rejected. It's your responsibility to make sure the epub structure remains intact and spec compliant.
-
-<br/>
-<br/>
-
-## <center>Preferred Workflow</center>
+3. __不要破坏任何东西__。导致生成的 epub 损坏或引发校验问题的改动会被拒绝。确保 epub 结构完整且符合规范，是你自己的责任。
 
 <br/>
+<br/>
 
-- Fork this repository to your own Github account and clone a local copy of it to your computer.
+## <center>推荐的工作流程</center>
 
-- Use the [FolderIn Sigil plugin](https://www.mobileread.com/forums/showthread.php?t=293649) to load the contents of the "src" directory of your local, cloned repository into Sigil.
+<br/>
 
-- Do your editing (saving changes to a local temporary epub somewhere if you must). Remember to use "Mend and Prettify" after you're done, and always make sure the epub validates with no errors. Then when ready, save the contents back to the "src" directory of your local, cloned repository using the [FolderOut Sigil plugin](https://www.mobileread.com/forums/showthread.php?t=293649).
+- 将本仓库 Fork 到你自己的 GitHub 账号，并克隆一份本地副本到你的电脑上。
 
-- Use the normal git tools to check your differences and then when satisfied, commit and push your changes to your Github fork.
+- 使用 [FolderIn Sigil 插件](https://www.mobileread.com/forums/showthread.php?t=293649)，将本地已克隆仓库中 "src" 目录的内容载入 Sigil。
 
-- Create a new Pull Request from your Github account so that we can review and hopefully pull your changes into the project.
+- 开始编辑（如有需要，可把改动先保存到本地某个临时 epub 中）。完成后记得执行"Mend and Prettify（整理并美化）"，并始终确保 epub 校验无错误。准备就绪后，使用 [FolderOut Sigil 插件](https://www.mobileread.com/forums/showthread.php?t=293649)把内容保存回本地已克隆仓库的 "src" 目录。
+
+- 使用常规的 git 工具检查你的差异，确认无误后提交并推送到你 Fork 的 GitHub 仓库。
+
+- 从你的 GitHub 账号发起一个新的 Pull Request，以便我们评审并（希望如此）将你的改动合并进本项目。
 
 <br/>
 
@@ -39,4 +39,4 @@
 
 <br/>
 
-If you run into trouble, feel free to ask for help at the [Sigil Support forums on Mobileread](https://www.mobileread.com/forums/forumdisplay.php?f=203).
+如果遇到问题，欢迎到 [Mobileread 上的 Sigil 支持论坛](https://www.mobileread.com/forums/forumdisplay.php?f=203)寻求帮助。
