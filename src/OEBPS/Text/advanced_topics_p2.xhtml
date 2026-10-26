@@ -37,11 +37,14 @@
   <pre><code> def replace (match, number, file_name, metadata, data) : if match: return match.group(0) </code>
 </pre>
 
-  The parameters passed to the replace function are important to understand:|→需要理解传递给 replace 函数的各个参数：←| 
+  需要理解传递给 replace 函数的各个参数： 
 
   
 
-  <pre><code> match: the current python match object|→当前的 Python 匹配对象←| number: number starts at 1 and is incremented after each match|→编号从 1 开始，每匹配一次递增 1←| (only when using replace all)|→（仅在使用“全部替换”时生效）←| file_name: the book path from the ebook's root to this file|→从电子书根目录到该文件的书籍内路径←| data: a python dict object used to store any data across matches|→一个 Python dict 对象，用于在多次匹配之间存储任意数据←| </code>
+  <pre><code> match: 当前的 Python 匹配对象
+   number: 编号从 1 开始，每匹配一次递增 1（仅在使用“全部替换”时生效）
+   file_name: 从电子书根目录到该文件的书籍内路径
+   data: 一个 Python dict 对象，用于在多次匹配之间存储任意数据</code>
 </pre>
 
   <p>为了更贴切地说明如何在自己的 Python 函数替换例程中使用这些参数，下面给出一个递增 id 的 Python 函数版本，它只会统计并修改每个文件中找到的第一个 h1 标签。</p>
