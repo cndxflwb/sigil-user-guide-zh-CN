@@ -31,15 +31,15 @@
   <ul>
     <li><p><span class="listheading">从 QtWebKit 切换到 QtWebEngine</span> QtWebEngine 减少了内存增长，堵住了许多重大内存泄漏，并持续获得来自 Qt/Google/Chromium 的安全与支持补丁</p></li>
 
-    <li><p><span class="listheading">从 Qt 5.15.X 更新到 Qt6.7.X</span></p></li>
+    <li><p><span class="listheading">从 Qt 5.15.X 更新到 Qt6.10.2</span></p></li>
 
-    <li><p><span class="listheading">移除书籍视图</span> 因为它允许用户错误地创建出在 EPUB 中不可接受的、严重损坏的 xhtml。为替代其部分功能，我们创建了一个名为 <a href="https://github.com/Sigil-Ebook/PageEdit/releases">PageEdit</a> 的新外部程序，它更适合基本的所见即所得（WYSIWYG）校对和简单编辑。完全不了解 xhtml 或 css 的用户可能想继续使用 Sigil 0.9.14，因为那是最后一个支持书籍视图的版本。关于 PageEdit 及其与 Sigil 的集成，可在<a href="../Text/external_xhtml_editor.xhtml">首选外部 Xhtml 编辑器</a>一章中找到更多信息。</p></li>
+    <li><p><span class="listheading">移除书籍视图</span> 因为它允许用户错误地创建出在 EPUB 中不可接受的、严重损坏的 xhtml。为替代其部分功能，我们创建了一个名为 <a href="https://github.com/Sigil-Ebook/PageEdit/releases">PageEdit</a> 的新外部程序，它更适合基本的所见即所得（WYSIWYG）校对和简单编辑。关于 PageEdit 及其与 Sigil 的集成，可在<a href="../Text/external_xhtml_editor.xhtml">首选外部 Xhtml 编辑器</a>一章中找到更多信息。</p></li>
 
     <li><p><span class="listheading">支持 Python 插件</span> 允许用户自定义 Sigil 的使用方式并将其融入自己的工作流，还能独立于 Sigil 添加自己需要或想要的工具。可以下载并安装这些插件来为 Sigil 添加扩展支持，包括 EPUBCheck、Access-Aide、KindleImport、Kindlegen、FlightCrew、ePub3-itizer、DOCX Import 等插件。关于插件的更多信息、下载地址和安装方法将在后面的章节中介绍。</p></li>
 
     <li><p><span class="listheading">支持保留用户指定的实体字符</span></p></li>
 
-    <li><p><span class="listheading">Sigil 内置了自己的 Python 解释器</span>（撰写本文时为 v3.11.9），用来支持基于 Python 3 的插件</p></li>
+    <li><p><span class="listheading">Sigil 内置了自己的 Python 解释器</span>（撰写本文时为 v3.14.2），用来支持基于 Python 3 的插件</p></li>
 
     <li><p><span class="listheading">Sigil 使用 Google Gumbo Parser 的特别修改版</span>，按照 HTML5 和 xhtml 规范自动修正 xhtml 解析错误</p></li>
 
@@ -50,6 +50,14 @@
     <li><p>Sigil 在 EPUB3 下添加 Aria 角色和剪贴板变得更加容易。</p></li>
 
     <li><p>Sigil 新增了正则 Python 函数替换功能。</p></li>
+
+    <li><p>Sigil 的图像标签页（Image Tabs）现已具备简单的图像编辑能力。</p></li>
+
+    <li><p>Sigil 现在允许用户使用 Sigil 首选项目录中的 special_characters.xml 文件，自行创建“插入特殊字符”对话框。</p></li>
+
+    <li><p>Sigil 现在提供拖放区（Drop Zone），允许用户通过拖放方式把文件添加到自己的 EPUB 中。</p></li>
+
+    <li><p>Sigil 现在允许用户创建自己的自定义自动化列表，以便更轻松地处理重复性的编辑需求。</p></li>
   </ul>
 </body>
 </html>

@@ -74,7 +74,7 @@
   <ul>
     <li><span class="listheading">查找</span> 
 
-    <pre class="example">&lt;p&gt;\sCHAPTER\s(\d+)\s&lt;/p&gt;</pre></li>
+    <pre class="example">&lt;p&gt;\s*CHAPTER\s+(\d+)\s*&lt;/p&gt;</pre></li>
 
     <li><span class="listheading">替换：</span> 
 
@@ -92,20 +92,22 @@
   <ul>
     <li><span class="example">&lt;p&gt;</span> 查找起始段落标签。</li>
 
-    <li><span class="example">\s</span> – 匹配任意空白（空格、制表符等）的正则代码。</li>
+    <li><span class="example">\s*</span> – 匹配任意空白（空格、制表符等）的正则代码，或者不匹配任何空白。</li>
 
     <li><span class="example">CHAPTER</span> – 匹配单词 CHAPTER（正则表达式默认区分大小写）。</li>
 
-    <li><span class="example">\s</span> – 匹配任意空白的正则代码。</li>
+    <li><span class="example">\s+</span> – 匹配一个或多个任意空白字符的正则代码。</li>
 
     <li><span class="example">(\d+)</span> – 匹配连续任意多个数字并记住它们的正则代码。</li>
 
-    <li><span class="example">\s</span> – 匹配任意空白的正则代码。</li>
+    <li><span class="example">\s*</span> – 匹配任意空白或不匹配任何空白的正则代码。</li>
 
     <li><span class="example">&lt;/p&gt;</span> – 查找结束段落标签。</li>
   </ul>
 
-  <p>你也可以用空格代替 <span class="example">\s</span>，但 <span class="example">\s</span> 更灵活，因为它能匹配任意数量的空格和制表符。</p>
+  <p>你也可以用空格代替 <span class="example">\s</span>，但 \s* 更灵活，因为它能匹配任意数量的空格和制表符，或者一个都不匹配。\s+ 则会匹配一个或多个空格或制表符。</p>
+
+  <p>关于 * 和 + 以及其他正则量词的更多信息，请参见下一章（<a href="../Text/tutorial_regex_reference.xhtml">正则表达式参考</a>）。</p>
 
   <p>因此，该搜索的结果可能是：</p>
 

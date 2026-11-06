@@ -257,6 +257,8 @@
 
     <li class="first"><span class="listheading">过滤替换：</span>生成一张表格，按“查找与替换”设置列出所有匹配文本及候选替换内容。应用更改前，可先删除不需要的替换。</li>
 
+    <li class="first"><span class="listheading">重新开始当前搜索：</span>让“查找”忘记它此前搜索到的位置，从头开始。</li>
+
     <li class="first"><span class="listheading">当前文件：</span> 
 
     <ul>
@@ -298,6 +300,8 @@
     </ul></li>
 
     <li class="first"><p><span class="listheading">按 Sigil 规范重构 EPUB：</span>从 Sigil 1.0.0 开始，载入 Sigil 的 EPUB 保持原样，文件和文件夹均不移动、不改名。这与 Sigil 0.9.18 及更早版本不同：早期版本会自动把每个 EPUB 重构为标准的 Sigil 结构（一个 OEBPS 文件夹、OPF 与 NCX 使用特定名称、文本和图片各只有一个文件夹）。若偏好标准结构，可使用“按 Sigil 规范重构 EPUB”，将 EPUB 手动重构为旧的 Sigil 标准。</p></li>
+
+    <li class="first"><span class="listheading">使用标准文件扩展名：</span>批量重命名文件时，使用业界标准的文件扩展名。</li>
 
     <li class="first"><p><span class="listheading">基于当前文件名重建 OPF 清单 ID：</span>旧版 Sigil 曾根据文件名生成 OPF 清单 ID，以保证唯一性。文件改名后，清单 ID 仍沿用旧文件名，手动编辑 OPF 时容易混淆。此工具基于当前文件名重建整套清单 ID，同时维护和更新 OPF 中对这些 ID 的所有引用，包括 spine、封面元数据、smil 元数据、其他元数据细化、媒体叠加层、回退 ID 和 spine 属性。</p></li>
 
@@ -344,9 +348,15 @@
     <ul>
       <li><span class="listheading">更新清单属性：</span>添加或更新必需的清单属性。</li>
 
-      <li><span class="listheading">为 EPUB2 阅读器生成 NCX/Guide：</span>用 NAV 文件中的目录条目填充 NCX 文件（EPUB3 无需 NCX，故不会自动更新，可用此工具手动更新）。同时用 NAV 文件中的 Landmarks 条目填充 Guide。</li>
+      <li><span class="listheading">为 EPUB2 阅读器生成 NCX/Guide：</span>用 NAV 文件中的目录条目填充 NCX 文件（EPUB3 无需 NCX，故不会自动更新，可用此工具手动更新）。同时用 NAV 文件中的 Landmarks 条目填充 Guide，并添加 EPUB2 封面元数据。</li>
 
-      <li><span class="listheading">移除 NCX 和 Guide：</span>移除 NCX 和 Guide。这两者在 EPUB3 中并非必需，但有时为兼容 EPUB2 阅读系统而保留。</li>
+      <li><span class="listheading">移除 NCX 和 Guide：</span>移除 NCX 和 Guide，以及任何 EPUB2 封面元数据。这些内容在 EPUB3 中并非必需，但有时为兼容 EPUB2 阅读系统而保留。</li>
+
+      <li><span class="listheading">从阅读顺序中移除 Nav：</span>把 EPUB3 的 Nav 从 OPF spine 中完全移除。</li>
+
+      <li><span class="listheading">将 Nav 加入阅读顺序：</span>把 EPUB3 的 Nav 加入 OPF spine，使其像其他 xhtml 文件一样被处理。</li>
+
+      <li><span class="listheading">以 <code>linear="no"</code> 将 Nav 加入阅读顺序：</span>把 EPUB3 的 Nav 加入 OPF spine，但把 <code>linear</code> 属性设为 <code>"no"</code>，表示其内容属于补充材料，而不是顺序阅读顺序的一部分。</li>
     </ul></li>
 
     <li class="first"><span class="listheading">EPUB格式良好性检查：</span>简单的验证工具，用于检查 EPUB 是否良好。</li>
@@ -417,6 +427,8 @@
       <li><span class="listheading">剪贴板2：</span>显示或隐藏第二个剪贴板。（要创建和管理剪贴板，请到 <span class="menuitem">工具=&gt;剪贴板编辑器</span>。）</li>
 
       <li><span class="listheading">索引：</span>显示或隐藏索引按钮：索引编辑器、将选中文本添加到索引编辑器、将选中文本标记为索引条目、生成新的索引 HTML 文件。</li>
+
+      <li><span class="listheading">自动化列表：</span>显示或隐藏用于编辑和运行自动化列表的工具栏图标。</li>
     </ul></li>
 
     <li class="first"><span class="listheading">放大：</span>放大代码视图或预览窗口（以当前选中窗口为准）中的文本和图片。</li>
@@ -465,7 +477,7 @@
   <p class="heading">插件</p>
 
   <ul>
-    <li><span class="listheading">插件管理：</span>添加或移除插件，并选择哪些插件显示在工具栏中。</li>
+    <li><span class="listheading">插件管理：</span>添加或移除插件，并选择哪些插件显示在工具栏中。此外，安装插件后，你还可以通过菜单来运行自己所安装的选定“编辑”“输入”“输出”和“验证”类插件。</li>
   </ul>
 
   <p class="heading">检查点</p>
@@ -482,6 +494,14 @@
     <li><span class="listheading">编辑检查点描述：</span>为每个已创建的检查点编写并附加简短描述。</li>
 
     <li><span class="listheading">显示检查点日志：</span>查看所有检查点及其日志描述的列表。</li>
+  </ul>
+
+  <p class="heading">自动化</p>
+
+  <ul>
+    <li><span class="listheading">管理自动化列表：</span>创建和编辑自动化列表，帮助加快一连串重复任务的执行速度。</li>
+
+    <li><span class="listheading">运行：</span>用此菜单选择并运行你之前创建的自动化列表。</li>
   </ul>
 
   <p class="heading">帮助</p>
@@ -812,6 +832,8 @@
     <img alt="Image of Book Browser Context menu." style="width:40%" src="../Images/ui_book-browser-context-menu.png"/>
   </div>
 
+  <p>Mac 用户注意：右键上下文菜单在 Sigil 中被大量使用，如果你不熟悉如何产生鼠标右键单击，请查看 Mac 设置中有关鼠标或触控板的设置。</p>
+
   <div class="tip">
     <p class="tiptext">拿不准的时候，右键点击某处看看是否有其他可用操作！</p>
   </div>
@@ -828,7 +850,7 @@
 
   <p>主窗口左下角偶尔会在操作完成时显示状态信息，例如“EPUB 已保存”或“目录已编辑”。</p>
 
-  <p>主窗口右下角附近（缩放滑块之前）显示当前打开文件的信息，例如代码视图中的行号和列号。</p>
+  <p>主窗口右下角附近（缩放滑块之前）显示当前打开文件的信息，例如代码视图中的行号和列号，以及光标所在字符的说明。此外，状态栏上还设有拖放区（Drop Zone），你只需把文件拖放到该区域，就能把它们添加到自己的 epub 中。</p>
 
   <div class="image">
     <img alt="Image of the Status bar when information is briefly displayed." src="../Images/ui_status-bar.png"/>

@@ -14,7 +14,7 @@
 
   <p>许多 EPUB 开发者每次开始制作新 EPUB，或是清理从各种来源导入的 HTML，又或是为提交给出版商而保存 EPUB 做准备时，都会发现自己反复执行同一组任务。这些任务通常涉及按某种组合运行 Sigil 的内部命令/工具（例如修复并美化 HTML、更新 Manifest 属性等）和外部插件（例如 EPUBCheck、FolderIn、ePub3-itizer、Access-Aide 等）。</p>
 
-  <p>从 Sigil 1.8.0 开始，一项名为“自动化列表”的新功能使你可以创建一个常规任务列表，将其分配给三个<span class="buttonbox">运行自动化列表</span>工具栏按钮之一，然后只需单击一次该按钮，即可按顺序运行整个任务列表。</p>
+  <p>从 Sigil 1.8.0 开始，一项名为“自动化列表”的新功能使你可以创建一个常规任务列表，把它分配给你自选的文件名，然后只需单击 3 个可用工具栏按钮之一，或直接从“自动化=&gt;运行”菜单中选择，即可按顺序运行整个任务列表。</p>
 
   <div class="image">
     <img class="toolbar-icon" alt="Automate Toolbar showing Automate Icons" src="../Images/automate_toolbar.png"/>
@@ -22,10 +22,10 @@
 
   <h3 id="sigil_toc_id_31">创建与编辑自动化列表</h3>
 
-  <p>要创建和编辑自动化列表，请按住三个自动化列表工具栏按钮之一，从下拉菜单中选择 <span class="menuitem">编辑自动化列表</span>。这将打开自动化列表编辑器。</p>
+  <p>要创建和编辑自动化列表，请从 <span class="menuitem">自动化</span> 主菜单中选择 <span class="menuitem">管理自动化列表</span>。随后会出现下面的对话框，你可以在其中选择一个现有列表进行编辑，也可以新建、删除或重命名列表。此外，你还可以把任意一个现有自动化列表分配给 3 个快速启动工具栏按钮之一。</p>
 
   <div class="image">
-    <img alt="Automate Toolbar showing Automate menu" src="../Images/automate_open_editor.png"/>
+    <img style="width: 30%;" alt="Manage Automation Lists menu" src="../Images/manage_automation_lists.png"/>
   </div>
 
   <div class="image">
@@ -56,7 +56,7 @@
 
   <h4 id="sigil_toc_id_34">自动化列表是简单的文本文件</h4>
 
-  <p>自动化列表就是位于 Sigil 首选项文件夹根目录下的简单文本文件。它们的名称为：<span class="example">automate01.txt</span>、<span class="example">automate02.txt</span> 和 <span class="example">automate03.txt</span>。因此，如果你愿意，可以使用任何文本编辑器来编辑它们。要直接跳转到 Sigil 首选项文件夹，请转到 <span class="menuitem">编辑=&gt;首选项</span>（在 Mac 上：<span class="menuitem">Sigil=&gt;首选项</span>），并单击左下角的<span class="buttonbox">打开首选项文件夹</span>按钮。</p>
+  <p>自动化列表就是位于 Sigil 首选项文件夹根目录下的简单文本文件。它们的名称为：<span class="example">automatebase.txt</span>、<span class="example">automate02.txt</span> 和 <span class="example">automateextend.txt</span>。因此，如果你愿意，可以使用任何文本编辑器来编辑它们。要直接跳转到 Sigil 首选项文件夹，请转到 <span class="menuitem">编辑=&gt;首选项</span>（在 Mac 上：<span class="menuitem">Sigil=&gt;首选项</span>），并单击左下角的<span class="buttonbox">打开首选项文件夹</span>按钮。</p>
 
   <p>下面是一个自动化列表文本文件的示例，可以在发布 EPUB 之前作为最终的清理与验证检查来运行：</p>
 
@@ -88,12 +88,12 @@ Save
 </pre>
 
   <div class="tip">
-    <p class="tiptext">虽然自动化列表工具栏按钮只有三个，但你可以创建任意数量的列表并将其保存在首选项文件夹中。要运行某个列表，你需要将其重命名为 <span class="example">automate01.txt</span>、<span class="example">automate02.txt</span> 或 <span class="example">automate03.txt</span>，从而将其分配给三个工具栏按钮之一。</p>
+    <p class="tiptext">虽然自动化列表工具栏按钮只有三个，但你可以使用“管理自动化列表”菜单创建任意数量的自动化列表。</p>
   </div>
 
   <h3 id="sigil_toc_id_32">运行自动化列表</h3>
 
-  <p>要运行自动化列表，只需单击相应的<span class="buttonbox">自动化列表</span>工具栏按钮即可。</p>
+  <p>要运行自动化列表，只需单击相应的<span class="buttonbox">自动化列表</span>工具栏按钮，或直接从“自动化=&gt;运行”菜单中选择一个列表即可。</p>
 
   <div class="image">
     <img class="toolbar-icon" alt="Automate Toolbar showing Automate Icons" src="../Images/automate_toolbar.png"/>

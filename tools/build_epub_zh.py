@@ -34,7 +34,7 @@ REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC_DIR = os.path.join(REPO_ROOT, "src")
 SKIP_BASENAMES = {"encryption.xml", "rights.xml", ".gitignore", ".gitattributes"}
 NAME_TEMPLATE = "Sigil 用户指南中文版（{version} {date}）.epub"
-DEFAULT_VERSION = "2.6.2+"
+DEFAULT_VERSION = "2.8.5+"
 
 CONTAINER_NS = {"c": "urn:oasis:names:tc:opendocument:xmlns:container"}
 OPF_NS = {"o": "http://www.idpf.org/2007/opf"}
