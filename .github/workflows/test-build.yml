@@ -55,16 +55,24 @@ jobs:
         path: ./*.epub
         retention-days: 3
 
+    - name: Rename Epub Artifact
+      if: startswith( github.ref, 'refs/tags/')
+      run: |
+        VERSION="${GITHUB_TAGNAME#zh-CN-}"
+        VERSION="${VERSION%-*}"
+        DATE="${GITHUB_TAGNAME##*-}"
+        for f in ./*.epub; do
+          mv "$f" "Sigil 用户指南中文版（${VERSION}+ ${DATE}）.epub"
+        done
+        ls -l ./*.epub
+
     - name: Create Release
       if: startswith( github.ref, 'refs/tags/')
       uses: ncipollo/release-action@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        name: Sigil User Guide (${{ steps.get_tag_name.outputs.TAGNAME }})
-        body: |
-          Changes in this Release
-          - First Change
-          - Second Change
+        name: Sigil 用户指南中文版（${{ steps.get_tag_name.outputs.TAGNAME }}）
+        bodyFile: .github/release-notes/${{ steps.get_tag_name.outputs.TAGNAME }}.md
         draft: true
         prerelease: false
         artifacts: './*.epub'
