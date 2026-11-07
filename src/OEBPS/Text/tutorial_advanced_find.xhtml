@@ -105,9 +105,9 @@
     <li><span class="example">&lt;/p&gt;</span> – 查找结束段落标签。</li>
   </ul>
 
-  <p>你也可以用空格代替 <span class="example">\s</span>，但 \s* 更灵活，因为它能匹配任意数量的空格和制表符，或者一个都不匹配。\s+ 则会匹配一个或多个空格或制表符。</p>
+  <p>你也可以用空格代替 <span class="example">\s</span>，但 <span class="example">\s*</span> 更灵活，因为它能匹配任意数量的空格和制表符，或者一个都不匹配。<span class="example">\s+</span> 则会匹配一个或多个空格或制表符。</p>
 
-  <p>关于 * 和 + 以及其他正则量词的更多信息，请参见下一章（<a href="../Text/tutorial_regex_reference.xhtml">正则表达式参考</a>）。</p>
+  <p>关于 <span class="example">*</span> 和 <span class="example">+</span> 以及其他正则量词的更多信息，请参见下一章（<a href="../Text/tutorial_regex_reference.xhtml">正则表达式参考</a>）。</p>
 
   <p>因此，该搜索的结果可能是：</p>
 
@@ -140,13 +140,13 @@
   <p class="sigil_not_in_toc"></p>
 
   <ul>
-    <li><p><span class="listheading">覆盖全部：</span>这个正则选项会在所有正则搜索前加上 (?s)，当你想让“.*”模式跨行匹配时使用。</p></li>
+    <li><p><span class="listheading">覆盖全部：</span>这个正则选项会在所有正则搜索前加上 <span class="example">(?s)</span>，当你想让“.*”模式跨行匹配时使用。</p></li>
 
-    <li><p><span class="listheading">懒惰匹配：</span>这个正则选项会在所有正则搜索前加上 (?U)，当你想让模式匹配最短的出现而不是最长匹配时使用。</p></li>
+    <li><p><span class="listheading">懒惰匹配：</span>这个正则选项会在所有正则搜索前加上 <span class="example">(?U)</span>，当你想让模式匹配最短的出现而不是最长匹配时使用。</p></li>
 
-    <li><p><span class="listheading">自动转义：</span>当对选中的文本使用 Ctrl+F 将文本添加到查找与替换时，此选项会把空格转换为 \s 并转义某些字符，使其适合正则表达式。</p></li>
+    <li><p><span class="listheading">自动转义：</span>当对选中的文本使用 Ctrl+F 将文本添加到查找与替换时，此选项会把空格转换为 <span class="example">\s</span> 并转义某些字符，使其适合正则表达式。</p></li>
 
-    <li><p><span class="listheading">Unicode 属性：</span>此选项让搜索把 \w 等搜索字符类替换为基于每个字符的 Unicode 属性。使用该选项会大大减慢查找与替换的速度，但在多种语言中使用正则字符占位符搜索时可能非常有用。</p></li>
+    <li><p><span class="listheading">Unicode 属性：</span>此选项让搜索把 <span class="example">\w</span> 等搜索字符类替换为基于每个字符的 Unicode 属性。使用该选项会大大减慢查找与替换的速度，但在多种语言中使用正则字符占位符搜索时可能非常有用。</p></li>
   </ul>
 
   <p>更多细节请参见<a href="../Text/tutorial_regex_reference.xhtml">正则表达式参考</a>一章。</p>

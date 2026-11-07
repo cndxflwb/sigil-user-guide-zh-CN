@@ -34,17 +34,22 @@
 
   <p>下面这个 Python 代码块展示了一个什么都不做的空 Python 函数替换函数（即返回与匹配内容完全相同的东西）：</p>
 
-  <pre><code> def replace (match, number, file_name, metadata, data) : if match: return match.group(0) </code>
+  <pre><code>def replace (match, number, file_name, metadata, data) :
+    if match:
+        return match.group(0)</code>
 </pre>
 
   <p>需要理解传递给 replace 函数的各个参数：</p> 
 
-  
+  <pre><code>
+match:     当前的 Python 匹配对象
 
-  <pre><code> match: 当前的 Python 匹配对象
-   number: 编号从 1 开始，每匹配一次递增 1（仅在使用“全部替换”时生效）
-   file_name: 从电子书根目录到该文件的书籍内路径
-   data: 一个 Python dict 对象，用于在多次匹配之间存储任意数据</code>
+number:    编号从 1 开始，每匹配一次递增 1（仅在使用“全部替换”时生效）
+
+file_name: 从电子书根目录到该文件的书籍内路径
+
+data:      一个 Python dict 对象，用于在多次匹配之间存储任意数据
+</code>
 </pre>
 
   <p>为了更贴切地说明如何在自己的 Python 函数替换例程中使用这些参数，下面给出一个递增 id 的 Python 函数版本，它只会统计并修改每个文件中找到的第一个 h1 标签。</p>
@@ -61,7 +66,26 @@
 
   <p>以下是该 Python 代码的副本，方便复制粘贴使用：</p>
 
-  <pre><code> # add_ids_to_first_h1 def replace(match, number, file_name, metadata, data): # Find: &lt;h1[^&gt;]*&gt; if number == 1: data["old_file_name"] = "" data["mycount"] = 1 old_file_name = data["old_file_name"] mycnt = data["mycount"] result = match.group(0) replace_debug_log("filename: " + file_name + '\n') replace_debug_log("old file name: " + old_file_name + '\n') replace_debug_log("mycount: " + str(mycnt) +'\n') if match: if file_name != old_file_name: result = match.group(0)[0:-1] + ' id="heading_' + str(mycnt) + '"&gt;' data["old_file_name"] = file_name mycnt = mycnt + 1 data["mycount"] = mycnt return result </code></pre>
+  <pre><code># add_ids_to_first_h1
+def replace(match, number, file_name, metadata, data):
+    # Find: &lt;h1[^&gt;]*&gt;
+    if number == 1:
+        data["old_file_name"] = ""
+        data["mycount"] = 1
+
+    old_file_name = data["old_file_name"]
+    mycnt = data["mycount"]
+    result = match.group(0)
+    replace_debug_log("filename: " + file_name + '\n')
+    replace_debug_log("old file name: " + old_file_name + '\n')
+    replace_debug_log("mycount: " + str(mycnt) +'\n')
+    if match:
+        if file_name != old_file_name:
+             result = match.group(0)[0:-1] + ' id="heading_' + str(mycnt) + '"&gt;'
+             data["old_file_name"] = file_name
+             mycnt = mycnt + 1
+             data["mycount"] = mycnt
+        return result</code></pre>
 
   <p>这段 “add_ids_to_first_h1” 代码展示了如何利用 <code>number</code> 参数来判断何时初始化你自己的数据变量，还展示了如何利用传入的 <code>data</code> 字典参数来保存和读取跨多次调用持续存在的状态信息，同时也展示了如何利用 <code>file_name</code> 参数来检测何时进入了一个新文件。</p>
 
@@ -69,10 +93,16 @@
 
   <p>设置此环境变量时，其值应为一个文本文件的完整路径（包括文件名），来自你的函数调试输出将被追加写入该文件。</p>
 
-  <pre><code> def replace_debug_log(message): logfile = os.environ.get('SIGIL_FUNCTION_REPLACE_LOGFILE', None); if logfile: with open(logfile, "a", encoding="utf-8") as f: f.write(message) </code>
+  <pre><code>
+def replace_debug_log(message):
+    logfile = os.environ.get('SIGIL_FUNCTION_REPLACE_LOGFILE', None);
+    if logfile:
+        with open(logfile, "a", encoding="utf-8") as f:
+            f.write(message)
+</code>
 </pre>
 
-  <p>Sigil 内置了一个带语法高亮的 Python 函数替换编辑器，只需点击查找与替换窗口左侧的 <img class="toolbar-icon" src="../Images/function.png" alt="svg image of the a stylized 'F' icon that invokes the Python Funmction Replace code editor."/> 图标即可轻松打开它。</p>
+  <p>Sigil 内置了一个带语法高亮的 Python 函数替换编辑器，只需点击 查找与替换 窗口左侧的 <img class="toolbar-icon" src="../Images/function.png" alt="svg image of the a stylized 'F' icon that invokes the Python Funmction Replace code editor."/> 图标即可轻松打开它。</p>
 
   <div class="image">
     <img alt="Find and Replace set up to use Python Function Replace." src="../Images/pf_find_and_replace.png"/>

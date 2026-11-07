@@ -138,55 +138,102 @@
 
   <p><b>让查找与替换按钮只显示文字</b></p>
 
-  <pre><code>QFrame QToolButton#findNext, QFrame QToolButton#replaceCurrent, QFrame QToolButton#replaceFind, QFrame QToolButton#restart, QFrame QToolButton#replaceAll, QFrame QToolButton#count { qproperty-toolButtonStyle: ToolButtonTextOnly; } </code></pre>
+  <pre><code>
+QFrame QToolButton#findNext, 
+QFrame QToolButton#replaceCurrent, 
+QFrame QToolButton#replaceFind, 
+QFrame QToolButton#restart, 
+QFrame QToolButton#replaceAll, 
+QFrame QToolButton#count {
+    qproperty-toolButtonStyle: ToolButtonTextOnly;
+}
+</code></pre>
 
   <p><b>让查找与替换按钮同时显示图标和文字</b></p>
 
-  <pre><code>QFrame QToolButton#findNext, QFrame QToolButton#replaceCurrent, QFrame QToolButton#replaceFind, QFrame QToolButton#restart, QFrame QToolButton#replaceAll, QFrame QToolButton#count { qproperty-toolButtonStyle: ToolButtonTextBesideIcon; } </code></pre>
+  <pre><code>QFrame QToolButton#findNext, 
+QFrame QToolButton#replaceCurrent, 
+QFrame QToolButton#replaceFind, 
+QFrame QToolButton#restart, 
+QFrame QToolButton#replaceAll, 
+QFrame QToolButton#count {
+    qproperty-toolButtonStyle: ToolButtonTextBesideIcon;
+}</code></pre>
 
   <p><b>使用 QSS 隐藏所有工具提示。</b></p>
 
-  <pre><code>QToolTip { max-width:0; max-height:0; margin:0; padding:0; } </code></pre>
+  <pre><code>QToolTip {
+    max-width:0; max-height:0; margin:0; padding:0;
+}</code></pre>
 
   <p><b>隐藏查找与替换历史</b></p>
 
-  <pre><code>QFrame QComboBox QAbstractItemView::item { max-height: 0; } #cbFind, #cbReplace { qproperty-maxCount:0; } </code></pre>
+  <pre><code>QFrame QComboBox QAbstractItemView::item {
+    max-height: 0;
+}
+#cbFind, #cbReplace {
+    qproperty-maxCount:0;
+}</code></pre>
 
   <p><b>设置查找与替换输入框的字体和字号</b></p>
 
-  <pre><code>#cbFind, #cbReplace { font-family: "Georgia"; font-size: 16px; } </code></pre>
+  <pre><code>#cbFind, #cbReplace {
+    font-family: "Georgia"; font-size: 16px;
+}</code></pre>
 
   <p><b>将 关于 对话框中的 Sigil 版本号改为其他颜色</b></p>
 
-  <pre><code>QLabel#lbVersionDisplay { color: #FFA000; } </code></pre>
+  <pre><code>QLabel#lbVersionDisplay {
+    color: #FFA000;
+}</code></pre>
 
   <p><b>为 关于 对话框的作者选项卡设置灰色背景</b></p>
 
-  <pre><code>QTextEdit#creditsDisplay { background-color: #323232; } </code></pre>
+  <pre><code>QTextEdit#creditsDisplay {
+    background-color: #323232;
+}</code></pre>
 
   <p><b>为书籍浏览器面板设置灰色背景</b></p>
 
-  <pre><code>#bookbrowser { background-color: #323232; } </code></pre>
+  <pre><code>#bookbrowser {
+    background-color: #323232;
+}</code></pre>
 
   <p><b>将书籍浏览器面板的边框设为灰色</b></p>
 
-  <pre><code>#bookbrowser { border: 1px solid #323232; } </code></pre>
+  <pre><code>#bookbrowser {
+    border: 1px solid #323232;
+}</code></pre>
 
   <p><b>将查找与替换栏的边框设为灰色</b></p>
 
-  <pre><code>QFrame { border: 1px solid #323232; } </code></pre>
+  <pre><code>QFrame {
+    border: 1px solid #323232;
+}</code></pre>
 
   <p><b>更改默认的选区颜色</b></p>
 
-  <pre><code>*, *::separator, *::handle, *::tab-bar, *::tab, *::section { selection-background-color: #00404a; selection-color: white; } </code></pre>
+  <pre><code>*,
+*::separator,
+*::handle,
+*::tab-bar,
+*::tab,
+*::section {
+    selection-background-color: #00404a;
+    selection-color: white;
+}</code></pre>
 
   <p><b>更改 QDockWidget 关闭与解除停靠图标的大小。</b>（此项会影响预览、目录、书籍浏览器、剪贴板和验证窗口）</p>
 
-  <pre><code>QDockWidget::float-button, QDockWidget::close-button { icon-size: 16px; } </code></pre>
+  <pre><code>QDockWidget::float-button, QDockWidget::close-button {
+  icon-size: 16px;
+}</code></pre>
 
   <p><b>设置插件运行器窗口中的字体</b></p>
 
-  <pre><code>QTextEdit#textEdit { font-family: Consolas; } </code></pre>
+  <pre><code>QTextEdit#textEdit {
+    font-family: Consolas;
+}</code></pre>
 
   <p>以上只是用 Qt 的 QSS 样式修改 Sigil 外观的几个示例。如需了解关于 QSS 与 Sigil 的更多信息，请访问我们的 <a href="https://www.mobileread.com/forums/forumdisplay.php?f=203">Mobileread Sigil 用户论坛</a>，并查看以下关于 Qt 样式的网站资源：</p>
 
