@@ -67,6 +67,7 @@ jobs:
         for f in ./*.epub; do
           mv "$f" "Sigil 用户指南中文版（${VERSION}+ ${DATE}）.epub"
         done
+        echo "RELEASE_NAME=Sigil 用户指南中文版（${VERSION}+ ${DATE}）" >> $GITHUB_ENV
         ls -l ./*.epub
 
     - name: Create Release
@@ -74,7 +75,7 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        name: Sigil 用户指南中文版（${{ steps.get_tag_name.outputs.TAGNAME }}）
+        name: ${{ env.RELEASE_NAME }}
         bodyFile: .github/release-notes/${{ steps.get_tag_name.outputs.TAGNAME }}.md
         draft: true
         prerelease: false
